@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ESTUDIO | Arquitectura Contemporánea</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;500;700;800&amp;family=Inter:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-secondary-fixed-variant": "#5b5b5b",
+              "primary-dim": "#535252",
+              "secondary": "#5f5f5f",
+              "primary-fixed": "#e5e2e1",
+              "on-tertiary-container": "#624604",
+              "surface-container-high": "#e4e9ea",
+              "error-container": "#fe8983",
+              "on-secondary-container": "#515252",
+              "error": "#9f403d",
+              "surface-variant": "#dde4e5",
+              "error-dim": "#4e0309",
+              "outline": "#757c7d",
+              "on-error": "#fff7f6",
+              "secondary-fixed-dim": "#d5d4d4",
+              "primary-container": "#e5e2e1",
+              "on-primary-fixed-variant": "#5c5b5b",
+              "on-surface-variant": "#5a6061",
+              "inverse-surface": "#0c0f0f",
+              "on-primary-container": "#525151",
+              "surface-tint": "#5f5e5e",
+              "surface-container": "#ebeeef",
+              "surface-container-low": "#f2f4f4",
+              "on-primary-fixed": "#403f3f",
+              "on-error-container": "#752121",
+              "secondary-fixed": "#e3e2e2",
+              "inverse-on-surface": "#9c9d9d",
+              "on-secondary": "#faf8f8",
+              "tertiary-fixed": "#fbd185",
+              "secondary-container": "#e3e2e2",
+              "on-tertiary": "#fff8f1",
+              "inverse-primary": "#ffffff",
+              "surface": "#f9f9f9",
+              "surface-bright": "#f9f9f9",
+              "on-background": "#2d3435",
+              "tertiary-dim": "#6b4e0e",
+              "on-secondary-fixed": "#3f3f3f",
+              "surface-dim": "#d4dbdd",
+              "on-tertiary-fixed": "#4a3400",
+              "tertiary-fixed-dim": "#ecc479",
+              "primary": "#5f5e5e",
+              "on-surface": "#2d3435",
+              "surface-container-highest": "#dde4e5",
+              "outline-variant": "#adb3b4",
+              "primary-fixed-dim": "#d6d4d3",
+              "on-primary": "#faf7f6",
+              "surface-container-lowest": "#ffffff",
+              "tertiary": "#785a1a",
+              "tertiary-container": "#fbd185",
+              "on-tertiary-fixed-variant": "#6c500f",
+              "background": "#f9f9f9",
+              "secondary-dim": "#535353"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Manrope"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        .glass-nav { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(20px); }
+        .brushed-metal { background: linear-gradient(135deg, #5f5e5e 0%, #535252 100%); }
+        .ambient-shadow { box-shadow: 0 10px 40px rgba(45, 52, 53, 0.04); }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container">
+<!-- Top Navigation Shell -->
+<nav class="fixed top-0 w-full z-50 glass-nav">
+<div class="flex justify-between items-center px-8 py-6 max-w-full mx-auto">
+<a class="font-headline text-2xl font-bold tracking-tighter text-neutral-900" href="#">ESTUDIO</a>
+<div class="hidden md:flex items-center gap-12">
+<a class="font-headline tracking-tight font-medium uppercase text-sm text-neutral-500 hover:text-neutral-900 transition-colors" href="#servicios">Servicios</a>
+<a class="font-headline tracking-tight font-medium uppercase text-sm text-neutral-500 hover:text-neutral-900 transition-colors" href="#portafolio">Portafolio</a>
+<a class="font-headline tracking-tight font-medium uppercase text-sm text-neutral-900 border-b-2 border-neutral-900 pb-1" href="#contacto">Contacto</a>
+</div>
+<button class="md:hidden flex items-center justify-center">
+<span class="material-symbols-outlined text-on-surface" data-icon="menu">menu</span>
+</button>
+</div>
+</nav>
+<!-- Hero Section: The Silent Monolith -->
+<section class="relative h-screen w-full flex items-center bg-surface overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="Contemporary skyscraper detail" class="w-full h-full object-cover grayscale brightness-90" data-alt="ultra-modern minimalist architectural facade with sharp lines and glass reflections in monochrome grayscale aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9vHh6D1ncs46MNm0zs9lz0VKjSxkneTnVNQzY6o0n6B7roRJYM6dvpIh1gvpee0zoWrnpIzOlMtPr0wWbUTv4dy_c6MLxx8JbJGvwndhvRWiIc_5laYUGVgjvp6PdINw6sciKyqw0mmUXNol8r5GOSYgyBeJolFDWGBgu8LRm2MLwFr0Gvwceayx5uVk1YcO7KMMm_WRuWNlxQsftrx1iCjg1Ro951jXrQnd5YKFtdzoP9z1xBVPfDirziChemEub9LB--Yn-dgg"/>
+</div>
+<div class="relative z-10 w-full px-8 md:px-24">
+<div class="max-w-4xl">
+<h1 class="font-headline text-5xl md:text-[5rem] font-extrabold leading-[1.1] tracking-tighter text-white mb-8">
+                    ARQUITECTURA QUE <br/> TRASCIENDE EL ESPACIO
+                </h1>
+<p class="font-body text-xl text-white/80 max-w-xl mb-12 leading-relaxed">
+                    Diseñamos estructuras que dialogan con el entorno a través de la precisión técnica y la pureza material.
+                </p>
+<a class="inline-block brushed-metal text-on-primary px-10 py-5 font-headline font-bold text-sm tracking-widest uppercase hover:opacity-90 transition-opacity" href="#portafolio">
+                    Ver Proyectos
+                </a>
+</div>
+</div>
+<div class="absolute bottom-12 right-12 hidden md:block">
+<span class="font-label text-xs uppercase tracking-[0.3em] text-white/50 vertical-rl transform rotate-180">Design. Build. Persist.</span>
+</div>
+</section>
+<!-- Services Section -->
+<section class="py-32 px-8 md:px-24 bg-surface" id="servicios">
+<div class="flex flex-col md:flex-row gap-20">
+<div class="md:w-1/3">
+<h2 class="font-headline text-4xl font-bold tracking-tighter mb-6">SERVICIOS</h2>
+<p class="font-body text-on-surface-variant leading-relaxed">Ofrecemos un enfoque integral desde la concepción del espacio hasta la materialización técnica final.</p>
+</div>
+<div class="md:w-2/3 grid grid-cols-1 md:grid-cols-2 gap-y-20 gap-x-12">
+<div class="group">
+<span class="font-label text-xs text-outline-variant mb-4 block">01</span>
+<h3 class="font-headline text-xl font-bold mb-4 uppercase tracking-tight">Diseño Arquitectónico</h3>
+<p class="font-body text-on-surface-variant leading-relaxed">Creación de volúmenes y espacios que optimizan la luz natural y la funcionalidad estructural.</p>
+<div class="h-px w-0 group-hover:w-full bg-primary mt-6 transition-all duration-500"></div>
+</div>
+<div class="group">
+<span class="font-label text-xs text-outline-variant mb-4 block">02</span>
+<h3 class="font-headline text-xl font-bold mb-4 uppercase tracking-tight">Interiorismo</h3>
+<p class="font-body text-on-surface-variant leading-relaxed">Curaduría de materiales y mobiliario para generar atmósferas de calma y sofisticación.</p>
+<div class="h-px w-0 group-hover:w-full bg-primary mt-6 transition-all duration-500"></div>
+</div>
+<div class="group">
+<span class="font-label text-xs text-outline-variant mb-4 block">03</span>
+<h3 class="font-headline text-xl font-bold mb-4 uppercase tracking-tight">Gestión de Proyectos</h3>
+<p class="font-body text-on-surface-variant leading-relaxed">Supervisión técnica rigurosa para garantizar la fidelidad absoluta al diseño original.</p>
+<div class="h-px w-0 group-hover:w-full bg-primary mt-6 transition-all duration-500"></div>
+</div>
+<div class="group">
+<span class="font-label text-xs text-outline-variant mb-4 block">04</span>
+<h3 class="font-headline text-xl font-bold mb-4 uppercase tracking-tight">Sostenibilidad</h3>
+<p class="font-body text-on-surface-variant leading-relaxed">Integración de sistemas pasivos y materiales de bajo impacto para una arquitectura consciente.</p>
+<div class="h-px w-0 group-hover:w-full bg-primary mt-6 transition-all duration-500"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Portfolio: Asymmetric Masonry Grid -->
+<section class="bg-surface-container-low py-32 px-8 md:px-24" id="portafolio">
+<div class="mb-20 flex justify-between items-end">
+<div>
+<h2 class="font-headline text-4xl font-bold tracking-tighter mb-2">PROYECTOS SELECCIONADOS</h2>
+<p class="font-label text-xs uppercase tracking-widest text-outline">Explora nuestra visión del espacio</p>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-12">
+<!-- Large Project -->
+<div class="md:col-span-8 bg-surface-container-lowest overflow-hidden">
+<div class="aspect-[16/9] relative overflow-hidden group">
+<img alt="Casa de cristal moderna" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="luxury modern minimalist glass house in a forest setting at twilight with soft warm interior lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQj9drz_0gqjOCvLvLKUCXzXWR2WKZjfVclJB-kbEJy_SrgfhQKfg2hozhgCk-3EIT6if8IVKD_qhDbJ_bueuIRJgGyagsouiByO32y4DsDGpVHqeh-xEOK8OGg-3R6DFTIujzNAgV6UjQVX9XZ8hnW1aP8XfwFlvtDoemJx3GSDiFCEM_1d4la1rVKatSXjzXEWobdM5AuHVFJa2kez24L8r4G6AOl4KBEUH89Zdx_gvf62nsc1amEUibn9UIOEzWrMwf4EQBjLM"/>
+<div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
+<span class="brushed-metal text-white px-8 py-4 text-xs tracking-widest uppercase">Ver Detalle</span>
+</div>
+</div>
+<div class="p-8">
+<span class="font-label text-[10px] uppercase tracking-widest text-outline">Residencial | CDMX</span>
+<h3 class="font-headline text-2xl font-bold mt-2">CASA TERRAZA</h3>
+</div>
+</div>
+<!-- Vertical Project -->
+<div class="md:col-span-4 bg-surface-container-lowest overflow-hidden flex flex-col">
+<div class="flex-grow relative overflow-hidden group">
+<img alt="Oficina minimalista" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="modern brutalist concrete office interior with high ceilings and dramatic natural shadows from tall windows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA7aAXYYd8NscFgujKEfWjMuh2k9pyZAE12asLsOqSP4dfgaaFfxwHOKaeeS6YBFLDSmrlrw6OfKEwTU5DxvBLjBSE3sjx6ImRvstwdcj2Xll6926G3aWOVEv1lnJW3HSoPZUWUF8x3Hhd4Hw9Ag8RuYBXghi_NPRaktvx996liuqXpp86wRIkCax4fRlP-bYX1dJ_LHo67ZUeRzYieWv07b6tLeV7vGyQxMryHgZUNHd9ALPDvaTUhiopEbrD4WlvhiMakw8z-Lak"/>
+</div>
+<div class="p-8">
+<span class="font-label text-[10px] uppercase tracking-widest text-outline">Corporativo | Madrid</span>
+<h3 class="font-headline text-2xl font-bold mt-2">ESTUDIO V</h3>
+</div>
+</div>
+<!-- Smaller Project 1 -->
+<div class="md:col-span-6 bg-surface-container-lowest overflow-hidden">
+<div class="aspect-square relative overflow-hidden group">
+<img alt="Arquitectura blanca" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="geometric white minimalist villa with swimming pool and sharp architectural shadows against blue sky" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCm0nE0JHBZ-So6Nf92QUdcGlS5cCwoIx99WTb0ldSaqbsWJv2SfL6NiiHJVL_30QYeR4yzuZF3sNSN4vMUGZwGTTIg7LAwj279nuvjbLCsgewLWwZBjR1E758Wzo1UlpdOLj2S3aSPK0EEnoZUQPf4BPef58DKrJcX-tjrEtoOKZRgVAcqOBQZOpajS4Lf6R2JNIbfaIWtsEfygxl4XV1rUaKU9wyItg0kQQ89SGoqrcJhojCD9QdzOwMTCBXElLU1ylyBQA2LPEo"/>
+</div>
+<div class="p-8">
+<span class="font-label text-[10px] uppercase tracking-widest text-outline">Hospitalidad | Ibiza</span>
+<h3 class="font-headline text-2xl font-bold mt-2">VILLA BLANCA</h3>
+</div>
+</div>
+<!-- Smaller Project 2 -->
+<div class="md:col-span-6 bg-surface-container-lowest overflow-hidden">
+<div class="aspect-square relative overflow-hidden group">
+<img alt="Arquitectura detalle" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="abstract close up of contemporary museum facade with repetitive steel and glass patterns and clean lines" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_NtYHI7j7okuf71I9d2rO1QI4UM2kQbeOjXIQvEytBJwIdpwIp2hIY9olpqbWSOuHRidd54P5yzvMMwWP0SLFDJfCM-B7MauD-C01XwFOkUcxsGbctWUrqy9pd4-LrMLZCSXvak3Zkkp8uhadONyPMGZRdXw5qVfaXL1x1xjwxy5_jS206COtZnfQUJ2ZWw4aNsPJgfaEyBng-2ymhf7sdLEMT1VMNbMO06ZKXm-zitnKErhrIX6WoixgTyMMRFZ6Q-KTLbVRUf4"/>
+</div>
+<div class="p-8">
+<span class="font-label text-[10px] uppercase tracking-widest text-outline">Cultural | Bogotá</span>
+<h3 class="font-headline text-2xl font-bold mt-2">MUSEO DEL AIRE</h3>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials -->
+<section class="py-32 px-8 md:px-24 bg-surface">
+<div class="max-w-4xl mx-auto text-center">
+<span class="material-symbols-outlined text-4xl text-primary-dim mb-8" data-icon="format_quote">format_quote</span>
+<blockquote class="font-headline text-2xl md:text-3xl font-light italic text-on-surface leading-snug mb-12">
+                "La capacidad de ESTUDIO para transformar nuestras ideas abstractas en una estructura física que respira serenidad fue asombrosa. Superaron toda expectativa técnica y estética."
+            </blockquote>
+<cite class="not-italic">
+<span class="block font-headline font-bold text-sm tracking-widest uppercase">Adrián Moreno</span>
+<span class="block font-label text-xs text-outline mt-1">Fundador, Nexus Group</span>
+</cite>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="py-32 px-8 md:px-24 bg-surface-container-high" id="contacto">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-24">
+<div>
+<h2 class="font-headline text-4xl font-bold tracking-tighter mb-8">INICIA TU <br/> PROYECTO</h2>
+<p class="font-body text-on-surface-variant mb-12 max-w-sm">Estamos listos para materializar tu visión. Agenda una consulta técnica inicial.</p>
+<div class="space-y-8">
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary mt-1" data-icon="location_on">location_on</span>
+<div>
+<p class="font-headline font-bold text-sm uppercase">Ubicación</p>
+<p class="font-body text-on-surface-variant text-sm mt-1">Av. Arquitectura 1024, CDMX</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary mt-1" data-icon="mail">mail</span>
+<div>
+<p class="font-headline font-bold text-sm uppercase">Email</p>
+<p class="font-body text-on-surface-variant text-sm mt-1">contacto@estudio.com</p>
+</div>
+</div>
+</div>
+</div>
+<div>
+<form class="space-y-10">
+<div>
+<input class="w-full bg-transparent border-t-0 border-x-0 border-b border-outline-variant focus:border-primary focus:ring-0 font-label text-xs py-4 transition-all" placeholder="NOMBRE COMPLETO" type="text"/>
+</div>
+<div>
+<input class="w-full bg-transparent border-t-0 border-x-0 border-b border-outline-variant focus:border-primary focus:ring-0 font-label text-xs py-4 transition-all" placeholder="EMAIL" type="email"/>
+</div>
+<div>
+<textarea class="w-full bg-transparent border-t-0 border-x-0 border-b border-outline-variant focus:border-primary focus:ring-0 font-label text-xs py-4 transition-all" placeholder="MENSAJE" rows="4"></textarea>
+</div>
+<button class="w-full brushed-metal text-on-primary py-5 font-headline font-bold text-xs tracking-[0.2em] uppercase hover:opacity-95 transition-all" type="submit">
+                        Enviar Mensaje
+                    </button>
+</form>
+</div>
+</div>
+</section>
+<!-- Footer Shell -->
+<footer class="w-full py-20 px-8 bg-neutral-100">
+<div class="flex flex-col md:flex-row justify-between items-center gap-8">
+<span class="font-headline font-bold text-neutral-900">ESTUDIO</span>
+<p class="font-headline text-xs tracking-widest uppercase text-neutral-600">
+                © 2024 ESTUDIO ARQUITECTURA. TODOS LOS DERECHOS RESERVADOS.
+            </p>
+<div class="flex gap-8">
+<a class="font-headline text-xs tracking-widest uppercase text-neutral-500 hover:text-neutral-900 transition-colors" href="#">Instagram</a>
+<a class="font-headline text-xs tracking-widest uppercase text-neutral-500 hover:text-neutral-900 transition-colors" href="#">LinkedIn</a>
+<a class="font-headline text-xs tracking-widest uppercase text-neutral-500 hover:text-neutral-900 transition-colors" href="#">Privacidad</a>
+</div>
+</div>
+</footer>
+<!-- WhatsApp Floating Action Button -->
+<a class="fixed bottom-8 right-8 z-[60] group" href="https://wa.me/521234567890" target="_blank">
+<div class="w-16 h-16 rounded-full bg-tertiary flex items-center justify-center text-on-tertiary ambient-shadow glass-nav bg-opacity-70 backdrop-blur-md relative overflow-hidden transition-transform duration-300 group-hover:scale-110">
+<!-- Subtle Gold Accent Gradient Overlay -->
+<div class="absolute inset-0 bg-tertiary/10"></div>
+<span class="material-symbols-outlined text-3xl" data-icon="chat">chat</span>
+</div>
+</a>
+</body></html>

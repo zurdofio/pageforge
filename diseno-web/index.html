@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ARCHITECT | Technical Authority</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "outline-variant": "#c5c5d3",
+              "on-surface": "#191c1e",
+              "inverse-on-surface": "#eff1f3",
+              "on-tertiary-fixed-variant": "#773205",
+              "on-error": "#ffffff",
+              "error": "#ba1a1a",
+              "surface-variant": "#e0e3e5",
+              "background": "#f7f9fb",
+              "surface-container-lowest": "#ffffff",
+              "secondary-fixed-dim": "#b9c7df",
+              "tertiary-fixed-dim": "#ffb691",
+              "surface-container-high": "#e6e8ea",
+              "error-container": "#ffdad6",
+              "inverse-primary": "#b6c4ff",
+              "on-primary-fixed": "#00164e",
+              "on-secondary-fixed-variant": "#3a485b",
+              "on-primary-fixed-variant": "#264191",
+              "surface-dim": "#d8dadc",
+              "secondary-container": "#d5e3fc",
+              "on-tertiary": "#ffffff",
+              "on-background": "#191c1e",
+              "tertiary-container": "#6e2c00",
+              "on-primary-container": "#90a8ff",
+              "inverse-surface": "#2d3133",
+              "on-secondary-container": "#57657a",
+              "primary": "#00236f",
+              "tertiary": "#4b1c00",
+              "primary-fixed": "#dce1ff",
+              "primary-container": "#1e3a8a",
+              "surface-bright": "#f7f9fb",
+              "on-primary": "#ffffff",
+              "surface": "#f7f9fb",
+              "on-secondary-fixed": "#0d1c2e",
+              "on-tertiary-container": "#f39461",
+              "primary-fixed-dim": "#b6c4ff",
+              "on-secondary": "#ffffff",
+              "secondary": "#515f74",
+              "on-tertiary-fixed": "#341100",
+              "on-surface-variant": "#444651",
+              "surface-tint": "#4059aa",
+              "surface-container": "#eceef0",
+              "secondary-fixed": "#d5e3fc",
+              "tertiary-fixed": "#ffdbcb",
+              "outline": "#757682",
+              "on-error-container": "#93000a",
+              "surface-container-low": "#f2f4f6",
+              "surface-container-highest": "#e0e3e5"
+            },
+            fontFamily: {
+              "headline": ["Inter"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .technical-gradient {
+            background: linear-gradient(135deg, #00236f 0%, #1e3a8a 100%);
+        }
+        .glass-nav {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface antialiased selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-slate-50/80 backdrop-blur-xl h-20">
+<div class="flex justify-between items-center max-w-7xl mx-auto px-8 h-full relative">
+<div class="text-xl font-bold tracking-tighter text-slate-900 font-headline">
+                ARCHITECT
+            </div>
+<div class="hidden md:flex items-center space-x-8 font-['Inter'] tracking-tight">
+<a class="text-blue-900 font-medium border-b-2 border-blue-900 pb-1 transition-all duration-500 ease-in-out" href="#hero">Hero</a>
+<a class="text-slate-600 hover:text-slate-900 transition-colors" href="#features">Features</a>
+<a class="text-slate-600 hover:text-slate-900 transition-colors" href="#about">About</a>
+<a class="text-slate-600 hover:text-slate-900 transition-colors" href="#solutions">Solutions</a>
+</div>
+<div class="flex items-center">
+<button class="bg-primary hover:bg-primary-container text-on-primary px-6 py-2.5 rounded-lg text-sm font-medium transition-all shadow-sm">
+                    Get Started
+                </button>
+</div>
+<div class="bg-slate-200/50 h-[1px] w-full absolute bottom-0 left-0"></div>
+</div>
+</nav>
+<main>
+<!-- Hero Section -->
+<section class="relative pt-32 pb-20 md:pt-48 md:pb-40 overflow-hidden bg-surface" id="hero">
+<div class="max-w-7xl mx-auto px-8 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<div class="lg:col-span-7 z-10">
+<div class="inline-block py-1 px-3 mb-6 bg-secondary-container rounded-full">
+<span class="text-[10px] font-bold tracking-[0.1em] uppercase text-on-secondary-container font-label">v4.0 Technical Infrastructure</span>
+</div>
+<h1 class="text-6xl md:text-8xl font-black tracking-tighter text-on-surface leading-[0.9] mb-8 font-headline">
+                        ENGINEERING <br/>THE ABSOLUTE.
+                    </h1>
+<p class="text-lg md:text-xl text-secondary max-w-xl leading-relaxed mb-10">
+                        Deploy corporate-grade architectural monoliths designed for extreme resilience and technical authority. No compromises on scale or security.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-4">
+<button class="technical-gradient text-on-primary px-8 py-4 rounded-lg font-semibold flex items-center justify-center gap-2 group">
+                            Initialize Protocol
+                            <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</button>
+<button class="px-8 py-4 rounded-lg font-semibold border border-outline-variant/20 hover:bg-surface-container-high transition-colors text-primary">
+                            Technical Specs
+                        </button>
+</div>
+</div>
+<div class="lg:col-span-5 relative">
+<div class="aspect-square bg-surface-container rounded-3xl overflow-hidden shadow-2xl rotate-3 scale-105">
+<img alt="Corporate Skyscraper" class="w-full h-full object-cover grayscale-[0.2] contrast-[1.1]" data-alt="Modern geometric skyscraper facade with reflective glass windows and steel structures under a clear blue sky, sharp technical focus" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDPzOe2LverSZA8bzivcI-Rpqt5kmV34CfTZPMdJWSwDBP_OELX1FZwDGp3F44WcxawrdGLS7keHoksljCZW8aqIykmZs7tPDeFqSriDZfdjzZHO04mWJbN9WEYjMATrJxLGB0WdXtwBgoCSn3CBrA2K_gtCFPZq9Rmwvud5Rcz79gylRcDLUJ6UmizC23aemKxK8bou3FrUFp-sSqWp_eAmzIqEbrk6bgHpsrHbkwAsFysO5-_O3dXtEmFqs6yVsE3jcVfE4m6Hiw"/>
+</div>
+<div class="absolute -bottom-8 -left-8 p-8 technical-gradient text-on-primary rounded-2xl shadow-xl max-w-xs backdrop-blur-md bg-opacity-90">
+<div class="text-3xl font-bold mb-1">99.999%</div>
+<div class="text-xs uppercase tracking-widest opacity-80 font-label">Operational Uptime</div>
+</div>
+</div>
+</div>
+<!-- Decorative Background Element -->
+<div class="absolute top-0 right-0 w-1/2 h-full bg-surface-container-low -z-10 skew-x-[-12deg] translate-x-20"></div>
+</section>
+<!-- Features Section (Bento Grid) -->
+<section class="py-24 bg-surface-container-low" id="features">
+<div class="max-w-7xl mx-auto px-8">
+<div class="mb-20">
+<span class="text-sm font-bold tracking-[0.2em] uppercase text-secondary font-label block mb-4">Capabilities</span>
+<h2 class="text-4xl md:text-5xl font-black tracking-tight text-on-surface font-headline">Structural Integrity by Design.</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Feature Card 1 -->
+<div class="md:col-span-2 bg-surface-container-lowest p-10 rounded-xl group transition-all duration-300">
+<div class="flex flex-col h-full justify-between">
+<div>
+<span class="material-symbols-outlined text-4xl text-primary mb-6" data-icon="security">security</span>
+<h3 class="text-2xl font-bold mb-4">Hardened Core Security</h3>
+<p class="text-secondary leading-relaxed max-w-lg">
+                                    Our kernel-level protection layers ensure that every data transaction is encrypted at the hardware level, preventing unauthorized access even in compromised environments.
+                                </p>
+</div>
+<div class="mt-8 pt-8 border-t border-outline-variant/10 flex items-center justify-between">
+<span class="text-xs font-bold uppercase tracking-widest text-primary font-label">Protocol AES-256</span>
+<span class="material-symbols-outlined text-outline-variant group-hover:text-primary transition-colors" data-icon="verified">verified</span>
+</div>
+</div>
+</div>
+<!-- Feature Card 2 -->
+<div class="bg-surface-container p-10 rounded-xl flex flex-col justify-between">
+<div>
+<span class="material-symbols-outlined text-4xl text-primary mb-6" data-icon="hub">hub</span>
+<h3 class="text-2xl font-bold mb-4">Distributed Monolith</h3>
+<p class="text-secondary text-sm leading-relaxed">
+                                Unified control planes with decentralized execution for zero-latency operations across global nodes.
+                            </p>
+</div>
+<div class="mt-6 flex gap-2">
+<div class="w-2 h-2 rounded-full bg-primary"></div>
+<div class="w-2 h-2 rounded-full bg-primary opacity-40"></div>
+<div class="w-2 h-2 rounded-full bg-primary opacity-20"></div>
+</div>
+</div>
+<!-- Feature Card 3 -->
+<div class="bg-surface-container-highest p-10 rounded-xl flex flex-col justify-between">
+<div>
+<span class="material-symbols-outlined text-4xl text-primary mb-6" data-icon="monitoring">monitoring</span>
+<h3 class="text-2xl font-bold mb-4">Real-time Analytics</h3>
+<p class="text-secondary text-sm leading-relaxed">
+                                Advanced telemetry capturing over 400 unique data points per millisecond for deep structural visibility.
+                            </p>
+</div>
+</div>
+<!-- Feature Card 4 -->
+<div class="md:col-span-2 bg-primary text-on-primary p-10 rounded-xl overflow-hidden relative">
+<div class="relative z-10">
+<h3 class="text-3xl font-bold mb-4">Quantum-Ready Cryptography</h3>
+<p class="text-primary-fixed-dim leading-relaxed max-w-md">
+                                Future-proof your infrastructure against the next generation of technical threats with post-quantum lattice-based encryption algorithms.
+                            </p>
+</div>
+<span class="material-symbols-outlined absolute -bottom-10 -right-10 text-[12rem] opacity-10 rotate-12" data-icon="memory">memory</span>
+</div>
+</div>
+</div>
+</section>
+<!-- About Section -->
+<section class="py-24 bg-surface" id="about">
+<div class="max-w-7xl mx-auto px-8">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+<div class="lg:col-span-5 order-2 lg:order-1">
+<div class="relative">
+<img alt="Tech Team Workspace" class="rounded-xl shadow-lg grayscale" data-alt="High-end corporate meeting room with glass walls, soft morning light, and technical diagrams on a digital screen, professional atmosphere" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-MyOYMQ_A11Ptu4A2VBIC-mXQmHHUpOrKsnuJFd3EtmLXiE6AO7sCNUSelh4tx5rGN0BADsuTjD_L-yLglxv2ChAEWiBqT48MCifpwnGPK4cjUCe7zl_zVghjn5TF5OzQ3vIkN7d-Rt1yzLJ8ufgpayMQY5OOTusFJNMJeX_eg2ISCZKEqsGycoggS9rL5VcYECGEteAOt7fg56-UiLI_BPIWQa5N2mICcDyiyJu-Z67H3N9epUHJ_ON0_SaFeXIGAsHGXwNyWs8"/>
+<div class="absolute -top-4 -right-4 w-32 h-32 bg-primary/5 rounded-full blur-3xl"></div>
+</div>
+</div>
+<div class="lg:col-span-7 order-1 lg:order-2">
+<span class="text-sm font-bold tracking-[0.2em] uppercase text-secondary font-label block mb-4">Legacy &amp; Innovation</span>
+<h2 class="text-5xl md:text-6xl font-black tracking-tighter text-on-surface mb-8 font-headline leading-tight">
+                            Built for the <br/><span class="text-primary">Next Century.</span>
+</h2>
+<div class="space-y-6 text-lg text-secondary leading-relaxed">
+<p>
+                                At ARCHITECT, we don't build software; we construct digital foundations. Our philosophy centers on the concept of **Technical Permanence**—the idea that infrastructure should be as enduring as the physical structures of a monolith.
+                            </p>
+<p>
+                                Founded by a collective of systems engineers and structural designers, we bridge the gap between abstract code and concrete reliability. Every line of our stack is scrutinized for its contribution to the whole.
+                            </p>
+</div>
+<div class="mt-10 grid grid-cols-2 gap-8 border-t border-outline-variant/10 pt-10">
+<div>
+<div class="text-3xl font-bold text-primary font-headline">12k+</div>
+<div class="text-xs uppercase tracking-widest text-secondary font-label">Enterprise Deployments</div>
+</div>
+<div>
+<div class="text-3xl font-bold text-primary font-headline">40+</div>
+<div class="text-xs uppercase tracking-widest text-secondary font-label">Global Patents</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Solutions Section (High Contrast) -->
+<section class="py-32 bg-surface-container-highest" id="solutions">
+<div class="max-w-7xl mx-auto px-8">
+<div class="text-center mb-24">
+<h2 class="text-5xl md:text-7xl font-black tracking-tighter text-on-surface font-headline mb-6">Vertical Solutions.</h2>
+<p class="text-xl text-secondary max-w-2xl mx-auto">Precision-engineered environments for highly specialized corporate sectors.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-px bg-outline-variant/20 overflow-hidden rounded-2xl">
+<!-- Solution 1 -->
+<div class="bg-surface p-12 hover:bg-surface-container-lowest transition-colors group">
+<div class="flex items-start justify-between mb-12">
+<span class="text-6xl font-black text-outline-variant/20 font-headline group-hover:text-primary/10 transition-colors">01</span>
+<span class="material-symbols-outlined text-4xl text-primary" data-icon="account_balance">account_balance</span>
+</div>
+<h3 class="text-3xl font-bold mb-6">Financial Systems</h3>
+<p class="text-secondary leading-relaxed mb-8">
+                            Ultra-low latency transaction engines with immutable audit logs and real-time fraud detection layers. Designed for global banking standards.
+                        </p>
+<a class="inline-flex items-center gap-2 text-primary font-bold text-sm tracking-widest uppercase group-hover:underline" href="#">
+                            Explore Logistics <span class="material-symbols-outlined text-sm" data-icon="north_east">north_east</span>
+</a>
+</div>
+<!-- Solution 2 -->
+<div class="bg-surface p-12 hover:bg-surface-container-lowest transition-colors group">
+<div class="flex items-start justify-between mb-12">
+<span class="text-6xl font-black text-outline-variant/20 font-headline group-hover:text-primary/10 transition-colors">02</span>
+<span class="material-symbols-outlined text-4xl text-primary" data-icon="precision_manufacturing">precision_manufacturing</span>
+</div>
+<h3 class="text-3xl font-bold mb-6">Industrial Core</h3>
+<p class="text-secondary leading-relaxed mb-8">
+                            Integration platforms for heavy industry IoT, providing synchronous control over global manufacturing assets and predictive maintenance.
+                        </p>
+<a class="inline-flex items-center gap-2 text-primary font-bold text-sm tracking-widest uppercase group-hover:underline" href="#">
+                            Control Interface <span class="material-symbols-outlined text-sm" data-icon="north_east">north_east</span>
+</a>
+</div>
+<!-- Solution 3 -->
+<div class="bg-surface p-12 hover:bg-surface-container-lowest transition-colors group">
+<div class="flex items-start justify-between mb-12">
+<span class="text-6xl font-black text-outline-variant/20 font-headline group-hover:text-primary/10 transition-colors">03</span>
+<span class="material-symbols-outlined text-4xl text-primary" data-icon="cloud_done">cloud_done</span>
+</div>
+<h3 class="text-3xl font-bold mb-6">Data Sovereignty</h3>
+<p class="text-secondary leading-relaxed mb-8">
+                            Multi-region storage clusters with local law compliance automation and decentralized shard management.
+                        </p>
+<a class="inline-flex items-center gap-2 text-primary font-bold text-sm tracking-widest uppercase group-hover:underline" href="#">
+                            Cloud Ops <span class="material-symbols-outlined text-sm" data-icon="north_east">north_east</span>
+</a>
+</div>
+<!-- Solution 4 -->
+<div class="bg-surface p-12 hover:bg-surface-container-lowest transition-colors group">
+<div class="flex items-start justify-between mb-12">
+<span class="text-6xl font-black text-outline-variant/20 font-headline group-hover:text-primary/10 transition-colors">04</span>
+<span class="material-symbols-outlined text-4xl text-primary" data-icon="biotech">biotech</span>
+</div>
+<h3 class="text-3xl font-bold mb-6">Bio-Metric Layer</h3>
+<p class="text-secondary leading-relaxed mb-8">
+                            Zero-knowledge proof identity management systems for sensitive research and development environments.
+                        </p>
+<a class="inline-flex items-center gap-2 text-primary font-bold text-sm tracking-widest uppercase group-hover:underline" href="#">
+                            Bio Protocols <span class="material-symbols-outlined text-sm" data-icon="north_east">north_east</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section (Glassmorphism) -->
+<section class="py-24 bg-surface relative overflow-hidden">
+<div class="max-w-7xl mx-auto px-8 relative z-10">
+<div class="technical-gradient rounded-[2rem] p-12 md:p-24 text-center text-on-primary shadow-2xl overflow-hidden relative">
+<div class="absolute inset-0 opacity-10 pointer-events-none">
+<div class="absolute inset-0" style="background-image: radial-gradient(circle at 2px 2px, rgba(255,255,255,0.1) 1px, transparent 0); background-size: 40px 40px;"></div>
+</div>
+<h2 class="text-4xl md:text-6xl font-black tracking-tighter mb-8 font-headline leading-tight">Ready to fortify your <br/>digital landscape?</h2>
+<p class="text-xl text-primary-fixed-dim mb-12 max-w-2xl mx-auto">
+                        Speak with a senior architect today about your organization's technical requirements and scale-up timeline.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center">
+<button class="bg-surface-container-lowest text-primary px-10 py-4 rounded-lg font-bold text-lg hover:bg-primary-fixed transition-all">
+                            Request Consultation
+                        </button>
+<button class="bg-white/10 backdrop-blur-md text-on-primary border border-white/20 px-10 py-4 rounded-lg font-bold text-lg hover:bg-white/20 transition-all">
+                            System Documentation
+                        </button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-20 px-8 bg-slate-100 dark:bg-slate-950 font-['Inter'] text-sm leading-relaxed border-t border-outline-variant/10">
+<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+<!-- Brand Column -->
+<div class="space-y-6">
+<div class="text-lg font-black text-slate-900 font-headline tracking-tighter uppercase">ARCHITECT</div>
+<p class="text-slate-500 max-w-xs">
+                    Architectural Monolith Corp. Providing sovereign technical foundations for global enterprise leaders since 2012.
+                </p>
+<div class="flex space-x-4">
+<span class="material-symbols-outlined text-slate-400 hover:text-primary cursor-pointer transition-colors" data-icon="terminal">terminal</span>
+<span class="material-symbols-outlined text-slate-400 hover:text-primary cursor-pointer transition-colors" data-icon="code">code</span>
+<span class="material-symbols-outlined text-slate-400 hover:text-primary cursor-pointer transition-colors" data-icon="lan">lan</span>
+</div>
+</div>
+<!-- Navigation Links -->
+<div class="space-y-6">
+<h4 class="text-blue-900 font-bold uppercase tracking-widest text-xs">Resources</h4>
+<ul class="space-y-4">
+<li><a class="text-slate-500 hover:text-blue-900 transition-colors" href="#">Documentation</a></li>
+<li><a class="text-slate-500 hover:text-blue-900 transition-colors" href="#">Status</a></li>
+<li><a class="text-slate-500 hover:text-blue-900 transition-colors" href="#">Technical Blog</a></li>
+<li><a class="text-slate-500 hover:text-blue-900 transition-colors" href="#">Open Source</a></li>
+</ul>
+</div>
+<!-- Company Links -->
+<div class="space-y-6">
+<h4 class="text-blue-900 font-bold uppercase tracking-widest text-xs">Monolith Corp</h4>
+<ul class="space-y-4">
+<li><a class="text-slate-500 hover:text-blue-900 transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="text-slate-500 hover:text-blue-900 transition-colors" href="#">Terms of Service</a></li>
+<li><a class="text-slate-500 hover:text-blue-900 transition-colors" href="#">Security</a></li>
+<li><a class="text-slate-500 hover:text-blue-900 transition-colors" href="#">Global Locations</a></li>
+</ul>
+</div>
+<!-- Newsletter/Status -->
+<div class="space-y-6">
+<h4 class="text-blue-900 font-bold uppercase tracking-widest text-xs">System Status</h4>
+<div class="bg-surface-container p-4 rounded-lg flex items-center gap-3">
+<div class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+<span class="text-xs font-medium text-slate-600">All Clusters Operational</span>
+</div>
+<div class="pt-4">
+<p class="text-xs text-slate-400 mb-2">Subscribe to technical updates</p>
+<div class="flex gap-2">
+<input class="bg-surface-container border-none focus:ring-1 focus:ring-primary rounded text-xs w-full py-2" placeholder="Email" type="email"/>
+<button class="bg-primary text-white p-2 rounded hover:bg-primary-container transition-colors">
+<span class="material-symbols-outlined text-sm" data-icon="send">send</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<div class="max-w-7xl mx-auto mt-20 pt-8 border-t border-outline-variant/10 flex flex-col md:flex-row justify-between items-center gap-4">
+<div class="text-slate-500 text-xs">
+                © 2024 Architectural Monolith Corp. All technical rights reserved.
+            </div>
+<div class="flex gap-8">
+<span class="text-slate-500 text-xs hover:text-primary transition-colors cursor-pointer">Cookie Settings</span>
+<span class="text-slate-500 text-xs hover:text-primary transition-colors cursor-pointer">Site Map</span>
+<span class="text-slate-500 text-xs hover:text-primary transition-colors cursor-pointer">Accessibility</span>
+</div>
+</div>
+</footer>
+</body></html>

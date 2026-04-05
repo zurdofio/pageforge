@@ -1,366 +1,162 @@
 <!DOCTYPE html>
-
-<html class="scroll-smooth" lang="es"><head>
+<html lang="es"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Hostel Nomade | El Horizonte Kinético</title>
+<title>Hostel Nómade | Urban Chaos</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            colors: {
-              "on-secondary-fixed-variant": "#004395",
-              "inverse-surface": "#21323e",
-              "on-error-container": "#93000a",
-              "tertiary-container": "#004c8b",
-              "on-background": "#0c1d28",
-              "secondary-container": "#2170e4",
-              "inverse-on-surface": "#e4f3ff",
-              "on-primary-container": "#a8b8ff",
-              "on-tertiary-container": "#8fbeff",
-              "outline-variant": "#c4c5d5",
-              "surface-container-lowest": "#ffffff",
-              "secondary-fixed-dim": "#adc6ff",
-              "on-tertiary": "#ffffff",
-              "outline": "#757684",
-              "on-primary-fixed-variant": "#173bab",
-              "on-secondary": "#ffffff",
-              "surface-container-low": "#eaf5ff",
-              "error": "#ba1a1a",
-              "surface-container-high": "#d8ebfa",
-              "surface": "#f6faff",
-              "inverse-primary": "#b8c4ff",
-              "surface-variant": "#d3e5f4",
-              "tertiary-fixed-dim": "#a4c9ff",
-              "on-surface-variant": "#444653",
-              "error-container": "#ffdad6",
-              "on-primary": "#ffffff",
-              "on-error": "#ffffff",
-              "on-secondary-fixed": "#001a42",
-              "surface-container-highest": "#d3e5f4",
-              "surface-container": "#def0ff",
-              "primary-container": "#1e40af",
-              "on-primary-fixed": "#001453",
-              "primary-fixed-dim": "#b8c4ff",
-              "on-tertiary-fixed-variant": "#004883",
-              "secondary-fixed": "#d8e2ff",
-              "surface-tint": "#3755c3",
-              "primary": "#00288e",
-              "on-tertiary-fixed": "#001c39",
-              "tertiary-fixed": "#d4e3ff",
-              "surface-bright": "#f6faff",
-              "on-secondary-container": "#fefcff",
-              "primary-fixed": "#dde1ff",
-              "background": "#f6faff",
-              "secondary": "#0058be",
-              "on-surface": "#0c1d28",
-              "tertiary": "#003564",
-              "surface-dim": "#cadceb"
-            },
-            fontFamily: {
-              "headline": ["Space Grotesk"],
-              "body": ["Inter"],
-              "label": ["Inter"]
-            },
-            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
-          },
-        },
-      }
-    </script>
-<style>
-      .material-symbols-outlined {
-        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-      }
-      .kinetic-gradient {
-        background: linear-gradient(135deg, #00288e 0%, #1e40af 100%);
-      }
-      .glass-nav {
-        backdrop-filter: blur(20px);
-        -webkit-backdrop-filter: blur(20px);
-      }
+<link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&amp;family=Space+Grotesk:wght@300;500;700&amp;family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style type="text/tailwindcss">
+        :root {
+            --charcoal: #121212;
+            --neon-green: #ccff00;
+            --magenta: #ff00ff;
+            --stark-white: #f5f5f5;
+        }
+        body {
+            background-color: var(--charcoal);
+            color: var(--stark-white);
+            font-family: 'Space Grotesk', sans-serif;
+            overflow-x: hidden;
+        }
+        .font-syncopate { font-family: 'Syncopate', sans-serif; }
+        .collage-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            grid-auto-rows: minmax(100px, auto);
+            gap: 1rem;
+        }
+        .glitch-text {
+            text-shadow: 2px 0 var(--magenta), -2px 0 var(--neon-green);
+        }
+        .vertical-text {
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+        }
+        .skew-box {
+            transform: skewY(-3deg);
+        }
+        .brutal-border {
+            border: 4px solid var(--stark-white);
+            box-shadow: 8px 8px 0px var(--neon-green);
+        }
+        .mask-blob {
+            clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+        }
+        .mask-jagged {
+            clip-path: polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%);
+        }
     </style>
 </head>
-<body class="bg-surface text-on-surface font-body selection:bg-secondary-container selection:text-white">
-<!-- TopAppBar -->
-<nav class="fixed top-0 w-full z-50 bg-[#f6faff]/80 dark:bg-[#0c1d28]/80 backdrop-blur-xl shadow-sm dark:shadow-none">
-<div class="flex justify-between items-center h-20 px-8 max-w-screen-2xl mx-auto">
-<div class="text-2xl font-bold tracking-tighter text-[#00288e] dark:text-white font-headline">
-                Hostel Nomade
-            </div>
-<div class="hidden md:flex gap-8 items-center">
-<a class="font-['Space_Grotesk'] font-medium uppercase tracking-wider text-sm text-[#00288e] dark:text-white border-b-2 border-[#00288e] pb-1 transition-all duration-300" href="#">Inicio</a>
-<a class="font-['Space_Grotesk'] font-medium uppercase tracking-wider text-sm text-[#0c1d28] dark:text-[#f6faff] opacity-70 hover:opacity-100 hover:text-[#0058be] transition-all duration-300" href="#">Sobre Nosotros</a>
-<a class="font-['Space_Grotesk'] font-medium uppercase tracking-wider text-sm text-[#0c1d28] dark:text-[#f6faff] opacity-70 hover:opacity-100 hover:text-[#0058be] transition-all duration-300" href="#">Servicios</a>
-<a class="font-['Space_Grotesk'] font-medium uppercase tracking-wider text-sm text-[#0c1d28] dark:text-[#f6faff] opacity-70 hover:opacity-100 hover:text-[#0058be] transition-all duration-300" href="#">Rutas</a>
-<a class="font-['Space_Grotesk'] font-medium uppercase tracking-wider text-sm text-[#0c1d28] dark:text-[#f6faff] opacity-70 hover:opacity-100 hover:text-[#0058be] transition-all duration-300" href="#">Contacto</a>
+<body class="selection:bg-[var(--neon-green)] selection:text-black">
+<nav class="fixed top-0 left-0 w-full z-50 p-6 flex justify-between items-center mix-blend-difference">
+<div class="text-3xl font-syncopate font-bold tracking-tighter text-[var(--stark-white)]">
+            NÓMADE<span class="text-[var(--neon-green)]">.</span>
 </div>
-<button class="bg-primary text-white px-6 py-2 rounded-md font-headline font-bold uppercase tracking-widest text-xs scale-100 hover:scale-95 duration-200 ease-in-out">
-                Reservar Ahora
-            </button>
+<div class="flex gap-8 items-center">
+<span class="material-symbols-outlined text-4xl cursor-pointer hover:text-[var(--magenta)]">menu</span>
 </div>
 </nav>
-<main>
-<!-- Hero Section -->
-<section class="relative min-h-screen flex items-center overflow-hidden">
-<div class="absolute inset-0 z-0">
-<img class="w-full h-full object-cover" data-alt="dramatic wide shot of a modern cruiser motorcycle on a winding mountain road at dusk with atmospheric cinematic lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJJvAmvwDSKlL6w9T_bfSlSarzPOg60ZIZlGpdwVFWUEiswH04qzWeo49Nx5HGKK-23bShbSmAHn5RJMfYEnLYpA5ft0TxLvIX-9Azjj0FV8_uD8uEnjkFAE-gOvG8AOd2z9WW0tktUzEOlVlR1zz5FIygVkZHTiNtv9dj4jZWJw8TR_hvtGwn6J057UDVEI3SestAFfui0yocMwiVBlbin4TR2LvsJIWjMkavBroWL7epYO0V3uVAuGZ5AwSlncrA1Fy6FQNqxPSu"/>
-<div class="absolute inset-0 bg-gradient-to-r from-on-background/90 via-on-background/40 to-transparent"></div>
-</div>
-<div class="relative z-10 max-w-screen-2xl mx-auto px-8 w-full">
-<div class="max-w-3xl">
-<span class="inline-block px-4 py-1 mb-6 rounded-full bg-secondary/20 text-secondary border border-secondary/30 font-headline font-medium uppercase tracking-widest text-xs">
-                        Hostel Motero Premium
-                    </span>
-<h1 class="font-headline font-bold text-6xl md:text-8xl text-white tracking-tighter leading-[0.9] mb-6">
-                        Hostel Nomade
-                    </h1>
-<p class="font-body text-xl md:text-2xl text-surface-variant/90 mb-10 max-w-xl leading-relaxed">
-                        El mejor hostel para los amantes de las dos ruedas. Donde la carretera y el descanso se encuentran en perfecta armonía.
-                    </p>
-<div class="flex flex-col sm:flex-row gap-4">
-<button class="kinetic-gradient text-white px-10 py-5 rounded-md font-headline font-bold uppercase tracking-widest text-sm hover:scale-95 transition-transform duration-200">
-                            Reservar Ahora
-                        </button>
-<button class="bg-white/10 backdrop-blur-md text-white border border-white/20 px-10 py-5 rounded-md font-headline font-bold uppercase tracking-widest text-sm hover:bg-white/20 transition-all duration-200">
-                            Ver Rutas
-                        </button>
-</div>
-</div>
-</div>
-<!-- Scroll Indicator -->
-<div class="absolute bottom-10 left-1/2 -translate-x-1/2 text-white/50 flex flex-col items-center gap-2">
-<span class="text-[10px] uppercase tracking-[0.3em] font-headline">Desliza</span>
-<div class="w-[1px] h-12 bg-gradient-to-b from-white/50 to-transparent"></div>
-</div>
-</section>
-<!-- About / Services Section -->
-<section class="py-24 bg-surface">
-<div class="max-w-screen-2xl mx-auto px-8">
-<div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
-<div class="lg:col-span-5 space-y-8">
-<h2 class="font-headline text-4xl md:text-5xl font-bold text-primary tracking-tight leading-tight">
-                            Un refugio diseñado por y para moteros.
-                        </h2>
-<div class="space-y-6 text-on-surface-variant leading-relaxed text-lg">
-<p>
-                                Hostel Nomade no es solo un lugar donde dormir; es el cuartel general de tu próxima aventura. Entendemos que tu moto es más que un vehículo, es parte de tu identidad.
-                            </p>
-<p>
-                                Hemos creado un espacio donde la técnica se encuentra con el confort. Desde herramientas de precisión hasta camas de alta gama, cada detalle está pensado para el viajero de larga distancia.
-                            </p>
-</div>
-<div class="grid grid-cols-2 gap-8 pt-4">
-<div>
-<span class="block text-4xl font-headline font-bold text-secondary">+50</span>
-<span class="text-sm text-on-surface-variant uppercase tracking-wider">Rutas Mapeadas</span>
-</div>
-<div>
-<span class="block text-4xl font-headline font-bold text-secondary">24/7</span>
-<span class="text-sm text-on-surface-variant uppercase tracking-wider">Taller Abierto</span>
-</div>
-</div>
-</div>
-<div class="lg:col-span-7 grid grid-cols-2 gap-4">
-<div class="space-y-4 pt-12">
-<div class="aspect-[3/4] rounded-xl overflow-hidden bg-surface-container-low shadow-xl">
-<img class="w-full h-full object-cover" data-alt="professional motorcycle workshop interior with organized tools and a classic motorbike on a lift" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLcYRckybrNfb1xvuOXR3PFoGfDJiqcGop-DuQYDK5UbtO08TlZ2IROpwS0fRUgugNJZcWE60LhS6bZy0tZ9JzUe2Mjn1FIk3FqE5KdVIVyb9egcQTvrQKioM5WpYH6Qc5Xv5PBDsVlhYrvxZ8U-Nu46r1NRl3H0fioon7Q8Vah46PsC80f1xgvifYoojGs-8TzHfPPY9eGy8vpNEHA-4TzToRUP4tM-X_hUlA97il_OwPS7_oCkhSmVCGUF-vD0JIUkO_CUNZ7HlT"/>
-</div>
-<div class="p-6 bg-surface-container-lowest rounded-xl">
-<span class="material-symbols-outlined text-primary text-3xl mb-4" data-icon="build">build</span>
-<h3 class="font-headline font-bold text-xl mb-2">Taller Mecánico</h3>
-<p class="text-sm text-on-surface-variant">Herramientas profesionales para mantenimiento preventivo y reparaciones básicas.</p>
-</div>
-</div>
-<div class="space-y-4">
-<div class="p-6 bg-primary text-white rounded-xl">
-<span class="material-symbols-outlined text-white text-3xl mb-4" data-icon="security">security</span>
-<h3 class="font-headline font-bold text-xl mb-2">Parking Seguro</h3>
-<p class="text-sm text-on-primary-container">Garaje privado, vigilado y techado con acceso directo a las habitaciones.</p>
-</div>
-<div class="aspect-[3/4] rounded-xl overflow-hidden bg-surface-container-low shadow-xl">
-<img class="w-full h-full object-cover" data-alt="luxury boutique hostel lounge area with industrial design elements and communal wooden tables" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8aZukWaihnaYoPiUMupL9F2-hAapIYcektDxAl2htzqUoIKETkMEtbKEBQmRmrefZ7yDnbhn-hQ8RUGiW-pB4h23NQwqGbfECaIFHVhtU6ZOyG6iuRzJ0TvTHylcpBgM5TZA0uC10MkUeduI1jzGlQ_9EnBf6OAceS8IXpbjzxILb_v5x_emJRk01UXl04HwnuHRsELaqZ3GdjtN4bhbl7QGgAIjvtmSy9BDCmvDJAJq8XTi9SfBtNxLeaK8G36MzW7cAvnKAHOk7"/>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Features Bento Grid -->
-<section class="py-24 bg-surface-container-low">
-<div class="max-w-screen-2xl mx-auto px-8">
-<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
-<div class="max-w-2xl">
-<h2 class="font-headline text-4xl font-bold tracking-tight mb-4">Experiencias Nomade</h2>
-<p class="text-on-surface-variant">Elevamos el estándar del alojamiento económico centrándonos en lo que realmente importa para tu viaje.</p>
-</div>
-<div class="flex gap-2">
-<span class="bg-surface-container-highest px-4 py-2 rounded-full text-xs font-headline font-bold uppercase tracking-widest text-on-surface-variant">Confort</span>
-<span class="bg-surface-container-highest px-4 py-2 rounded-full text-xs font-headline font-bold uppercase tracking-widest text-on-surface-variant">Aventura</span>
-</div>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-<!-- Feature 1: Rutas -->
-<div class="md:col-span-2 relative group overflow-hidden rounded-2xl aspect-[16/9] md:aspect-auto">
-<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="winding asphalt road through scenic mountain landscape with soft morning fog" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmU9XRscXdBVoLe5A5lrtVyDdtkRxAojtB3Wu0WUmNdk1beZJYph9Y4FgVuB9xIz8ItUhwyOR8E9JWkYIXBEaV_I7KwMBaqJqgMyWB7fCo9mrhqtLQh7rAxGf_YL8DvcbbCjScits2dwcwRo1OkTyn91YY7_wOj-c9OlYtBrgZPFgtsPvgpKKa4WRKcbvrXa6Xpq_5ftvbLV94xGA3usgmE4dUdDaMXuFUgRuI_Q0gAFNYFqsUu8OqrzjaefTI8puIQRpTTe0GaHGU"/>
-<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
-<div class="absolute bottom-0 left-0 p-8">
-<h3 class="font-headline font-bold text-3xl text-white mb-2">Rutas Moteras</h3>
-<p class="text-white/70 max-w-md mb-6">Guías digitales y mapas GPX exclusivos con las mejores curvas y paisajes de la región.</p>
-<button class="bg-white/10 backdrop-blur-md border border-white/20 text-white px-6 py-2 rounded-md font-headline font-bold uppercase text-xs tracking-widest hover:bg-white/30 transition-all">Explorar Mapas</button>
-</div>
-</div>
-<!-- Feature 2: Comunidad -->
-<div class="bg-surface-container-lowest p-8 rounded-2xl flex flex-col justify-between hover:shadow-2xl transition-shadow duration-500">
-<div>
-<div class="w-12 h-12 rounded-lg bg-secondary/10 flex items-center justify-center mb-6">
-<span class="material-symbols-outlined text-secondary text-3xl" data-icon="local_bar">local_bar</span>
-</div>
-<h3 class="font-headline font-bold text-2xl mb-4">Comunidad y Bar</h3>
-<p class="text-on-surface-variant">El punto de encuentro para compartir anécdotas de la carretera con una cerveza artesanal fría.</p>
-</div>
-<div class="pt-8 flex -space-x-3">
-<div class="w-10 h-10 rounded-full border-2 border-white overflow-hidden bg-surface-dim">
-<img alt="User" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvGXaVdphZXFyicstUylVQw1CEl5uyWKKPwVr0wlS5FNAyGxUY_WsxTeGIUbqkuHi_f3Ed1x1KagW8XE8twyDVHxAkG6cCvAWHlOJlvM3013BBpte7KbaZi-Rlpbpr7vZjOuXeHAqfYYIz8DgA2xVoNM02UjSwE0MNCKXmSxI-_jPd9cNjwkhxq8LQ6SLwGc6cmtbeoNy-e1F4KtZtnClQzq_-STQmheL6iUDcflj2Kardi5gLmm5MiM0-x2_Nd10HD_UrEq-z9KgI"/>
-</div>
-<div class="w-10 h-10 rounded-full border-2 border-white overflow-hidden bg-surface-dim">
-<img alt="User" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpf4_bcy1TB9HZPTqnV2XkWxct4Lvn8rlYrdwgaUqlrECa3wZoleo0mxXNM9Pj2_s4S1pdXKe3ZKn-gei9AmL1MoIAo6NvnhQo1avlxbpC3qtnc1ofKjUoRvezt4RNe0NMMY-Qrwnc6iO2e6sVz2F9e8numHhKgEX5h4Xb9ERa3_Ril_PrH1Tge6NeOankcFYTC5CaHV_ANHNhZb5-4ocSwj84qCsvwWt5jSHBa5KZr1zkaokrpheeebMRUfAZvRmgP22X96llE7ee"/>
-</div>
-<div class="w-10 h-10 rounded-full border-2 border-white overflow-hidden bg-surface-dim">
-<img alt="User" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCh934BAb2E1hnyQcNy8PD7myXgr45vpZTUKl9C6xZpBvf1dy_xJRQSw3aQcz5QLjbmcyzjbGFjS_lgSrv9I5hG_QqhFi4ogXkSPF7JxliAvPH4VEwMNnbcKO5GeCg7-td9niRddwzAAsIKskCJML4wmiEsvj0X1i8vSphDkY43nOHFL0iVy8yqwn36ISf8XLGSZd7TSGNcpuKn8CofTvSH-JpQoQy7yZstqPG0v1_8AZNP0Jau2xlaMeLIUCdd1s00CIhm_aiNBa9r"/>
-</div>
-<div class="w-10 h-10 rounded-full border-2 border-white bg-secondary flex items-center justify-center text-[10px] text-white font-bold">+12</div>
-</div>
-</div>
-<!-- Feature 3: Habitaciones -->
-<div class="bg-on-background p-8 rounded-2xl flex flex-col justify-between group">
-<div class="text-white/40 font-headline text-8xl font-black mb-4 group-hover:text-secondary/30 transition-colors">03</div>
-<div>
-<h3 class="font-headline font-bold text-2xl text-white mb-2">Habitaciones Confortables</h3>
-<p class="text-white/60 text-sm">Cápsulas de descanso insonorizadas con lockers extragrandes para cascos y equipamiento.</p>
-</div>
-</div>
-<!-- Feature 4: Ubicación -->
-<div class="md:col-span-2 relative rounded-2xl overflow-hidden bg-surface-container-highest">
-<div class="absolute inset-0 opacity-20 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]"></div>
-<div class="relative z-10 p-8 flex flex-col md:flex-row gap-8 items-center h-full">
-<div class="flex-1">
-<h3 class="font-headline font-bold text-2xl mb-2">En el Corazón de la Ruta</h3>
-<p class="text-on-surface-variant text-sm mb-6">Ubicados estratégicamente en el nexo de las tres rutas más icónicas del país.</p>
-<div class="flex items-center gap-2 text-primary font-bold">
-<span class="material-symbols-outlined" data-icon="location_on">location_on</span>
-<span class="font-headline uppercase tracking-widest text-xs">Pirineos, España</span>
-</div>
-</div>
-<div class="w-full md:w-64 h-40 rounded-xl overflow-hidden shadow-lg border border-white/20">
-<img class="w-full h-full object-cover grayscale brightness-50" data-alt="topographic map view of mountain ranges with a stylized blue route highlighted" data-location="Pyrenees, Spain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBjfw_oG6pW5TLYwcrtedMs5TpEfg_LHuAfvtUMgqJdWrUPzd8XEYumW9vRyiSyOfpI1IGdprQ590EA5RnTF0tWztIqL7IPEHlFMRavjm9v5yeS6fnqez47gZOdWxftjpoWu_neKjfs1mF1q4X5wR4LjFUBD9VTI-Ah1iWN74a6rWSuZN4FfYUqEQPZ1B5nnmNRdM9fR7rrDBBrpFomGBQ4_hphYjm0IK7Ieb8M9kFTKXpe4CIsUnO5aGi_XrI1aOtJ0nSy2wO1E3yh"/>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Signature Component: Nomad Route Card -->
-<section class="py-24 bg-surface overflow-hidden">
-<div class="max-w-screen-2xl mx-auto px-8">
-<div class="mb-16">
-<h2 class="font-headline text-4xl font-bold tracking-tight">Rutas Destacadas</h2>
-</div>
-<div class="flex gap-8 overflow-x-auto pb-12 snap-x no-scrollbar">
-<!-- Route Card 01 -->
-<div class="flex-none w-80 snap-start">
-<div class="relative bg-surface-container-lowest p-6 pt-12 rounded-xl group hover:-translate-y-2 transition-transform duration-300">
-<span class="absolute -top-6 left-6 font-headline text-7xl font-bold text-surface-container-low transition-colors group-hover:text-secondary-container/20">01</span>
-<h4 class="font-headline font-bold text-xl mb-4 text-on-surface relative z-10">La Senda del Silencio</h4>
-<div class="flex items-center gap-4 text-xs font-bold uppercase tracking-widest text-on-surface-variant mb-6">
-<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm" data-icon="distance">distance</span> 120km</span>
-<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm" data-icon="timer">timer</span> 4h</span>
-</div>
-<div class="relative h-48 rounded-lg overflow-hidden">
-<img class="w-full h-full object-cover" data-alt="winding road through a dense forest with dramatic sunbeams cutting through the trees" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_w7WC04I5Tmgx3fc_4P34St5exKDwzGoqaM2Rq8tFYa_I_2-hpfhjEFgtt4m_tU0qJDnKiCfqOT44qQ7kMZqgdWX0WBW5B0k3fQoTmbhcX6JXB6CliU0PLrgnO-N8ibXPH-_SFuODkKHaahCWBL_d0kCY4Pulu6QAIgiUyHaqGF2fhcuQ3fcyO2lY2KNMqDsrIRj1IKVj_x0XhL7wNjr_2h-Q4b9_kTQqCOiBexJwVX3WOIV51APtEBkHWt9Tawaxalxafsjlljxw"/>
-<div class="absolute inset-0 bg-primary/20 backdrop-blur-[2px]"></div>
-<div class="absolute bottom-4 left-4 right-4 bg-white/10 backdrop-blur-xl border border-white/20 p-2 rounded-lg text-center">
-<span class="text-[10px] text-white font-bold uppercase tracking-widest">Dificultad: Media</span>
-</div>
-</div>
-</div>
-</div>
-<!-- Route Card 02 -->
-<div class="flex-none w-80 snap-start">
-<div class="relative bg-surface-container-lowest p-6 pt-12 rounded-xl group hover:-translate-y-2 transition-transform duration-300">
-<span class="absolute -top-6 left-6 font-headline text-7xl font-bold text-surface-container-low transition-colors group-hover:text-secondary-container/20">02</span>
-<h4 class="font-headline font-bold text-xl mb-4 text-on-surface relative z-10">Ascenso al Glaciar</h4>
-<div class="flex items-center gap-4 text-xs font-bold uppercase tracking-widest text-on-surface-variant mb-6">
-<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm" data-icon="distance">distance</span> 85km</span>
-<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm" data-icon="timer">timer</span> 3h</span>
-</div>
-<div class="relative h-48 rounded-lg overflow-hidden">
-<img class="w-full h-full object-cover" data-alt="high altitude mountain road with snow-capped peaks in the background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7q-PrZZt4BSbnoj1hj7wBQkTCv-VDp_kcKLzsPn1JPiGOTWUugbQisBg0x7qpyjQSJMNZJr5XZKYiEWLXvIUBYkYAcbkK-MS1tpsVNo1OEY2XIrwTMcn5UpMDTp2ne9KUFGTveyeYfQJ0UxHW3XNJNE20NXiQrrAsObxxetOpevuYXGz-uHL1KXK00K4-ITc26YiW16hp716SejXjhCEKMX7lelVMYReJneO1vSUayC4wVOlC8IYbn9n-P1kITX499Qd6Z7uKHui0"/>
-<div class="absolute inset-0 bg-primary/20 backdrop-blur-[2px]"></div>
-<div class="absolute bottom-4 left-4 right-4 bg-white/10 backdrop-blur-xl border border-white/20 p-2 rounded-lg text-center">
-<span class="text-[10px] text-white font-bold uppercase tracking-widest">Dificultad: Alta</span>
-</div>
-</div>
-</div>
-</div>
-<!-- Route Card 03 -->
-<div class="flex-none w-80 snap-start">
-<div class="relative bg-surface-container-lowest p-6 pt-12 rounded-xl group hover:-translate-y-2 transition-transform duration-300">
-<span class="absolute -top-6 left-6 font-headline text-7xl font-bold text-surface-container-low transition-colors group-hover:text-secondary-container/20">03</span>
-<h4 class="font-headline font-bold text-xl mb-4 text-on-surface relative z-10">Curvas de la Costa</h4>
-<div class="flex items-center gap-4 text-xs font-bold uppercase tracking-widest text-on-surface-variant mb-6">
-<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm" data-icon="distance">distance</span> 210km</span>
-<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm" data-icon="timer">timer</span> 6h</span>
-</div>
-<div class="relative h-48 rounded-lg overflow-hidden">
-<img class="w-full h-full object-cover" data-alt="panoramic coastal road hugging the blue ocean cliffs at sunset" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBVjHvzDmt05rUET_DwvKaa002cX5NlpmYyvF3ZfE1tHO1lEf_BUux7GHkSQfGapK0fFoSy6C89yHxMr0yOjl57-aNwUONa-qBRbzvT6JsxoEr9Ww_mqEH56Iz2YS7xmpvZQfZvitnzUP77iduaUVUsAIj71fdqltvD75kjD0vruwupdoDtrOqPjK6PKug1U5DxFDsWLghT38oPIvfj9ncNFShFJVuO1XE9-8ihL-IcKbenKu7pMoG0VAK52TtN-GDDRjZ4t15JJh2C"/>
-<div class="absolute inset-0 bg-primary/20 backdrop-blur-[2px]"></div>
-<div class="absolute bottom-4 left-4 right-4 bg-white/10 backdrop-blur-xl border border-white/20 p-2 rounded-lg text-center">
-<span class="text-[10px] text-white font-bold uppercase tracking-widest">Dificultad: Baja</span>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- CTA Section -->
-<section class="py-24 relative overflow-hidden bg-on-background">
-<div class="absolute top-0 right-0 w-1/3 h-full opacity-10 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]"></div>
-<div class="max-w-screen-2xl mx-auto px-8 relative z-10 flex flex-col items-center text-center">
-<h2 class="font-headline font-bold text-5xl md:text-7xl text-white tracking-tighter mb-8 leading-tight">
-                    ¿Listo para arrancar <br/>la aventura?
-                </h2>
-<p class="text-white/60 text-lg md:text-xl max-w-2xl mb-12">
-                    Reserva tu plaza hoy mismo y únete a la comunidad de viajeros más auténtica de la península.
+<main class="p-4 md:p-10 pt-24 max-w-[1600px] mx-auto">
+<div class="collage-grid">
+<div class="col-span-12 md:col-span-8 row-span-2 relative z-10 flex flex-col justify-end p-4">
+<h1 class="text-6xl md:text-9xl font-syncopate font-bold leading-none glitch-text uppercase italic">
+                    Vive el <br/><span class="text-[var(--neon-green)]">Asfalto</span>
+</h1>
+<p class="mt-6 text-xl max-w-md border-l-4 border-[var(--magenta)] pl-4 font-light">
+                    Refugio brutalista para nómadas que no temen al ruido.
                 </p>
-<button class="bg-white text-primary px-12 py-6 rounded-md font-headline font-bold uppercase tracking-widest text-sm hover:bg-secondary-fixed transition-colors">
-                    Asegurar mi estancia
-                </button>
+</div>
+<div class="col-span-6 md:col-span-4 row-span-3 overflow-hidden mask-jagged bg-zinc-800 border-2 border-[var(--magenta)]">
+<img alt="Urban Texture" class="w-full h-full object-cover grayscale contrast-150 hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAiIEP1PmVD5Oz7tfn04we5Sb4ZexHtJj1Uzc08xW9in22ZHf-8XeVaLwaE5-6eSXn89rY7CWae8H8s78OAR7rm9y1tS9FtD9wLUwITeJ0QEn9aUPo93aFRW8eLJrG-bB2zG_kXGO-gtKGQ3sP4F6cFm7wnQ3pkBYxjquGoD-b0jlKTZ9ekBwW591nAoDXzYTU61GVlyfVHpfEH3Dq5fKLCin7tEoOTXX4-vqL-SHDfBBRpqBJdOvLkOo4lWTCEOFbvrALJdAZrIIen"/>
+</div>
+<div class="col-span-6 md:col-span-3 row-span-2 bg-[var(--neon-green)] text-black p-6 flex flex-col justify-between skew-box -rotate-2 z-20">
+<span class="material-symbols-outlined text-5xl">bolt</span>
+<h2 class="text-4xl font-syncopate font-bold leading-tight">CAOS<br/>CONTROLADO</h2>
+</div>
+<div class="col-span-12 md:col-span-5 row-span-4 relative -mt-20 md:-mt-40 z-0">
+<img alt="Street Art" class="w-full h-full object-cover filter contrast-125 sepia-[.5] hue-rotate-[280deg]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFzfQOzQngEPnENDAwSVlrmTJVlj_9Schv0VCyE6o9vjBkeL7TISTg9h85kAKpUiRx_xNWvFAJxS8JUomUErSRATReA0An--l1_K6s79uFG59r5D3z104UkYZFz3LBkOkfEkYfm_9WQNxq75Z3jrE70IsVcmGOS5JTYWTsBENJlxudY0NbWQZemB7dO8Ggj18hSswRxkoAyWTX9ZIhwRI5T0CzxRiyaTGbRz3RrKNhwlcXpAQpzitdNGcgUKRoGPqtlRhKtgbkXdBM"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[var(--charcoal)] to-transparent"></div>
+</div>
+<div class="hidden md:flex col-span-1 row-span-4 items-center justify-center">
+<div class="vertical-text font-syncopate text-2xl font-bold text-zinc-600 tracking-widest uppercase">
+                    SIN REGLAS • SIN LÍMITES • NÓMADE
+                </div>
+</div>
+<div class="col-span-12 md:col-span-3 row-span-2 brutal-border bg-[var(--charcoal)] p-8 flex flex-col items-center justify-center gap-4 group cursor-pointer hover:bg-[var(--magenta)] transition-colors">
+<p class="font-syncopate font-bold text-center">RESERVA TU ESPACIO</p>
+<span class="material-symbols-outlined text-6xl group-hover:translate-x-2 transition-transform">arrow_forward</span>
+</div>
+<div class="col-span-6 md:col-span-4 row-span-2 grid grid-cols-2 gap-2">
+<div class="bg-zinc-900 flex items-center justify-center p-4 border border-zinc-800">
+<span class="text-[var(--neon-green)] font-bold">WIFI 6G</span>
+</div>
+<div class="bg-zinc-900 flex items-center justify-center p-4 border border-zinc-800">
+<span class="text-[var(--magenta)] font-bold">CAFÉ FRÍO</span>
+</div>
+<div class="col-span-2 bg-[var(--stark-white)] text-black flex items-center justify-center p-4">
+<span class="font-syncopate font-black text-xs">COMMUNITY FIRST</span>
+</div>
+</div>
+<div class="col-span-6 md:col-span-4 row-span-4 mask-blob bg-zinc-800 overflow-hidden mt-8">
+<img alt="Hostel Vibe" class="w-full h-full object-cover grayscale opacity-60 hover:opacity-100 transition-opacity" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHCoyM7AvjHohRCv5huXzHAnqivVKp0fhREvHfyMy5oaKsRzDe9OoOgrlGR4jIQp-VRWjXB8dv4sMc9hMKxj2Ka3aXUYtZHyo2NNJebwd4BpeRUocpISLSxuu5Sk3xb2Pil95UN5evyn08355AHOvtmzhRPenXRNBt2E3Josw3PIvrRvmpeGeMrytn_A24jj7m_5Qa-qrJLpUUbUlCBCp1xD8KJWKz5ylZqqu-uV2gOKq1fEt7pbQgcnd676UGHoavAnq8WJFLUBcC"/>
+</div>
+<div class="col-span-12 md:col-span-3 row-span-2 relative border-4 border-dotted border-zinc-700 flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 opacity-20 pointer-events-none bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]"></div>
+<div class="relative z-10 text-center">
+<h3 class="text-5xl font-black text-zinc-500 opacity-30">GRAFFITI</h3>
+</div>
+</div>
+<div class="col-span-12 md:col-span-5 row-span-1 flex items-center px-4">
+<h4 class="text-3xl md:text-5xl font-syncopate font-black text-transparent stroke-text" style="-webkit-text-stroke: 1px var(--stark-white);">
+                    DORMIR ES SECUNDARIO
+                </h4>
+</div>
+<div class="col-span-12 md:col-span-4 row-span-3 bg-zinc-900 p-10 flex flex-col justify-end relative">
+<div class="absolute top-0 right-0 p-4">
+<span class="material-symbols-outlined text-[var(--neon-green)] text-4xl">location_on</span>
+</div>
+<h5 class="text-4xl font-syncopate font-bold mb-4">CENTRO CIUDAD</h5>
+<p class="text-sm uppercase tracking-widest text-zinc-500">Calle del Ruido 404, Distrito Zero.</p>
+</div>
+<div class="col-span-6 md:col-span-4 row-span-2 bg-[var(--magenta)] p-2">
+<div class="w-full h-full border-2 border-black flex items-center justify-center italic font-bold text-black text-xl">
+                    #STAYREBEL
+                </div>
+</div>
+<div class="col-span-6 md:col-span-2 row-span-2 overflow-hidden">
+<img alt="Detail" class="w-full h-full object-cover contrast-150 brightness-50" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVGIpha--s_-pY6VXm4a5RJXex2lcgrmSn3CdPr3N9lNos8rbeSEm7UuZ7VzRQXeMupmyxvPM027DAc2uNzfTrt-b9BGTOwPj-z_VkEOvqjBk0utxTRt14uHQdmne1zXVpQdZxHGbjCheuCPvS9H3ZxFpwYSZKmT7pZ-QnHNhn7MS9tKLHR494wsdxdZsrcu5XhIwWJEIlUsvJBvJ09UZ5zw5hd0uRXMp1TXQEdLofxQZXBYQzjvBQ6VzgBAQuU4VXI_IyhqogYrrc"/>
+</div>
+</div>
+<section class="mt-40 mb-20 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+<div class="relative">
+<div class="absolute -top-20 -left-10 text-[10rem] font-black text-zinc-900 select-none z-0">RAW</div>
+<h2 class="text-7xl font-syncopate font-bold relative z-10 glitch-text">EL MANIFIESTO</h2>
+</div>
+<div class="space-y-8">
+<div class="flex gap-6 items-start">
+<span class="text-4xl font-syncopate text-[var(--neon-green)]">01.</span>
+<p class="text-2xl font-light">No somos un hotel. Somos un cruce de caminos.</p>
+</div>
+<div class="flex gap-6 items-start">
+<span class="text-4xl font-syncopate text-[var(--magenta)]">02.</span>
+<p class="text-2xl font-light">El confort es aburrido. La experiencia es todo.</p>
+</div>
+<div class="flex gap-6 items-start">
+<span class="text-4xl font-syncopate text-[var(--neon-green)]">03.</span>
+<p class="text-2xl font-light">Conexión real sobre wi-fi (aunque el nuestro vuela).</p>
+</div>
 </div>
 </section>
 </main>
-<!-- Footer -->
-<footer class="w-full py-12 px-8 bg-[#0c1d28] dark:bg-black">
-<div class="max-w-screen-2xl mx-auto">
-<div class="flex flex-col md:flex-row justify-between items-center gap-6">
-<div class="text-lg font-bold text-[#f6faff] font-headline">
-                    Hostel Nomade
-                </div>
-<div class="flex gap-8">
-<a class="font-['Inter'] text-sm tracking-normal text-[#f6faff]/60 hover:text-white transition-colors" href="#">Privacidad</a>
-<a class="font-['Inter'] text-sm tracking-normal text-[#f6faff]/60 hover:text-white transition-colors" href="#">Términos</a>
-<a class="font-['Inter'] text-sm tracking-normal text-[#f6faff]/60 hover:text-white transition-colors" href="#">Instagram</a>
-<a class="font-['Inter'] text-sm tracking-normal text-[#f6faff]/60 hover:text-white transition-colors" href="#">Facebook</a>
+<footer class="border-t border-zinc-800 p-10 mt-20 bg-black flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="font-syncopate font-bold text-xl tracking-tighter">
+            HOSTEL NÓMADE <span class="text-zinc-600">© 2024</span>
 </div>
-<div class="font-['Inter'] text-sm tracking-normal text-[#f6faff]/60">
-                    © 2024 Hostel Nomade. El Horizonte Kinético.
-                </div>
-</div>
+<div class="flex gap-6">
+<a class="hover:text-[var(--neon-green)] transition-colors uppercase text-xs font-bold tracking-widest" href="#">Instagram</a>
+<a class="hover:text-[var(--magenta)] transition-colors uppercase text-xs font-bold tracking-widest" href="#">Spotify</a>
+<a class="hover:text-[var(--neon-green)] transition-colors uppercase text-xs font-bold tracking-widest" href="#">TikTok</a>
 </div>
 </footer>
+
 </body></html>

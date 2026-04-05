@@ -1,377 +1,260 @@
 <!DOCTYPE html>
 
-<html class="scroll-smooth" lang="en"><head>
+<html class="scroll-smooth" lang="es"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>ARCHITECT | Precision Engineered Systems</title>
+<title>DISEÑO WEB | Autoridad en Estrategia Digital</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        "on-primary-container": "#7c839b",
-                        "on-error": "#ffffff",
-                        "surface": "#f7f9fb",
-                        "inverse-surface": "#2d3133",
-                        "surface-bright": "#f7f9fb",
-                        "on-secondary-fixed": "#0d1c2f",
-                        "on-tertiary-container": "#0090a9",
-                        "surface-variant": "#e0e3e5",
-                        "tertiary": "#000000",
-                        "on-primary-fixed-variant": "#3f465c",
-                        "surface-container-highest": "#e0e3e5",
-                        "primary-fixed": "#dae2fd",
-                        "inverse-primary": "#bec6e0",
-                        "secondary": "#515f74",
-                        "secondary-container": "#d5e3fd",
-                        "on-tertiary-fixed": "#001f26",
-                        "primary-container": "#131b2e",
-                        "on-primary": "#ffffff",
-                        "outline-variant": "#c6c6cd",
-                        "secondary-fixed-dim": "#b9c7e0",
-                        "on-error-container": "#93000a",
-                        "on-secondary-fixed-variant": "#3a485c",
-                        "secondary-fixed": "#d5e3fd",
-                        "tertiary-fixed-dim": "#4cd7f6",
-                        "on-tertiary-fixed-variant": "#004e5c",
-                        "surface-container-lowest": "#ffffff",
-                        "tertiary-fixed": "#acedff",
-                        "on-tertiary": "#ffffff",
-                        "surface-container": "#eceef0",
-                        "tertiary-container": "#001f26",
-                        "on-secondary-container": "#57657b",
-                        "error-container": "#ffdad6",
-                        "surface-container-low": "#f2f4f6",
-                        "surface-container-high": "#e6e8ea",
-                        "outline": "#76777d",
-                        "on-surface-variant": "#45464d",
-                        "surface-tint": "#565e74",
-                        "error": "#ba1a1a",
-                        "background": "#f7f9fb",
-                        "on-secondary": "#ffffff",
-                        "on-surface": "#191c1e",
-                        "primary-fixed-dim": "#bec6e0",
-                        "on-primary-fixed": "#131b2e",
-                        "primary": "#000000",
-                        "surface-dim": "#d8dadc",
-                        "on-background": "#191c1e",
-                        "inverse-on-surface": "#eff1f3"
-                    },
-                    fontFamily: {
-                        "headline": ["Manrope"],
-                        "body": ["Inter"],
-                        "label": ["Inter"]
-                    },
-                    borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" },
-                },
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "inverse-primary": "#b8c4ff",
+                    "on-secondary-fixed-variant": "#004395",
+                    "error": "#ba1a1a",
+                    "tertiary": "#003564",
+                    "on-primary-container": "#a8b8ff",
+                    "on-primary-fixed": "#001453",
+                    "on-secondary-container": "#fefcff",
+                    "tertiary-container": "#004c8b",
+                    "on-tertiary-container": "#8fbeff",
+                    "surface-container-high": "#eae7e7",
+                    "surface-variant": "#e5e2e1",
+                    "surface-container-low": "#f6f3f2",
+                    "outline-variant": "#c4c5d5",
+                    "primary-fixed-dim": "#b8c4ff",
+                    "primary-fixed": "#dde1ff",
+                    "surface": "#fcf9f8",
+                    "primary-container": "#1e40af",
+                    "on-primary-fixed-variant": "#173bab",
+                    "surface-bright": "#fcf9f8",
+                    "surface-container-highest": "#e5e2e1",
+                    "surface-tint": "#3755c3",
+                    "on-background": "#1c1b1b",
+                    "on-tertiary": "#ffffff",
+                    "error-container": "#ffdad6",
+                    "secondary-fixed": "#d8e2ff",
+                    "surface-container": "#f0eded",
+                    "inverse-surface": "#313030",
+                    "primary": "#00288e",
+                    "on-surface": "#1c1b1b",
+                    "on-primary": "#ffffff",
+                    "surface-container-lowest": "#ffffff",
+                    "secondary": "#0058be",
+                    "on-tertiary-fixed": "#001c39",
+                    "background": "#fcf9f8",
+                    "on-secondary-fixed": "#001a42",
+                    "tertiary-fixed": "#d4e3ff",
+                    "on-tertiary-fixed-variant": "#004883",
+                    "surface-dim": "#dcd9d9",
+                    "tertiary-fixed-dim": "#a4c9ff",
+                    "on-error-container": "#93000a",
+                    "on-surface-variant": "#444653",
+                    "on-error": "#ffffff",
+                    "secondary-container": "#2170e4",
+                    "on-secondary": "#ffffff",
+                    "outline": "#757684",
+                    "inverse-on-surface": "#f3f0ef",
+                    "secondary-fixed-dim": "#adc6ff"
             },
-        }
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope", "sans-serif"],
+                    "body": ["Inter", "sans-serif"],
+                    "label": ["Inter", "sans-serif"]
+            }
+          },
+        },
+      }
     </script>
 <style>
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }
-        .ghost-shadow {
-            box-shadow: 0 24px 48px -12px rgba(25, 28, 30, 0.08);
-        }
-        .text-glow:focus {
-            box-shadow: 0 0 0 2px #4cd7f6;
-        }
-        .machined-metal {
-            background: linear-gradient(135deg, #000000 0%, #131b2e 100%);
-        }
-        .glass-nav {
-            backdrop-filter: blur(20px);
-        }
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        vertical-align: middle;
+      }
+      body { font-family: 'Inter', sans-serif; }
+      h1, h2, h3, h4 { font-family: 'Manrope', sans-serif; }
     </style>
 </head>
-<body class="bg-surface font-body text-on-surface antialiased">
-<!-- 1. Navigation -->
-<nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl">
-<div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
-<div class="text-2xl font-extrabold tracking-tighter text-slate-900 dark:text-white font-headline">
-                ARCHITECT
-            </div>
-<!-- Desktop Links -->
-<div class="hidden md:flex items-center gap-8">
-<a class="font-manrope font-bold tracking-tight text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors duration-300" href="#features">Features</a>
-<a class="font-manrope font-bold tracking-tight text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors duration-300" href="#solutions">Solutions</a>
-<a class="font-manrope font-bold tracking-tight text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors duration-300" href="#about">About</a>
-<a class="font-manrope font-bold tracking-tight text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors duration-300" href="#contact">Contact</a>
-</div>
-<div class="flex items-center gap-4">
-<button class="machined-metal text-on-primary px-6 py-2 font-bold transition-all duration-300 hover:opacity-80 rounded-sm">
-                    Get Started
-                </button>
-</div>
-</div>
+<body class="bg-surface text-on-surface antialiased selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl shadow-[0_20px_40px_rgba(28,27,27,0.03)] transition-all">
+<div class="max-w-7xl mx-auto flex justify-between items-center px-8 py-4">
+<a class="text-xl font-extrabold tracking-tighter text-blue-900 dark:text-white uppercase" href="#">DISEÑO WEB</a>
+<nav class="hidden md:flex items-center gap-10">
+<a class="text-blue-700 dark:text-blue-400 font-bold border-b-2 border-blue-700 dark:border-blue-400 pb-1 hover:text-blue-900 dark:hover:text-blue-200 transition-all duration-300" href="#inicio">Inicio</a>
+<a class="text-slate-600 dark:text-slate-400 font-medium hover:text-blue-900 dark:hover:text-blue-200 transition-all duration-300" href="#servicios">Servicios</a>
+<a class="text-slate-600 dark:text-slate-400 font-medium hover:text-blue-900 dark:hover:text-blue-200 transition-all duration-300" href="#nosotros">Nosotros</a>
+<a class="text-slate-600 dark:text-slate-400 font-medium hover:text-blue-900 dark:hover:text-blue-200 transition-all duration-300" href="#portafolio">Portafolio</a>
+<a class="text-slate-600 dark:text-slate-400 font-medium hover:text-blue-900 dark:hover:text-blue-200 transition-all duration-300" href="#contacto">Contacto</a>
 </nav>
-<main>
-<!-- 2. Hero Section -->
-<section class="relative min-h-screen flex items-center pt-20 overflow-hidden bg-surface-container-low">
-<div class="absolute inset-0 opacity-10 pointer-events-none">
-<div class="absolute top-[-10%] right-[-10%] w-[600px] h-[600px] rounded-full bg-tertiary-fixed-dim blur-[120px]"></div>
-<div class="absolute bottom-[-5%] left-[-5%] w-[400px] h-[400px] rounded-full bg-primary-container blur-[100px]"></div>
+<button class="bg-primary text-on-primary px-6 py-2.5 rounded-full font-semibold text-sm active:scale-95 hover:bg-secondary transition-all duration-300">
+                Empezar Proyecto
+            </button>
 </div>
-<div class="max-w-7xl mx-auto px-8 w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
+</header>
+<main>
+<!-- Hero Section -->
+<section class="pt-40 pb-24 md:pt-56 md:pb-40 px-8" id="inicio">
+<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
 <div class="lg:col-span-7">
-<div class="inline-block px-3 py-1 mb-6 border border-outline-variant/30 text-[0.65rem] font-bold tracking-widest uppercase text-on-surface-variant">
-                        Engineering the Future
-                    </div>
-<h1 class="font-headline text-5xl md:text-7xl font-extrabold tracking-tighter text-primary leading-[1.1] mb-8">
-                        The Architectural <span class="text-tertiary-fixed-dim">Blueprint</span> for Scale.
+<h1 class="text-5xl md:text-7xl lg:text-8xl font-extrabold tracking-tight text-on-surface leading-[1.1] mb-8">
+                        Arquitectura <span class="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Digital</span> con Propósito
                     </h1>
-<p class="text-lg md:text-xl text-on-surface-variant max-w-xl leading-relaxed mb-10">
-                        High-precision digital infrastructure designed for institutional stability. We build the systems that define tomorrow's industrial standards.
+<p class="text-lg md:text-xl text-on-surface-variant leading-relaxed max-w-2xl mb-10">
+                        Transformamos marcas ambiciosas en autoridades del mercado digital a través de un diseño web de alta precisión y estrategias de conversión orientadas a resultados.
                     </p>
-<div class="flex flex-col sm:flex-row gap-4">
-<button class="machined-metal text-on-primary px-8 py-4 font-bold text-lg hover:translate-y-[-2px] transition-all duration-300 flex items-center justify-center gap-2 group">
-                            Launch Project 
-                            <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
-</button>
-<button class="bg-surface-container-lowest border border-outline-variant/20 px-8 py-4 font-bold text-lg hover:bg-surface-container transition-all duration-300">
-                            View Documentation
+<div class="flex flex-wrap gap-4">
+<button class="bg-primary text-on-primary px-8 py-4 rounded-full font-bold text-lg hover:bg-secondary transition-all shadow-lg shadow-primary/20">
+                            Descubre Nuestro Trabajo
+                        </button>
+<button class="text-primary font-bold px-8 py-4 rounded-full border border-primary/20 hover:bg-primary/5 transition-all">
+                            Nuestros Servicios
                         </button>
 </div>
 </div>
-<div class="lg:col-span-5 relative hidden lg:block">
-<div class="aspect-square bg-surface-container-highest rounded-xl overflow-hidden ghost-shadow transform rotate-3">
-<img alt="Modern architectural structure" class="w-full h-full object-cover grayscale opacity-80 hover:grayscale-0 transition-all duration-700" data-alt="Modern geometric skyscraper facade with reflective glass and sharp diagonal lines under a clear blue sky" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB88gqp2anO7lfThlqx1OwI74HmI2XnYRAKP0QeqXslL11sv_7IyaYwWSfiQiig4I5Urek4_ULbyMtvdSsDVWAR_Wxh7BHIfucXSXlpnM-0PGhTDWqvSo8abWDFJZwrrKtsw81EKA6cYmTK4k1sBXb7Msq4lLR4U9CqRLnq67Qt5JJKJDAHczNRfkhjX4TpO7joihrFyMjabPPi1DD4Z1QtjHG5u0PZARKYPsjBFelwVKfopYD6sTuxYMoEsCi56hZFZU4MLXm2iA"/>
+<div class="lg:col-span-5 relative">
+<div class="aspect-[4/5] rounded-xl overflow-hidden shadow-2xl relative z-10">
+<img alt="Professional web design setup" class="w-full h-full object-cover" data-alt="high-end modern workspace with laptop displaying abstract architectural design in minimalist home office with natural light and plants" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMAApgO5GUdeFr8cw0sXG0ByQCfw3nNLxP6VVD_BClOwctuaRPQ2iGwN8_1pL0ulGWqoYLV0UCWE2HhRH0emV59evbsMN6olcfXRM-tRUv8C_oGmGO6w53OlDrxmi0DLB4CX0MGQInJkuuIVuNI7-chxbhRY2tS_iJBBSa3kQCOyx1uRH8BgElSeCfU9rlMMrqbcXtCkkG3Uq697feJjUbKY4vwnQeCh45VGaGDLeUIwG7x4TGuhb9wtvv8v8QjIUXRuMsd3obMhFD"/>
 </div>
-<div class="absolute -bottom-6 -left-6 bg-white p-6 ghost-shadow max-w-[240px]">
-<p class="text-xs font-bold uppercase tracking-tighter text-on-primary-container mb-2">Technical Specs</p>
-<div class="h-1 w-12 bg-tertiary-fixed-dim mb-4"></div>
-<p class="text-sm text-on-surface leading-snug">99.99% Operational Integrity across distributed clusters.</p>
-</div>
+<div class="absolute -bottom-6 -left-6 w-48 h-48 bg-secondary-container/20 blur-3xl rounded-full z-0"></div>
+<div class="absolute -top-6 -right-6 w-64 h-64 bg-primary-container/10 blur-3xl rounded-full z-0"></div>
 </div>
 </div>
 </section>
-<!-- 3. Feature Grid -->
-<section class="py-32 bg-surface" id="features">
+<!-- Services Section -->
+<section class="py-24 md:py-32 bg-surface-container-low" id="servicios">
 <div class="max-w-7xl mx-auto px-8">
 <div class="mb-20">
-<h2 class="font-headline text-4xl font-extrabold tracking-tight text-primary mb-4">Professional Services</h2>
-<p class="text-on-surface-variant max-w-lg">Engineered solutions tailored for complex organizational requirements.</p>
+<span class="text-primary font-bold tracking-widest uppercase text-sm block mb-4">Especialización</span>
+<h2 class="text-4xl md:text-5xl font-extrabold text-on-surface max-w-3xl leading-tight">
+                        Servicios diseñados para elevar la presencia de su negocio.
+                    </h2>
 </div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-10">
-<!-- Feature 1 -->
-<div class="group bg-surface-container-lowest p-10 hover:translate-y-[-8px] transition-all duration-500 hover:shadow-2xl hover:shadow-primary-container/5 relative">
-<div class="w-12 h-12 machined-metal flex items-center justify-center mb-8">
-<span class="material-symbols-outlined text-white" data-icon="architecture">architecture</span>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Service Card 1 -->
+<div class="bg-surface-container-lowest p-10 rounded-xl hover:shadow-xl transition-shadow duration-500 group">
+<div class="w-14 h-14 bg-primary-container/10 rounded-full flex items-center justify-center mb-8 group-hover:bg-primary-container transition-colors duration-500">
+<span class="material-symbols-outlined text-primary group-hover:text-on-primary transition-colors duration-500" data-icon="design_services">design_services</span>
 </div>
-<h3 class="font-headline text-xl font-bold mb-4">Structural Integrity</h3>
-<p class="text-on-surface-variant leading-relaxed text-sm">Modular architecture that scales horizontally without compromising performance or data consistency.</p>
-<div class="mt-8 pt-8 border-t border-outline-variant/10 flex items-center justify-between opacity-0 group-hover:opacity-100 transition-opacity">
-<span class="text-xs font-bold uppercase tracking-widest text-tertiary-fixed-dim">View Service</span>
-<span class="material-symbols-outlined text-tertiary-fixed-dim">north_east</span>
+<h3 class="text-2xl font-bold mb-4 text-on-surface">Diseño UX/UI</h3>
+<p class="text-on-surface-variant leading-relaxed">
+                            Creamos interfaces intuitivas que reducen la fricción y maximizan la retención del usuario a través de una estética minimalista y funcional.
+                        </p>
+</div>
+<!-- Service Card 2 -->
+<div class="bg-surface-container-lowest p-10 rounded-xl hover:shadow-xl transition-shadow duration-500 group">
+<div class="w-14 h-14 bg-primary-container/10 rounded-full flex items-center justify-center mb-8 group-hover:bg-primary-container transition-colors duration-500">
+<span class="material-symbols-outlined text-primary group-hover:text-on-primary transition-colors duration-500" data-icon="terminal">terminal</span>
+</div>
+<h3 class="text-2xl font-bold mb-4 text-on-surface">Desarrollo Web</h3>
+<p class="text-on-surface-variant leading-relaxed">
+                            Ingeniería de software robusta, optimizada para velocidad y SEO, utilizando las tecnologías más avanzadas del mercado actual.
+                        </p>
+</div>
+<!-- Service Card 3 -->
+<div class="bg-surface-container-lowest p-10 rounded-xl hover:shadow-xl transition-shadow duration-500 group">
+<div class="w-14 h-14 bg-primary-container/10 rounded-full flex items-center justify-center mb-8 group-hover:bg-primary-container transition-colors duration-500">
+<span class="material-symbols-outlined text-primary group-hover:text-on-primary transition-colors duration-500" data-icon="query_stats">query_stats</span>
+</div>
+<h3 class="text-2xl font-bold mb-4 text-on-surface">Estrategia Digital</h3>
+<p class="text-on-surface-variant leading-relaxed">
+                            No solo construimos sitios; trazamos caminos hacia el crecimiento mediante el análisis de datos y el posicionamiento de marca.
+                        </p>
 </div>
 </div>
-<!-- Feature 2 -->
-<div class="group bg-surface-container-lowest p-10 hover:translate-y-[-8px] transition-all duration-500 hover:shadow-2xl hover:shadow-primary-container/5 relative">
-<div class="w-12 h-12 machined-metal flex items-center justify-center mb-8">
-<span class="material-symbols-outlined text-white" data-icon="precision_manufacturing">precision_manufacturing</span>
 </div>
-<h3 class="font-headline text-xl font-bold mb-4">Precision Logic</h3>
-<p class="text-on-surface-variant leading-relaxed text-sm">Automated workflows powered by deterministic algorithms to eliminate human error in critical paths.</p>
-<div class="mt-8 pt-8 border-t border-outline-variant/10 flex items-center justify-between opacity-0 group-hover:opacity-100 transition-opacity">
-<span class="text-xs font-bold uppercase tracking-widest text-tertiary-fixed-dim">View Service</span>
-<span class="material-symbols-outlined text-tertiary-fixed-dim">north_east</span>
+</section>
+<!-- About Section -->
+<section class="py-24 md:py-40 bg-surface" id="nosotros">
+<div class="max-w-7xl mx-auto px-8 grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+<div class="order-2 lg:order-1">
+<div class="bg-surface-container-high rounded-xl p-4 md:p-8">
+<img alt="Digital strategy team at work" class="w-full h-auto rounded-lg shadow-lg -mt-12 md:-mt-16 -ml-4 md:-ml-8 transition-transform hover:scale-[1.02] duration-500" data-alt="diverse team of creative professionals collaborating in a bright modern office studio with large windows and digital wireframes on screen" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBYb4hfTToDZY2avqY8S_arThQYzVP6l15iiMkrwrRa7js16X1bc7tQLrNQ_oeyThLECCZ86tkRaVMe9T-TSOuv-uK2JdkxCs1GMfjydaLZ-HzFUPtliRW8hN9KhLpcHmy2THT6zkvWaQYYjv88LoIzxna2IP3jhDyxTGDTFN5oWkDGpJ9XZ_LuQRlK-bcUpsvnnrUDsEl98ztSG2kFCu5AI-YdZnMCOwf4C34lwjoObiTHXq_3N58PTfJbWwzc0Jv--Mx-AdFBsQqx"/>
 </div>
 </div>
-<!-- Feature 3 -->
-<div class="group bg-surface-container-lowest p-10 hover:translate-y-[-8px] transition-all duration-500 hover:shadow-2xl hover:shadow-primary-container/5 relative">
-<div class="w-12 h-12 machined-metal flex items-center justify-center mb-8">
-<span class="material-symbols-outlined text-white" data-icon="security">security</span>
+<div class="order-1 lg:order-2">
+<span class="text-secondary font-bold tracking-widest uppercase text-sm block mb-4">Nuestra Filosofía</span>
+<h2 class="text-4xl md:text-5xl font-extrabold text-on-surface leading-tight mb-8">
+                        Donde la arquitectura se encuentra con la comunicación.
+                    </h2>
+<div class="space-y-6 text-lg text-on-surface-variant leading-relaxed">
+<p>
+                            En <span class="font-bold text-on-surface">Diseño Web</span>, creemos que un sitio web es el activo más valioso de una organización. No es solo un escaparate, sino una herramienta de precisión que debe reflejar la autoridad de su marca.
+                        </p>
+<p>
+                            Nuestro enfoque editorial prioriza la legibilidad, la jerarquía visual y el impacto emocional. Eliminamos lo innecesario para dejar que su mensaje principal resuene con claridad absoluta en su audiencia.
+                        </p>
 </div>
-<h3 class="font-headline text-xl font-bold mb-4">Security Perimeter</h3>
-<p class="text-on-surface-variant leading-relaxed text-sm">Zero-trust protocols embedded at the core of every deployment, ensuring maximum data isolation.</p>
-<div class="mt-8 pt-8 border-t border-outline-variant/10 flex items-center justify-between opacity-0 group-hover:opacity-100 transition-opacity">
-<span class="text-xs font-bold uppercase tracking-widest text-tertiary-fixed-dim">View Service</span>
-<span class="material-symbols-outlined text-tertiary-fixed-dim">north_east</span>
+<div class="mt-12 pt-12 border-t border-outline-variant/15 grid grid-cols-2 gap-8">
+<div>
+<p class="text-4xl font-extrabold text-primary mb-2">120+</p>
+<p class="text-sm font-medium text-on-surface-variant uppercase tracking-wider">Proyectos Entregados</p>
+</div>
+<div>
+<p class="text-4xl font-extrabold text-primary mb-2">98%</p>
+<p class="text-sm font-medium text-on-surface-variant uppercase tracking-wider">Satisfacción Cliente</p>
 </div>
 </div>
 </div>
 </div>
 </section>
-<!-- 4. About Section -->
-<section class="py-32 bg-surface-container-low overflow-hidden" id="about">
-<div class="max-w-7xl mx-auto px-8">
-<div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
-<div class="relative">
-<div class="bg-surface-container-highest aspect-[4/5] rounded-lg overflow-hidden ghost-shadow">
-<img alt="Technical workspace" class="w-full h-full object-cover grayscale" data-alt="A clean minimalist technical lab with glowing screens, circuit diagrams, and professional engineers working in soft ambient lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAU_gWiKOZIPWc-I14JBoUgcy6UOxCxpJFf3IHPLRYX-z_rtBZ49w_8Y988z2tduOdDlVxatypBXa9opzAibeDEF-erY6k5CuDJ12RXgUU9F4PFZhCXexRFFY1YzSZfQNoQBErWOwNqsbfcwZnb2E2Wm8DrEbW2AkEzDibRU-wemNEOmVY_tk0mq8JM5vUQO459IzMukE8pWcBUi12YC7VlRKarp8WehwDXaC3XikpQ1RE7DZ4W7ZNeumqaJTM4vVks-5a9MBF7Yw"/>
-</div>
-<div class="absolute -right-10 top-20 hidden xl:block w-48 h-48 bg-primary-container p-6 text-white flex flex-col justify-end">
-<span class="text-4xl font-headline font-bold">12+</span>
-<span class="text-xs font-bold tracking-widest uppercase opacity-60">Global Hubs</span>
-</div>
-</div>
-<div>
-<span class="text-tertiary-fixed-dim font-bold tracking-[0.2em] text-xs uppercase mb-6 block">Our Methodology</span>
-<h2 class="font-headline text-4xl md:text-5xl font-extrabold tracking-tight text-primary mb-8 leading-tight">
-                            Synthesizing Design and Technical Superiority.
+<!-- CTA Project Reveal -->
+<section class="py-24 px-8 overflow-hidden" id="portafolio">
+<div class="max-w-7xl mx-auto">
+<div class="bg-primary-container rounded-3xl p-12 md:p-24 relative overflow-hidden flex flex-col items-center text-center">
+<div class="absolute inset-0 bg-gradient-to-br from-primary to-primary-container opacity-90 z-0"></div>
+<div class="relative z-10 max-w-3xl">
+<h2 class="text-4xl md:text-6xl font-extrabold text-on-primary mb-8 leading-tight">
+                            ¿Listo para definir su autoridad digital?
                         </h2>
-<div class="space-y-6 text-on-surface-variant leading-relaxed">
-<p>
-                                At ARCHITECT, we believe that complexity requires clarity. Our approach merges structural engineering principles with modern software paradigms to create environments that are both beautiful and bulletproof.
-                            </p>
-<p>
-                                We don't just solve problems; we redefine the parameters of what's possible. From high-frequency trading platforms to national-scale logistic networks, our blueprints power the most demanding sectors.
-                            </p>
+<p class="text-on-primary-container text-xl md:text-2xl mb-12 opacity-90">
+                            Colaboramos con empresas visionarias para construir el futuro de la web. Agende una consultoría hoy.
+                        </p>
+<button class="bg-surface text-primary px-10 py-5 rounded-full font-bold text-xl hover:bg-surface-bright transition-all active:scale-95 shadow-xl">
+                            Iniciar una Consulta
+                        </button>
 </div>
-<div class="mt-12 grid grid-cols-2 gap-8">
-<div>
-<h4 class="font-headline font-bold text-lg mb-2 text-primary">Reliability</h4>
-<p class="text-sm opacity-70">Fault-tolerant by design.</p>
+<!-- Specialty Component: The "Project Reveal" Background Effect -->
+<div class="absolute -right-20 -bottom-20 w-1/2 opacity-20 rotate-12 hidden lg:block pointer-events-none">
+<img alt="Web interface preview" class="rounded-2xl shadow-2xl" data-alt="close up of a high-end luxury website design featuring serif typography and elegant grey color palette with smooth gradients" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAcDxhxPBvBGviVp3MaUneg7IYT98mqaHmpQcYwjKLurE3traBTs1CUWCYZneyIyT_4rvbkITqrN-voFqkCUUW1Wh_Jzzu94WLk_gjm3pHoVazVAvGqPGU9Cv3A8gvs4GuzxOB1far7hjs-lKRiHaTop3PXLIcFbKI7DOGKjv_pcrIaCRe4-liVOXSBtLLWv9LaoVXgK84GKcaETMgyeJGzXklTjoeCvOAdDqBMCxydk2xdYxJIRsljqcBUIxtDgi0X_BZY6OVrpKBf"/>
 </div>
-<div>
-<h4 class="font-headline font-bold text-lg mb-2 text-primary">Scalability</h4>
-<p class="text-sm opacity-70">Elastic core functionality.</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- 5. Tech Stack/Partners -->
-<section class="py-20 bg-surface border-y border-outline-variant/10">
-<div class="max-w-7xl mx-auto px-8">
-<p class="text-center text-[0.65rem] font-bold uppercase tracking-[0.3em] text-on-primary-container mb-12">Validated by Industry Leaders</p>
-<div class="flex flex-wrap justify-center items-center gap-12 md:gap-24 opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
-<div class="text-xl font-bold font-headline tracking-tighter text-slate-900">NEXUS.CORE</div>
-<div class="text-xl font-bold font-headline tracking-tighter text-slate-900">QUANTUM.SYST</div>
-<div class="text-xl font-bold font-headline tracking-tighter text-slate-900">VECTOR.OPS</div>
-<div class="text-xl font-bold font-headline tracking-tighter text-slate-900">PLATFORM_X</div>
-<div class="text-xl font-bold font-headline tracking-tighter text-slate-900">GRID_NAV</div>
-</div>
-</div>
-</section>
-<!-- CTA Section -->
-<section class="py-32 bg-primary-container text-white relative overflow-hidden" id="contact">
-<div class="absolute inset-0 opacity-20">
-<div class="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white/10 to-transparent"></div>
-</div>
-<div class="max-w-4xl mx-auto px-8 text-center relative z-10">
-<h2 class="font-headline text-4xl md:text-6xl font-extrabold tracking-tight mb-8">Ready to start building?</h2>
-<p class="text-on-primary-container text-lg md:text-xl mb-12 max-w-2xl mx-auto font-light">
-                    Join the ranks of high-performance organizations leveraging ARCHITECT for their core digital infrastructure.
-                </p>
-<div class="flex flex-col sm:flex-row justify-center gap-6">
-<button class="bg-tertiary-fixed-dim text-primary-container px-10 py-5 font-bold text-lg hover:scale-105 transition-transform duration-300">
-                        Request a Technical Audit
-                    </button>
-<button class="border border-white/20 px-10 py-5 font-bold text-lg hover:bg-white hover:text-primary-container transition-all duration-300">
-                        Speak to an Engineer
-                    </button>
 </div>
 </div>
 </section>
 </main>
-<!-- 6. Footer -->
-<footer class="bg-slate-900 dark:bg-black text-slate-300 dark:text-slate-500 border-t border-white/5 font-inter text-sm tracking-wide">
-<div class="grid grid-cols-1 md:grid-cols-4 gap-8 px-12 py-16 w-full max-w-7xl mx-auto">
-<div class="col-span-1 md:col-span-1">
-<div class="text-lg font-bold text-white mb-6">ARCHITECT</div>
-<p class="opacity-60 leading-relaxed mb-6">
-                    Precision Engineered Navigation for modern enterprise structures.
+<!-- Footer -->
+<footer class="bg-slate-50 dark:bg-slate-950 py-16">
+<div class="max-w-7xl mx-auto px-8">
+<div class="grid grid-cols-1 md:flex md:justify-between items-center gap-8 mb-12">
+<div class="flex flex-col gap-2">
+<span class="text-lg font-bold text-blue-900 dark:text-blue-300">DISEÑO WEB</span>
+<p class="text-slate-500 dark:text-slate-400 text-sm max-w-xs">
+                        Elevando estándares digitales mediante diseño de alta precisión.
+                    </p>
+</div>
+<nav class="flex flex-wrap gap-8">
+<a class="text-slate-500 dark:text-slate-400 hover:text-blue-800 dark:hover:text-blue-200 transition-colors" href="#">Aviso Legal</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-blue-800 dark:hover:text-blue-200 transition-colors" href="#">Privacidad</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-blue-800 dark:hover:text-blue-200 transition-colors" href="#">Cookies</a>
+<a class="text-blue-700 dark:text-blue-300 underline underline-offset-4 hover:text-blue-800 dark:hover:text-blue-200 transition-colors" href="#contacto">Contacto</a>
+</nav>
+</div>
+<div class="pt-8 border-t border-outline-variant/10 text-center md:text-left">
+<p class="text-slate-500 dark:text-slate-400 text-sm">
+                    © 2024 Diseño Web. Autoridad en Estrategia Digital.
                 </p>
-<div class="flex gap-4">
-<div class="w-8 h-8 rounded-full border border-white/10 flex items-center justify-center hover:bg-white/10 cursor-pointer transition-colors">
-<span class="material-symbols-outlined text-[16px]">public</span>
-</div>
-<div class="w-8 h-8 rounded-full border border-white/10 flex items-center justify-center hover:bg-white/10 cursor-pointer transition-colors">
-<span class="material-symbols-outlined text-[16px]">terminal</span>
-</div>
-</div>
-</div>
-<div>
-<h4 class="text-white font-bold mb-6">Capabilities</h4>
-<ul class="space-y-4">
-<li><a class="text-slate-400 hover:text-white transition-colors" href="#">Cloud Infrastructure</a></li>
-<li><a class="text-slate-400 hover:text-white transition-colors" href="#">Edge Computing</a></li>
-<li><a class="text-slate-400 hover:text-white transition-colors" href="#">Network Topology</a></li>
-<li><a class="text-slate-400 hover:text-white transition-colors" href="#">Systems Audit</a></li>
-</ul>
-</div>
-<div>
-<h4 class="text-white font-bold mb-6">Company</h4>
-<ul class="space-y-4">
-<li><a class="text-slate-400 hover:text-white transition-colors" href="#">About Us</a></li>
-<li><a class="text-slate-400 hover:text-white transition-colors" href="#">Technical Docs</a></li>
-<li><a class="text-slate-400 hover:text-white transition-colors" href="#">Security</a></li>
-<li><a class="text-slate-400 hover:text-white transition-colors" href="#">Research</a></li>
-</ul>
-</div>
-<div>
-<h4 class="text-white font-bold mb-6">Legal</h4>
-<ul class="space-y-4">
-<li><a class="text-slate-400 hover:text-white transition-colors" href="#">Privacy Policy</a></li>
-<li><a class="text-slate-400 hover:text-white transition-colors" href="#">Terms of Service</a></li>
-<li><a class="text-slate-400 hover:text-white transition-colors" href="#">Compliance</a></li>
-</ul>
-</div>
-</div>
-<div class="border-t border-white/5 py-8 px-12 flex flex-col md:flex-row justify-between items-center gap-4">
-<p class="text-xs opacity-50">© 2024 ARCHITECT. Precision Engineered Navigation.</p>
-<div class="flex gap-6 text-xs font-bold tracking-widest uppercase text-cyan-400">
-<span>Status: Optimal</span>
-<span>Region: US-EAST-1</span>
 </div>
 </div>
 </footer>
-<button class="fixed bottom-8 right-8 w-12 h-12 machined-metal text-white flex items-center justify-center ghost-shadow opacity-0 translate-y-10 transition-all duration-500 z-50" id="scrollToTop">
-<span class="material-symbols-outlined">north</span>
-</button>
-<script>
-        // Scroll behavior for Header
-        const nav = document.querySelector('nav');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
-                nav.classList.add('shadow-lg');
-            } else {
-                nav.classList.remove('shadow-lg');
-            }
-        });
-
-        // Scroll to Top Button Visibility
-        const scrollBtn = document.getElementById('scrollToTop');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 500) {
-                scrollBtn.classList.remove('opacity-0', 'translate-y-10');
-                scrollBtn.classList.add('opacity-100', 'translate-y-0');
-            } else {
-                scrollBtn.classList.add('opacity-0', 'translate-y-10');
-                scrollBtn.classList.remove('opacity-100', 'translate-y-0');
-            }
-        });
-
-        scrollBtn.addEventListener('click', () => {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
-
-        // Intersection Observer for simple reveal
-        const observerOptions = {
-            threshold: 0.1
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('opacity-100', 'translate-y-0');
-                    entry.target.classList.remove('opacity-0', 'translate-y-10');
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('section').forEach(section => {
-            // Simple entry effect - note: elements start without these classes 
-            // but we can add them via script or just let them stay static for zero JS requirement if needed.
-            // For high-end feel, we ensure visibility is managed.
-        });
-    </script>
 </body></html>

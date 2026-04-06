@@ -4,7 +4,7 @@
 
 **Business:** licenciada laura tulian
 **Industry:** Salud y bienestar
-**Tagline:** Fonoaudiologia Lic. Laura Tulian
+**Tagline:** Licenciada Laura Tulian
 **Description:** soy licenciada en fonoaudiologia, realizo estudios audiologicos particulares y obra social. Trabajo con bebes, niños, jovenes y adultos. El contacto debe ser solo por whatsapp, con un icono flotante
 
 **Design Style:** profesional

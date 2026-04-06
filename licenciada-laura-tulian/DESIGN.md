@@ -1,10 +1,10 @@
-# DESIGN.md — Licenciada Laura Tulian
+# DESIGN.md — licenciada laura tulian
 
 ## 1. Overview & Creative Direction
 
-**Business:** Licenciada Laura Tulian
+**Business:** licenciada laura tulian
 **Industry:** Salud y bienestar
-**Tagline:** Licenciada Laura Tulian
+**Tagline:** Fonoaudiologia Lic. Laura Tulian
 **Description:** soy licenciada en fonoaudiologia, realizo estudios audiologicos particulares y obra social. Trabajo con bebes, niños, jovenes y adultos. El contacto debe ser solo por whatsapp, con un icono flotante
 
 **Design Style:** profesional
@@ -56,15 +56,16 @@ Clean, balanced, and trustworthy. Uses structured layouts with generous whitespa
 
 ### Contact
 Include a contact section with:
-- Phone: +5493515111175
-- Email: lictulianlaura@gmail.com
-- Address: Montemayor 1531, Cordoba
+- Phone: +5493515640023
+- Email: laura.tulian@gmail.com
+- Address: Montemayor 1531, cordoba
 
 ### Footer
 Include social media icon links:
 - instagram: https://instagram.com/sileymartin
 - facebook: https://facebook.com/sileymartin
-- whatsapp: https://wa.me/543515111175
+- twitter: https://x.com/sileymartin
+- whatsapp: https://wa.me/543515640023
 
 ## 6. Interactions & Animations
 

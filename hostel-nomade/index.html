@@ -1,162 +1,264 @@
 <!DOCTYPE html>
-<html lang="es"><head>
+
+<html class="scroll-smooth" lang="es"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Hostel Nómade | Urban Chaos</title>
+<title>Hostel Nomade - El mejor Hostel de Punilla</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&amp;family=Space+Grotesk:wght@300;500;700&amp;family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<style type="text/tailwindcss">
-        :root {
-            --charcoal: #121212;
-            --neon-green: #ccff00;
-            --magenta: #ff00ff;
-            --stark-white: #f5f5f5;
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;700;800;900&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "secondary-fixed-dim": "#ffb95f",
+                        "error": "#ba1a1a",
+                        "on-secondary-fixed-variant": "#653e00",
+                        "on-primary": "#ffffff",
+                        "on-secondary-fixed": "#2a1700",
+                        "inverse-on-surface": "#feede7",
+                        "on-secondary-container": "#684000",
+                        "surface-container": "#fbebe4",
+                        "on-background": "#221a16",
+                        "surface-container-high": "#f5e5df",
+                        "primary": "#592100",
+                        "on-primary-fixed-variant": "#76330d",
+                        "surface-container-highest": "#efdfd9",
+                        "on-primary-container": "#ffa072",
+                        "surface-container-lowest": "#ffffff",
+                        "background": "#fff8f6",
+                        "primary-fixed": "#ffdbcc",
+                        "surface-dim": "#e6d7d1",
+                        "surface": "#fff8f6",
+                        "outline": "#87736a",
+                        "on-tertiary-fixed-variant": "#534600",
+                        "on-tertiary-container": "#4b3f00",
+                        "on-secondary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "inverse-primary": "#ffb693",
+                        "tertiary-container": "#bfab56",
+                        "on-error": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "surface-bright": "#fff8f6",
+                        "surface-variant": "#efdfd9",
+                        "surface-tint": "#944a23",
+                        "secondary-fixed": "#ffddb8",
+                        "surface-container-low": "#fff1eb",
+                        "outline-variant": "#dac1b7",
+                        "on-surface": "#221a16",
+                        "inverse-surface": "#382e2b",
+                        "on-primary-fixed": "#351000",
+                        "secondary": "#855300",
+                        "on-tertiary": "#ffffff",
+                        "primary-fixed-dim": "#ffb693",
+                        "secondary-container": "#fea619",
+                        "tertiary-fixed-dim": "#dcc66e",
+                        "tertiary": "#6e5e0d",
+                        "tertiary-fixed": "#f9e287",
+                        "on-surface-variant": "#54433c",
+                        "primary-container": "#78350f",
+                        "on-tertiary-fixed": "#221b00"
+                    },
+                    fontFamily: {
+                        "headline": ["Epilogue"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
         }
-        body {
-            background-color: var(--charcoal);
-            color: var(--stark-white);
-            font-family: 'Space Grotesk', sans-serif;
-            overflow-x: hidden;
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
         }
-        .font-syncopate { font-family: 'Syncopate', sans-serif; }
-        .collage-grid {
-            display: grid;
-            grid-template-columns: repeat(12, 1fr);
-            grid-auto-rows: minmax(100px, auto);
-            gap: 1rem;
+        .editorial-shadow {
+            box-shadow: 0 20px 40px rgba(84, 67, 60, 0.08);
         }
-        .glitch-text {
-            text-shadow: 2px 0 var(--magenta), -2px 0 var(--neon-green);
-        }
-        .vertical-text {
-            writing-mode: vertical-rl;
-            text-orientation: mixed;
-        }
-        .skew-box {
-            transform: skewY(-3deg);
-        }
-        .brutal-border {
-            border: 4px solid var(--stark-white);
-            box-shadow: 8px 8px 0px var(--neon-green);
-        }
-        .mask-blob {
-            clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
-        }
-        .mask-jagged {
-            clip-path: polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%);
+        .glass-amber {
+            background: rgba(255, 248, 246, 0.8);
+            backdrop-filter: blur(20px);
         }
     </style>
 </head>
-<body class="selection:bg-[var(--neon-green)] selection:text-black">
-<nav class="fixed top-0 left-0 w-full z-50 p-6 flex justify-between items-center mix-blend-difference">
-<div class="text-3xl font-syncopate font-bold tracking-tighter text-[var(--stark-white)]">
-            NÓMADE<span class="text-[var(--neon-green)]">.</span>
+<body class="bg-surface text-on-surface font-body selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#fff8f6]/80 backdrop-blur-md shadow-sm flex justify-between items-center px-8 md:px-24 py-4 w-full">
+<div class="text-2xl font-black text-[#592100] tracking-tighter font-headline">Hostel Nomade</div>
+<!-- Desktop Nav -->
+<div class="hidden md:flex items-center gap-8">
+<a class="text-[#592100] border-b-2 border-[#592100] pb-1 font-headline font-bold tracking-tight" href="#">Inicio</a>
+<a class="text-[#221a16]/70 hover:text-[#592100] transition-colors font-headline font-bold tracking-tight" href="#">Habitaciones</a>
+<a class="text-[#221a16]/70 hover:text-[#592100] transition-colors font-headline font-bold tracking-tight" href="#">Moto Posada</a>
+<a class="text-[#221a16]/70 hover:text-[#592100] transition-colors font-headline font-bold tracking-tight" href="#">Servicios</a>
+<a class="text-[#221a16]/70 hover:text-[#592100] transition-colors font-headline font-bold tracking-tight" href="#">Contacto</a>
 </div>
-<div class="flex gap-8 items-center">
-<span class="material-symbols-outlined text-4xl cursor-pointer hover:text-[var(--magenta)]">menu</span>
-</div>
+<button class="bg-primary text-on-primary px-6 py-2.5 rounded-full font-bold tracking-tight hover:bg-primary-container transition-all duration-300 editorial-shadow">
+            Reserva ahora
+        </button>
 </nav>
-<main class="p-4 md:p-10 pt-24 max-w-[1600px] mx-auto">
-<div class="collage-grid">
-<div class="col-span-12 md:col-span-8 row-span-2 relative z-10 flex flex-col justify-end p-4">
-<h1 class="text-6xl md:text-9xl font-syncopate font-bold leading-none glitch-text uppercase italic">
-                    Vive el <br/><span class="text-[var(--neon-green)]">Asfalto</span>
+<main>
+<!-- Hero Section -->
+<section class="relative min-h-screen flex items-center pt-20 px-8 md:px-24 overflow-hidden bg-surface">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center w-full">
+<div class="lg:col-span-7 z-10">
+<span class="inline-block py-1 px-4 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-bold text-sm mb-6 uppercase tracking-widest">Aventura en Punilla</span>
+<h1 class="text-6xl md:text-8xl font-black text-primary font-headline leading-[0.9] tracking-tighter mb-8">
+                        Hostel <br/> <span class="text-secondary">Nomade</span>
 </h1>
-<p class="mt-6 text-xl max-w-md border-l-4 border-[var(--magenta)] pl-4 font-light">
-                    Refugio brutalista para nómadas que no temen al ruido.
+<p class="text-xl md:text-2xl text-on-surface-variant max-w-xl mb-10 leading-relaxed">
+                        El mejor Hostel de Punilla. Una pausa diseñada para el viajero moderno que busca refugio en las sierras de Córdoba.
+                    </p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-primary text-on-primary px-8 py-4 rounded-xl font-bold text-lg hover:bg-primary-container transition-all duration-300 editorial-shadow">
+                            Reserva ahora
+                        </button>
+<button class="bg-surface-container text-primary px-8 py-4 rounded-xl font-bold text-lg hover:bg-surface-container-high transition-all duration-300">
+                            Explorar espacios
+                        </button>
+</div>
+</div>
+<div class="lg:col-span-5 relative">
+<div class="relative w-full aspect-[4/5] rounded-[2rem] overflow-hidden editorial-shadow transform lg:rotate-3">
+<img alt="Interior acogedor del Hostel Nomade" class="w-full h-full object-cover" data-alt="Warm and inviting hostel common area with rustic wooden furniture, large windows overlooking mountains, and cozy textiles at sunset" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBh-I94pR_5O9CpmtRoW-y3DP-QYKMfNkvb9h7Ku3oXRqgGSUReljQHuxTiYg4zf-5p_LTlTzG4Ox9t_-L8eeCF6xNX1v4hbni_r59ouyz2M92F2L0c9nvHD7A4igwXBXAnEO5BEuxm5_eRZERJLmr2Ru3dCyVE7Tw6WB30pEA24qHjZcpZZnuhcaUDU8hvJpmtaKGsJru2jNyRqdYf7ZYWzoyNPvwVLteCEONMQUWqXK2xcjbbuAYpIkdd0YKA1mY_Y1y6pKgQ7P8"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent"></div>
+</div>
+<!-- Decorative element -->
+<div class="absolute -bottom-6 -left-6 w-32 h-32 bg-secondary-container rounded-3xl -z-10 opacity-50"></div>
+</div>
+</div>
+</section>
+<!-- About / Moto Posada -->
+<section class="py-24 px-8 md:px-24 bg-surface-container-low">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col lg:flex-row gap-16 items-center">
+<div class="w-full lg:w-1/2 grid grid-cols-2 gap-4">
+<div class="aspect-square rounded-2xl overflow-hidden mt-8">
+<img alt="Habitación privada" class="w-full h-full object-cover" data-alt="Boutique private hostel room with warm ambient lighting, wooden accents, and artisanal decor in Córdoba mountains" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDOuPWZZAkk6Tyc5-F7y-Qv4qo9b8-3gnjChPcdkC7sT_Ll0tfRVLyNunDS1B7nswKSFhWQ3CXtb5wj11H1h5it3bY0APxWQjDKv1HykfaUWy7KnSqCBNWH4WfuxMr_TwLUiQ0nYgnrsXCJw4-jVtmz1pqfFXmnAAchHUt-dJTMAXeqExnjyMUkOerNxOwcxMRM2Y6OvCRYdh8wkymPv4LAoNyEqCGnPnXfiiB6BIuLR7gqenABYGigXVMAEsawOevpA-u63FXq5mM"/>
+</div>
+<div class="aspect-square rounded-2xl overflow-hidden">
+<img alt="Moto viajera" class="w-full h-full object-cover" data-alt="Rugged adventure motorcycle parked in front of a rustic stone and wood building during golden hour" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxkWknbpQ8OkZzk-U_dDHyoO4_UGyUj841bVmMTd9sPsN0cNr7uTzCy35IAzMwk_hM4S9lhiS_r85SZ3W6Xi_oPihOl_Bt0cizl949Ap5Kne5WpRadxoSsbUDAAmxd2x2fTGNxlUvbPlO6kf6tAOFDXhc6qOlQhooeEPHNGE-aKVCjmb0kuMB8DiFPvU-rwTUSijj2lYavvRvuafOM9xx0_SU7q7M1Eh_TuHS4mWeaIKJmBvgtvdW_4DvFc0rz41kIkVAOr0lKp6E"/>
+</div>
+</div>
+<div class="w-full lg:w-1/2">
+<h2 class="text-4xl md:text-5xl font-black text-primary font-headline mb-8 leading-tight">
+                            Bienvenidos a nuestra <span class="text-secondary">Moto Posada</span>
+</h2>
+<div class="space-y-6 text-lg text-on-surface-variant leading-relaxed">
+<p>
+                                Entendemos la libertad del camino. Hostel Nomade no es solo un lugar para dormir, es un punto de encuentro para quienes recorren las rutas en dos ruedas.
+                            </p>
+<p>
+                                Ofrecemos una experiencia híbrida: la calidez de un hogar y la practicidad de un refugio técnico. Habitaciones privadas para el descanso profundo y compartidas para forjar nuevas amistades de ruta.
+                            </p>
+<div class="flex items-center gap-4 pt-4">
+<span class="material-symbols-outlined text-secondary text-3xl" data-icon="two_wheeler">two_wheeler</span>
+<span class="font-bold text-primary">Diseñado por y para viajeros.</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Section -->
+<section class="py-32 px-8 md:px-24 bg-surface">
+<div class="max-w-7xl mx-auto">
+<div class="mb-20">
+<h2 class="text-4xl font-black text-primary font-headline mb-4">Servicios Pensados para Vos</h2>
+<p class="text-on-surface-variant max-w-xl">Equipamiento y comodidad para que tu única preocupación sea disfrutar el paisaje.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<!-- Service 1 -->
+<div class="group p-8 rounded-3xl bg-surface-container hover:bg-surface-container-high transition-all duration-500 editorial-shadow">
+<div class="w-14 h-14 bg-primary rounded-2xl flex items-center justify-center text-on-primary mb-6 transition-transform group-hover:scale-110">
+<span class="material-symbols-outlined" data-icon="bed">bed</span>
+</div>
+<h3 class="text-xl font-bold text-primary mb-3 font-headline">Habitaciones</h3>
+<p class="text-on-surface-variant">Opciones privadas y compartidas con colchones de alta densidad para un descanso real.</p>
+</div>
+<!-- Service 2 -->
+<div class="group p-8 rounded-3xl bg-surface-container hover:bg-surface-container-high transition-all duration-500 editorial-shadow">
+<div class="w-14 h-14 bg-secondary-container rounded-2xl flex items-center justify-center text-on-secondary-container mb-6 transition-transform group-hover:scale-110">
+<span class="material-symbols-outlined" data-icon="soup_kitchen">soup_kitchen</span>
+</div>
+<h3 class="text-xl font-bold text-primary mb-3 font-headline">Cocina compartida</h3>
+<p class="text-on-surface-variant">Totalmente equipada para que prepares tus comidas como en casa. Café siempre listo.</p>
+</div>
+<!-- Service 3 -->
+<div class="group p-8 rounded-3xl bg-surface-container hover:bg-surface-container-high transition-all duration-500 editorial-shadow">
+<div class="w-14 h-14 bg-tertiary-fixed rounded-2xl flex items-center justify-center text-on-tertiary-fixed mb-6 transition-transform group-hover:scale-110">
+<span class="material-symbols-outlined" data-icon="wifi">wifi</span>
+</div>
+<h3 class="text-xl font-bold text-primary mb-3 font-headline">WiFi de alta velocidad</h3>
+<p class="text-on-surface-variant">Conexión estable en todo el predio, ideal para nómades digitales y planificación de rutas.</p>
+</div>
+<!-- Service 4 -->
+<div class="group p-8 rounded-3xl bg-surface-container hover:bg-surface-container-high transition-all duration-500 editorial-shadow">
+<div class="w-14 h-14 bg-primary-container rounded-2xl flex items-center justify-center text-on-primary-container mb-6 transition-transform group-hover:scale-110">
+<span class="material-symbols-outlined" data-icon="garage_home">garage_home</span>
+</div>
+<h3 class="text-xl font-bold text-primary mb-3 font-headline">Estacionamiento</h3>
+<p class="text-on-surface-variant">Sector exclusivo y seguro para motos. Herramientas básicas para ajustes rápidos disponibles.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Breakfast Section -->
+<section class="relative py-32 px-8 md:px-24 overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-primary/20 mix-blend-multiply"></div>
+<img alt="Desayuno artesanal" class="w-full h-full object-cover" data-alt="Rustic breakfast spread with artisan coffee, fresh bread, and local fruit on a heavy wooden table in a sun-drenched patio" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfnV8u6G-z7UJBDq4fpzGqBbVU9dzpxj168TRKqzwGDz0nZqTxRzPqd10FzaVP29TdUZdA-j4BVrfjQzwJPVbNjh4R8OeMWYXeqchg2R4jSRiyl8tbaNtR5vCB_8HaXfITDEZPP48dCIyiJIV6o_I9AHHjGKkcPFdxBy1x1oXIYgra0IBcmkzGzbjYFRjYBLY4rMYn-w_qOsnc--Ac3OoOakK8CdCGVmFeFNLaPgxQACSjyBTEGT90DVoOXAxF3hszvbAz_ctlRTQ"/>
+</div>
+<div class="relative z-10 max-w-3xl glass-amber p-12 md:p-20 rounded-[3rem] editorial-shadow">
+<span class="text-secondary font-bold tracking-widest uppercase text-sm mb-4 block">Energía para el camino</span>
+<h2 class="text-4xl md:text-5xl font-black text-primary font-headline mb-6">Desayuno Incluido</h2>
+<p class="text-xl text-on-surface-variant leading-relaxed mb-8">
+                    Empezar el día bien es fundamental. Nuestro desayuno fusiona sabores locales con la calidez de lo casero. Panificados regionales, frutas de estación y un café que te despierta el alma.
                 </p>
+<div class="flex items-center gap-6">
+<div class="flex flex-col">
+<span class="text-3xl font-black text-primary font-headline">07:30 - 10:30</span>
+<span class="text-sm font-bold text-on-surface-variant uppercase tracking-tighter">Todos los días</span>
 </div>
-<div class="col-span-6 md:col-span-4 row-span-3 overflow-hidden mask-jagged bg-zinc-800 border-2 border-[var(--magenta)]">
-<img alt="Urban Texture" class="w-full h-full object-cover grayscale contrast-150 hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAiIEP1PmVD5Oz7tfn04we5Sb4ZexHtJj1Uzc08xW9in22ZHf-8XeVaLwaE5-6eSXn89rY7CWae8H8s78OAR7rm9y1tS9FtD9wLUwITeJ0QEn9aUPo93aFRW8eLJrG-bB2zG_kXGO-gtKGQ3sP4F6cFm7wnQ3pkBYxjquGoD-b0jlKTZ9ekBwW591nAoDXzYTU61GVlyfVHpfEH3Dq5fKLCin7tEoOTXX4-vqL-SHDfBBRpqBJdOvLkOo4lWTCEOFbvrALJdAZrIIen"/>
-</div>
-<div class="col-span-6 md:col-span-3 row-span-2 bg-[var(--neon-green)] text-black p-6 flex flex-col justify-between skew-box -rotate-2 z-20">
-<span class="material-symbols-outlined text-5xl">bolt</span>
-<h2 class="text-4xl font-syncopate font-bold leading-tight">CAOS<br/>CONTROLADO</h2>
-</div>
-<div class="col-span-12 md:col-span-5 row-span-4 relative -mt-20 md:-mt-40 z-0">
-<img alt="Street Art" class="w-full h-full object-cover filter contrast-125 sepia-[.5] hue-rotate-[280deg]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFzfQOzQngEPnENDAwSVlrmTJVlj_9Schv0VCyE6o9vjBkeL7TISTg9h85kAKpUiRx_xNWvFAJxS8JUomUErSRATReA0An--l1_K6s79uFG59r5D3z104UkYZFz3LBkOkfEkYfm_9WQNxq75Z3jrE70IsVcmGOS5JTYWTsBENJlxudY0NbWQZemB7dO8Ggj18hSswRxkoAyWTX9ZIhwRI5T0CzxRiyaTGbRz3RrKNhwlcXpAQpzitdNGcgUKRoGPqtlRhKtgbkXdBM"/>
-<div class="absolute inset-0 bg-gradient-to-t from-[var(--charcoal)] to-transparent"></div>
-</div>
-<div class="hidden md:flex col-span-1 row-span-4 items-center justify-center">
-<div class="vertical-text font-syncopate text-2xl font-bold text-zinc-600 tracking-widest uppercase">
-                    SIN REGLAS • SIN LÍMITES • NÓMADE
-                </div>
-</div>
-<div class="col-span-12 md:col-span-3 row-span-2 brutal-border bg-[var(--charcoal)] p-8 flex flex-col items-center justify-center gap-4 group cursor-pointer hover:bg-[var(--magenta)] transition-colors">
-<p class="font-syncopate font-bold text-center">RESERVA TU ESPACIO</p>
-<span class="material-symbols-outlined text-6xl group-hover:translate-x-2 transition-transform">arrow_forward</span>
-</div>
-<div class="col-span-6 md:col-span-4 row-span-2 grid grid-cols-2 gap-2">
-<div class="bg-zinc-900 flex items-center justify-center p-4 border border-zinc-800">
-<span class="text-[var(--neon-green)] font-bold">WIFI 6G</span>
-</div>
-<div class="bg-zinc-900 flex items-center justify-center p-4 border border-zinc-800">
-<span class="text-[var(--magenta)] font-bold">CAFÉ FRÍO</span>
-</div>
-<div class="col-span-2 bg-[var(--stark-white)] text-black flex items-center justify-center p-4">
-<span class="font-syncopate font-black text-xs">COMMUNITY FIRST</span>
+<div class="h-12 w-px bg-outline-variant"></div>
+<p class="text-on-surface font-semibold italic">"El aroma a café recién hecho es nuestra alarma natural."</p>
 </div>
 </div>
-<div class="col-span-6 md:col-span-4 row-span-4 mask-blob bg-zinc-800 overflow-hidden mt-8">
-<img alt="Hostel Vibe" class="w-full h-full object-cover grayscale opacity-60 hover:opacity-100 transition-opacity" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHCoyM7AvjHohRCv5huXzHAnqivVKp0fhREvHfyMy5oaKsRzDe9OoOgrlGR4jIQp-VRWjXB8dv4sMc9hMKxj2Ka3aXUYtZHyo2NNJebwd4BpeRUocpISLSxuu5Sk3xb2Pil95UN5evyn08355AHOvtmzhRPenXRNBt2E3Josw3PIvrRvmpeGeMrytn_A24jj7m_5Qa-qrJLpUUbUlCBCp1xD8KJWKz5ylZqqu-uV2gOKq1fEt7pbQgcnd676UGHoavAnq8WJFLUBcC"/>
-</div>
-<div class="col-span-12 md:col-span-3 row-span-2 relative border-4 border-dotted border-zinc-700 flex items-center justify-center overflow-hidden">
-<div class="absolute inset-0 opacity-20 pointer-events-none bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]"></div>
-<div class="relative z-10 text-center">
-<h3 class="text-5xl font-black text-zinc-500 opacity-30">GRAFFITI</h3>
-</div>
-</div>
-<div class="col-span-12 md:col-span-5 row-span-1 flex items-center px-4">
-<h4 class="text-3xl md:text-5xl font-syncopate font-black text-transparent stroke-text" style="-webkit-text-stroke: 1px var(--stark-white);">
-                    DORMIR ES SECUNDARIO
-                </h4>
-</div>
-<div class="col-span-12 md:col-span-4 row-span-3 bg-zinc-900 p-10 flex flex-col justify-end relative">
-<div class="absolute top-0 right-0 p-4">
-<span class="material-symbols-outlined text-[var(--neon-green)] text-4xl">location_on</span>
-</div>
-<h5 class="text-4xl font-syncopate font-bold mb-4">CENTRO CIUDAD</h5>
-<p class="text-sm uppercase tracking-widest text-zinc-500">Calle del Ruido 404, Distrito Zero.</p>
-</div>
-<div class="col-span-6 md:col-span-4 row-span-2 bg-[var(--magenta)] p-2">
-<div class="w-full h-full border-2 border-black flex items-center justify-center italic font-bold text-black text-xl">
-                    #STAYREBEL
-                </div>
-</div>
-<div class="col-span-6 md:col-span-2 row-span-2 overflow-hidden">
-<img alt="Detail" class="w-full h-full object-cover contrast-150 brightness-50" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVGIpha--s_-pY6VXm4a5RJXex2lcgrmSn3CdPr3N9lNos8rbeSEm7UuZ7VzRQXeMupmyxvPM027DAc2uNzfTrt-b9BGTOwPj-z_VkEOvqjBk0utxTRt14uHQdmne1zXVpQdZxHGbjCheuCPvS9H3ZxFpwYSZKmT7pZ-QnHNhn7MS9tKLHR494wsdxdZsrcu5XhIwWJEIlUsvJBvJ09UZ5zw5hd0uRXMp1TXQEdLofxQZXBYQzjvBQ6VzgBAQuU4VXI_IyhqogYrrc"/>
+</section>
+<!-- Location/Map CTA Section (Asymmetric) -->
+<section class="py-24 px-8 md:px-24 bg-surface">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row gap-12 items-end">
+<div class="flex-1 w-full">
+<div class="rounded-3xl overflow-hidden grayscale contrast-125 h-96 editorial-shadow">
+<img alt="Mapa de la zona" class="w-full h-full object-cover" data-alt="Stylized monochromatic topographic map of the Punilla valley mountains in Argentina" data-location="Villa Carlos Paz, Argentina" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDAw_cyOVDwFXCGDGZLrbY1zh_uyTiZbKhvCXurg98tCbEuuUGpgCYS9fxQn7ZO0GajR5fKjGYnEqrKzx4_FcVmSlSbodj4skPOFb0bHu5p8sMkCASRssqnWicL39JbbJ-46NZ7DZl418u5SWzj30reWBHd-dueve4H6F7SyLlc_QWYYeXGSL6ypaTR8AZ2w8OfgG5M3wdBRTNw-Y2VrVwvX27WVNek4ds_s-2yo6u6SDrwAu4gZIdEiMD_rZxKAnQeDG6bPIypZqo"/>
 </div>
 </div>
-<section class="mt-40 mb-20 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-<div class="relative">
-<div class="absolute -top-20 -left-10 text-[10rem] font-black text-zinc-900 select-none z-0">RAW</div>
-<h2 class="text-7xl font-syncopate font-bold relative z-10 glitch-text">EL MANIFIESTO</h2>
-</div>
-<div class="space-y-8">
-<div class="flex gap-6 items-start">
-<span class="text-4xl font-syncopate text-[var(--neon-green)]">01.</span>
-<p class="text-2xl font-light">No somos un hotel. Somos un cruce de caminos.</p>
-</div>
-<div class="flex gap-6 items-start">
-<span class="text-4xl font-syncopate text-[var(--magenta)]">02.</span>
-<p class="text-2xl font-light">El confort es aburrido. La experiencia es todo.</p>
-</div>
-<div class="flex gap-6 items-start">
-<span class="text-4xl font-syncopate text-[var(--neon-green)]">03.</span>
-<p class="text-2xl font-light">Conexión real sobre wi-fi (aunque el nuestro vuela).</p>
+<div class="w-full md:w-1/3 mb-4">
+<h3 class="text-2xl font-black text-primary font-headline mb-4">En el corazón de Punilla</h3>
+<p class="text-on-surface-variant mb-6">Estamos ubicados estratégicamente para que accedas a los mejores recorridos serranos en minutos.</p>
+<a class="inline-flex items-center gap-2 text-primary font-bold group" href="#">
+                        Ver cómo llegar 
+                        <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</a>
 </div>
 </div>
 </section>
 </main>
-<footer class="border-t border-zinc-800 p-10 mt-20 bg-black flex flex-col md:flex-row justify-between items-center gap-8">
-<div class="font-syncopate font-bold text-xl tracking-tighter">
-            HOSTEL NÓMADE <span class="text-zinc-600">© 2024</span>
+<!-- Footer -->
+<footer class="bg-[#fbebe4] w-full py-12 px-8 md:px-24 mt-20 flex flex-col md:flex-row justify-between items-center gap-6 text-[#592100] font-['Manrope'] text-sm tracking-wide">
+<div class="flex flex-col gap-2">
+<div class="font-['Epilogue'] font-bold text-[#592100] text-xl">Hostel Nomade</div>
+<p class="text-[#221a16]/60">© 2024 Hostel Nomade - El mejor Hostel de Punilla.</p>
 </div>
-<div class="flex gap-6">
-<a class="hover:text-[var(--neon-green)] transition-colors uppercase text-xs font-bold tracking-widest" href="#">Instagram</a>
-<a class="hover:text-[var(--magenta)] transition-colors uppercase text-xs font-bold tracking-widest" href="#">Spotify</a>
-<a class="hover:text-[var(--neon-green)] transition-colors uppercase text-xs font-bold tracking-widest" href="#">TikTok</a>
+<div class="flex gap-8">
+<a class="text-[#221a16]/60 hover:text-[#592100] transition-colors" href="#">Privacidad</a>
+<a class="text-[#221a16]/60 hover:text-[#592100] transition-colors" href="#">Términos</a>
+<a class="text-[#221a16]/60 hover:text-[#592100] transition-colors" href="#">Instagram</a>
+<a class="text-[#221a16]/60 hover:text-[#592100] transition-colors" href="#">Contacto</a>
 </div>
 </footer>
-
 </body></html>

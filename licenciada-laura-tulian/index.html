@@ -1,204 +1,413 @@
 <!DOCTYPE html>
-<html lang="es"><head>
+
+<html class="scroll-smooth" lang="es"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Lic. Laura Tulian | Fonoaudiología</title>
+<title>Lic. Laura Tulian - Fonoaudiología</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600&amp;family=Playfair+Display:ital,wght@0,400;0,500;1,400&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100;200;300;400&amp;display=swap" rel="stylesheet"/>
-<style type="text/tailwindcss">
-        :root {
-            --primary: #166534;
-            --primary-soft: #f0fdf4;
-            --accent: #86efac;
-            --text-main: #1a2e23;
-            --text-muted: #64748b;
-            --bg-canvas: #fafbf9;
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;family=Manrope:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-background": "#191c1d",
+                        "secondary-container": "#6bff8f",
+                        "on-tertiary-container": "#7be4a2",
+                        "primary": "#004c22",
+                        "outline": "#707a6f",
+                        "surface-variant": "#e1e3e4",
+                        "primary-fixed-dim": "#8bd79b",
+                        "surface-tint": "#1f6c3a",
+                        "background": "#f8f9fa",
+                        "error": "#ba1a1a",
+                        "on-primary-fixed-variant": "#005226",
+                        "surface": "#f8f9fa",
+                        "surface-container-highest": "#e1e3e4",
+                        "on-secondary-fixed-variant": "#005321",
+                        "on-surface": "#191c1d",
+                        "primary-container": "#166534",
+                        "on-secondary-fixed": "#002109",
+                        "on-primary-fixed": "#00210b",
+                        "on-error-container": "#93000a",
+                        "surface-container-high": "#e7e8e9",
+                        "surface-bright": "#f8f9fa",
+                        "tertiary-fixed-dim": "#73db9a",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "outline-variant": "#bfc9bd",
+                        "on-primary-container": "#93e0a2",
+                        "surface-container-low": "#f3f4f5",
+                        "on-tertiary-fixed-variant": "#00522d",
+                        "error-container": "#ffdad6",
+                        "secondary-fixed-dim": "#4ae176",
+                        "surface-container": "#edeeef",
+                        "primary-fixed": "#a6f4b5",
+                        "tertiary-fixed": "#8ff8b4",
+                        "secondary": "#006e2f",
+                        "inverse-primary": "#8bd79b",
+                        "tertiary": "#004c29",
+                        "surface-dim": "#d9dadb",
+                        "on-tertiary-fixed": "#00210f",
+                        "on-primary": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "inverse-surface": "#2e3132",
+                        "on-error": "#ffffff",
+                        "on-surface-variant": "#404940",
+                        "secondary-fixed": "#6bff8f",
+                        "on-secondary-container": "#007432",
+                        "tertiary-container": "#006639",
+                        "inverse-on-surface": "#f0f1f2"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Plus Jakarta Sans"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"]
+                    }
+                },
+            },
         }
-        body {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            background-color: var(--bg-canvas);
-            color: var(--text-main);
-            scroll-behavior: smooth;
+    </script>
+<style>
+        body { font-family: 'Manrope', sans-serif; }
+        h1, h2, h3, h4 { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .material-symbols-outlined.filled { font-variation-settings: 'FILL' 1; }
+        .glass-nav { backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+        .fade-in-section {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
         }
-        .serif {
-            font-family: 'Playfair Display', serif;
-        }
-        .soft-mask {
-            mask-image: radial-gradient(circle at center, black 30%, transparent 80%);
-        }
-        .organic-blob {
-            border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-        }
-        .glass-nav {
-            background: rgba(250, 251, 249, 0.7);
-            backdrop-filter: blur(12px);
-        }
-        .floating-wa {
-            transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
-        }
-        .floating-wa:hover {
-            transform: translateY(-5px) scale(1.1);
-        }
-        .section-curve {
-            border-radius: 0 0 100% 100% / 0 0 15% 15%;
+        .fade-in-section.is-visible {
+            opacity: 1;
+            transform: translateY(0);
         }
     </style>
 </head>
-<body class="selection:bg-[var(--accent)] selection:text-[var(--primary)]">
-<div class="fixed inset-0 -z-10 overflow-hidden pointer-events-none">
-<div class="absolute -top-[10%] -left-[5%] w-[600px] h-[600px] bg-[#dcfce7] opacity-40 blur-[120px] organic-blob"></div>
-<div class="absolute top-[40%] -right-[10%] w-[500px] h-[500px] bg-[#f0fdf4] opacity-60 blur-[100px] organic-blob"></div>
+<body class="bg-surface text-on-surface selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopNavBar -->
+<header class="sticky top-0 w-full z-50 bg-white/80 dark:bg-emerald-950/80 backdrop-blur-md shadow-sm dark:shadow-none">
+<nav class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
+<a class="text-xl font-bold text-emerald-900 dark:text-emerald-50 font-['Plus_Jakarta_Sans'] tracking-tight" href="#">
+            Lic. Laura Tulian
+        </a>
+<div class="hidden md:flex items-center gap-8 font-['Plus_Jakarta_Sans'] font-bold">
+<a class="text-emerald-700 dark:text-emerald-400 border-b-2 border-emerald-600 dark:border-emerald-400 pb-1 hover:opacity-80 transition-all duration-300" href="#inicio">Inicio</a>
+<a class="text-emerald-900/70 dark:text-emerald-100/70 hover:text-emerald-600 hover:opacity-80 transition-all duration-300" href="#servicios">Servicios</a>
+<a class="text-emerald-900/70 dark:text-emerald-100/70 hover:text-emerald-600 hover:opacity-80 transition-all duration-300" href="#sobre-mi">Sobre Mí</a>
+<a class="text-emerald-900/70 dark:text-emerald-100/70 hover:text-emerald-600 hover:opacity-80 transition-all duration-300" href="#testimonios">Testimonios</a>
+<a class="text-emerald-900/70 dark:text-emerald-100/70 hover:text-emerald-600 hover:opacity-80 transition-all duration-300" href="#contacto">Contacto</a>
 </div>
-<nav class="fixed top-0 w-full z-50 glass-nav border-b border-white/20">
-<div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-<div class="flex flex-col">
-<span class="text-xl font-light tracking-[0.2em] uppercase text-[var(--primary)]">Laura Tulian</span>
-<span class="text-[10px] tracking-[0.3em] uppercase text-[var(--text-muted)] -mt-1">Lic. en Fonoaudiología</span>
-</div>
-<div class="hidden md:flex items-center gap-10">
-<a class="text-sm font-medium hover:text-[var(--primary)] transition-colors" href="#inicio">Inicio</a>
-<a class="text-sm font-medium hover:text-[var(--primary)] transition-colors" href="#servicios">Servicios</a>
-<a class="text-sm font-medium hover:text-[var(--primary)] transition-colors" href="#contacto">Contacto</a>
-<a class="bg-[var(--primary)] text-white px-6 py-2.5 rounded-full text-sm font-medium hover:shadow-lg hover:shadow-green-900/10 transition-all" href="https://wa.me/543515111175">Turnos</a>
-</div>
-<button class="md:hidden text-[var(--primary)]">
-<span class="material-symbols-outlined text-3xl">menu</span>
-</button>
+<div class="flex items-center gap-4">
+<a class="bg-primary text-on-primary px-6 py-2.5 rounded-xl font-bold transition-all hover:opacity-90 active:scale-95 duration-200" href="https://wa.me/543515640023" target="_blank">
+                Turno Online
+            </a>
 </div>
 </nav>
+</header>
 <main>
-<section class="relative min-h-screen flex items-center pt-20 px-6 overflow-hidden" id="inicio">
-<div class="max-w-7xl mx-auto w-full grid md:grid-cols-2 gap-12 items-center">
-<div class="relative z-10 space-y-8">
-<div class="space-y-4">
-<span class="inline-block px-4 py-1.5 rounded-full bg-white text-[var(--primary)] text-xs font-semibold tracking-widest uppercase border border-[var(--primary-soft)]">Especialista en Salud Auditiva</span>
-<h1 class="text-6xl md:text-8xl serif leading-[1.1] text-[var(--text-main)]">
-                            La armonía de <br/> <span class="italic text-[var(--primary)] opacity-80">volver a oír.</span>
-</h1>
-<p class="text-lg text-[var(--text-muted)] max-w-md leading-relaxed font-light">
-                            Estudios audiológicos especializados para bebés, niños y adultos. Un espacio dedicado al cuidado integral de tu audición.
-                        </p>
+<!-- Hero Section -->
+<section class="relative min-h-[921px] flex items-center overflow-hidden pt-16" id="inicio">
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent z-10"></div>
+<img class="w-full h-full object-cover opacity-60" data-alt="Modern clinical office space with minimalist furniture, soft natural lighting through a large window, and indoor plants creating a healing sanctuary" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDW6_wbdcf0G3LllwtczGxe8r4EWTN62euk95P_7_yi8PHHuXjt-eV7xD8lsAGhictz5lagApZiVPzxJOFPPseCXWJygijyhvlIyOASBdX7TLOokYVJlt-MI2ho_rfAIAdTwAIEMl08cfgbwiPNvyg82Xi9d7s6HIBAvedSXmoM9JoWi0dtnEHoOgumvpdH0_nBVo0LTQ_nRoQ2pKLeHVqZWWFmZQZeLXRr2nVlOVhNtmFa6rRiJfwfEmNS7b38oGUwyDhn6aY7iuQ"/>
 </div>
-<div class="flex flex-wrap gap-4">
-<a class="px-8 py-4 bg-[var(--primary)] text-white rounded-full font-medium flex items-center gap-3 group" href="https://wa.me/543515111175">
-<span>Consultar Particular/Obra Social</span>
-<span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+<div class="container max-w-7xl mx-auto px-8 relative z-20">
+<div class="max-w-3xl">
+<span class="inline-block px-4 py-1.5 rounded-full bg-primary-container/20 text-primary font-bold text-sm mb-6 tracking-wide uppercase">Fonoaudiologia Profesional</span>
+<h1 class="text-6xl md:text-8xl font-extrabold text-primary mb-6 tracking-tighter leading-tight">
+                    Lic. Laura Tulian
+                </h1>
+<p class="text-2xl md:text-3xl text-on-surface-variant font-medium mb-10 leading-relaxed max-w-2xl">
+                    Atención personalizada para el cuidado integral de tu comunicación y audición.
+                </p>
+<div class="flex flex-col sm:flex-row gap-4">
+<a class="bg-primary text-on-primary px-8 py-4 rounded-xl font-bold text-lg inline-flex items-center justify-center gap-2 transition-all hover:scale-[1.02]" href="#servicios">
+                        Ver Servicios
+                        <span class="material-symbols-outlined">arrow_forward</span>
 </a>
-</div>
-</div>
-<div class="relative flex justify-center lg:justify-end">
-<div class="relative w-full max-w-[500px]">
-<div class="aspect-[4/5] bg-[#e8f5e9] organic-blob overflow-hidden shadow-2xl shadow-green-900/5">
-<img alt="Consulta profesional" class="w-full h-full object-cover mix-blend-multiply opacity-80" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_Zo4-j1kupwBt68LMw_4deoBqL6Jp311sCPVKutIrRIBreAyEwXYN1j53asAkkIj4c7hhddBTVFjZf8Pea-kwKQ29Z5Y9wKWBwMxSUJUwB17iwDp711Ay7naSBbEhINkcnVg6voWvU8unq2Bd1SMWjQhOVZbjuKbeAl0itwq-C0vk9sxlkG50lO_qjqhY7KjW3YL7YrJN-iZyHpP_pWRlGGwiUVTRo95f4lHt-2B3AhlA9Etb2MPNAu19lrBnZgmQiOjzHZi9gk0"/>
-</div>
-<div class="absolute -bottom-10 -left-10 bg-white/80 backdrop-blur-md p-6 rounded-3xl shadow-xl border border-white max-w-[200px]">
-<div class="flex gap-1 text-[var(--accent)] mb-2">
-<span class="material-symbols-outlined fill-1">star</span>
-<span class="material-symbols-outlined fill-1">star</span>
-<span class="material-symbols-outlined fill-1">star</span>
-</div>
-<p class="text-xs italic text-[var(--text-main)] font-medium">"Atención cálida y profesional para mi hijo desde su nacimiento."</p>
-</div>
+<a class="bg-surface-container-highest text-on-surface px-8 py-4 rounded-xl font-bold text-lg inline-flex items-center justify-center transition-all hover:bg-surface-container-high" href="#contacto">
+                        Consultar Ahora
+                    </a>
 </div>
 </div>
 </div>
 </section>
-<section class="py-32 bg-white section-curve" id="servicios">
-<div class="max-w-7xl mx-auto px-6">
-<div class="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
-<div class="max-w-xl">
-<h2 class="text-4xl md:text-5xl serif mb-6">Cuidado experto para cada etapa de la vida</h2>
-<p class="text-[var(--text-muted)] leading-relaxed">Ofrecemos soluciones personalizadas y diagnósticos precisos utilizando tecnología de vanguardia para asegurar la mejor calidad auditiva.</p>
+<!-- Services Section (Bento Grid) -->
+<section class="py-24 bg-surface-container-low" id="servicios">
+<div class="container max-w-7xl mx-auto px-8">
+<div class="text-center mb-16">
+<h2 class="text-4xl md:text-5xl font-bold text-primary mb-4">Nuestros Servicios</h2>
+<p class="text-on-surface-variant text-lg">Especialidades en fonoaudiología para todas las etapas de la vida.</p>
 </div>
-<div class="text-[var(--primary)] opacity-10">
-<span class="material-symbols-outlined text-[120px] font-thin">hearing</span>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+<!-- Service 1: Audiometrías -->
+<div class="md:col-span-8 bg-surface-container-lowest p-8 rounded-xl shadow-sm hover:shadow-md transition-all group overflow-hidden relative">
+<div class="relative z-10 flex flex-col h-full justify-between">
+<div>
+<div class="w-14 h-14 bg-primary/5 rounded-xl flex items-center justify-center text-primary mb-6">
+<span class="material-symbols-outlined text-3xl">hearing</span>
+</div>
+<h3 class="text-3xl font-bold text-on-surface mb-4">Estudios Audiológicos</h3>
+<p class="text-on-surface-variant text-lg leading-relaxed max-w-md">Audiometrías tonales y estudios específicos para particulares y obras sociales. Diagnóstico preciso de la capacidad auditiva.</p>
+</div>
+<div class="mt-8">
+<span class="text-primary font-bold inline-flex items-center gap-2 group-hover:gap-4 transition-all">Más información <span class="material-symbols-outlined">arrow_right_alt</span></span>
 </div>
 </div>
-<div class="grid md:grid-cols-3 gap-12">
-<div class="group">
-<div class="w-16 h-16 rounded-2xl bg-[var(--primary-soft)] flex items-center justify-center mb-8 group-hover:bg-[var(--primary)] group-hover:text-white transition-all duration-500">
-<span class="material-symbols-outlined text-3xl">child_care</span>
+<img class="absolute top-0 right-0 w-1/3 h-full object-cover opacity-10 group-hover:opacity-20 transition-opacity" data-alt="Close up of a professional audiology test device in a clean clinical setting with shallow depth of field" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSJ6RzLGuhow52XGcK4m4Wwkx7Asq2XiKr07-tn8EjoIE2VLrvguB2ECdaP_B1XZtwzWK9ZApsQy9BMnPbgUcKN1RUfpaG30PYgyOpKWHpcO7OZbDY1LHH2Zi1JrzfKRAxtSIIvsu3c5K-iZWJYzTpxxq9z6CwOtdq687JoZMNOblk4xTDbWxsIatt0zLMA4yDURXX2S18DazGlt0YwH5TcFwzt3wToTTu6UB2LnLjQ0BZWEaE3nwgKEcIVqP-lC8LvBgK63aTz8I"/>
 </div>
-<h3 class="text-xl font-medium mb-4">Bebés y Niños</h3>
-<p class="text-[var(--text-muted)] font-light leading-relaxed">Detección temprana y seguimiento auditivo especializado para el desarrollo saludable desde el primer día.</p>
-</div>
-<div class="group">
-<div class="w-16 h-16 rounded-2xl bg-[var(--primary-soft)] flex items-center justify-center mb-8 group-hover:bg-[var(--primary)] group-hover:text-white transition-all duration-500">
+<!-- Service 2: Logopedia -->
+<div class="md:col-span-4 bg-primary text-on-primary p-8 rounded-xl shadow-sm hover:shadow-md transition-all">
+<div class="w-14 h-14 bg-white/10 rounded-xl flex items-center justify-center text-white mb-6">
 <span class="material-symbols-outlined text-3xl">record_voice_over</span>
 </div>
-<h3 class="text-xl font-medium mb-4">Jóvenes y Adultos</h3>
-<p class="text-[var(--text-muted)] font-light leading-relaxed">Diagnóstico clínico, audiometrías y asesoramiento integral para preservar tu salud comunicativa.</p>
+<h3 class="text-2xl font-bold mb-4">Logopedia</h3>
+<p class="text-primary-fixed-dim text-lg leading-relaxed">Tratamientos especializados en trastornos del habla, lenguaje y comunicación.</p>
 </div>
-<div class="group">
-<div class="w-16 h-16 rounded-2xl bg-[var(--primary-soft)] flex items-center justify-center mb-8 group-hover:bg-[var(--primary)] group-hover:text-white transition-all duration-500">
-<span class="material-symbols-outlined text-3xl">description</span>
+<!-- Service 3: Estimulación Temprana -->
+<div class="md:col-span-4 bg-surface-container p-8 rounded-xl shadow-sm hover:shadow-md transition-all border border-transparent hover:border-outline-variant/30">
+<div class="w-14 h-14 bg-secondary/10 rounded-xl flex items-center justify-center text-secondary mb-6">
+<span class="material-symbols-outlined text-3xl">child_care</span>
 </div>
-<h3 class="text-xl font-medium mb-4">Obras Sociales</h3>
-<p class="text-[var(--text-muted)] font-light leading-relaxed">Atención a través de diversas coberturas y turnos particulares con mínimos tiempos de espera.</p>
+<h3 class="text-2xl font-bold text-on-surface mb-4">Estimulación Temprana</h3>
+<p class="text-on-surface-variant text-lg">Acompañamiento en el desarrollo inicial de bebés y niños pequeños para potenciar sus capacidades.</p>
+</div>
+<!-- Service 4: Tratamientos Adultos -->
+<div class="md:col-span-8 bg-surface-container-lowest p-8 rounded-xl shadow-sm hover:shadow-md transition-all group overflow-hidden relative">
+<div class="relative z-10">
+<div class="w-14 h-14 bg-primary/5 rounded-xl flex items-center justify-center text-primary mb-6">
+<span class="material-symbols-outlined text-3xl">psychology</span>
+</div>
+<h3 class="text-3xl font-bold text-on-surface mb-4">Tratamientos para Adultos</h3>
+<p class="text-on-surface-variant text-lg leading-relaxed max-w-xl">Rehabilitación y terapia fonoaudiológica para jóvenes y adultos, adaptada a cada necesidad específica.</p>
+</div>
+<img class="absolute top-0 right-0 w-1/4 h-full object-cover opacity-5 group-hover:opacity-10 transition-opacity" data-alt="Mature professional woman engaged in conversation in a professional clinical office atmosphere" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjaqun6M3QpjgjDt4lMXUjfTwdk-I2FXIwlbo3ULRqAajec07El7Gm_UeSn7kDP7H0Ur7CYlYSkj1nrbdcc2G1F2OPk3CRVRDK9Ylytv5CIFVg3kIXbsUxa80n6IDlTW6vatXiSjlWSNdZb5raaMx5R0E5k1yYjd10qHkoNIZYbg7aGQZea8XgOHVN_VzNfVlP7iMV1SwH77cvp7LLwBJiURbZmAqbOSj9741e3n5O8J8JARa5nItrrvACX0l09f8VoK1qepynp6c"/>
 </div>
 </div>
 </div>
 </section>
-<section class="py-32 px-6" id="contacto">
-<div class="max-w-7xl mx-auto">
-<div class="bg-[var(--primary)] rounded-[4rem] overflow-hidden relative">
-<div class="absolute inset-0 opacity-10 pointer-events-none" style="background-image: radial-gradient(#fff 1px, transparent 1px); background-size: 40px 40px;"></div>
-<div class="relative z-10 grid lg:grid-cols-2 p-12 md:p-24 items-center gap-16">
-<div class="text-white">
-<h2 class="text-4xl md:text-6xl serif mb-8">Coordinemos tu <br/><span class="opacity-70 italic">próxima consulta.</span></h2>
-<p class="text-green-100/80 mb-12 text-lg font-light max-w-md">Estamos ubicados en el corazón de Córdoba, brindando un entorno sereno para tu atención.</p>
+<!-- About Me Section -->
+<section class="py-24 overflow-hidden" id="sobre-mi">
+<div class="container max-w-7xl mx-auto px-8">
+<div class="flex flex-col md:flex-row items-center gap-16">
+<div class="w-full md:w-1/2 relative">
+<div class="aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl relative z-10">
+<img class="w-full h-full object-cover" data-alt="Portrait of a professional female healthcare provider in a bright office environment, smiling warmly at the camera" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBiqCQ7xx4bG1yoUWbIH0447vZzf-0NRHVNu7BDwImt-fas2GiVaSm7E8cw_esqtezfWsFQkfFoaFxRzgQt2FiOL1IM1rwRvsaqYYjpS-msfgx9H9q5OCUC7rCNTwm7wCxZh7y_BcNcU1Lf1l3rAXKz6QpKfFuTQ0hA4B0_FtpFjpQI0OTAKl0OqLRbubyhJKpbbPDaZHeFG1EGPruVqpDtRyi9wVKaFrtpjCXSKxiyx7ZPG-BD_tsGI5Rj08e94-SJzPV2qXRK0KE"/>
+</div>
+<div class="absolute -bottom-8 -right-8 w-64 h-64 bg-primary-container rounded-3xl -z-0"></div>
+<div class="absolute -top-8 -left-8 w-48 h-48 bg-secondary-container/20 rounded-full -z-0"></div>
+</div>
+<div class="w-full md:w-1/2">
+<h2 class="text-4xl md:text-5xl font-bold text-primary mb-8 tracking-tight">Sobre Mí</h2>
 <div class="space-y-6">
-<div class="flex items-center gap-4">
-<span class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center">
-<span class="material-symbols-outlined text-sm">location_on</span>
-</span>
-<span class="font-light">Montemayor 1531, Córdoba</span>
+<p class="text-xl text-on-surface leading-relaxed">
+                            Soy <span class="font-bold text-primary">Licenciada en Fonoaudiología</span>, dedicada con pasión a mejorar la calidad de vida de mis pacientes a través de la comunicación y la salud auditiva.
+                        </p>
+<p class="text-lg text-on-surface-variant leading-relaxed">
+                            Mi práctica profesional se caracteriza por un enfoque integral y personalizado. Realizo estudios audiológicos tanto para pacientes particulares como a través de obras sociales.
+                        </p>
+<p class="text-lg text-on-surface-variant leading-relaxed font-semibold border-l-4 border-primary pl-6 py-2 bg-primary/5 italic">
+                            "Trabajo con bebés, niños, jóvenes y adultos, entendiendo que cada etapa de la vida requiere una sensibilidad y técnica diferente."
+                        </p>
+<div class="grid grid-cols-2 gap-4 mt-8">
+<div class="p-4 bg-surface-container rounded-xl">
+<span class="text-primary font-bold block text-2xl mb-1">Audiología</span>
+<span class="text-on-surface-variant text-sm">Estudios Precisos</span>
+</div>
+<div class="p-4 bg-surface-container rounded-xl">
+<span class="text-primary font-bold block text-2xl mb-1">Terapia</span>
+<span class="text-on-surface-variant text-sm">Todas las edades</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Social Proof (Testimonials) Section -->
+<section class="py-24 bg-surface" id="testimonios">
+<div class="container max-w-7xl mx-auto px-8">
+<div class="text-center mb-16 fade-in-section">
+<span class="text-primary font-bold tracking-widest uppercase text-sm mb-4 block">Experiencias</span>
+<h2 class="text-4xl md:text-5xl font-bold text-primary mb-4 tracking-tight">Lo que dicen nuestros pacientes</h2>
+<p class="text-on-surface-variant text-lg max-w-2xl mx-auto">Tu bienestar es nuestra prioridad. Conocé las historias de quienes ya confiaron en nosotros.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Testimonial 1 -->
+<div class="bg-white p-8 rounded-3xl shadow-sm border border-outline-variant/20 flex flex-col justify-between hover:shadow-md transition-shadow fade-in-section" style="transition-delay: 100ms;">
+<div>
+<div class="flex gap-0.5 text-primary-container mb-6">
+<span class="material-symbols-outlined filled">star</span>
+<span class="material-symbols-outlined filled">star</span>
+<span class="material-symbols-outlined filled">star</span>
+<span class="material-symbols-outlined filled">star</span>
+<span class="material-symbols-outlined filled">star</span>
+</div>
+<p class="text-on-surface text-lg italic leading-relaxed mb-8">"Excelente profesional. Mi hijo mejoró muchísimo su habla en poco tiempo. Súper recomendada."</p>
 </div>
 <div class="flex items-center gap-4">
-<span class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center">
-<span class="material-symbols-outlined text-sm">mail</span>
-</span>
-<span class="font-light">lictulianlaura@gmail.com</span>
+<img alt="Carla R." class="w-12 h-12 rounded-full border-2 border-primary/10" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDgIF0s6ltwdD2AiOGzDyUf_tVd6NNsLqsn_sZlyrdyQ-e68Uk8C1kbuGqhum9I0VmIom0pUagowHhC067cuYUVni51KA7GuazjiUl9lOWX9jRKiMX4blwiWmoFr6YLBbH7Xwxy3m2ndjMi0BQysbsNt8lt8R9lHG7bYRGBo9aYaZ-RFx7VR2_4PmgCtB7UBurXtZCiT3Y4J2sNbrvudX1yMtVwJiEhZgdvbkXwOnQAepPnx-qQwdUGOlZ9Aem5pTE2bMhlv82UTAQ"/>
+<div>
+<p class="font-bold text-on-surface">Carla R.</p>
+<p class="text-on-surface-variant text-xs uppercase tracking-wider">Mamá de paciente</p>
+</div>
+</div>
+</div>
+<!-- Testimonial 2 -->
+<div class="bg-white p-8 rounded-3xl shadow-sm border border-outline-variant/20 flex flex-col justify-between hover:shadow-md transition-shadow fade-in-section" style="transition-delay: 200ms;">
+<div>
+<div class="flex gap-0.5 text-primary-container mb-6">
+<span class="material-symbols-outlined filled">star</span>
+<span class="material-symbols-outlined filled">star</span>
+<span class="material-symbols-outlined filled">star</span>
+<span class="material-symbols-outlined filled">star</span>
+<span class="material-symbols-outlined filled">star</span>
+</div>
+<p class="text-on-surface text-lg italic leading-relaxed mb-8">"Muy conforme con el estudio auditivo. Laura es muy amable y paciente, explicó todo con claridad."</p>
 </div>
 <div class="flex items-center gap-4">
-<span class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center">
-<span class="material-symbols-outlined text-sm">phone_iphone</span>
-</span>
-<span class="font-light">+54 9 351 511 1175</span>
+<img alt="Roberto M." class="w-12 h-12 rounded-full border-2 border-primary/10" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCX-SDWhQqOfqvYi4tAPn3ea6PbZx5PeZOoH-OQNP0IfAF1UTfBeHMFg1_jDuVrpTkR9VMwEPpQDMI28rifiLld4umhiPqb0kq_peVTNCKhK3cCJG6A9WVMmSTtdpfGwCTwwKr-Xd-xrF8oETBPszr41EX5MYBp0hDAhDcysEN8p2ItvlsHq9aSvsJdZWjRMH_LFhOmcCnzGuDxEI11qkhxa3WkADtSwAAllOdHFske8nce_L3NDYMv1M8ZL2mJqX4xK0pvw3C0W_E"/>
+<div>
+<p class="font-bold text-on-surface">Roberto M.</p>
+<p class="text-on-surface-variant text-xs uppercase tracking-wider">Paciente Adulto</p>
 </div>
 </div>
 </div>
-<div class="bg-white/5 backdrop-blur-sm p-8 md:p-12 rounded-[3rem] border border-white/10">
-<h4 class="text-white text-2xl serif mb-6">Atención Prioritaria</h4>
-<p class="text-green-50/70 mb-8 font-light">Para agendar un turno de manera ágil, por favor presione el botón de WhatsApp a continuación.</p>
-<a class="block w-full text-center bg-white text-[var(--primary)] py-5 rounded-2xl font-semibold hover:bg-[var(--accent)] hover:text-[var(--primary)] transition-all" href="https://wa.me/543515111175">
-                                Agendar por WhatsApp
-                            </a>
+<!-- Testimonial 3 -->
+<div class="bg-white p-8 rounded-3xl shadow-sm border border-outline-variant/20 flex flex-col justify-between hover:shadow-md transition-shadow fade-in-section" style="transition-delay: 300ms;">
+<div>
+<div class="flex gap-0.5 text-primary-container mb-6">
+<span class="material-symbols-outlined filled">star</span>
+<span class="material-symbols-outlined filled">star</span>
+<span class="material-symbols-outlined filled">star</span>
+<span class="material-symbols-outlined filled">star</span>
+<span class="material-symbols-outlined filled">star</span>
+</div>
+<p class="text-on-surface text-lg italic leading-relaxed mb-8">"La atención es impecable. El consultorio es muy cómodo y el trato con los niños es excepcional."</p>
+</div>
+<div class="flex items-center gap-4">
+<img alt="Lucía S." class="w-12 h-12 rounded-full border-2 border-primary/10" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYZvkwGQ3nhthC0NTyykRnRrara4PH_d3hRMOjpbogSTS5hLTrqj_z8x8Tk9PhzkCIlT3VsfM3P4TPtDfWvlE3QyZi5-XXvo4jPJCH6WxpD2kmyuduvLlv5R1FLnUeLBZ_soRREh3TIGoFvszxsuoFQ2hkjqRMc4ijUJRlhhEpi9PYfiEWAVHLIcrrpn_bZ7dofbwwNCJp7E9suoKHhsey2cBWjOI3ZFERygoq7483ekl6mwK8NNnGPFCu-H2RawwYiBsgTCJYq2A"/>
+<div>
+<p class="font-bold text-on-surface">Lucía S.</p>
+<p class="text-on-surface-variant text-xs uppercase tracking-wider">Paciente</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="py-24 bg-surface-container-low" id="contacto">
+<div class="container max-w-7xl mx-auto px-8">
+<div class="bg-white rounded-3xl overflow-hidden shadow-xl flex flex-col lg:flex-row">
+<!-- Contact Info -->
+<div class="lg:w-2/5 bg-primary p-12 text-on-primary">
+<h2 class="text-3xl font-bold mb-8">Contacto</h2>
+<p class="text-primary-fixed-dim mb-12 text-lg">Estoy aquí para ayudarte. No dudes en consultarme por cualquier duda sobre estudios o tratamientos.</p>
+<div class="space-y-8">
+<div class="flex items-start gap-4">
+<div class="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined">call</span>
+</div>
+<div>
+<p class="text-sm text-primary-fixed-dim uppercase tracking-wider font-bold mb-1">Teléfono</p>
+<p class="text-xl font-medium">+54 9 351 564 0023</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined">mail</span>
+</div>
+<div>
+<p class="text-sm text-primary-fixed-dim uppercase tracking-wider font-bold mb-1">Email</p>
+<p class="text-xl font-medium">laura.tulian@gmail.com</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined">location_on</span>
+</div>
+<div>
+<p class="text-sm text-primary-fixed-dim uppercase tracking-wider font-bold mb-1">Ubicación</p>
+<p class="text-xl font-medium">Montemayor 1531, Córdoba</p>
+</div>
+</div>
+</div>
+<div class="mt-16 pt-12 border-t border-white/10">
+<h4 class="font-bold mb-4 uppercase tracking-widest text-xs opacity-60">Horarios de Atención</h4>
+<p class="text-lg opacity-90">Lunes a Viernes - Con turno previo</p>
+</div>
+</div>
+<!-- Map Placeholder -->
+<div class="lg:w-3/5 h-[400px] lg:h-auto bg-surface-container-high relative overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Abstract aerial satellite view of an urban residential neighborhood with structured streets and soft evening light" data-location="Cordoba, Argentina" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfVwbCyjTr2-smxX4QLQqoAP7sK6-di_5DmxJ5PsEhvWNfyCW9z58W-QQ19uDS3jndX5W5L0pnEFa0-D5RjOL_mfT8wu7doaxm6-5nKhEbD0NVhoiSK2RLEF1Bcx7ccQSC4UcAP-SpB_-XmchZQOudWbu_WBvILlVE2naKBO4BJ9GMiKkgzUK2QUmBRidP_2gJfEeKvv4Sb7nEQPlOBRAL6UKCXJ-HowL9TIR14LvQJpFI757XiqQoiSA-35XjyaVePCtS8uWPBLs"/>
+<div class="absolute inset-0 bg-primary/10 pointer-events-none"></div>
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+<div class="bg-primary text-on-primary p-4 rounded-full shadow-2xl flex items-center justify-center animate-bounce">
+<span class="material-symbols-outlined text-3xl">location_on</span>
+</div>
 </div>
 </div>
 </div>
 </div>
 </section>
 </main>
-<footer class="py-20 px-6 border-t border-green-100">
-<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-10">
-<div class="flex flex-col items-center md:items-start">
-<span class="text-lg font-light tracking-widest uppercase text-[var(--primary)]">Laura Tulian</span>
-<span class="text-xs tracking-tighter text-[var(--text-muted)] mt-1">© 2024 Salud Auditiva. Todos los derechos reservados.</span>
+<!-- Footer -->
+<footer class="w-full py-12 bg-emerald-900 dark:bg-black flex flex-col items-center gap-6 px-4">
+<div class="text-lg font-bold text-white font-['Plus_Jakarta_Sans']">
+        Lic. Laura Tulian - Fonoaudiología
+    </div>
+<div class="flex gap-8 font-['Manrope'] text-sm">
+<a class="text-emerald-200/60 hover:text-emerald-400 transition-colors" href="https://instagram.com">Instagram</a>
+<a class="text-emerald-200/60 hover:text-emerald-400 transition-colors" href="https://facebook.com">Facebook</a>
+<a class="text-emerald-200/60 hover:text-emerald-400 transition-colors" href="https://twitter.com">X</a>
 </div>
-<div class="flex gap-8">
-<a class="text-[var(--text-muted)] hover:text-[var(--primary)] transition-colors" href="https://instagram.com/sileymartin">
-<svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg>
-</a>
-<a class="text-[var(--text-muted)] hover:text-[var(--primary)] transition-colors" href="https://facebook.com/sileymartin">
-<svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.469h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path></svg>
-</a>
+<div class="flex gap-6 font-['Manrope'] text-sm">
+<a class="text-emerald-200/60 hover:text-emerald-400 transition-colors" href="#">Privacidad</a>
+<a class="text-emerald-200/60 hover:text-emerald-400 transition-colors" href="#">Términos</a>
+<a class="text-emerald-200/60 hover:text-emerald-400 transition-colors" href="#">Preguntas Frecuentes</a>
 </div>
-</div>
+<div class="text-emerald-200/60 text-xs font-['Manrope'] mt-4 text-center">
+        © 2024 Lic. Laura Tulian - Fonoaudiología. Todos los derechos reservados.
+    </div>
 </footer>
-<a class="floating-wa fixed bottom-8 right-8 z-[100] w-16 h-16 bg-[#25d366] text-white rounded-full flex items-center justify-center shadow-2xl shadow-green-500/40" href="https://wa.me/543515111175">
-<svg class="w-8 h-8 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.246 2.248 3.484 5.232 3.484 8.412-.003 6.557-5.338 11.892-11.893 11.892-1.997-.001-3.951-.5-5.688-1.448l-6.309 1.656zm6.222-4.032c1.504.893 3.141 1.364 4.816 1.365 5.071 0 9.201-4.128 9.203-9.201.001-2.462-.959-4.773-2.701-6.516s-4.053-2.702-6.513-2.703c-5.072 0-9.203 4.129-9.205 9.203-.001 1.782.518 3.522 1.501 5.034l-1.023 3.733 3.822-1.001zm10.158-6.197c-.276-.138-1.631-.804-1.885-.897-.253-.092-.438-.138-.623.139-.185.277-.714.897-.874 1.082-.16.184-.321.208-.598.069-.276-.138-1.168-.431-2.224-1.374-.821-.733-1.375-1.637-1.536-1.913-.16-.277-.017-.426.121-.563.124-.124.276-.322.415-.483.138-.161.184-.276.276-.46.092-.184.046-.345-.023-.483-.069-.138-.623-1.501-.853-2.053-.224-.539-.47-.465-.644-.474-.167-.008-.36-.01-.553-.01s-.507.072-.771.357c-.264.285-1.012.989-1.012 2.413s1.035 2.798 1.181 2.994c.146.196 2.036 3.111 4.933 4.364.688.298 1.226.476 1.644.609.692.219 1.321.188 1.82.114.557-.083 1.631-.667 1.861-1.311.23-.644.23-1.196.161-1.311-.069-.115-.253-.184-.529-.322z"></path></svg>
+<!-- Floating WhatsApp Button -->
+<a class="fixed bottom-8 right-8 z-[100] group flex items-center gap-3" href="https://wa.me/543515640023" target="_blank">
+<div class="hidden group-hover:block bg-surface-container-lowest/80 backdrop-blur-md px-4 py-2 rounded-full shadow-lg border border-outline-variant/10 transition-all">
+<span class="text-primary font-bold text-sm whitespace-nowrap">¡Hablemos por WhatsApp!</span>
+</div>
+<div class="w-16 h-16 bg-white/80 backdrop-blur-xl rounded-full shadow-[0_20px_40px_rgba(0,76,34,0.15)] flex items-center justify-center text-secondary transition-transform hover:scale-110 active:scale-95">
+<svg class="w-8 h-8 fill-current" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.414 0 .01 5.403.007 12.039c0 2.121.554 4.189 1.604 6.012l-1.704 6.223 6.365-1.669a11.838 11.838 0 005.772 1.503h.005c6.635 0 12.039-5.403 12.042-12.04a11.75 11.75 0 00-3.486-8.366z"></path>
+</svg>
+</div>
 </a>
+<script>
+    // Simple intersection observer for scroll animations
+    const observerOptions = {
+        threshold: 0.1
+    };
 
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+            }
+        });
+    }, observerOptions);
+
+    document.querySelectorAll('.fade-in-section').forEach(section => {
+        observer.observe(section);
+    });
+</script>
 </body></html>

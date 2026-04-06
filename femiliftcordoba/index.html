@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>FemiLift Córdoba | Salud y Bienestar</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;600;700;800&amp;family=Manrope:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-surface-variant": "#544434",
+                    "surface-container-lowest": "#ffffff",
+                    "inverse-surface": "#2d3133",
+                    "on-error": "#ffffff",
+                    "on-primary": "#ffffff",
+                    "secondary-fixed": "#fbddc7",
+                    "tertiary-container": "#d2902a",
+                    "on-secondary-container": "#745e4d",
+                    "inverse-on-surface": "#eff1f3",
+                    "secondary-fixed-dim": "#ddc1ac",
+                    "error-container": "#ffdad6",
+                    "primary-fixed": "#ffdcbd",
+                    "surface-container": "#eceef0",
+                    "inverse-on-surface": "#eff1f3",
+                    "inverse-primary": "#ffb86d",
+                    "secondary": "#705a49",
+                    "tertiary-fixed": "#ffddb5",
+                    "on-tertiary-fixed": "#2a1800",
+                    "surface-dim": "#d8dadc",
+                    "tertiary": "#835400",
+                    "on-primary-fixed": "#2c1600",
+                    "on-error-container": "#93000a",
+                    "surface-container-high": "#e6e8ea",
+                    "tertiary-fixed-dim": "#ffb957",
+                    "surface-bright": "#f8f9fb",
+                    "outline-variant": "#dac2ae",
+                    "on-secondary": "#ffffff",
+                    "on-tertiary": "#ffffff",
+                    "on-primary-container": "#4f2c00",
+                    "surface-container-low": "#f2f4f6",
+                    "on-tertiary-fixed-variant": "#643f00",
+                    "on-tertiary-container": "#4b2f00",
+                    "secondary-container": "#f8dac4",
+                    "on-background": "#191c1e",
+                    "surface-variant": "#e0e3e5",
+                    "outline": "#877462",
+                    "primary": "#8a5100",
+                    "error": "#ba1a1a",
+                    "background": "#f8f9fb",
+                    "surface-tint": "#8a5100",
+                    "primary-fixed-dim": "#ffb86d",
+                    "on-secondary-fixed": "#27180b",
+                    "primary-container": "#e28800",
+                    "on-surface": "#191c1e",
+                    "on-secondary-fixed-variant": "#564333",
+                    "surface-container-highest": "#e0e3e5",
+                    "surface": "#f8f9fb",
+                    "on-primary-fixed-variant": "#693c00"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Epilogue"],
+                    "body": ["Manrope"],
+                    "label": ["Manrope"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Manrope', sans-serif; }
+        h1, h2, h3 { font-family: 'Epilogue', sans-serif; }
+        .glass-nav { backdrop-filter: blur(20px); }
+    </style>
+</head>
+<body class="bg-background text-on-background selection:bg-primary-container selection:text-on-primary-container">
+<!-- Top Navigation Bar -->
+<nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-950/80 backdrop-blur-xl">
+<div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
+<div class="text-xl font-bold text-orange-900 dark:text-orange-50 font-epilogue tracking-tight">
+                FemiLift Córdoba
+            </div>
+<div class="hidden md:flex items-center space-x-8 font-epilogue tracking-tight">
+<a class="text-slate-600 dark:text-slate-400 hover:text-orange-800 transition-colors" href="#servicios">Servicios</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-orange-800 transition-colors" href="#sobre-nosotros">Sobre Nosotros</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-orange-800 transition-colors" href="#tratamientos">Tratamientos</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-orange-800 transition-colors" href="#contacto">Contacto</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="bg-primary text-on-primary px-6 py-2.5 rounded-md font-medium text-sm hover:opacity-80 transition-opacity duration-300">
+                    Reservar Cita
+                </button>
+</div>
+</div>
+</nav>
+<main>
+<!-- Hero Section -->
+<section class="relative min-h-screen flex items-center pt-20 overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover opacity-20" data-alt="Interior of a luxury medical spa with warm lighting, minimalist wooden furniture, and white textured walls in a serene atmosphere" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCeqU6ygRPItImNc0JrMm5_-zJOrFWdhe4WBzTl_82H99IbKjX5mwv8QSNycJvq3ueCq0FdbY_JcdTsn3UYyKkZKYllEjr6v84FEWj1vCar3k7zOuNhRw4ulQH7V0yZDTIwysGNj-ntwd7RFBZAIVN3VU6Bu8bAMFCHTVTu_v_E47lraWI26dLGY9ziT-RzVvUOEZaRK5HGrEw7WNGiAk8DCY2l_kzXs2e9jvFoAOvvSdJV5hLrKyao-wZFZ2hcOdDkRHH8zEHpavaQ"/>
+<div class="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-transparent"></div>
+</div>
+<div class="container max-w-7xl mx-auto px-8 relative z-10">
+<div class="max-w-2xl">
+<span class="inline-block text-primary font-semibold tracking-widest text-sm uppercase mb-4 font-label">Bienvenido a la Excelencia</span>
+<h1 class="text-6xl md:text-8xl font-extrabold text-on-surface leading-[1.1] tracking-tighter mb-8 font-headline">
+                        Salud y Bienestar
+                    </h1>
+<p class="text-xl text-on-surface-variant leading-relaxed mb-10 max-w-lg font-body">
+                        Descubra una nueva dimensión del cuidado íntimo y el rejuvenecimiento médico en el corazón de Córdoba, donde la tecnología de vanguardia se encuentra con el confort del taller clínico.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-4">
+<button class="bg-primary text-on-primary px-10 py-4 rounded-md font-semibold text-lg hover:shadow-xl transition-all duration-500 flex items-center justify-center gap-2">
+                            Reservar Cita
+                            <span class="material-symbols-outlined">calendar_today</span>
+</button>
+<button class="bg-transparent border border-outline/30 text-primary px-10 py-4 rounded-md font-semibold text-lg hover:bg-surface-container-low transition-all duration-500">
+                            Nuestros Tratamientos
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Section (Bento Grid Style) -->
+<section class="py-32 bg-surface" id="servicios">
+<div class="max-w-7xl mx-auto px-8">
+<div class="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
+<div class="max-w-xl">
+<h2 class="text-4xl md:text-5xl font-bold text-on-surface mb-6 tracking-tight">Experiencia Clínica Especializada</h2>
+<p class="text-on-surface-variant text-lg">Ofrecemos soluciones innovadoras diseñadas específicamente para el bienestar femenino, combinando precisión médica con un enfoque humano.</p>
+</div>
+<div class="hidden md:block">
+<span class="material-symbols-outlined text-primary text-6xl opacity-20">medical_services</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+<!-- Large Service Card -->
+<div class="md:col-span-8 group relative overflow-hidden rounded-xl bg-surface-container-lowest h-[450px]">
+<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Close up of a modern medical laser device in a sterile clinic environment with soft blue and white lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpIOcxxN_i1tqE6lU9FvA7pD8o-WCdi0wDsrUDQK3172kyBO1olK8l9fZrnfKfArtWky9T-e5SGsrlobwpudGotF3Lhb1_56DO5B3fb5j5jlIOd-RXO448B2vfMfOwy_QtWm06ded3WZhzLpsp34_KthBnP0WYJPNqIn0DKbvnY4974nA25WTIZhTuFBXyDXHe7CLQxGl0KoQnPchJIzpz0xaV3zOSOqgPJCHbMLcJNQpc52x6mxqzyFD3ETkcx3dQM0jeyv20nqFq"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-10 text-white">
+<h3 class="text-3xl font-bold mb-4">Láser de Rejuvenecimiento</h3>
+<p class="text-white/80 max-w-md mb-6">Tratamientos no invasivos de última generación para la restauración del tejido y la salud íntima femenina.</p>
+<a class="inline-flex items-center gap-2 font-semibold hover:gap-4 transition-all" href="#">Saber más <span class="material-symbols-outlined">arrow_forward</span></a>
+</div>
+</div>
+<!-- Small Service Card 1 -->
+<div class="md:col-span-4 bg-surface-container-low p-10 rounded-xl flex flex-col justify-between group">
+<div>
+<span class="material-symbols-outlined text-primary text-4xl mb-6 bg-primary-fixed p-4 rounded-full">spa</span>
+<h3 class="text-2xl font-bold mb-4">Wellness Integral</h3>
+<p class="text-on-surface-variant">Programas personalizados que equilibran su salud física y emocional bajo supervisión experta.</p>
+</div>
+<div class="mt-8 border-t border-outline-variant/30 pt-6">
+<span class="text-primary font-bold">Ver detalles</span>
+</div>
+</div>
+<!-- Small Service Card 2 -->
+<div class="md:col-span-4 bg-surface-container-lowest p-10 rounded-xl flex flex-col justify-between border-b-4 border-primary">
+<div>
+<span class="material-symbols-outlined text-primary text-4xl mb-6">biotech</span>
+<h3 class="text-2xl font-bold mb-4">Diagnóstico Avanzado</h3>
+<p class="text-on-surface-variant">Evaluaciones clínicas profundas utilizando la tecnología diagnóstica más precisa del mercado.</p>
+</div>
+<div class="mt-8">
+<button class="text-on-surface font-semibold flex items-center gap-2">Explorar <span class="material-symbols-outlined text-sm">open_in_new</span></button>
+</div>
+</div>
+<!-- Medium Service Card -->
+<div class="md:col-span-8 group relative overflow-hidden rounded-xl bg-surface-container-highest h-[350px]">
+<img class="absolute inset-0 w-full h-full object-cover opacity-50 transition-transform duration-700 group-hover:scale-110" data-alt="Soft focused image of a patient consultation room with high-end designer chairs and calming botanical art" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCX3F_zW8XIDhRfiHq9uWRcelyn7jP6hP6tbkyILPsSeoLCa-LmFJmOdTNenD--lR6wwRrpNTBnN5HL_wnGLK6HdE-lsrPSKYfr9hmXZ9huukVh3YWYvi4ihrI3m4-QaO_myXAxry8b_h74sLvGyng1kHRz27nAmbATxBFQppAy87O-7_aJqe1Qs07oF_POXeh605TPQt04Y_lJK3VNIoevnw6jNMrmLTcpTU5MjEieKGxiJJdrB2k0DDEODRlpchPxeYGvuGG-yJCC"/>
+<div class="absolute inset-0 flex items-center justify-center p-12">
+<div class="text-center max-w-lg">
+<h3 class="text-3xl font-bold mb-4 text-on-surface">Consultoría Privada</h3>
+<p class="text-on-surface-variant font-medium">Un espacio seguro y confidencial para dialogar sobre sus necesidades y diseñar su camino hacia el bienestar.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- About Section -->
+<section class="py-32 bg-surface-container-low overflow-hidden" id="sobre-nosotros">
+<div class="max-w-7xl mx-auto px-8">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+<div class="relative">
+<div class="aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl relative z-10">
+<img class="w-full h-full object-cover" data-alt="Professional female doctor in a white coat looking confident and welcoming in a high-end medical clinic hallway" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDyFFo5mwKWpjI0bd3mp_4nsNykshTQ9vOWuTWIEaugrUtkaE9_JxwTHP65vjnu00o2ZFPkYiHHcKIm81-sJPkTwYcDMySD4BQFgvC3mUNKAYnbps0tfcpHebM5ivSEAuG6Toseb_0SkPvaHrdCEaAzTSLQRsUV5ZF3NK-LPflsx-mzFdPFR57X8Wogy2mELHm-ZXDhu9JiRyz2w4lvV0dSi6_p-ThaH9k93lWLN-Js84yn4fJ_-fOTnMvrfTn_eZ4hnSobzJd-HKTr"/>
+</div>
+<div class="absolute -bottom-10 -right-10 w-64 h-64 bg-primary-container/20 rounded-full blur-3xl z-0"></div>
+<div class="absolute -top-10 -left-10 p-8 bg-surface-container-lowest rounded-xl shadow-lg z-20 hidden md:block">
+<p class="text-primary text-4xl font-bold mb-1">15+</p>
+<p class="text-on-surface-variant text-sm font-semibold uppercase tracking-wider">Años de Experiencia</p>
+</div>
+</div>
+<div class="flex flex-col space-y-8">
+<div class="space-y-4">
+<span class="text-primary font-bold tracking-widest text-sm uppercase">Nuestra Filosofía</span>
+<h2 class="text-4xl md:text-5xl font-bold text-on-surface leading-tight tracking-tight">
+                                Excelencia Médica con <span class="italic text-primary">Alma</span>
+</h2>
+</div>
+<p class="text-lg text-on-surface-variant leading-relaxed font-body">
+                            En FemiLift Córdoba, creemos que el bienestar no es solo la ausencia de enfermedad, sino un estado de plenitud física y armonía estética. Nuestro compromiso es proporcionar a cada paciente una atención personalizada que integra los últimos avances de la medicina con un entorno de exclusividad y discreción.
+                        </p>
+<p class="text-lg text-on-surface-variant leading-relaxed font-body">
+                            Nuestro equipo de especialistas altamente cualificados trabaja bajo los más estrictos estándares clínicos, asegurando resultados transformadores que mejoran significativamente la calidad de vida de nuestras pacientes.
+                        </p>
+<div class="grid grid-cols-2 gap-6 pt-6">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary">verified</span>
+<div>
+<h4 class="font-bold">Certificados</h4>
+<p class="text-sm text-on-surface-variant">Estándares europeos</p>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary">group</span>
+<div>
+<h4 class="font-bold">Privacidad</h4>
+<p class="text-sm text-on-surface-variant">Atención discreta</p>
+</div>
+</div>
+</div>
+<div class="pt-8">
+<button class="group inline-flex items-center gap-3 text-on-surface font-bold text-lg">
+                                Conozca a nuestro equipo
+                                <span class="w-12 h-px bg-primary transition-all group-hover:w-20"></span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-24 bg-primary">
+<div class="max-w-7xl mx-auto px-8 text-center text-on-primary">
+<h2 class="text-4xl md:text-5xl font-bold mb-8 font-headline">¿Lista para comenzar su transformación?</h2>
+<p class="text-xl mb-12 opacity-90 max-w-2xl mx-auto font-body">Reserve su consulta inicial hoy mismo y dé el primer paso hacia una versión más saludable y radiante de sí misma.</p>
+<button class="bg-surface-container-lowest text-primary px-12 py-5 rounded-md font-bold text-xl hover:bg-surface-container-high transition-colors shadow-2xl">
+                    Solicitar Cita Ahora
+                </button>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-slate-50 dark:bg-slate-900 w-full border-t-0">
+<div class="flex flex-col md:flex-row justify-between items-center px-12 py-16 w-full max-w-7xl mx-auto">
+<div class="mb-8 md:mb-0">
+<div class="text-lg font-bold text-orange-900 dark:text-orange-50 font-epilogue mb-2">FemiLift Córdoba</div>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-manrope">© 2024 FemiLift Córdoba. Todos los derechos reservados.</p>
+</div>
+<div class="flex flex-wrap justify-center gap-8 text-sm font-manrope text-slate-500 dark:text-slate-400">
+<a class="hover:text-orange-600 transition-colors" href="#">Privacidad</a>
+<a class="hover:text-orange-600 transition-colors" href="#">Términos de Uso</a>
+<a class="hover:text-orange-600 transition-colors" href="#">Contacto</a>
+</div>
+<div class="flex gap-6 mt-8 md:mt-0">
+<a class="text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="sr-only">Instagram</span>
+<svg class="w-6 h-6" fill="currentColor" viewbox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg>
+</a>
+<a class="text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="sr-only">Facebook</span>
+<svg class="w-6 h-6" fill="currentColor" viewbox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path></svg>
+</a>
+</div>
+</div>
+</footer>
+</body></html>

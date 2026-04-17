@@ -1,312 +1,199 @@
 <!DOCTYPE html>
-
-<html class="light" lang="es"><head>
+<html lang="es"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>CAMILA — THE EDITORIAL CELEBRATION 2024</title>
+<title>CAMILA — XV</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;700;900&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            "colors": {
-                    "tertiary": "#5e5f62",
-                    "surface-variant": "#dbe4e7",
-                    "secondary": "#5e5e67",
-                    "surface": "#f8f9fa",
-                    "on-tertiary-fixed": "#484a4d",
-                    "on-error-container": "#782232",
-                    "on-primary-fixed-variant": "#5c5b5e",
-                    "inverse-surface": "#0c0f10",
-                    "background": "#f8f9fa",
-                    "on-error": "#fff7f7",
-                    "outline-variant": "#abb3b7",
-                    "on-surface-variant": "#586064",
-                    "on-surface": "#2b3437",
-                    "secondary-container": "#e3e1ec",
-                    "on-secondary-container": "#515159",
-                    "on-tertiary-fixed-variant": "#65666a",
-                    "error-dim": "#4f0116",
-                    "inverse-primary": "#f9f5fa",
-                    "on-primary": "#faf7fb",
-                    "on-primary-fixed": "#3f3f42",
-                    "primary-fixed": "#e4e1e6",
-                    "surface-container-low": "#f1f4f6",
-                    "outline": "#737c7f",
-                    "surface-container-lowest": "#ffffff",
-                    "tertiary-fixed-dim": "#e5e5e9",
-                    "secondary-dim": "#52525b",
-                    "error": "#9e3f4e",
-                    "primary-dim": "#535255",
-                    "on-primary-container": "#525155",
-                    "surface-container-highest": "#dbe4e7",
-                    "tertiary-fixed": "#f3f3f7",
-                    "on-background": "#2b3437",
-                    "surface-bright": "#f8f9fa",
-                    "surface-container-high": "#e3e9ec",
-                    "on-secondary": "#faf8ff",
-                    "on-tertiary": "#f9f8fc",
-                    "on-tertiary-container": "#5a5c5f",
-                    "surface-container": "#eaeff1",
-                    "secondary-fixed-dim": "#d4d3dd",
-                    "tertiary-dim": "#525356",
-                    "primary-container": "#e4e1e6",
-                    "error-container": "#ff8b9a",
-                    "surface-dim": "#d1dce0",
-                    "tertiary-container": "#f3f3f7",
-                    "secondary-fixed": "#e3e1ec",
-                    "on-secondary-fixed": "#3e3f47",
-                    "surface-tint": "#5f5e61",
-                    "primary": "#5f5e61",
-                    "inverse-on-surface": "#9b9d9e",
-                    "primary-fixed-dim": "#d6d3d7",
-                    "on-secondary-fixed-variant": "#5a5b63"
-            },
-            "borderRadius": {
-                    "DEFAULT": "0.125rem",
-                    "lg": "0.25rem",
-                    "xl": "0.5rem",
-                    "full": "0.75rem"
-            },
-            "spacing": {},
-            "fontFamily": {
-                    "headline": ["Epilogue"],
-                    "body": ["Inter"],
-                    "label": ["Inter"]
-            }
-          },
-        },
-      }
-    </script>
-<style>
-        body { font-family: 'Inter', sans-serif; }
-        h1, h2, h3 { font-family: 'Epilogue', sans-serif; }
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&amp;family=Archivo+Black&amp;family=Inter:wght@300;400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style type="text/tailwindcss">
+        :root {
+            --charcoal: #121212;
+            --neon-pink: #ff007f;
+            --chrome: #e2e8f0;
+            --dark-gray: #1a1a1a;
         }
-        .text-ink { color: #18181b; }
-        .bg-ink { background-color: #18181b; }
-        .kerning-tight { letter-spacing: -0.04em; }
+        body {
+            background-color: var(--charcoal);
+            color: white;
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+        }
+        .font-syne { font-family: 'Syne', sans-serif; }
+        .font-archivo { font-family: 'Archivo Black', sans-serif; }
+        .chrome-bg {
+            background: linear-gradient(135deg, #cbd5e1 0%, #f8fafc 25%, #94a3b8 50%, #f1f5f9 75%, #cbd5e1 100%);
+            background-attachment: fixed;
+        }
+        .text-outline {
+            -webkit-text-stroke: 1px var(--neon-pink);
+            color: transparent;
+        }
+        .text-overlap {
+            text-shadow: -10px 10px 0px var(--neon-pink);
+        }
+        .floating-img {
+            transition: transform 0.3s ease-out;
+        }
+        .editorial-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 1rem;
+        }
+        .custom-cursor {
+            cursor: crosshair;
+        }
     </style>
 </head>
-<body class="bg-background text-on-background antialiased selection:bg-primary-container selection:text-on-primary-container">
-<!-- TopAppBar Shell -->
-<header class="fixed top-0 w-full z-50 bg-white/80 dark:bg-zinc-950/80 backdrop-blur-xl shadow-[0_20px_40px_rgba(24,24,27,0.06)]">
-<div class="flex justify-between items-center px-8 py-6 max-w-[1440px] mx-auto">
-<div class="text-2xl font-black tracking-tighter text-zinc-900 dark:text-zinc-50 font-['Epilogue'] uppercase">CAMILA</div>
-<nav class="hidden md:flex items-center gap-8 font-['Epilogue'] tracking-tighter uppercase font-bold">
-<a class="text-zinc-900 dark:text-zinc-50 border-b-2 border-zinc-900 dark:border-zinc-50 pb-1 transition-all duration-300" href="#mis-15">Mis 15</a>
-<a class="text-zinc-500 dark:text-zinc-400 font-medium hover:text-zinc-900 dark:hover:text-zinc-50 transition-all duration-300" href="#timeline">Timeline</a>
-<a class="text-zinc-500 dark:text-zinc-400 font-medium hover:text-zinc-900 dark:hover:text-zinc-50 transition-all duration-300" href="#venue">Venue</a>
-<a class="text-zinc-500 dark:text-zinc-400 font-medium hover:text-zinc-900 dark:hover:text-zinc-50 transition-all duration-300" href="#gallery">Gallery</a>
-<a class="bg-zinc-900 text-white px-6 py-2 text-xs hover:scale-95 transition-transform" href="#rsvp">RSVP</a>
+<body class="custom-cursor">
+<nav class="fixed top-0 w-full z-50 mix-blend-difference px-6 py-8 flex justify-between items-center">
+<div class="font-archivo text-2xl tracking-tighter text-white">CAMILA<span class="text-[var(--neon-pink)]">.</span>15</div>
+<div class="hidden md:flex gap-8 font-syne font-bold uppercase text-xs tracking-widest">
+<a class="hover:text-[var(--neon-pink)] transition-colors" href="#event">El Evento</a>
+<a class="hover:text-[var(--neon-pink)] transition-colors" href="#playlist">Música</a>
+<a class="hover:text-[var(--neon-pink)] transition-colors" href="#gallery">Galería</a>
+<a class="hover:text-[var(--neon-pink)] transition-colors" href="#contact">Confirmar</a>
+</div>
+<button class="material-symbols-outlined text-white md:hidden">menu</button>
 </nav>
-<button class="md:hidden text-zinc-900">
-<span class="material-symbols-outlined">menu</span>
-</button>
+<section class="relative min-h-screen flex flex-col justify-center px-6 overflow-hidden">
+<div class="absolute -right-20 top-20 opacity-20 pointer-events-none">
+<h2 class="font-archivo text-[25vw] leading-none text-outline uppercase">QUINCE</h2>
 </div>
-</header>
-<main class="pt-24">
-<!-- Hero Section: Organic Asymmetry -->
-<section class="relative min-h-[921px] flex flex-col justify-center px-8 lg:px-24 overflow-hidden" id="mis-15">
-<div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
-<div class="md:col-span-7 z-10">
-<h1 class="text-[clamp(4rem,15vw,10rem)] leading-[0.85] font-black text-ink kerning-tight mb-4">
-                        Mis 15 de <br/> Camila
-                    </h1>
-<p class="text-xl md:text-2xl font-light tracking-widest uppercase text-secondary mt-8 flex items-center gap-4">
-<span class="w-12 h-[1px] bg-secondary"></span>
-                        Una noche inolvidable
-                    </p>
+<div class="relative z-10 editorial-grid">
+<div class="col-span-12 md:col-span-8">
+<h1 class="font-archivo text-7xl md:text-[12rem] leading-[0.8] uppercase tracking-tighter mb-4">
+                    CAMI<br/>
+<span class="text-[var(--neon-pink)]">LA</span>
+</h1>
+<p class="font-syne font-bold text-xl md:text-3xl uppercase tracking-widest mt-8 flex items-center gap-4">
+<span class="h-px w-20 bg-[var(--neon-pink)]"></span>
+                    Mis Quince Años
+                </p>
 </div>
-<div class="md:col-span-5 relative">
-<div class="aspect-[3/4] bg-surface-container-high rounded-xl overflow-hidden relative shadow-2xl transform rotate-3 translate-y-12 md:translate-y-0">
-<img class="w-full h-full object-cover grayscale" data-alt="Editorial portrait of a teenage girl in a minimalist white modern dress against a soft grey industrial studio background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBGgxBeewIPGXNIDUZSKQ_wULgxdkru6XjVPpmA7haBAzgm89dWsuqQcH_UpSBr314rLwoUJ7ByBzNtVqsgxp3EN1IVYLsANQiNN7OVX-sqaSaU6C7e-c-F1mv2Jn9p__zRpcHABSIhILjuAyBvsYmZZiAQp0ENvSUOYOuh53FY2j6lKS5yw34Nppwb4EPU2OZE7eoXPr5t4ajMn3vfvUBlD-a104ADmvK6ROxWoJCEs1P4-L-VxTwJ9SXk2KUisPXdcZQ6Vt2dDcE"/>
+<div class="col-span-12 md:col-start-9 md:col-span-4 mt-12 md:mt-0 flex flex-col justify-end">
+<div class="relative w-full aspect-[3/4] bg-[var(--dark-gray)] overflow-hidden group">
+<img alt="Camila Hero" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOjLSnV5g2fM8Gh1_T2XJZeAlTeirmMNDPLPOe8IZZIqizaaS6-utym9c0B8cF_zq-BCP1RE9XAB-A-XIsD-BAMjXp43izqyWF_4oPxKh1pQbxn6qDPuj_cq2GtoS39dStSZXu6HX-Sy-8DGWcUfU8fddIoAS8n3BtVsMwLieJL5l_YUQDg3VdJpINnaKw4XlNLyGXr1E12DdDjX0Z_DgN8XqSrB_Mc7l6K5Hv6XEi56oh3K60RKwDWPPWx4L4GT58SKvW-GvXSl0"/>
+<div class="absolute inset-0 border-[12px] border-[var(--neon-pink)] mix-blend-overlay"></div>
 </div>
-<!-- Mood Fragment -->
-<div class="absolute -bottom-8 -left-12 p-6 bg-white/80 backdrop-blur-xl shadow-xl max-w-[200px] z-20 hidden lg:block">
-<p class="text-sm italic font-body text-on-surface-variant">"La elegancia es la única belleza que nunca desaparece."</p>
-</div>
+<div class="mt-4 font-syne text-sm uppercase tracking-tighter text-right">
+                    Est. 2009 — Córdoba, AR
+                </div>
 </div>
 </div>
 </section>
-<!-- Timeline: Vertical Editorial -->
-<section class="py-32 px-8 max-w-5xl mx-auto" id="timeline">
-<h2 class="text-4xl font-bold text-ink mb-24 border-l-4 border-ink pl-6 uppercase tracking-tighter">Event Timeline</h2>
-<div class="space-y-24 relative before:absolute before:left-[19px] md:before:left-1/2 before:top-0 before:h-full before:w-[2px] before:bg-surface-container-highest">
-<!-- Ceremony -->
-<div class="relative flex flex-col md:flex-row items-start md:items-center justify-between gap-12 group">
-<div class="hidden md:block w-5/12 text-right">
-<span class="text-6xl font-black text-surface-variant opacity-50 group-hover:opacity-100 transition-opacity">20:00</span>
-</div>
-<div class="z-10 bg-ink text-white w-10 h-10 flex items-center justify-center rounded-full shadow-lg">
-<span class="material-symbols-outlined text-sm">church</span>
-</div>
-<div class="w-full md:w-5/12">
-<h3 class="text-2xl font-bold uppercase text-ink">Ceremonia</h3>
-<p class="text-secondary mt-2">Un momento de reflexión y gratitud rodeada de familia.</p>
-</div>
-</div>
-<!-- Dinner -->
-<div class="relative flex flex-col md:flex-row-reverse items-start md:items-center justify-between gap-12 group">
-<div class="hidden md:block w-5/12 text-left">
-<span class="text-6xl font-black text-surface-variant opacity-50 group-hover:opacity-100 transition-opacity">22:00</span>
-</div>
-<div class="z-10 bg-ink text-white w-10 h-10 flex items-center justify-center rounded-full shadow-lg">
-<span class="material-symbols-outlined text-sm">restaurant</span>
-</div>
-<div class="w-full md:w-5/12 md:text-right">
-<h3 class="text-2xl font-bold uppercase text-ink">Cena</h3>
-<p class="text-secondary mt-2">Un banquete diseñado para deleitar los sentidos.</p>
-</div>
-</div>
-<!-- Dance -->
-<div class="relative flex flex-col md:flex-row items-start md:items-center justify-between gap-12 group">
-<div class="hidden md:block w-5/12 text-right">
-<span class="text-6xl font-black text-surface-variant opacity-50 group-hover:opacity-100 transition-opacity">00:30</span>
-</div>
-<div class="z-10 bg-ink text-white w-10 h-10 flex items-center justify-center rounded-full shadow-lg">
-<span class="material-symbols-outlined text-sm">music_note</span>
-</div>
-<div class="w-full md:w-5/12">
-<h3 class="text-2xl font-bold uppercase text-ink">Baile</h3>
-<p class="text-secondary mt-2">El vals tradicional seguido de una noche sin descanso.</p>
-</div>
-</div>
-<!-- Cotillón -->
-<div class="relative flex flex-col md:flex-row-reverse items-start md:items-center justify-between gap-12 group">
-<div class="hidden md:block w-5/12 text-left">
-<span class="text-6xl font-black text-surface-variant opacity-50 group-hover:opacity-100 transition-opacity">03:00</span>
-</div>
-<div class="z-10 bg-ink text-white w-10 h-10 flex items-center justify-center rounded-full shadow-lg">
-<span class="material-symbols-outlined text-sm">celebration</span>
-</div>
-<div class="w-full md:w-5/12 md:text-right">
-<h3 class="text-2xl font-bold uppercase text-ink">Cotillón</h3>
-<p class="text-secondary mt-2">Explosión de color y alegría para cerrar la noche.</p>
-</div>
-</div>
-</div>
-</section>
-<!-- Spotify Section: Styled Card -->
-<section class="py-24 bg-surface-container-low">
-<div class="max-w-4xl mx-auto px-8">
-<div class="bg-ink p-12 flex flex-col md:flex-row items-center justify-between gap-8 rounded-lg shadow-2xl relative overflow-hidden">
-<div class="absolute top-0 left-0 w-full h-full opacity-10 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white to-transparent"></div>
-<div class="z-10 text-center md:text-left">
-<h2 class="text-white text-3xl font-bold uppercase tracking-tight mb-2">The Soundtrack</h2>
-<p class="text-secondary-fixed-dim max-w-sm">Escuchá la Playlist oficial y empezá a vivir la previa de la fiesta.</p>
-</div>
-<a class="z-10 flex items-center gap-4 bg-white text-ink px-8 py-4 font-bold uppercase tracking-widest hover:bg-secondary-fixed transition-colors" href="#">
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
-                        Escuchá la Playlist
-                    </a>
-</div>
-</div>
-</section>
-<!-- Gallery Section: Metallic Parallax Style -->
-<section class="py-32 bg-[#d4d4d8]" id="gallery">
-<div class="max-w-7xl mx-auto px-8">
-<div class="grid grid-cols-1 md:grid-cols-4 gap-4 auto-rows-[300px]">
-<div class="md:col-span-2 md:row-span-2 rounded-xl overflow-hidden shadow-xl transform hover:-rotate-1 transition-transform">
-<img class="w-full h-full object-cover" data-alt="High-end event space with crystal chandeliers and modern metallic decor elements in a monochrome color scheme" src="https://lh3.googleusercontent.com/aida-public/AB6AXuArlTYpr2slGvNCmvNDJNvXryqcTgNxJdOnFt9kbifGLR-tfLNtKGTwpRzmJ58jZ1RBrYqFOMIxjiDcmbHkXbK2ZHEY4UhdBU6UKWQhg6jCoukaC1nFxjH5aHS6iKSFqSrwaM_yNzXReraKqSNT4zwCbNpozCVlxOcWoW_pYVqBp1eMg4pTtU9jg6FfEvLk_E1vCWwilA1svUQaxmUD_KZ7YhPGtBtxDwUfVAcT6l_VK6Wk1-Veh5eu9eRvyEhKOME8xpVk2lzeHck"/>
-</div>
-<div class="rounded-xl overflow-hidden shadow-xl transform translate-y-12 hover:translate-y-8 transition-all">
-<img class="w-full h-full object-cover" data-alt="Close up of a sparkling luxury celebratory drink with bokeh lights in a dark sophisticated background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAe5Ob7w8iPOUUBvu5xmTUVgwT-k0rdkkdnZEjguz-hzDcjaUgFVPeAosXkAYBwF1d2geWLnIhQs9iAp__ng_sNYbwRhNI-1kurw6QCbdenbBJRzQU___f0sO6BdevZGM1LwlWxfZS3MjLF9mrpnvjtXTJK2ZwwV_URJNmiABcdwt3uRgOg_YB1JEWoC4ah0AvDuvDf5kEEcM0O7JtBWoXQU35VNQu6CkNEKdMH2oCkpNV9AOMYOc6ogTAoqwHCr7LzDVL4jfgC8r0"/>
-</div>
-<div class="rounded-xl overflow-hidden shadow-xl hover:scale-105 transition-transform">
-<img class="w-full h-full object-cover" data-alt="Artistic shot of a designer party dress detail with silver sequins and intricate embroidery" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0gcx-019xFAQ3k1FClI9y7k4jO58-uSB7llbyACd33Zo_0ZHPJwpu6XHOSS36MwbxIJT3bOXXh9uVh26ZuLIwG5wXZGhIZa0GnxLFudgZyjQc9ChHxCJFbTwCn22tO4gaPOpYffj4dgTm6O1CO6RwkF971QH8zGeQ8EvcyoBjt2732oWaamZ-GpSTFibBSpyX6eIwKAe3SpZ87P5dFWxn5l2I_Yyth5BlQbQegLyqeGoB6lGmFNg404caGr-V3f5KB_lter-S8Mk"/>
-</div>
-<div class="md:col-span-2 rounded-xl overflow-hidden shadow-xl transform -rotate-2 hover:rotate-0 transition-all">
-<img class="w-full h-full object-cover" data-alt="Blurred background of a festive party with glowing lights and energetic atmosphere" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTPHJ3O4Po4WBFDwufHdveCLhAI2DfdE9mkXICNJyoXg986wRZ_KHXjzQS1fKZ8IPl7FbbsNDrXZyEMIELNRcCwPJrfnKPUF1eDMfwtF9nct8dpfKkUi0zK7JeKeQMD6CANnMk8sQYN9MdWBxxR0CkouiR0RmDc3tzC1oQ8yRyVOSiYVMq166saimdp5lzUWRVJYMMWSSjeGeQARdUt4pSl4YNI8_Rby4M4AGM6xejJdGMndIZtHthw-WTnfA_0NYmJcZJOKrzFfw"/>
-</div>
-</div>
-</div>
-</section>
-<!-- Venue Section: No-line Boundaries -->
-<section class="py-32 grid md:grid-cols-2 bg-surface overflow-hidden" id="venue">
-<div class="p-8 md:p-24 flex flex-col justify-center">
-<h2 class="text-4xl font-black text-ink uppercase mb-8 leading-none">Venue &amp; Location</h2>
-<div class="space-y-6 text-on-surface-variant">
-<p class="text-xl">Corrientes 1234, Cordoba, Argentina</p>
-<p class="font-body leading-relaxed max-w-md">Te esperamos para compartir este momento único en un espacio diseñado para la celebración.</p>
-<a class="inline-flex items-center gap-2 mt-8 text-ink font-bold border-b-2 border-ink pb-1 hover:text-secondary hover:border-secondary transition-all" href="https://maps.google.com" target="_blank">
-                        Cómo llegar
-                        <span class="material-symbols-outlined text-sm">open_in_new</span>
+<section class="py-32 px-6 bg-white text-[var(--charcoal)] relative" id="event">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-baseline mb-20">
+<h2 class="font-archivo text-6xl md:text-9xl uppercase leading-none tracking-tighter">THE<br/>PLAN</h2>
+<div class="font-syne text-lg max-w-sm mt-8 md:mt-0">
+<p class="mb-4">Una noche diseñada para el caos elegante y la celebración pura. Seguí el ritmo del evento.</p>
+<a class="inline-flex items-center gap-2 font-bold text-[var(--neon-pink)] border-b-2 border-[var(--neon-pink)]" href="https://maps.google.com/?q=Corrientes+1234,Cordoba">
+                        VER UBICACIÓN <span class="material-symbols-outlined">north_east</span>
 </a>
 </div>
 </div>
-<div class="min-h-[400px] relative grayscale hover:grayscale-0 transition-all duration-700">
-<img class="w-full h-full object-cover" data-alt="Stylized map showing Corrientes street in Cordoba Argentina with a custom minimalist dark marker" data-location="Cordoba, Argentina" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAIM2uenhTjhDL0lOll7BFEtMvmpKbq7x77Mr0ypKX8L9yuJ9bfcEgdhhognDA-3h99fISACArkBdxCM6rRCyuSxCIyxvUmsSKOYcADqGLRjR1Yj6ZDyQP5_Q8zi6BInf6tRpzS-GxSlxWfhE6uwByHIbkmqYc86cy6U37NWsGzpjCNiufWP5UV1me9hlvywPht_y69NHeazf8OttSuk2YBhu9DKP7amU__kRGPeXV--QSevQC-ZxVDypkCLvIcED0PqD9monlod2M"/>
-</div>
-</section>
-<!-- RSVP & Contact -->
-<section class="py-32 px-8 max-w-7xl mx-auto" id="rsvp">
-<div class="grid grid-cols-1 md:grid-cols-2 gap-16">
-<div>
-<h2 class="text-6xl font-black text-ink uppercase mb-12">R.S.V.P</h2>
-<form class="space-y-8">
-<div>
-<label class="block text-xs uppercase tracking-widest text-secondary mb-2">Nombre Completo</label>
-<input class="w-full bg-transparent border-b-2 border-surface-variant focus:border-ink outline-none py-4 transition-colors" type="text"/>
-</div>
-<div>
-<label class="block text-xs uppercase tracking-widest text-secondary mb-2">¿Asistirás?</label>
-<div class="flex gap-4 pt-2">
-<button class="px-8 py-3 rounded-full border-2 border-ink bg-ink text-white font-bold text-sm uppercase transition-all" type="button">Confirmar</button>
-<button class="px-8 py-3 rounded-full border-2 border-surface-variant text-secondary font-bold text-sm uppercase hover:border-ink transition-all" type="button">No puedo ir</button>
+<div class="space-y-12">
+<div class="flex flex-col md:flex-row md:items-center border-t border-[var(--charcoal)] pt-8 group">
+<span class="font-archivo text-4xl md:text-6xl text-[var(--neon-pink)] w-48">21:00</span>
+<div class="flex-1">
+<h3 class="font-archivo text-3xl md:text-5xl uppercase">Recepción de Gala</h3>
+<p class="font-sy-bold opacity-60">Cócteles de bienvenida y alfombra rosa.</p>
 </div>
 </div>
-</form>
-</div>
-<div class="bg-surface-container-high p-12 flex flex-col justify-center">
-<h3 class="text-xs uppercase tracking-[0.3em] text-secondary mb-8">Contacto Directo</h3>
-<div class="space-y-8">
-<div class="flex items-start gap-4">
-<span class="material-symbols-outlined text-ink">phone_iphone</span>
-<div>
-<p class="text-xs text-secondary uppercase mb-1">WhatsApp</p>
-<a class="text-xl font-bold text-ink" href="tel:+5493515640023">+54 9 351 564-0023</a>
+<div class="flex flex-col md:flex-row md:items-center border-t border-[var(--charcoal)] pt-8 group">
+<span class="font-archivo text-4xl md:text-6xl text-[var(--neon-pink)] w-48">22:30</span>
+<div class="flex-1">
+<h3 class="font-archivo text-3xl md:text-5xl uppercase">Cena Editorial</h3>
+<p class="font-sy-bold opacity-60">Experiencia gastronómica de tres pasos.</p>
 </div>
 </div>
-<div class="flex items-start gap-4">
-<span class="material-symbols-outlined text-ink">mail</span>
-<div>
-<p class="text-xs text-secondary uppercase mb-1">Email</p>
-<a class="text-xl font-bold text-ink" href="mailto:silene.tulian@gmail.com">silene.tulian@gmail.com</a>
-</div>
-</div>
-<div class="flex items-start gap-4">
-<span class="material-symbols-outlined text-ink">location_on</span>
-<div>
-<p class="text-xs text-secondary uppercase mb-1">Dirección</p>
-<p class="text-xl font-bold text-ink">Corrientes 1234, Cordoba</p>
-</div>
+<div class="flex flex-col md:flex-row md:items-center border-t border-[var(--charcoal)] pt-8 group">
+<span class="font-archivo text-4xl md:text-6xl text-[var(--neon-pink)] w-48">01:00</span>
+<div class="flex-1">
+<h3 class="font-archivo text-3xl md:text-5xl uppercase">After Party</h3>
+<p class="font-sy-bold opacity-60">DJ Set &amp; Neon Lights.</p>
 </div>
 </div>
 </div>
 </div>
 </section>
-</main>
-<!-- Footer Shell -->
-<footer class="bg-zinc-100 dark:bg-zinc-900 w-full py-12 px-8 border-t border-zinc-200/50 dark:border-zinc-800/50">
-<div class="flex flex-col md:flex-row justify-between items-start gap-8 max-w-7xl mx-auto font-['Inter'] text-sm tracking-wide">
-<div class="font-['Epilogue'] font-bold uppercase text-lg text-zinc-900 dark:text-zinc-100">
-                CAMILA — THE EDITORIAL CELEBRATION 2024
+<section class="py-32 bg-[var(--neon-pink)] text-white overflow-hidden relative" id="playlist">
+<div class="whitespace-nowrap flex overflow-hidden -rotate-3 bg-black py-4 absolute top-10 left-0 right-0">
+<div class="animate-marquee font-archivo text-4xl uppercase px-4">
+                SOUVENIR SONORO — SPOTIFY LIST — SOUVENIR SONORO — SPOTIFY LIST — SOUVENIR SONORO — SPOTIFY LIST —
             </div>
-<div class="flex gap-8 text-zinc-500 dark:text-zinc-400">
-<a class="hover:underline decoration-zinc-400 underline-offset-4 transition-all" href="#">Instagram</a>
-<a class="hover:underline decoration-zinc-400 underline-offset-4 transition-all" href="#">Spotify</a>
-<a class="hover:underline decoration-zinc-400 underline-offset-4 transition-all" href="#">Contact</a>
-<a class="hover:underline decoration-zinc-400 underline-offset-4 transition-all" href="#">Venue Details</a>
+</div>
+<div class="max-w-5xl mx-auto px-6 relative z-10 pt-20">
+<div class="bg-[var(--charcoal)] p-12 md:p-20 flex flex-col md:flex-row gap-12 items-center transform rotate-1">
+<div class="w-64 h-64 bg-white shrink-0 shadow-[20px_20px_0px_rgba(255,255,255,0.2)] flex items-center justify-center">
+<span class="material-symbols-outlined text-[var(--charcoal)] text-9xl">album</span>
+</div>
+<div>
+<h2 class="font-archivo text-5xl md:text-7xl leading-none mb-6">ARMÁ EL<br/>PLAYLIST</h2>
+<p class="font-syne text-xl mb-8 opacity-80">Elegí las canciones que no pueden faltar en la pista de baile. Camila las revisará personalmente.</p>
+<a class="inline-block bg-white text-[var(--charcoal)] font-archivo px-10 py-5 hover:bg-[var(--neon-pink)] hover:text-white transition-all transform hover:-translate-y-1" href="https://spotify.com">
+                        AÑADIR CANCIONES
+                    </a>
 </div>
 </div>
-<div class="max-w-7xl mx-auto mt-8 pt-8 border-t border-zinc-200/30 text-zinc-400 text-xs text-center md:text-left">
-            © 2024 CAMILA. ALL RIGHTS RESERVED. DESIGNED FOR THE MODERN MUSE.
-        </div>
+</div>
+</section>
+<section class="chrome-bg py-32 px-6 min-h-screen overflow-hidden relative" id="gallery">
+<div class="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBkLlDKO6zsZ9EyBmQrmdFf875fnWwshH6sJuB7fsTHQMlhbeAbjDcCJHWSMcnBJsBx2w08ViXuTo-uhLH-6hipUViit8H68kKxMSQhR2WI7XahMiwgXC5jDlayuYWoXT2dmQoSsErat7EUs3K-biNujzh7y1pKyMy-XZZ6cI8BmSSKW4ERDF4QGKQgmT9Og17qi112f9XryISeE6-Z2S8n3VziaHuZLdANzHVRkEWBnQ6XHz4gmT-GtFXAUC1TLXkTNSKw0NO2IN0');"></div>
+<h2 class="font-archivo text-[15vw] text-outline opacity-30 text-center sticky top-20 pointer-events-none">GALLERY</h2>
+<div class="relative h-[2048px] max-w-7xl mx-auto">
+<div class="absolute top-0 left-[5%] w-[30%] rotate-3 shadow-2xl floating-img">
+<img class="w-full grayscale border-4 border-white" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzA4hS87K2vxzhcSKT7YrDjTBfD_Rm3fv9IP65paHOHMWSzyduZpBRHHVWLyGQSYd6Bqt3FbZdKSIbYL-PNUhZ5TPwkCYD6t--b6QYz4VbWzyzviVxl7MpoQUzkQsuc4rB5gnOMlUjJd28F0hLLAHTqFTbxSWhEpYnWykPvgC842-EJaGFywohukDVsBRvC0f1tcEMiicKAW8rkuWWrOfkojx9zey8Az_f-Pn93drh99FgD8U_yaCcGe46ynY9duMOOnA5aTsgVPo"/>
+</div>
+<div class="absolute top-[15%] right-[10%] w-[35%] -rotate-2 shadow-2xl floating-img">
+<img class="w-full border-4 border-white" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHTTTLJRVyXaQcT4TQXpGXsqqH7MHemjXXO4hffGBljLhm4m3qWRSUOCnhVwmEbTChyHV0i7LU5v1T7u0T-p4J-7pqFVbjtwsfYZxP7Z0rreJZ5KSIVhRoNuYTvnZDbsKfyDKjZXzRqcEPCO_RoXWFUmTYLHhhD_dmd5lUuG-Fc0oywMJqEM-Z5oH-jPaX6juSGP1oUSZiBfk3Ybojvd5SUeVQwuC7qHby2u3oa2bDXBFKbyauTRKh81P8eicfB4wmOkunLo4GtNE"/>
+</div>
+<div class="absolute top-[40%] left-[20%] w-[40%] rotate-1 shadow-2xl floating-img">
+<img class="w-full grayscale border-4 border-white" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBi1dQadzpoy396xtflagHofrf4kR4lkZjLGENyX-cgGB-JwAWif6XnD4M-SOc7diJQlfCZ7TFVoiJm9Acvq65JqWsOFLBpKTcOf7r-SSTZJSGpnZEbYIjXKCYy68ODar3fSrVTc6bmzz_IWnPeMQgFgEHDaT67VXrEnpWgVhD4Bxx6HPg8_ffg5OuW2z86x3cG4lOD5eEitjpVLr82gy3SEfN3dex_H8f208NV7XMO85eJx25BTRjCNOqD-ukiUKrT9VyNE1jymbs"/>
+</div>
+<div class="absolute top-[65%] right-[5%] w-[25%] -rotate-6 shadow-2xl floating-img">
+<img class="w-full border-4 border-white" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAs8O5RRV--xOpNCBzLHuLuz-kMga8Z5jUZrC7J_sOf-1Xd8Sjm9dyNfHhm_rDByLtrE7yJW9P2tGCC2aIIGHHYvanfTGNFGL6I2zfwVl5NsN2WJhw6oGzrsdaMGu0blFbT0hOwRzYKwjM18nWl4PkD3kWlKHNkF8HTTYH8mvU5b3h0D8KOEFKaPE8Br9y0WvGooLR8LZVnSoY9QrDy38LbJSewspa0mIf8i1ozLT9-xTDVcjE3yWTESShpaP7_X3zbC2-Pr9YdcTA"/>
+</div>
+<div class="absolute top-[80%] left-[10%] w-[35%] rotate-3 shadow-2xl floating-img">
+<img class="w-full grayscale border-4 border-white" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMt51BlkWQff7C6xhBpzgVza9sNxnrDUFSobbb0CF9ooEAcDHbmyqq0X_ApYk5khoLgdImrXb_uZrXkr7SgZ5Mji88n_e7fv3gZ_xqtWRCY6rQlI254irMkitlfS6y1fYy355K_T8AQlyo2tyYqyJkfVj__YkJoyxrRxGYWbCZlaDeLk0zBUTJK4S7bfsrhJuvkPN6hm2RDocL5gQ14KeDHferk2EE1FgC8uWCK-PaX4efFYcvXJTCt__aZi03IkMxP-N2anUsAFk"/>
+</div>
+</div>
+</section>
+<footer class="bg-[var(--charcoal)] py-32 px-6" id="contact">
+<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-20">
+<div>
+<h2 class="font-archivo text-6xl md:text-8xl mb-12 leading-none uppercase">KEEP IN<br/><span class="text-[var(--neon-pink)]">TOUCH</span></h2>
+<div class="space-y-6 font-syne text-xl">
+<p class="flex items-center gap-4"><span class="material-symbols-outlined text-[var(--neon-pink)]">call</span> +54 9 351 5640023</p>
+<p class="flex items-center gap-4"><span class="material-symbols-outlined text-[var(--neon-pink)]">mail</span> silene.tulian@gmail.com</p>
+<p class="flex items-center gap-4"><span class="material-symbols-outlined text-[var(--neon-pink)]">location_on</span> Corrientes 1234, Córdoba</p>
+</div>
+</div>
+<div class="flex flex-col justify-between">
+<div class="grid grid-cols-2 gap-4">
+<a class="border border-white/20 aspect-square flex items-center justify-center hover:bg-white hover:text-black transition-all font-archivo text-xs uppercase tracking-widest" href="https://instagram.com/cumple15">Instagram</a>
+<a class="border border-white/20 aspect-square flex items-center justify-center hover:bg-white hover:text-black transition-all font-archivo text-xs uppercase tracking-widest" href="https://facebook.com/cumple15">Facebook</a>
+<a class="border border-white/20 aspect-square flex items-center justify-center hover:bg-[var(--neon-pink)] hover:border-[var(--neon-pink)] transition-all font-archivo text-xs uppercase tracking-widest col-span-2" href="https://wa.me/543515640023">Confirmar Asistencia</a>
+</div>
+<div class="mt-20 font-syne text-xs opacity-40 uppercase tracking-[0.5em]">
+                    © 2024 Camila Editorial / All Rights Reserved
+                </div>
+</div>
+</div>
 </footer>
+<script>
+        // Smooth floating rotation effect based on scroll
+        window.addEventListener('scroll', () => {
+            const items = document.querySelectorAll('.floating-img');
+            const scrolled = window.pageYOffset;
+            items.forEach((item, index) => {
+                const speed = 0.05 + (index * 0.02);
+                const rotation = (scrolled * speed) % 10 - 5;
+                const translateY = (scrolled * speed) * -1;
+                item.style.transform = `translateY(${translateY}px) rotate(${rotation}deg)`;
+            });
+        });
+    </script>
+
 </body></html>

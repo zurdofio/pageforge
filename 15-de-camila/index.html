@@ -43,7 +43,20 @@
         .custom-cursor {
             cursor: crosshair;
         }
-    </style>
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .animate-marquee {
+            display: inline-flex;
+            animation: marquee 25s linear infinite;
+            will-change: transform;
+        }
+        .marquee-track {
+            white-space: nowrap;
+            flex-shrink: 0;
+        }
+</style>
 </head>
 <body class="custom-cursor">
 <nav class="fixed top-0 w-full z-50 mix-blend-difference px-6 py-8 flex justify-between items-center">
@@ -70,6 +83,9 @@
 <span class="h-px w-20 bg-[var(--neon-pink)]"></span>
                     Mis Quince Años
                 </p>
+<a class="inline-block mt-10 bg-[var(--neon-pink)] text-white font-archivo px-10 py-5 uppercase tracking-widest hover:bg-white hover:text-[var(--charcoal)] transition-all transform hover:-translate-y-1" href="#rsvp-form" target="_blank" rel="noopener"><!-- TODO: reemplazar por URL del Google Form -->
+                    Confirmar Asistencia
+                </a>
 </div>
 <div class="col-span-12 md:col-start-9 md:col-span-4 mt-12 md:mt-0 flex flex-col justify-end">
 <div class="relative w-full aspect-[3/4] bg-[var(--dark-gray)] overflow-hidden group">
@@ -79,6 +95,33 @@
 <div class="mt-4 font-syne text-sm uppercase tracking-tighter text-right">
                     Est. 2009 — Córdoba, AR
                 </div>
+</div>
+</div>
+</section>
+<section class="py-24 px-6 border-t border-b border-[var(--neon-pink)]/30 relative overflow-hidden" id="countdown">
+<div class="absolute inset-0 opacity-10 pointer-events-none">
+<h2 class="font-archivo text-[20vw] leading-none text-outline uppercase text-center">19·08·26</h2>
+</div>
+<div class="max-w-6xl mx-auto relative z-10">
+<p class="font-syne font-bold uppercase tracking-[0.3em] text-xs text-[var(--neon-pink)] mb-6 text-center">Cuenta Regresiva</p>
+<h2 class="font-archivo text-3xl md:text-5xl uppercase text-center mb-12 tracking-tight">19 de Agosto, 2026</h2>
+<div class="grid grid-cols-4 gap-3 md:gap-8 text-center">
+<div class="border border-white/20 py-6 md:py-10 bg-[var(--dark-gray)]">
+<span class="font-archivo text-4xl md:text-7xl text-[var(--neon-pink)] block" id="cd-days">--</span>
+<span class="font-syne text-xs md:text-sm uppercase tracking-widest opacity-60 mt-2 block">Días</span>
+</div>
+<div class="border border-white/20 py-6 md:py-10 bg-[var(--dark-gray)]">
+<span class="font-archivo text-4xl md:text-7xl text-[var(--neon-pink)] block" id="cd-hours">--</span>
+<span class="font-syne text-xs md:text-sm uppercase tracking-widest opacity-60 mt-2 block">Horas</span>
+</div>
+<div class="border border-white/20 py-6 md:py-10 bg-[var(--dark-gray)]">
+<span class="font-archivo text-4xl md:text-7xl text-[var(--neon-pink)] block" id="cd-minutes">--</span>
+<span class="font-syne text-xs md:text-sm uppercase tracking-widest opacity-60 mt-2 block">Min</span>
+</div>
+<div class="border border-white/20 py-6 md:py-10 bg-[var(--dark-gray)]">
+<span class="font-archivo text-4xl md:text-7xl text-[var(--neon-pink)] block" id="cd-seconds">--</span>
+<span class="font-syne text-xs md:text-sm uppercase tracking-widest opacity-60 mt-2 block">Seg</span>
+</div>
 </div>
 </div>
 </section>
@@ -119,10 +162,11 @@
 </div>
 </section>
 <section class="py-32 bg-[var(--neon-pink)] text-white overflow-hidden relative" id="playlist">
-<div class="whitespace-nowrap flex overflow-hidden -rotate-3 bg-black py-4 absolute top-10 left-0 right-0">
-<div class="animate-marquee font-archivo text-4xl uppercase px-4">
-                SOUVENIR SONORO — SPOTIFY LIST — SOUVENIR SONORO — SPOTIFY LIST — SOUVENIR SONORO — SPOTIFY LIST —
-            </div>
+<div class="flex overflow-hidden -rotate-3 bg-black py-4 absolute top-10 left-0 right-0">
+<div class="animate-marquee font-archivo text-4xl uppercase">
+<span class="marquee-track px-4">SOUVENIR SONORO — SPOTIFY LIST — SOUVENIR SONORO — SPOTIFY LIST — SOUVENIR SONORO — SPOTIFY LIST — </span>
+<span class="marquee-track px-4" aria-hidden="true">SOUVENIR SONORO — SPOTIFY LIST — SOUVENIR SONORO — SPOTIFY LIST — SOUVENIR SONORO — SPOTIFY LIST — </span>
+</div>
 </div>
 <div class="max-w-5xl mx-auto px-6 relative z-10 pt-20">
 <div class="bg-[var(--charcoal)] p-12 md:p-20 flex flex-col md:flex-row gap-12 items-center transform rotate-1">
@@ -140,23 +184,32 @@
 </div>
 </section>
 <section class="chrome-bg py-32 px-6 min-h-screen overflow-hidden relative" id="gallery">
-<div class="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBkLlDKO6zsZ9EyBmQrmdFf875fnWwshH6sJuB7fsTHQMlhbeAbjDcCJHWSMcnBJsBx2w08ViXuTo-uhLH-6hipUViit8H68kKxMSQhR2WI7XahMiwgXC5jDlayuYWoXT2dmQoSsErat7EUs3K-biNujzh7y1pKyMy-XZZ6cI8BmSSKW4ERDF4QGKQgmT9Og17qi112f9XryISeE6-Z2S8n3VziaHuZLdANzHVRkEWBnQ6XHz4gmT-GtFXAUC1TLXkTNSKw0NO2IN0');"></div>
+<div class="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none" style="background-image: url('images/gallery-bg.jpg');"></div>
 <h2 class="font-archivo text-[15vw] text-outline opacity-30 text-center sticky top-20 pointer-events-none">GALLERY</h2>
-<div class="relative h-[2048px] max-w-7xl mx-auto">
+<div class="relative h-[2800px] max-w-7xl mx-auto">
 <div class="absolute top-0 left-[5%] w-[30%] rotate-3 shadow-2xl floating-img">
-<img class="w-full grayscale border-4 border-white" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzA4hS87K2vxzhcSKT7YrDjTBfD_Rm3fv9IP65paHOHMWSzyduZpBRHHVWLyGQSYd6Bqt3FbZdKSIbYL-PNUhZ5TPwkCYD6t--b6QYz4VbWzyzviVxl7MpoQUzkQsuc4rB5gnOMlUjJd28F0hLLAHTqFTbxSWhEpYnWykPvgC842-EJaGFywohukDVsBRvC0f1tcEMiicKAW8rkuWWrOfkojx9zey8Az_f-Pn93drh99FgD8U_yaCcGe46ynY9duMOOnA5aTsgVPo"/>
+<img class="w-full grayscale border-4 border-white" src="images/gallery-1.jpg"/>
 </div>
-<div class="absolute top-[15%] right-[10%] w-[35%] -rotate-2 shadow-2xl floating-img">
-<img class="w-full border-4 border-white" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHTTTLJRVyXaQcT4TQXpGXsqqH7MHemjXXO4hffGBljLhm4m3qWRSUOCnhVwmEbTChyHV0i7LU5v1T7u0T-p4J-7pqFVbjtwsfYZxP7Z0rreJZ5KSIVhRoNuYTvnZDbsKfyDKjZXzRqcEPCO_RoXWFUmTYLHhhD_dmd5lUuG-Fc0oywMJqEM-Z5oH-jPaX6juSGP1oUSZiBfk3Ybojvd5SUeVQwuC7qHby2u3oa2bDXBFKbyauTRKh81P8eicfB4wmOkunLo4GtNE"/>
+<div class="absolute top-[10%] right-[8%] w-[32%] -rotate-2 shadow-2xl floating-img">
+<img class="w-full border-4 border-white" src="images/gallery-2.jpg"/>
 </div>
-<div class="absolute top-[40%] left-[20%] w-[40%] rotate-1 shadow-2xl floating-img">
-<img class="w-full grayscale border-4 border-white" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBi1dQadzpoy396xtflagHofrf4kR4lkZjLGENyX-cgGB-JwAWif6XnD4M-SOc7diJQlfCZ7TFVoiJm9Acvq65JqWsOFLBpKTcOf7r-SSTZJSGpnZEbYIjXKCYy68ODar3fSrVTc6bmzz_IWnPeMQgFgEHDaT67VXrEnpWgVhD4Bxx6HPg8_ffg5OuW2z86x3cG4lOD5eEitjpVLr82gy3SEfN3dex_H8f208NV7XMO85eJx25BTRjCNOqD-ukiUKrT9VyNE1jymbs"/>
+<div class="absolute top-[22%] left-[25%] w-[28%] rotate-2 shadow-2xl floating-img">
+<img class="w-full grayscale border-4 border-white" src="images/gallery-3.jpg"/>
 </div>
-<div class="absolute top-[65%] right-[5%] w-[25%] -rotate-6 shadow-2xl floating-img">
-<img class="w-full border-4 border-white" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAs8O5RRV--xOpNCBzLHuLuz-kMga8Z5jUZrC7J_sOf-1Xd8Sjm9dyNfHhm_rDByLtrE7yJW9P2tGCC2aIIGHHYvanfTGNFGL6I2zfwVl5NsN2WJhw6oGzrsdaMGu0blFbT0hOwRzYKwjM18nWl4PkD3kWlKHNkF8HTTYH8mvU5b3h0D8KOEFKaPE8Br9y0WvGooLR8LZVnSoY9QrDy38LbJSewspa0mIf8i1ozLT9-xTDVcjE3yWTESShpaP7_X3zbC2-Pr9YdcTA"/>
+<div class="absolute top-[35%] left-[3%] w-[25%] -rotate-4 shadow-2xl floating-img">
+<img class="w-full border-4 border-white" src="images/gallery-4.jpg"/>
 </div>
-<div class="absolute top-[80%] left-[10%] w-[35%] rotate-3 shadow-2xl floating-img">
-<img class="w-full grayscale border-4 border-white" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMt51BlkWQff7C6xhBpzgVza9sNxnrDUFSobbb0CF9ooEAcDHbmyqq0X_ApYk5khoLgdImrXb_uZrXkr7SgZ5Mji88n_e7fv3gZ_xqtWRCY6rQlI254irMkitlfS6y1fYy355K_T8AQlyo2tyYqyJkfVj__YkJoyxrRxGYWbCZlaDeLk0zBUTJK4S7bfsrhJuvkPN6hm2RDocL5gQ14KeDHferk2EE1FgC8uWCK-PaX4efFYcvXJTCt__aZi03IkMxP-N2anUsAFk"/>
+<div class="absolute top-[44%] right-[12%] w-[35%] rotate-1 shadow-2xl floating-img">
+<img class="w-full grayscale border-4 border-white" src="images/gallery-5.jpg"/>
+</div>
+<div class="absolute top-[60%] left-[15%] w-[30%] -rotate-3 shadow-2xl floating-img">
+<img class="w-full border-4 border-white" src="images/gallery-6.jpg"/>
+</div>
+<div class="absolute top-[72%] right-[5%] w-[28%] rotate-6 shadow-2xl floating-img">
+<img class="w-full grayscale border-4 border-white" src="images/gallery-7.jpg"/>
+</div>
+<div class="absolute top-[85%] left-[20%] w-[35%] -rotate-2 shadow-2xl floating-img">
+<img class="w-full border-4 border-white" src="images/gallery-8.jpg"/>
 </div>
 </div>
 </section>
@@ -171,11 +224,24 @@
 </div>
 </div>
 <div class="flex flex-col justify-between">
-<div class="grid grid-cols-2 gap-4">
-<a class="border border-white/20 aspect-square flex items-center justify-center hover:bg-white hover:text-black transition-all font-archivo text-xs uppercase tracking-widest" href="https://instagram.com/cumple15">Instagram</a>
-<a class="border border-white/20 aspect-square flex items-center justify-center hover:bg-white hover:text-black transition-all font-archivo text-xs uppercase tracking-widest" href="https://facebook.com/cumple15">Facebook</a>
-<a class="border border-white/20 aspect-square flex items-center justify-center hover:bg-[var(--neon-pink)] hover:border-[var(--neon-pink)] transition-all font-archivo text-xs uppercase tracking-widest col-span-2" href="https://wa.me/543515640023">Confirmar Asistencia</a>
+<div class="grid grid-cols-3 gap-4">
+<a class="group border border-white/20 aspect-square flex flex-col items-center justify-center gap-2 hover:bg-[var(--neon-pink)] hover:border-[var(--neon-pink)] transition-all" href="https://instagram.com/cumple15" aria-label="Instagram">
+<svg class="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+<span class="font-archivo text-[10px] uppercase tracking-widest">Instagram</span>
+</a>
+<a class="group border border-white/20 aspect-square flex flex-col items-center justify-center gap-2 hover:bg-[var(--neon-pink)] hover:border-[var(--neon-pink)] transition-all" href="https://facebook.com/cumple15" aria-label="Facebook">
+<svg class="w-8 h-8" viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-8.5H16l.5-3.5h-3V6.8c0-1 .3-1.7 1.8-1.7H17V2.1C16.4 2 15.3 2 14.2 2 11.8 2 10 3.5 10 6.4V9H7.5v3.5H10V21h3.5z"/></svg>
+<span class="font-archivo text-[10px] uppercase tracking-widest">Facebook</span>
+</a>
+<a class="group border border-white/20 aspect-square flex flex-col items-center justify-center gap-2 hover:bg-[var(--neon-pink)] hover:border-[var(--neon-pink)] transition-all" href="https://wa.me/543515640023" aria-label="WhatsApp">
+<svg class="w-8 h-8" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.6.1-.2.2-.7.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.1-.6-1.5-.9-2-.2-.5-.5-.5-.6-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.3 5.2 4.6.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3zM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.5 1.3 4.9L2 22l5.3-1.4c1.4.7 3 1.2 4.7 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18.3c-1.5 0-2.9-.4-4.1-1.1l-.3-.2-3 .8.8-2.9-.2-.3c-.8-1.3-1.2-2.7-1.2-4.2 0-4.4 3.6-8 8-8s8 3.6 8 8-3.6 7.9-8 7.9z"/></svg>
+<span class="font-archivo text-[10px] uppercase tracking-widest">WhatsApp</span>
+</a>
 </div>
+<a class="mt-6 bg-[var(--neon-pink)] text-white flex items-center justify-center gap-3 py-6 font-archivo uppercase tracking-widest hover:bg-white hover:text-[var(--charcoal)] transition-all" href="#rsvp-form" target="_blank" rel="noopener"><!-- TODO: reemplazar por URL del Google Form -->
+<span class="material-symbols-outlined">edit_note</span>
+                    Confirmar Asistencia
+                </a>
 <div class="mt-20 font-syne text-xs opacity-40 uppercase tracking-[0.5em]">
                     © 2024 Camila Editorial / All Rights Reserved
                 </div>
@@ -194,6 +260,32 @@
                 item.style.transform = `translateY(${translateY}px) rotate(${rotation}deg)`;
             });
         });
+
+        // Countdown to 19 Aug 2026 at 21:00 AR (UTC-3)
+        const targetDate = new Date('2026-08-19T21:00:00-03:00').getTime();
+        const pad = n => String(n).padStart(2, '0');
+        const cd = {
+            d: document.getElementById('cd-days'),
+            h: document.getElementById('cd-hours'),
+            m: document.getElementById('cd-minutes'),
+            s: document.getElementById('cd-seconds'),
+        };
+        function tick() {
+            const diff = targetDate - Date.now();
+            if (diff <= 0) {
+                cd.d.textContent = '00';
+                cd.h.textContent = '00';
+                cd.m.textContent = '00';
+                cd.s.textContent = '00';
+                return;
+            }
+            cd.d.textContent = pad(Math.floor(diff / 86400000));
+            cd.h.textContent = pad(Math.floor((diff % 86400000) / 3600000));
+            cd.m.textContent = pad(Math.floor((diff % 3600000) / 60000));
+            cd.s.textContent = pad(Math.floor((diff % 60000) / 1000));
+        }
+        tick();
+        setInterval(tick, 1000);
     </script>
 
 </body></html>

@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Obra Social Mascotas | El amor se cuida</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary-container": "#625300",
+                    "on-secondary-fixed": "#5b3700",
+                    "tertiary-container": "#fce589",
+                    "on-background": "#2e3335",
+                    "primary-container": "#ffae87",
+                    "secondary-container": "#ffddb8",
+                    "tertiary-dim": "#625200",
+                    "background": "#f8f9fa",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-bright": "#f8f9fa",
+                    "secondary-fixed": "#ffddb8",
+                    "primary-fixed-dim": "#fa9c6e",
+                    "on-error-container": "#671200",
+                    "on-secondary-container": "#744800",
+                    "surface-variant": "#dee3e5",
+                    "secondary-dim": "#764900",
+                    "outline-variant": "#aeb3b5",
+                    "primary-dim": "#853f19",
+                    "surface-container": "#ebeef0",
+                    "tertiary-fixed": "#fce589",
+                    "inverse-surface": "#0c0f10",
+                    "outline": "#767c7e",
+                    "on-surface-variant": "#5a6062",
+                    "on-primary": "#fff7f5",
+                    "on-primary-fixed-variant": "#74320c",
+                    "on-primary-container": "#682904",
+                    "primary-fixed": "#ffae87",
+                    "on-primary-fixed": "#481900",
+                    "on-secondary-fixed-variant": "#815100",
+                    "on-error": "#fff7f6",
+                    "secondary": "#865400",
+                    "surface-tint": "#944b24",
+                    "primary": "#944b24",
+                    "on-surface": "#2e3335",
+                    "secondary-fixed-dim": "#ffcb8e",
+                    "surface-dim": "#d5dbdd",
+                    "on-tertiary-fixed-variant": "#6c5c0c",
+                    "inverse-primary": "#fd9e70",
+                    "tertiary-fixed-dim": "#edd77d",
+                    "tertiary": "#6e5e0e",
+                    "on-tertiary": "#fff8eb",
+                    "error": "#aa371c",
+                    "inverse-on-surface": "#9b9d9e",
+                    "surface": "#f8f9fa",
+                    "on-secondary": "#fff7f3",
+                    "surface-container-high": "#e5e9eb",
+                    "surface-container-low": "#f2f4f5",
+                    "on-tertiary-fixed": "#4d4000",
+                    "error-dim": "#821a01",
+                    "surface-container-highest": "#dee3e5",
+                    "error-container": "#fa7150"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Plus Jakarta Sans"],
+                    "body": ["Plus Jakarta Sans"],
+                    "label": ["Plus Jakarta Sans"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .asymmetric-clip {
+            clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 95%);
+        }
+        .blob-shape {
+            border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface antialiased">
+<!-- Top Navigation Bar -->
+<nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-stone-900/80 backdrop-blur-md shadow-lg shadow-amber-900/5">
+<div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
+<a class="text-2xl font-extrabold tracking-tighter text-amber-900 dark:text-amber-100" href="#">
+                Obra Social Mascotas
+            </a>
+<div class="hidden md:flex items-center space-x-8">
+<a class="text-amber-700 dark:text-amber-300 font-black border-b-4 border-amber-400 pb-1 font-['Plus_Jakarta_Sans'] font-extrabold uppercase tracking-wider text-xs" href="#inicio">Inicio</a>
+<a class="text-stone-500 dark:text-stone-400 font-semibold hover:text-amber-600 transition-colors font-['Plus_Jakarta_Sans'] font-extrabold uppercase tracking-wider text-xs hover:scale-105 transition-all duration-300" href="#planes">Planes</a>
+<a class="text-stone-500 dark:text-stone-400 font-semibold hover:text-amber-600 transition-colors font-['Plus_Jakarta_Sans'] font-extrabold uppercase tracking-wider text-xs hover:scale-105 transition-all duration-300" href="#beneficios">Beneficios</a>
+<a class="text-stone-500 dark:text-stone-400 font-semibold hover:text-amber-600 transition-colors font-['Plus_Jakarta_Sans'] font-extrabold uppercase tracking-wider text-xs hover:scale-105 transition-all duration-300" href="#nosotros">Nosotros</a>
+</div>
+<button class="bg-primary text-on-primary px-8 py-3 rounded-xl font-bold hover:scale-105 transition-all active:scale-95 shadow-lg shadow-primary/20">
+                ¡Unite ahora!
+            </button>
+</div>
+</nav>
+<!-- Hero Section -->
+<header class="relative min-h-screen flex items-center pt-20 overflow-hidden" id="inicio">
+<div class="absolute inset-0 bg-gradient-to-br from-secondary-container/30 to-background z-0"></div>
+<div class="max-w-7xl mx-auto px-8 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
+<div class="lg:col-span-7 space-y-8">
+<div class="inline-block px-4 py-2 bg-tertiary-container rounded-full text-on-tertiary-container font-bold text-sm tracking-widest uppercase">
+                    Cuidado Premium
+                </div>
+<h1 class="text-7xl lg:text-8xl font-black text-on-background leading-[0.9] tracking-tighter">
+                    La <span class="text-primary italic">Obra Social</span> para Mascotas
+                </h1>
+<p class="text-xl text-on-surface-variant max-w-xl leading-relaxed">
+                    Brindamos la tranquilidad que tu mejor amigo merece. Cobertura médica integral con un toque humano (y perruno) en cada detalle.
+                </p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-primary text-on-primary px-10 py-5 rounded-xl text-lg font-extrabold shadow-xl shadow-primary/25 hover:scale-105 transition-all active:scale-95">
+                        Ver Planes de Salud
+                    </button>
+<button class="bg-surface-container-lowest text-primary px-10 py-5 rounded-xl text-lg font-bold shadow-sm hover:bg-surface-container-low transition-all">
+                        Hablar con Asesor
+                    </button>
+</div>
+</div>
+<div class="lg:col-span-5 relative">
+<div class="relative w-full aspect-square blob-shape overflow-hidden shadow-2xl rotate-3 bg-primary-container">
+<img alt="Happy dog" class="w-full h-full object-cover scale-110" data-alt="Close-up portrait of a happy Golden Retriever smiling at the camera in a sun-drenched park with warm golden hour lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4sBjGTrljkz1QcL-QDT4RCuQtDIY7VAPsPzRPO5Sl1i8Dt1UIsdd-f2AneWBiDWGx4bFvh1zHuS3EW7y63pLOBCcOQn05sPpneVXXP01oxBlKt0ougpkTArQ3o20BgPFl9bJ6whcJYX1c0HABU5goffbJcC354aWXnfG730qgIuTECjRr4tFmoY-MMirK5mOXHQE8nc6R-i586sxbEEXzb0f1zsUAAxBh9VLrkng-7tdl4Pyo4CqrsnF6FNZP_A9DYHPPCMliCnBp"/>
+</div>
+<div class="absolute -bottom-8 -left-8 bg-surface-container-lowest p-6 rounded-xl shadow-xl max-w-[200px] -rotate-3 border-none">
+<div class="flex items-center gap-2 text-primary mb-2">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">pets</span>
+<span class="font-bold text-xs uppercase tracking-tighter">Miembro Destacado</span>
+</div>
+<p class="font-bold text-on-background">"El mejor servicio para mi gato Simba"</p>
+</div>
+</div>
+</div>
+</header>
+<!-- Services / Benefits Bento Grid -->
+<section class="py-24 bg-surface-container-low" id="beneficios">
+<div class="max-w-7xl mx-auto px-8">
+<div class="mb-16">
+<h2 class="text-5xl font-black text-on-background mb-4 tracking-tight">Todo lo que necesitan en un solo lugar</h2>
+<p class="text-xl text-on-surface-variant max-w-2xl">Un ecosistema diseñado para simplificar la vida de los pet-parents y maximizar la felicidad de los peludos.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Large Card 1 -->
+<div class="md:col-span-2 bg-surface-container-lowest p-10 rounded-xl shadow-sm flex flex-col md:flex-row gap-8 items-center overflow-hidden transition-all hover:shadow-lg">
+<div class="flex-1 space-y-4">
+<span class="material-symbols-outlined text-5xl text-primary" style="font-variation-settings: 'FILL' 1;">emergency</span>
+<h3 class="text-3xl font-extrabold text-on-background">Atención Veterinaria 24/7</h3>
+<p class="text-on-surface-variant leading-relaxed">Urgencias y consultas sin turno en nuestra red de clínicas seleccionadas. Siempre estamos despiertos para cuidarlos.</p>
+<button class="text-primary font-black uppercase text-xs tracking-widest flex items-center gap-2 group">
+                            Ver red de clínicas 
+                            <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</div>
+<div class="w-full md:w-64 aspect-square rounded-lg bg-secondary-container overflow-hidden">
+<img alt="Vet exam" class="w-full h-full object-cover" data-alt="Professional veterinarian gently examining a small white dog in a clean modern clinic with warm wood accents" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCAVJCh4zhh49CP3khAqnteZLz2fk_AWxWQNtUPqV-L_TE5kj_cvJDlkNK1-3j3IOBwAQ3Tz_HIrnQL7zv__ENngmDdH4N13vvnw9VHldr_UgLBI4TiAXW0TMPRk5cGW9e1MuZ9KFpULkX3_4DRqaTpgtpnU8j7500TzQN1FJutnCcw_kTDYGBuavs4I09BxGvxwjfZJpi0LK197ShrKk3xJYKFpc9z4pDWBWjsQ-vZ6InaBvcrMyHSvLZJfW-aZmTVKxtFNY7J_7SO"/>
+</div>
+</div>
+<!-- Tall Card -->
+<div class="bg-primary p-10 rounded-xl text-on-primary shadow-xl shadow-primary/20 flex flex-col justify-between">
+<div class="space-y-4">
+<span class="material-symbols-outlined text-5xl text-primary-container" style="font-variation-settings: 'FILL' 1;">vaccines</span>
+<h3 class="text-3xl font-extrabold">Vacunación Anual</h3>
+<p class="opacity-90">Cubrimos el calendario completo de vacunas para mantener sus defensas al 100%.</p>
+</div>
+<div class="mt-8">
+<div class="h-2 w-full bg-on-primary/20 rounded-full overflow-hidden">
+<div class="h-full bg-tertiary-container w-3/4 rounded-full"></div>
+</div>
+<p class="mt-2 text-xs font-bold uppercase tracking-widest opacity-75">75% de planes incluyen refuerzo anual</p>
+</div>
+</div>
+<!-- Small Card 1 -->
+<div class="bg-tertiary-container p-8 rounded-xl shadow-sm hover:translate-y-[-8px] transition-all">
+<span class="material-symbols-outlined text-4xl text-on-tertiary-container mb-4" style="font-variation-settings: 'FILL' 1;">shopping_bag</span>
+<h3 class="text-xl font-bold text-on-tertiary-container mb-2">Pet Shop Discounts</h3>
+<p class="text-on-tertiary-container/80 text-sm">Hasta 30% de descuento en alimentos premium y accesorios de moda.</p>
+</div>
+<!-- Small Card 2 -->
+<div class="bg-surface-container-highest p-8 rounded-xl shadow-sm hover:translate-y-[-8px] transition-all">
+<span class="material-symbols-outlined text-4xl text-secondary mb-4" style="font-variation-settings: 'FILL' 1;">content_cut</span>
+<h3 class="text-xl font-bold text-on-surface mb-2">Peluquería Canina</h3>
+<p class="text-on-surface-variant text-sm">Baño, corte de uñas y peinado incluido en todos los planes Diamond.</p>
+</div>
+<!-- Small Card 3 -->
+<div class="bg-secondary-container p-8 rounded-xl shadow-sm hover:translate-y-[-8px] transition-all">
+<span class="material-symbols-outlined text-4xl text-on-secondary-container mb-4" style="font-variation-settings: 'FILL' 1;">home_health</span>
+<h3 class="text-xl font-bold text-on-secondary-container mb-2">Visitas a Domicilio</h3>
+<p class="text-on-secondary-container/80 text-sm">¿Tu mascota no puede viajar? El vet va a casa sin costo extra.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Pricing / Plans Section (Asymmetric) -->
+<section class="py-32 bg-white overflow-hidden" id="planes">
+<div class="max-w-7xl mx-auto px-8">
+<div class="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
+<div class="max-w-xl">
+<h2 class="text-6xl font-black text-on-background tracking-tighter leading-none mb-6">Planes que se <span class="text-secondary italic">adaptan</span> a ellos</h2>
+<p class="text-xl text-on-surface-variant">Sin letra chica, sin esperas. Cobertura inmediata desde el primer día.</p>
+</div>
+<div class="flex gap-4">
+<button class="p-4 rounded-full border-2 border-outline-variant text-outline hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<button class="p-4 rounded-full border-2 border-primary text-primary hover:bg-primary-container transition-colors">
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12 items-center">
+<!-- Basic Plan -->
+<div class="bg-surface-container-low p-10 rounded-xl space-y-8 hover:scale-105 transition-all">
+<div class="space-y-2">
+<h3 class="text-2xl font-bold uppercase tracking-widest text-on-surface-variant">Plan Cachorro</h3>
+<div class="text-5xl font-black text-on-background">$4.500<span class="text-lg font-normal text-on-surface-variant">/mes</span></div>
+</div>
+<ul class="space-y-4">
+<li class="flex items-center gap-3 font-semibold text-on-surface">
+<span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+                            Consultas Ilimitadas
+                        </li>
+<li class="flex items-center gap-3 font-semibold text-on-surface">
+<span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+                            Vacunas de Calendario
+                        </li>
+<li class="flex items-center gap-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-outline-variant text-xl">radio_button_unchecked</span>
+                            Cirugías de Complejidad
+                        </li>
+</ul>
+<button class="w-full py-4 rounded-xl font-black border-2 border-on-background text-on-background hover:bg-on-background hover:text-white transition-all">Elegir Plan</button>
+</div>
+<!-- Featured Plan -->
+<div class="bg-primary text-on-primary p-12 rounded-xl space-y-8 scale-110 shadow-2xl shadow-primary/30 z-10">
+<div class="absolute -top-6 left-1/2 -translate-x-1/2 bg-tertiary-container text-on-tertiary-container px-6 py-2 rounded-full font-black text-xs tracking-widest uppercase">Más Popular</div>
+<div class="space-y-2">
+<h3 class="text-2xl font-bold uppercase tracking-widest opacity-80">Plan Familia</h3>
+<div class="text-6xl font-black">$8.900<span class="text-lg font-normal opacity-70">/mes</span></div>
+</div>
+<ul class="space-y-4">
+<li class="flex items-center gap-3 font-bold">
+<span class="material-symbols-outlined text-tertiary-container text-xl" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                            Todo lo del Plan Cachorro
+                        </li>
+<li class="flex items-center gap-3 font-bold">
+<span class="material-symbols-outlined text-tertiary-container text-xl" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                            Análisis Clínicos
+                        </li>
+<li class="flex items-center gap-3 font-bold">
+<span class="material-symbols-outlined text-tertiary-container text-xl" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                            20% en Medicamentos
+                        </li>
+<li class="flex items-center gap-3 font-bold">
+<span class="material-symbols-outlined text-tertiary-container text-xl" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                            Ecografías y Rayos X
+                        </li>
+</ul>
+<button class="w-full py-5 rounded-xl font-black bg-tertiary-container text-on-tertiary-container shadow-lg hover:brightness-110 transition-all">Contratar Ahora</button>
+</div>
+<!-- Premium Plan -->
+<div class="bg-surface-container-low p-10 rounded-xl space-y-8 hover:scale-105 transition-all">
+<div class="space-y-2">
+<h3 class="text-2xl font-bold uppercase tracking-widest text-on-surface-variant">Plan Senior</h3>
+<div class="text-5xl font-black text-on-background">$12.500<span class="text-lg font-normal text-on-surface-variant">/mes</span></div>
+</div>
+<ul class="space-y-4">
+<li class="flex items-center gap-3 font-semibold text-on-surface">
+<span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+                            Cobertura 100% Quirúrgica
+                        </li>
+<li class="flex items-center gap-3 font-semibold text-on-surface">
+<span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+                            Especialistas (Cardio/Onco)
+                        </li>
+<li class="flex items-center gap-3 font-semibold text-on-surface">
+<span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+                            Internación Ilimitada
+                        </li>
+</ul>
+<button class="w-full py-4 rounded-xl font-black border-2 border-on-background text-on-background hover:bg-on-background hover:text-white transition-all">Elegir Plan</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-stone-100 dark:bg-stone-950 w-full py-12 px-8" id="nosotros">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-10 border-t border-stone-200/50 dark:border-stone-800/50 pt-12">
+<div class="flex flex-col gap-4 items-center md:items-start">
+<a class="text-lg font-bold text-amber-900 font-['Plus_Jakarta_Sans']" href="#">
+                    Obra Social Mascotas
+                </a>
+<p class="font-['Plus_Jakarta_Sans'] text-sm text-stone-600 dark:text-stone-400">© 2024 Obra Social Mascotas. El amor se cuida.</p>
+<div class="flex gap-4 mt-2">
+<span class="material-symbols-outlined text-stone-400 hover:text-primary transition-colors cursor-pointer">social_leaderboard</span>
+<span class="material-symbols-outlined text-stone-400 hover:text-primary transition-colors cursor-pointer">share</span>
+<span class="material-symbols-outlined text-stone-400 hover:text-primary transition-colors cursor-pointer">language</span>
+</div>
+</div>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="text-stone-500 hover:text-amber-600 hover:underline underline-offset-4 decoration-amber-400 font-['Plus_Jakarta_Sans'] text-sm" href="#">Privacidad</a>
+<a class="text-stone-500 hover:text-amber-600 hover:underline underline-offset-4 decoration-amber-400 font-['Plus_Jakarta_Sans'] text-sm" href="#">Términos</a>
+<a class="text-stone-500 hover:text-amber-600 hover:underline underline-offset-4 decoration-amber-400 font-['Plus_Jakarta_Sans'] text-sm" href="#">Preguntas Frecuentes</a>
+<a class="text-stone-500 hover:text-amber-600 hover:underline underline-offset-4 decoration-amber-400 font-['Plus_Jakarta_Sans'] text-sm font-bold text-amber-700" href="#">Contacto</a>
+</div>
+<div class="bg-white dark:bg-stone-900 p-6 rounded-xl shadow-sm max-w-xs text-center md:text-left">
+<p class="text-xs font-black uppercase tracking-widest text-primary mb-2">Central de Emergencias</p>
+<p class="text-xl font-bold text-on-background">0800-PET-CARE</p>
+<p class="text-xs text-on-surface-variant">Llamada gratuita las 24hs</p>
+</div>
+</div>
+</footer>
+<!-- Emergencias FAB -->
+<div class="fixed bottom-8 right-8 z-50">
+<button class="bg-error text-on-error w-16 h-16 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 active:scale-95 transition-all group overflow-hidden">
+<span class="material-symbols-outlined text-3xl group-hover:hidden" style="font-variation-settings: 'FILL' 1;">emergency_home</span>
+<span class="hidden group-hover:block font-black text-[10px] uppercase">SOS</span>
+</button>
+</div>
+</body></html>

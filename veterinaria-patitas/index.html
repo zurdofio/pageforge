@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es-AR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Veterinaria Patitas | El Santuario Clínico para tus mascotas</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary": "#ffffff",
+                        "surface-bright": "#f8f9fa",
+                        "outline": "#707a6f",
+                        "tertiary-container": "#006639",
+                        "on-secondary-container": "#007432",
+                        "surface-container-highest": "#e1e3e4",
+                        "primary": "#004c22",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary-fixed": "#00210b",
+                        "background": "#f8f9fa",
+                        "primary-container": "#166534",
+                        "on-tertiary-fixed": "#00210f",
+                        "surface-container": "#edeeef",
+                        "tertiary-fixed": "#8ff8b4",
+                        "on-background": "#191c1d",
+                        "secondary-fixed": "#6bff8f",
+                        "error": "#ba1a1a",
+                        "on-tertiary-fixed-variant": "#00522d",
+                        "on-primary-fixed-variant": "#005226",
+                        "secondary-container": "#6bff8f",
+                        "on-secondary-fixed": "#002109",
+                        "surface-container-low": "#f3f4f5",
+                        "secondary-fixed-dim": "#4ae176",
+                        "surface-tint": "#1f6c3a",
+                        "inverse-surface": "#2e3132",
+                        "on-primary-container": "#93e0a2",
+                        "outline-variant": "#bfc9bd",
+                        "secondary": "#006e2f",
+                        "on-tertiary-container": "#7be4a2",
+                        "primary-fixed-dim": "#8bd79b",
+                        "surface": "#f8f9fa",
+                        "on-secondary": "#ffffff",
+                        "surface-container-high": "#e7e8e9",
+                        "inverse-primary": "#8bd79b",
+                        "on-tertiary": "#ffffff",
+                        "primary-fixed": "#a6f4b5",
+                        "on-secondary-fixed-variant": "#005321",
+                        "on-error": "#ffffff",
+                        "tertiary": "#004c29",
+                        "surface-dim": "#d9dadb",
+                        "tertiary-fixed-dim": "#73db9a",
+                        "on-surface-variant": "#404940",
+                        "error-container": "#ffdad6",
+                        "on-error-container": "#93000a",
+                        "surface-variant": "#e1e3e4",
+                        "on-surface": "#191c1d",
+                        "inverse-on-surface": "#f0f1f2"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Inter"],
+                        "display": ["Inter"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; background-color: #f8f9fa; color: #191c1d; }
+    </style>
+<style id="pageforge-smooth-scroll">html{scroll-behavior:smooth}</style></head>
+<body class="bg-surface selection:bg-secondary-fixed-dim selection:text-on-secondary-fixed">
+<!-- TopNavBar -->
+<nav class="sticky top-0 w-full z-50 bg-stone-50/80 backdrop-blur-md shadow-sm">
+<div class="flex justify-between items-center w-full px-6 py-4 max-w-7xl mx-auto">
+<span class="text-xl font-bold text-emerald-950 tracking-tight">Veterinaria Patitas</span>
+<div class="hidden md:flex gap-8 items-center">
+<a class="text-emerald-700 font-bold border-b-2 border-emerald-700 pb-1 font-inter tracking-tight" href="#inicio">Inicio</a>
+<a class="text-stone-500 font-medium hover:text-emerald-600 transition-colors duration-200 font-inter tracking-tight" href="#servicios">Servicios</a>
+<a class="text-stone-500 font-medium hover:text-emerald-600 transition-colors duration-200 font-inter tracking-tight" href="#servicios">Equipo</a>
+<a class="text-stone-500 font-medium hover:text-emerald-600 transition-colors duration-200 font-inter tracking-tight" href="#testimonios">Testimonios</a>
+<a class="text-stone-500 font-medium hover:text-emerald-600 transition-colors duration-200 font-inter tracking-tight" href="#equipo">Contacto</a>
+</div>
+<button class="bg-primary-container text-on-primary px-6 py-2.5 rounded-lg font-bold scale-95 active:scale-90 transition-transform">
+                Pedir turno
+            </button>
+</div>
+</nav>
+<main>
+<!-- Hero Section -->
+<section class="relative overflow-hidden bg-primary-container min-h-[819px] flex items-center" id="inicio">
+<div class="absolute inset-0 z-0 opacity-40">
+<img alt="Veterinary Clinic" class="w-full h-full object-cover" data-alt="Modern high-end veterinary examination room with soft natural lighting and medical equipment in a sanctuary-like atmosphere" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBi4EJG465p1JlrFLq0mZbTBvtd9jJ9sTXi7WChXlUA9OxjplOkdGakjjjbLEUKTfQlrGIgI2P-dQKxB7aPqcwIcgvGjaMemMa7kXccDWyxyMl5JTXfe0KBi98YeQ2zxsEohSW5spQXTj4eWr4a_kH_z6RAi28wO_yhlkNhE1RcS7Ue2yaDzAX7Xmj6qiyYbCX8vuNjKNgOK4U5F_GKPIIp0ZvDcRFezKnzO4Y0qcKX3QMhsnuwQfBuLgVUETSSnD-kU29i5NWrzFW2"/>
+</div>
+<div class="absolute inset-0 bg-gradient-to-r from-primary to-transparent z-10"></div>
+<div class="relative z-20 max-w-7xl mx-auto px-8 py-24 grid md:grid-cols-2 gap-12 items-center">
+<div class="space-y-8">
+<span class="text-secondary-fixed font-bold tracking-widest text-sm uppercase">Cuidado Integral Premium</span>
+<h1 class="text-white text-5xl md:text-7xl font-extrabold tracking-tight leading-[1.1]">
+                        Cuidamos a tu mascota como parte de la familia
+                    </h1>
+<p class="text-on-primary-container text-lg max-w-xl leading-relaxed">
+                        En Veterinaria Patitas combinamos la excelencia médica con un entorno de paz y sanación para garantizar el bienestar de tus compañeros de vida.
+                    </p>
+<div class="flex flex-wrap gap-4 pt-4">
+<button class="bg-primary-container text-white px-8 py-4 rounded-lg font-bold shadow-lg hover:brightness-110 transition-all">
+                            Pedir turno
+                        </button>
+<button class="bg-secondary-container text-on-secondary-fixed px-8 py-4 rounded-lg font-bold hover:brightness-110 transition-all">
+                            Ver servicios
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Stats Section (Asymmetry example) -->
+<section id="servicios" class="bg-surface-container-low py-12">
+<div class="max-w-7xl mx-auto px-8 flex flex-wrap justify-around gap-8 text-center">
+<div class="space-y-1">
+<p class="text-4xl font-black text-primary">15+</p>
+<p class="text-sm font-medium text-outline">Años de Experiencia</p>
+</div>
+<div class="space-y-1">
+<p class="text-4xl font-black text-primary">10k+</p>
+<p class="text-sm font-medium text-outline">Mascotas Felices</p>
+</div>
+<div class="space-y-1">
+<p class="text-4xl font-black text-primary">24/7</p>
+<p class="text-sm font-medium text-outline">Atención Emergencias</p>
+</div>
+</div>
+</section>
+<!-- Services Section: Bento Grid -->
+<section class="py-24 bg-surface" id="servicios">
+<div class="max-w-7xl mx-auto px-8">
+<div class="mb-16 flex flex-col md:flex-row justify-between items-end gap-6">
+<div class="max-w-2xl">
+<h2 class="text-3xl font-bold text-on-surface tracking-tight mb-4">Servicios Médicos Especializados</h2>
+<p class="text-outline leading-relaxed">Ofrecemos un espectro completo de medicina veterinaria, desde cuidados preventivos hasta intervenciones quirúrgicas complejas.</p>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Featured Service -->
+<div class="md:col-span-2 bg-surface-container-lowest p-10 rounded-lg shadow-sm border border-outline-variant/15 flex flex-col justify-between min-h-[320px]">
+<div>
+<span class="material-symbols-outlined text-primary text-4xl mb-6">clinical_notes</span>
+<h3 class="text-2xl font-bold text-on-surface mb-4">Clínica General</h3>
+<p class="text-outline max-w-md">Diagnósticos precisos apoyados en tecnología de vanguardia para asegurar el tratamiento correcto desde la primera visita.</p>
+</div>
+<div class="flex gap-2 mt-8">
+<span class="px-3 py-1 bg-secondary-fixed text-on-secondary-fixed text-xs font-bold rounded-sm">RECOMENDADO</span>
+</div>
+</div>
+<div class="bg-primary-container p-10 rounded-lg shadow-sm flex flex-col justify-between text-white">
+<div>
+<span class="material-symbols-outlined text-secondary-fixed text-4xl mb-6">vaccines</span>
+<h3 class="text-2xl font-bold mb-4">Vacunación</h3>
+<p class="text-emerald-100/80">Planes preventivos personalizados para mantener a tu mascota protegida contra todas las enfermedades comunes.</p>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-10 rounded-lg shadow-sm border border-outline-variant/15">
+<span class="material-symbols-outlined text-primary text-4xl mb-6">content_cut</span>
+<h3 class="text-xl font-bold text-on-surface mb-2">Peluquería</h3>
+<p class="text-outline text-sm">Estética canina y felina con productos hipoalergénicos y profesionales pacientes.</p>
+</div>
+<div class="bg-surface-container-lowest p-10 rounded-lg shadow-sm border border-outline-variant/15">
+<span class="material-symbols-outlined text-primary text-4xl mb-6">emergency</span>
+<h3 class="text-xl font-bold text-on-surface mb-2">Emergencias</h3>
+<p class="text-outline text-sm">Equipo de guardia preparado para actuar con rapidez y eficacia en momentos críticos.</p>
+</div>
+<div class="bg-surface-container-lowest p-10 rounded-lg shadow-sm border border-outline-variant/15">
+<span class="material-symbols-outlined text-primary text-4xl mb-6">medication</span>
+<h3 class="text-xl font-bold text-on-surface mb-2">Farmacia</h3>
+<p class="text-outline text-sm">Stock completo de medicamentos de primera línea y dietas prescriptas.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Preventive Plans (Editorial Layout) -->
+<section id="testimonios" class="py-24 bg-surface-container-low">
+<div class="max-w-7xl mx-auto px-8 grid md:grid-cols-12 gap-12">
+<div class="md:col-span-5">
+<h2 class="text-4xl font-extrabold text-primary tracking-tighter mb-8">Planes Preventivos</h2>
+<p class="text-lg text-outline mb-12">La prevención es la base de una vida larga y saludable. Diseñamos membresías adaptadas a cada etapa de vida.</p>
+<div class="flex flex-wrap gap-3">
+<span class="bg-secondary-fixed text-on-secondary-fixed px-4 py-2 rounded-full text-xs font-bold tracking-tight">CACHORROS</span>
+<span class="bg-secondary-fixed text-on-secondary-fixed px-4 py-2 rounded-full text-xs font-bold tracking-tight">ADULTOS</span>
+<span class="bg-secondary-fixed text-on-secondary-fixed px-4 py-2 rounded-full text-xs font-bold tracking-tight">SENIOR</span>
+<span class="bg-secondary-fixed text-on-secondary-fixed px-4 py-2 rounded-full text-xs font-bold tracking-tight">GATOS</span>
+<span class="bg-secondary-fixed text-on-secondary-fixed px-4 py-2 rounded-full text-xs font-bold tracking-tight">VIAJEROS</span>
+</div>
+</div>
+<div class="md:col-span-7 bg-surface-container-lowest rounded-lg p-12 shadow-sm relative">
+<div class="absolute -top-4 -right-4 w-24 h-24 bg-tertiary-container rounded-full flex items-center justify-center text-white text-xs font-black rotate-12">AHORRÁ 20%</div>
+<h4 class="text-xl font-bold text-on-surface mb-4">Plan Integral Anual</h4>
+<ul class="space-y-4 text-outline mb-8">
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary">check_circle</span> Consultas ilimitadas</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary">check_circle</span> Vacunación completa</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary">check_circle</span> Desparasitación mensual</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary">check_circle</span> Análisis de laboratorio</li>
+</ul>
+<button class="w-full bg-primary text-white py-4 rounded-lg font-bold hover:bg-primary-container transition-colors">Solicitar Información</button>
+</div>
+</div>
+</section>
+<!-- Equipo Section -->
+<section class="py-24 bg-surface" id="equipo">
+<div class="max-w-7xl mx-auto px-8">
+<div class="text-center mb-16">
+<h2 class="text-3xl font-bold text-on-surface mb-4">Nuestros Especialistas</h2>
+<p class="text-outline max-w-2xl mx-auto">Un equipo multidisciplinario unido por la misma pasión: el respeto absoluto por la vida animal.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Team Member 1 -->
+<div class="group bg-surface-container-lowest rounded-lg overflow-hidden border border-outline-variant/15 transition-all hover:translate-y-[-8px]">
+<div class="aspect-[4/5] overflow-hidden">
+<img alt="Veterinary Doctor" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Professional female veterinarian in white coat smiling in a clean medical setting with warm lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-GN4VEyVffO7zo1Jhs7ff1SuPQX2M3MKW2KlKDRx9iNJMXJ3OPz4staJOnSG4LyeYg-gdbS_uvistYMmOn_UBJqDYV_hdPHxFQWn86CcgaJxrVei-LR5l37KzpxgEJfAiFfd00WD27U03dOCnam9xKQ0QWbwDiqusbpprzKxNVPJCGhSKFJ-pJeXTVSkrwwJL_tZq7nl6scPAZPBKhccPs1Tf08ODf8r6_PWHekCUyc-pwIHjO690Wk2Le8G1GWrcACS-nt5vSfoK"/>
+</div>
+<div class="p-8">
+<h4 class="text-xl font-bold text-on-surface mb-1">Dra. Martina Rossi</h4>
+<p class="text-primary font-semibold text-sm mb-4">Directora Médica &amp; Cirugía</p>
+<p class="text-outline text-sm leading-relaxed">Especialista en medicina felina con más de 12 años de trayectoria clínica internacional.</p>
+</div>
+</div>
+<!-- Team Member 2 -->
+<div class="group bg-surface-container-lowest rounded-lg overflow-hidden border border-outline-variant/15 transition-all hover:translate-y-[-8px]">
+<div class="aspect-[4/5] overflow-hidden">
+<img alt="Veterinary Doctor" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Experienced male veterinarian in medical scrubs posing in a modern clinic with high-end diagnostic tools" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCGdypllUe5_iU65e4z1ugIyDMovexik3NmdjI4u8omrTScKlha_wSeu86_LTKB4f6P8oajKETMAOjH9fbRCjc8f-1dnxO-dPJM60O94GL7J1nc6Xl4K9Jtbz4pmqb2zRDhc45wl2RO6VPx7go38FgpJ5PwoHBwBJJ2iNh-TeoD2V27hJndibBlyeAG7PWiEK3NFIiql9LvGtfYotoHG40QCvmRFhQ7aBdWjpTkJrwCLAb1I8vsBVat3LOLFcIJZfyx0unfkGYynq_a"/>
+</div>
+<div class="p-8">
+<h4 class="text-xl font-bold text-on-surface mb-1">Dr. Julián Méndez</h4>
+<p class="text-primary font-semibold text-sm mb-4">Cardiología Veterinaria</p>
+<p class="text-outline text-sm leading-relaxed">Dedicado al diagnóstico por imágenes y salud cardiovascular de especies pequeñas.</p>
+</div>
+</div>
+<!-- Team Member 3 -->
+<div class="group bg-surface-container-lowest rounded-lg overflow-hidden border border-outline-variant/15 transition-all hover:translate-y-[-8px]">
+<div class="aspect-[4/5] overflow-hidden">
+<img alt="Veterinary Assistant" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Young professional female veterinary assistant smiling kindly, representing empathy and gentle animal care" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzZ7GJLm_RNSKHOJ0Qy0qJDg8L5RXy3fxxktP5HfSIhJEkpMCD3CvYlEgN9jUYC-gKzqeYA0iG9m-_IFFUG9z65mMg-m8piLz2wZlJ1pW-Ii_FtDZpck5RWK6doNJ1ks2sp36hC7xX98_zRnyt6PQjhS4BnE-GMb-QzyndTFVdoxF-gy1-O_6-pHhC16_CwopdBTNXIstmZv99vcLGlqL5w-xgPoz0Ao5c1P7mNZ6TgFtLGe1q8OAfp_Dsxx8igJxYErVMOq0-4AiT"/>
+</div>
+<div class="p-8">
+<h4 class="text-xl font-bold text-on-surface mb-1">Lic. Sofía Vega</h4>
+<p class="text-primary font-semibold text-sm mb-4">Comportamiento &amp; Bienestar</p>
+<p class="text-outline text-sm leading-relaxed">Experta en etología, asegurando que las visitas sean libres de estrés para todos nuestros pacientes.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonios (Glassmorphism overlap) -->
+<section class="py-24 bg-primary relative overflow-hidden" id="testimonios">
+<div class="absolute inset-0 opacity-10">
+<img alt="Happy dogs" class="w-full h-full object-cover" data-alt="Blurred background of happy healthy dogs running in a sunlit field with soft bokeh effect" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBeScvpruamiOraJrIM9DiQpJSaeRqVgyx9wsdQDt5QxozOXta1vVN8DM8lnRDaayDbAKZGm_QlnwyLO7xlWMOYQx-alAds_DZmbhOYFs_i5RIHTIaRq56_46ZaB1p-t8Kix4PUg44CeF-tdA7F8r1vMolW74J5EOYfZbcKrKFYMNURrVUc6xk95bWc3azlc9tD69f5rpt5kOC6U83-WkSvgoaxNNvtoMujuT_xVgLs1d4f7GAY2xKfGLiYIxyRYLaq9GjejSI7Cdvl"/>
+</div>
+<div class="max-w-7xl mx-auto px-8 relative z-10">
+<h2 class="text-3xl font-bold text-white text-center mb-16">Lo que dicen sus familias</h2>
+<div class="grid md:grid-cols-2 gap-8">
+<div class="bg-white/10 backdrop-blur-md p-10 rounded-lg border border-white/10">
+<span class="material-symbols-outlined text-secondary-fixed text-4xl mb-4" style="font-variation-settings: 'FILL' 1;">format_quote</span>
+<p class="text-white text-lg italic mb-6 leading-relaxed">"La calidez de la Dra. Rossi es incomparable. Operaron a mi perro Milo y el seguimiento postoperatorio fue de otro mundo. No los cambio por nada."</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-emerald-800 flex items-center justify-center font-bold text-white">LG</div>
+<div>
+<p class="text-white font-bold">Laura González</p>
+<p class="text-emerald-200 text-xs uppercase tracking-tighter">Dueña de Milo</p>
+</div>
+</div>
+</div>
+<div class="bg-white/10 backdrop-blur-md p-10 rounded-lg border border-white/10">
+<span class="material-symbols-outlined text-secondary-fixed text-4xl mb-4" style="font-variation-settings: 'FILL' 1;">format_quote</span>
+<p class="text-white text-lg italic mb-6 leading-relaxed">"Excelente atención 24hs. Tuvimos una urgencia un domingo a la madrugada y nos atendieron con una profesionalidad y calma que nos tranquilizó enseguida."</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-emerald-800 flex items-center justify-center font-bold text-white">RM</div>
+<div>
+<p class="text-white font-bold">Ricardo Morales</p>
+<p class="text-emerald-200 text-xs uppercase tracking-tighter">Dueño de Luna</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contacto Section -->
+<section class="py-24 bg-surface" id="contacto">
+<div class="max-w-7xl mx-auto px-8 grid md:grid-cols-2 gap-16 items-center">
+<div>
+<h2 class="text-4xl font-extrabold text-on-surface tracking-tight mb-8">Estamos cerca tuyo</h2>
+<p class="text-outline text-lg mb-12">Vení a visitarnos o agendá tu consulta por cualquier vía de contacto. Atendemos consultas generales con y sin turno previo.</p>
+<div class="space-y-8">
+<div class="flex gap-6 items-start">
+<div class="w-12 h-12 bg-surface-container-high rounded-lg flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary">location_on</span>
+</div>
+<div>
+<p class="font-bold text-on-surface">Dirección</p>
+<p class="text-outline">Av. Cabildo 2100, Buenos Aires</p>
+</div>
+</div>
+<div class="flex gap-6 items-start">
+<div class="w-12 h-12 bg-surface-container-high rounded-lg flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary">call</span>
+</div>
+<div>
+<p class="font-bold text-on-surface">Teléfono</p>
+<p class="text-outline">+54 11 4789-1234</p>
+</div>
+</div>
+<div class="flex gap-6 items-start">
+<div class="w-12 h-12 bg-surface-container-high rounded-lg flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary">mail</span>
+</div>
+<div>
+<p class="font-bold text-on-surface">Email</p>
+<p class="text-outline">hola@veterinariapatitas.com</p>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-high rounded-lg overflow-hidden h-[400px] shadow-sm">
+<img alt="Map location" class="w-full h-full object-cover grayscale opacity-80" data-alt="A stylized map-like view of a clean urban grid representing the clinic's premium location in Buenos Aires" data-location="Buenos Aires, Argentina" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAaDMarRxbDElnQ_0Ep7E16z9S20aFc3LQKJAkznt-J2msWOnCAU26DbPtp5skHsiqjTTFe7iy5BhYxzhdGO5Aoag22JVXM-LuWHyLfdYA0b_yqTkcgbzIsKISy7rZcUWoMErL0MQRL4x7n3yF6VrXyaJmMpR-vUuAyIdEL7pKTE-ho7A0bSNYqxV_ibGw-eTM5hATz2KuJLuUNBDIO-M6kx8BZwq3Ph9qemKxcTeONjuHqwGHmhtHdzx1uUSWPevr-kS5X1lNEtdUV"/>
+</div>
+</div>
+
+<div class="w-full mt-8 rounded-md overflow-hidden"><iframe src="https://www.google.com/maps?q=Av.%20Cabildo%202100%2C%20Buenos%20Aires&output=embed" width="100%" height="300" style="border:0;" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade" title="Mapa"></iframe></div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-emerald-950 dark:bg-black w-full border-t-0">
+<div class="flex flex-col md:flex-row justify-between items-center w-full px-8 py-12 max-w-7xl mx-auto gap-8">
+<div class="space-y-4 text-center md:text-left">
+<span class="text-lg font-black text-emerald-50 tracking-tighter">Veterinaria Patitas</span>
+<p class="text-emerald-400/80 font-inter text-sm leading-relaxed max-w-xs">
+                    © 2024 Veterinaria Patitas. El Santuario Clínico para tus mascotas.
+                </p>
+</div>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="text-emerald-400/80 hover:text-white transition-opacity font-inter text-sm" href="#">Privacidad</a>
+<a class="text-emerald-400/80 hover:text-white transition-opacity font-inter text-sm" href="#">Términos</a>
+<a class="text-emerald-400/80 hover:text-white transition-opacity font-inter text-sm flex items-center gap-2" href="#">
+<span class="material-symbols-outlined text-base">camera</span> Instagram
+                </a>
+<a class="text-emerald-400/80 hover:text-white transition-opacity font-inter text-sm flex items-center gap-2" href="#">
+<span class="material-symbols-outlined text-base">chat</span> WhatsApp
+                </a>
+<a class="text-emerald-400/80 hover:text-white transition-opacity font-inter text-sm flex items-center gap-2" href="#">
+<span class="material-symbols-outlined text-base">social_leaderboard</span> Facebook
+                </a>
+</div>
+</div>
+</footer>
+</body></html>

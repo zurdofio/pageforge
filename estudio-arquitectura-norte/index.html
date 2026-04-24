@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es-AR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&amp;family=JetBrains+Mono:wght@400;700&amp;family=Space+Grotesk:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary-fixed": "#c6c5cf",
+                    "surface-container-high": "#e7e8e9",
+                    "on-secondary": "#ffffff",
+                    "on-tertiary-container": "#ffffff",
+                    "on-secondary-container": "#1a1b22",
+                    "surface-container": "#edeeef",
+                    "inverse-surface": "#2e3132",
+                    "on-background": "#191c1d",
+                    "on-primary-fixed-variant": "#e4e1e6",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-tint": "#5f5e61",
+                    "background": "#f8f9fa",
+                    "surface-dim": "#d9dadb",
+                    "on-tertiary": "#e2e2e6",
+                    "surface-bright": "#f8f9fa",
+                    "on-error": "#ffffff",
+                    "inverse-on-surface": "#f0f1f2",
+                    "on-surface-variant": "#474747",
+                    "on-secondary-fixed": "#1a1b22",
+                    "error": "#ba1a1a",
+                    "primary-container": "#3b3b3e",
+                    "on-error-container": "#410002",
+                    "tertiary-container": "#737478",
+                    "on-tertiary-fixed-variant": "#e2e2e6",
+                    "secondary": "#5d5e66",
+                    "surface-container-highest": "#e1e3e4",
+                    "primary": "#000000",
+                    "tertiary-fixed-dim": "#45474a",
+                    "outline-variant": "#c6c6c6",
+                    "on-primary-container": "#ffffff",
+                    "secondary-fixed-dim": "#abaab4",
+                    "surface-container-low": "#f3f4f5",
+                    "primary-fixed-dim": "#47464a",
+                    "surface-variant": "#e1e3e4",
+                    "on-tertiary-fixed": "#ffffff",
+                    "error-container": "#ffdad6",
+                    "on-secondary-fixed-variant": "#3a3b43",
+                    "on-primary-fixed": "#ffffff",
+                    "tertiary": "#3a3b3f",
+                    "surface": "#f8f9fa",
+                    "tertiary-fixed": "#5d5e62",
+                    "on-primary": "#e4e1e6",
+                    "inverse-primary": "#c8c5ca",
+                    "outline": "#777777",
+                    "on-surface": "#191c1d",
+                    "primary-fixed": "#5f5e61",
+                    "secondary-container": "#d4d3dd"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Inter", "sans-serif"],
+                    "display": ["Inter", "sans-serif"],
+                    "body": ["Inter", "sans-serif"],
+                    "label": ["JetBrains Mono", "monospace"]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .font-mono { font-family: 'JetBrains Mono', monospace; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24; }
+    </style>
+</head>
+<body class="bg-background text-on-background selection:bg-primary selection:text-white">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-zinc-900/80 backdrop-blur-md transition-colors duration-300 shadow-sm shadow-black/5">
+<div class="flex justify-between items-center w-full px-8 py-6 max-w-[1920px] mx-auto">
+<div class="text-lg font-bold tracking-tighter text-zinc-900 dark:text-zinc-50 uppercase">
+                Estudio Arquitectura Norte
+            </div>
+<div class="hidden md:flex items-center space-x-10">
+<a class="text-xs font-mono tracking-widest uppercase text-zinc-900 dark:text-zinc-50 font-bold border-b border-zinc-900 dark:border-zinc-50 pb-1" href="#">Inicio</a>
+<a class="text-xs font-mono tracking-widest uppercase text-zinc-500 dark:text-zinc-400 pb-1 hover:text-zinc-900 dark:hover:text-zinc-50 transition-all duration-200" href="#">Proyectos</a>
+<a class="text-xs font-mono tracking-widest uppercase text-zinc-500 dark:text-zinc-400 pb-1 hover:text-zinc-900 dark:hover:text-zinc-50 transition-all duration-200" href="#">Servicios</a>
+<a class="text-xs font-mono tracking-widest uppercase text-zinc-500 dark:text-zinc-400 pb-1 hover:text-zinc-900 dark:hover:text-zinc-50 transition-all duration-200" href="#">Estudio</a>
+<a class="text-xs font-mono tracking-widest uppercase text-zinc-500 dark:text-zinc-400 pb-1 hover:text-zinc-900 dark:hover:text-zinc-50 transition-all duration-200" href="#">Contacto</a>
+</div>
+<button class="hidden md:block bg-primary text-on-primary px-10 py-4 text-xs font-mono uppercase tracking-widest transition-all hover:bg-primary-fixed-dim">
+                Agendar consulta
+            </button>
+<div class="md:hidden">
+<span class="material-symbols-outlined text-primary">menu</span>
+</div>
+</div>
+</nav>
+<main>
+<!-- Hero Section -->
+<section class="relative min-h-screen flex items-end pt-32 pb-24 px-8 overflow-hidden bg-surface">
+<div class="absolute inset-0 z-0">
+<img alt="Architecture Hero" class="w-full h-full object-cover grayscale brightness-90" data-alt="monolithic modern concrete building with sharp shadows and clean lines against a clear blue sky, architectural photography style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2nyKtcgUp9L5enOxOVFZtj79IY6gW5iOrI_dqII5gfzguy6Z8receTRPl1VhzuTRJOhL5KWDtTQl0psmdzQDnVMlchjpTOoj8zC6UiQddJcw9GdVouGL6ZLU1Xh698Ru6H6qHFKyutrLRrSOKqF24LjvTLh3-QQ38yduNJ01t2ThXrJYtsmjmBwjGn-_xc96P6wr574ss3cdHSNIdKVOqCi5hqWDCQGBmH1aHXW1wNtB-bUIKf7B5BBoZyv06KsyYeFKoo2pg71Y"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+</div>
+<div class="relative z-10 w-full max-w-[1920px] mx-auto grid grid-cols-12 gap-8 items-end">
+<div class="col-span-12 md:col-span-8 lg:col-span-6">
+<span class="font-mono text-[10px] tracking-[0.2em] uppercase text-white/70 mb-6 block">Estudio de Arquitectura de Vanguardia</span>
+<h1 class="text-white text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter leading-[0.9] mb-12">
+                        Diseñamos espacios para vivir mejor
+                    </h1>
+<div class="flex flex-col md:flex-row gap-6">
+<button class="bg-white text-black px-12 py-5 text-xs font-mono uppercase tracking-widest transition-all hover:bg-surface-container-high">Ver Proyectos</button>
+<button class="border border-white/30 text-white px-12 py-5 text-xs font-mono uppercase tracking-widest backdrop-blur-sm hover:bg-white/10 transition-all">Nuestra Visión</button>
+</div>
+</div>
+<div class="hidden lg:col-span-4 lg:col-start-9 lg:flex flex-col items-end text-right">
+<p class="text-white/60 font-mono text-[10px] uppercase tracking-widest max-w-[200px]">
+                        Especializados en arquitectura residencial y comercial de alta gama en Buenos Aires.
+                    </p>
+</div>
+</div>
+</section>
+<!-- Servicios (Bento Style) -->
+<section class="py-32 px-8 bg-surface-container-low">
+<div class="max-w-[1920px] mx-auto">
+<div class="mb-24">
+<span class="font-mono text-[10px] tracking-[0.2em] uppercase text-outline mb-4 block">Capacidades</span>
+<h2 class="text-4xl md:text-6xl font-bold tracking-tighter">Servicios que transforman</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-1">
+<div class="group relative aspect-square bg-surface-container-lowest p-12 flex flex-col justify-between hover:bg-primary transition-colors duration-500">
+<span class="font-mono text-[10px] text-outline group-hover:text-white/50">01</span>
+<div>
+<h3 class="text-2xl font-bold mb-4 group-hover:text-white">Arquitectura Integral</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed group-hover:text-white/70">Desde el concepto inicial hasta la dirección de obra finalizada.</p>
+</div>
+</div>
+<div class="group relative aspect-square bg-surface-container-high p-12 flex flex-col justify-between hover:bg-primary transition-colors duration-500">
+<span class="font-mono text-[10px] text-outline group-hover:text-white/50">02</span>
+<div>
+<h3 class="text-2xl font-bold mb-4 group-hover:text-white">Interiorismo</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed group-hover:text-white/70">Curaduría de materiales y mobiliario para espacios con alma.</p>
+</div>
+</div>
+<div class="group relative aspect-square bg-surface-container-lowest p-12 flex flex-col justify-between hover:bg-primary transition-colors duration-500">
+<span class="font-mono text-[10px] text-outline group-hover:text-white/50">03</span>
+<div>
+<h3 class="text-2xl font-bold mb-4 group-hover:text-white">Urbanismo</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed group-hover:text-white/70">Planificación de desarrollos a gran escala con visión sostenible.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Proyectos (Asymmetric Grid) -->
+<section class="py-32 px-8 bg-surface-container-lowest">
+<div class="max-w-[1920px] mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-24 gap-8">
+<div>
+<span class="font-mono text-[10px] tracking-[0.2em] uppercase text-outline mb-4 block">Portfolio</span>
+<h2 class="text-4xl md:text-6xl font-bold tracking-tighter">Obras Recientes</h2>
+</div>
+<a class="font-mono text-[10px] uppercase tracking-widest border-b border-primary pb-2" href="#">Explorar todo el archivo</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-12">
+<div class="md:col-span-8 group overflow-hidden">
+<div class="relative overflow-hidden aspect-[16/9]">
+<img alt="Proyecto 01" class="w-full h-full object-cover grayscale transition-transform duration-700 group-hover:scale-105" data-alt="ultra modern minimalist luxury villa with large glass windows and reflective pool in evening light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCjycEuic1uSKo9_w4hIMDPiA4V4LIQZWYSZ81gNKVHVZMbNjCNAsFZB2TkiONuPiys1EXApJhqUNx_dB3j6wbWe5X34cSOcXPkkm2JxuXpFxApxtKTIp5IBooaBMH9Nb7Cdd5PudxQkMA8tk6cuN62dZfSbXunPquZy_Qm54EL53bm-ghA5miS5Mp8267mGLgypO9kLbEUhKo-eUTQQz40DgdGayhTla1iWm3boGqo42BqnmwKpbLARyjeSr5ZhLUWaYyl94b7UDw"/>
+<div class="absolute top-6 left-6 bg-primary/60 backdrop-blur px-4 py-2">
+<span class="font-mono text-[10px] text-white uppercase tracking-widest">Residencial / 2023</span>
+</div>
+</div>
+<div class="mt-8">
+<h3 class="text-3xl font-bold tracking-tighter">Casa del Acantilado</h3>
+<p class="text-on-surface-variant font-mono text-[10px] uppercase tracking-widest mt-2">Punta del Este, Uruguay</p>
+</div>
+</div>
+<div class="md:col-span-4 group mt-0 md:mt-32">
+<div class="relative overflow-hidden aspect-[4/5]">
+<img alt="Proyecto 02" class="w-full h-full object-cover grayscale transition-transform duration-700 group-hover:scale-105" data-alt="industrial chic office space with exposed concrete beams and large windows, natural lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuANZ4IpWNcDaPIXHn7_Esvc5cphR05erW-_wWAH37U4FRJPlyE4TSJh4wgvUKeG_O8nvCCIS4uVEHYWBurPUih_qlC3CKLC5dObOBYBJnPS03HYJhnHC7YTyxIr-8itUf3f4kGSpFmQeQpP8WGDQHlF8ZL6JPDolX2jgP5kLcnOIBnDeUKZCIOAPATXjrhiWZrMQ4pkdr-MBFWaUx-45T_RYXY4-gsxiIkpBkqXdN06E8QUdvi6TPaqldTI8OKVSubVcIF4blyD95o"/>
+<div class="absolute top-6 left-6 bg-primary/60 backdrop-blur px-4 py-2">
+<span class="font-mono text-[10px] text-white uppercase tracking-widest">Corporativo / 2024</span>
+</div>
+</div>
+<div class="mt-8">
+<h3 class="text-3xl font-bold tracking-tighter">Oficinas Madero</h3>
+<p class="text-on-surface-variant font-mono text-[10px] uppercase tracking-widest mt-2">Buenos Aires, Argentina</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Proceso & Beneficios -->
+<section class="py-32 px-8 bg-surface-container">
+<div class="max-w-[1920px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
+<div class="relative">
+<img alt="Studio Process" class="w-full aspect-square object-cover grayscale" data-alt="architectural blueprint on a dark desk with professional tools and drafting light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2p_VMA2Fy8fyvdHrT067hbVmMjh0Vub5Qj14RsVueS_fE9uq7v8UfpMdOh82IjNmIGnDJuXIHc8bRdniWGt1eghO0WbWQlW6jx7wvOlmkgnuA7s9XnNdjGMYor0EMwaaWHoFSDUzAVx7vJ2R3QQdABMVPQYZsBcz5zqsaE33nVGHBLKzhuMkPcDMxRFU9C6fETpuZjPd5zpQZEqUmILBLZIrn8CkKDnBU1fqzw3NlON-PF6B6tNRkFmMFpwH7HGsdKvhx9ycAtbs"/>
+<div class="absolute -bottom-12 -right-12 bg-primary p-12 hidden md:block">
+<span class="text-white text-5xl font-bold tracking-tighter">15+</span>
+<p class="text-white/50 font-mono text-[10px] uppercase tracking-widest mt-2">Años de Excelencia</p>
+</div>
+</div>
+<div>
+<span class="font-mono text-[10px] tracking-[0.2em] uppercase text-outline mb-4 block">Metodología</span>
+<h2 class="text-4xl md:text-5xl font-bold tracking-tighter mb-12">La precisión como estándar fundamental</h2>
+<div class="space-y-12">
+<div class="flex gap-8">
+<span class="font-mono text-2xl text-primary font-bold">01</span>
+<div>
+<h4 class="text-xl font-bold mb-3">Conceptualización Profunda</h4>
+<p class="text-on-surface-variant leading-relaxed">Analizamos el entorno, la luz y las necesidades del usuario para crear un relato arquitectónico único.</p>
+</div>
+</div>
+<div class="flex gap-8">
+<span class="font-mono text-2xl text-primary font-bold">02</span>
+<div>
+<h4 class="text-xl font-bold mb-3">Ejecución Técnica</h4>
+<p class="text-on-surface-variant leading-relaxed">Documentación rigurosa y control de calidad exhaustivo en cada etapa constructiva.</p>
+</div>
+</div>
+<div class="flex gap-8">
+<span class="font-mono text-2xl text-primary font-bold">03</span>
+<div>
+<h4 class="text-xl font-bold mb-3">Eficiencia Sostenible</h4>
+<p class="text-on-surface-variant leading-relaxed">Optimización de recursos y sistemas pasivos para reducir el impacto ambiental.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonios -->
+<section class="py-32 px-8 bg-surface-container-lowest overflow-hidden">
+<div class="max-w-[1920px] mx-auto text-center">
+<span class="material-symbols-outlined text-6xl text-surface-container-highest mb-8">format_quote</span>
+<p class="text-2xl md:text-4xl font-medium tracking-tight max-w-4xl mx-auto mb-12 italic">
+                    "Arquitectura Norte no solo diseñó nuestra casa, crearon una experiencia de vida. Su atención al detalle y manejo de la luz es incomparable."
+                </p>
+<div class="flex flex-col items-center">
+<span class="font-bold text-lg">Federico Lombardi</span>
+<span class="font-mono text-[10px] uppercase tracking-widest text-outline">Cliente Residencial</span>
+</div>
+</div>
+</section>
+<!-- Contacto -->
+<section class="py-32 px-8 bg-primary text-white" id="contacto">
+<div class="max-w-[1920px] mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-24">
+<div>
+<span class="font-mono text-[10px] tracking-[0.2em] uppercase text-white/50 mb-4 block">Hablemos</span>
+<h2 class="text-5xl md:text-7xl font-bold tracking-tighter mb-12">Iniciemos su próximo proyecto</h2>
+<div class="space-y-8 mt-12">
+<div>
+<p class="font-mono text-[10px] uppercase text-white/50 mb-2">Oficina</p>
+<p class="text-xl">Av. Libertador 4500, Buenos Aires</p>
+</div>
+<div>
+<p class="font-mono text-[10px] uppercase text-white/50 mb-2">Contacto</p>
+<p class="text-xl">+54 11 4321-5678</p>
+<p class="text-xl">hola@arquitecturanorte.com</p>
+</div>
+</div>
+</div>
+<form class="space-y-12 bg-white/5 p-12 backdrop-blur-sm">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="space-y-2">
+<label class="font-mono text-[10px] uppercase text-white/70">Nombre</label>
+<input class="w-full bg-transparent border-b border-white/20 focus:border-white focus:ring-0 px-0 py-2 outline-none transition-all" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="font-mono text-[10px] uppercase text-white/70">Email</label>
+<input class="w-full bg-transparent border-b border-white/20 focus:border-white focus:ring-0 px-0 py-2 outline-none transition-all" type="email"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="font-mono text-[10px] uppercase text-white/70">Proyecto</label>
+<input class="w-full bg-transparent border-b border-white/20 focus:border-white focus:ring-0 px-0 py-2 outline-none transition-all" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="font-mono text-[10px] uppercase text-white/70">Mensaje</label>
+<textarea class="w-full bg-transparent border-b border-white/20 focus:border-white focus:ring-0 px-0 py-2 outline-none transition-all resize-none" rows="4"></textarea>
+</div>
+<button class="w-full bg-white text-black py-6 font-mono text-xs uppercase tracking-widest hover:bg-surface-container-high transition-all">Enviar consulta</button>
+</form>
+</div>
+</div>
+
+<div class="w-full mt-8 rounded-md overflow-hidden"><iframe src="https://www.google.com/maps?q=Av.%20Libertador%204500%2C%20Buenos%20Aires&output=embed" width="100%" height="300" style="border:0;" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade" title="Mapa"></iframe></div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-20 px-8 bg-zinc-50 dark:bg-zinc-950">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-8 w-full max-w-[1920px] mx-auto">
+<div class="text-sm font-bold tracking-widest text-zinc-900 dark:text-zinc-50 uppercase">
+                Estudio Arquitectura Norte
+            </div>
+<div class="flex gap-8">
+<a class="text-xs uppercase font-mono text-zinc-400 dark:text-zinc-600 hover:text-zinc-900 dark:hover:text-zinc-50 underline decoration-1 underline-offset-4" href="https://instagram.com/arquitecturanorte" target="_blank" rel="noopener noreferrer">Instagram</a>
+<a class="text-xs uppercase font-mono text-zinc-400 dark:text-zinc-600 hover:text-zinc-900 dark:hover:text-zinc-50 underline decoration-1 underline-offset-4" href="https://wa.me/5491143215678" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+<a class="text-xs uppercase font-mono text-zinc-400 dark:text-zinc-600 hover:text-zinc-900 dark:hover:text-zinc-50 underline decoration-1 underline-offset-4" href="#">Proyectos</a>
+<a class="text-xs uppercase font-mono text-zinc-400 dark:text-zinc-600 hover:text-zinc-900 dark:hover:text-zinc-50 underline decoration-1 underline-offset-4" href="#">Legal</a>
+</div>
+<div class="text-[10px] font-mono text-zinc-400 dark:text-zinc-600 uppercase tracking-tight">
+                © 2024 ESTUDIO ARQUITECTURA NORTE. PRECISION IN FORM.
+            </div>
+</div>
+</footer>
+</body></html>

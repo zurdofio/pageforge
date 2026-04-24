@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es-AR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>POLLERÍA EL Z | BRUTAL STREET FOOD</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&amp;family=Space+Grotesk:wght@300;400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@400&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#991b1b", // Red-900
+                        "secondary": "#ef4444", // Red-500
+                        "background": "#121212", 
+                        "surface": "#1A1A1A",
+                        "accent": "#fca5a5" // Red-300
+                    },
+                    fontFamily: {
+                        "display": ["Archivo Black", "sans-serif"],
+                        "body": ["Space Grotesk", "sans-serif"]
+                    },
+                    boxShadow: {
+                        "brutal": "8px 8px 0px 0px #000000",
+                        "brutal-primary": "8px 8px 0px 0px #991b1b",
+                    }
+                }
+            }
+        }
+    </script>
+<style type="text/tailwindcss">
+        @layer base {
+            body { 
+                @apply bg-background text-white font-body overflow-x-hidden;
+            }
+            h1, h2, h3 { 
+                @apply font-display uppercase leading-none tracking-tighter;
+            }
+        }
+        .text-outline {
+            -webkit-text-stroke: 2px #991b1b;
+            color: transparent;
+        }
+        .brutal-border {
+            border: 4px solid #000000;
+        }
+        .industrial-pattern {
+            background-image: radial-gradient(#333 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+        .marquee {
+            white-space: nowrap;
+            overflow: hidden;
+            display: flex;
+        }
+        .marquee div {
+            display: flex;
+            animation: marquee 20s linear infinite;
+        }
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+    </style>
+</head>
+<body class="selection:bg-primary selection:text-white">
+<nav class="fixed top-0 w-full z-50 bg-background/90 backdrop-blur-md border-b-4 border-black">
+<div class="flex justify-between items-center px-6 py-4 max-w-[1400px] mx-auto w-full">
+<a class="text-3xl font-display text-primary italic" href="#">EL Z.</a>
+<div class="hidden md:flex items-center gap-10 font-bold uppercase text-sm tracking-widest">
+<a class="hover:text-secondary transition-colors" href="#especialidades">MENÚ</a>
+<a class="hover:text-secondary transition-colors" href="#ubicacion">TRACK US</a>
+<a class="hover:text-secondary transition-colors" href="#contacto">FEEDBACK</a>
+<button class="bg-primary text-white px-6 py-2 brutal-border shadow-brutal hover:translate-x-1 hover:translate-y-1 hover:shadow-none hover:bg-secondary transition-all">
+                PEDIR AHORA
+            </button>
+</div>
+<div class="md:hidden">
+<span class="material-symbols-outlined text-primary text-4xl">menu_open</span>
+</div>
+</div>
+</nav>
+<main class="pt-20">
+<section class="relative min-h-screen flex items-center overflow-hidden bg-background industrial-pattern">
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full text-center z-0 pointer-events-none opacity-10">
+<span class="text-[30vw] font-display leading-none text-white block">BRUTAL</span>
+</div>
+<div class="container mx-auto px-6 relative z-10">
+<div class="relative">
+<h1 class="text-7xl md:text-[12rem] flex flex-col items-start gap-0 mix-blend-difference">
+<span class="bg-primary text-white px-4 leading-[0.8] mb-2 transform -rotate-2">POLLERÍA</span>
+<span class="text-white leading-[0.8] z-10 transform translate-x-10">EL ZETA</span>
+<span class="text-outline leading-[0.8] transform -translate-y-4 -rotate-1 self-end md:self-center">BIALET</span>
+</h1>
+<div class="mt-12 md:mt-0 md:absolute md:top-1/2 md:right-0 md:-translate-y-1/2 max-w-md bg-white text-black p-8 brutal-border shadow-brutal-primary transform rotate-2">
+<p class="text-xl md:text-2xl font-bold uppercase mb-6 leading-tight">
+                        Fuego real, pollo real. La pollería más cruda de Bialet Massé. Sin rodeos, puro sabor.
+                    </p>
+<button class="w-full bg-black text-accent py-4 font-display text-xl hover:bg-zinc-800 transition-colors uppercase">
+                        Explorar el Caos
+                    </button>
+</div>
+</div>
+</div>
+<div class="absolute bottom-10 left-0 w-full bg-primary border-y-4 border-black py-2 rotate-1 scale-110 z-20">
+<div class="marquee font-display text-2xl text-white">
+<div>
+<span class="mx-8">EL MEJOR POLLO DE BIALET —</span>
+<span class="mx-8">CALIDAD BRUTAL —</span>
+<span class="mx-8">ADOBE SECRETO —</span>
+<span class="mx-8">RESERVA YA —</span>
+<span class="mx-8">EL MEJOR POLLO DE BIALET —</span>
+<span class="mx-8">CALIDAD BRUTAL —</span>
+<span class="mx-8">ADOBE SECRETO —</span>
+<span class="mx-8">RESERVA YA —</span>
+</div>
+</div>
+</div>
+</section>
+<section class="py-32 bg-background relative" id="especialidades">
+<div class="container mx-auto px-6">
+<div class="mb-24 flex flex-col md:flex-row items-baseline gap-6 border-b-8 border-primary pb-10">
+<h2 class="text-6xl md:text-9xl">ESPECIALES</h2>
+<span class="text-2xl md:text-4xl text-outline font-display">DE LA CASA</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
+<div class="md:col-span-7 group">
+<div class="bg-zinc-900 brutal-border shadow-brutal overflow-hidden group-hover:-translate-y-2 transition-transform">
+<div class="h-[500px] overflow-hidden grayscale contrast-150 hover:grayscale-0 transition-all duration-500">
+<img alt="Pollo Spiedo" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2lZEyfuCzLw0kCiA9OQPpQdBBJeSe2ET44c_dgVuj4DS3AMhhbB0RJZSXBkeKEqRWTQcEChzow1Kjz6Or8WCczlMD4XeBnFJ-izlKQWxjhBmwV1ZH9ZdDM4M3h54hsZjcX9mxurHI81yXBySZ6uQqxWt9jTzhULXHI49PsalaY27phZiK6G6fzoLwnfWBAayAaVN18QBEO2AJ4X9uL3WOmlfKZ0O3oeuwe0J4_D9FB0T71Q_vkMuFWqbaxbU0fo37R3K8TKTzdgCR"/>
+</div>
+<div class="p-8 flex flex-col md:flex-row justify-between items-end gap-6 bg-primary text-white">
+<div>
+<h3 class="text-4xl mb-2">SPIEDO TRADICIONAL</h3>
+<p class="font-bold uppercase tracking-tight max-w-sm">A las brasas. Adobo secreto. La leyenda de Bialet.</p>
+</div>
+<div class="text-5xl font-display text-accent">$12.5K</div>
+</div>
+</div>
+</div>
+<div class="md:col-span-5 md:mt-32 group">
+<div class="bg-white brutal-border shadow-brutal-primary overflow-hidden group-hover:-translate-y-2 transition-transform">
+<div class="p-4 bg-black text-accent font-display text-sm flex justify-between">
+<span>HOT AS HELL</span>
+<span>#02</span>
+</div>
+<div class="h-[400px] bg-zinc-100 flex items-center justify-center p-6 border-b-4 border-black">
+<img alt="Pollo Feliz" class="w-full h-full object-contain mix-blend-multiply" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2lZEyfuCzLw0kCiA9OQPpQdBBJeSe2ET44c_dgVuj4DS3AMhhbB0RJZSXBkeKERWTQcEChzow1Kjz6Or8WCczlMD4XeBnFJ-izlKQWxjhBmwV1ZH9ZdDM4M3h54hsZjcX9mxurHI81yXBySZ6uQqxWt9jTzhULXHI49PsalaY27phZiK6G6fzoLwnfWBAayAaVN18QBEO2AJ4X9uL3WOmlfKZ0O3oeuwe0J4_D9FB0T71Q_vkMuFWqbaxbU0fo37R3K8TKTzdgCR"/>
+</div>
+<div class="p-8 bg-zinc-900 text-white">
+<h3 class="text-3xl mb-4 text-primary">ALITAS CRUJIENTES</h3>
+<p class="font-bold uppercase text-sm mb-6 opacity-80">Doble rebozado con 12 especias. Una explosión industrial.</p>
+<div class="flex justify-between items-center">
+<span class="text-3xl font-display text-accent">$8.9K</span>
+<button class="bg-primary text-white px-4 py-2 font-bold hover:bg-secondary transition-colors">ORDER</button>
+</div>
+</div>
+</div>
+</div>
+<div class="md:col-span-6 md:-mt-20 group">
+<div class="bg-zinc-800 brutal-border shadow-brutal overflow-hidden group-hover:-translate-y-2 transition-transform">
+<div class="h-[450px] overflow-hidden grayscale contrast-125 hover:grayscale-0 transition-all duration-500">
+<img alt="Burguer" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCKlNVWU1A1uRjD8iIGxqgveG2qplu2EyCGjW1iovbApBN6EIZKYPDT1uXte9-qn2XAFk6UFgmSoJkJebRTPDbQYNEYj9XnvgaRVSAC-_J4WUKxmBz5LgAFUjxOQK6RubSps96GAS_jgBIUouxcTm8rWnFVvrhxqfaWNvdasyyZb8sLq0-0yLsP3TPAtID3NDkhmqxj05nQc2LmRH5ir5lilCwLDP2toRpvsVos8Nym2vn-DLk6jiX4gmjAUjN6EtlRGa8ua8z4kXCG"/>
+</div>
+<div class="p-8 bg-white text-black">
+<h3 class="text-4xl mb-4 italic">PREMIUM BURGUER</h3>
+<div class="flex justify-between items-end border-t-4 border-black pt-4">
+<span class="text-4xl font-display text-primary">$9.2K</span>
+<span class="font-bold uppercase text-xs">CHEDDAR + RÚCULA + MAGIA</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-32 bg-primary text-white" id="contacto">
+<div class="container mx-auto px-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-0 border-8 border-black">
+<div class="p-12 md:p-20 space-y-12 bg-white border-b-8 md:border-b-0 md:border-r-8 border-black">
+<h2 class="text-7xl md:text-9xl mb-10 transform -rotate-3 text-black">RAW CONTACT</h2>
+<div class="space-y-8">
+<div class="flex items-center gap-6 group">
+<div class="bg-black text-accent p-4 brutal-border">
+<span class="material-symbols-outlined text-4xl">call</span>
+</div>
+<span class="text-3xl md:text-5xl font-display text-black">+54 9 351 555</span>
+</div>
+<div class="flex items-center gap-6 group">
+<div class="bg-black text-accent p-4 brutal-border">
+<span class="material-symbols-outlined text-4xl">location_on</span>
+</div>
+<span class="text-3xl md:text-5xl font-display text-black">COLÓN 100</span>
+</div>
+</div>
+<div class="pt-10 flex gap-4">
+<div class="bg-black text-white px-6 py-3 font-display brutal-border">BIALET</div>
+<div class="bg-white text-black px-6 py-3 font-display brutal-border">CORDOBA</div>
+</div>
+</div>
+<div class="relative min-h-[500px] bg-black group overflow-hidden" id="ubicacion">
+<img alt="Map" class="w-full h-full object-cover opacity-60 grayscale brightness-50 group-hover:scale-110 transition-transform duration-1000" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAelIUnp4kao1bDNeSwJ6B6Dufc9eTkVDUJhlkVsU21YVtZtT0LpOngAwKX3bqcvMx_X-XZJaPSECAqcrEgjvcP40CDTcSzz2-oaBcu3dG53B1by1CSMIy6Avc012bIQc78KgpPFw_cXPvCcx_W2GA9-So3vWnUBt_3g-BiILTlgFz1U4JlfEk_Ry7LIenyKd49RrBGaFfx0EA6F1aD3lRIqTcM_DiP-PzBJrsyfgrJV3FoNBfumnSQEY0fvBixe2nhEOX9eJ0VOVrT"/>
+<div class="absolute inset-0 flex items-center justify-center">
+<button class="bg-primary text-white px-12 py-6 font-display text-2xl shadow-brutal border-4 border-black hover:bg-secondary transition-colors">
+                            VIEW ON MAPS
+                        </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer class="bg-black text-zinc-500 py-20 px-6 border-t-8 border-zinc-900">
+<div class="max-w-[1400px] mx-auto flex flex-col md:flex-row justify-between items-start md:items-end gap-16">
+<div class="space-y-8">
+<h2 class="text-primary text-8xl md:text-[12rem] opacity-50">EL Z.</h2>
+<p class="font-bold uppercase tracking-widest text-zinc-400">© 2024 POLLERÍA EL Z. BIALET MASSE. NO MERCY ON FLAVOR.</p>
+</div>
+<div class="grid grid-cols-2 gap-12 text-lg font-bold uppercase italic">
+<a class="hover:text-accent" href="#">Instagram</a>
+<a class="hover:text-accent" href="#">Facebook</a>
+<a class="hover:text-accent" href="#">WhatsApp</a>
+<a class="hover:text-accent" href="#">TikTok</a>
+</div>
+</div>
+</footer>
+<div class="md:hidden fixed bottom-6 right-6 z-50">
+<button class="bg-primary text-white w-20 h-20 brutal-border shadow-brutal flex items-center justify-center hover:bg-secondary">
+<span class="material-symbols-outlined text-4xl">shopping_cart</span>
+</button>
+</div>
+</body></html>

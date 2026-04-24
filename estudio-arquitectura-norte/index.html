@@ -82,7 +82,7 @@
         .font-mono { font-family: 'JetBrains Mono', monospace; }
         .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24; }
     </style>
-</head>
+<style id="pageforge-smooth-scroll">html{scroll-behavior:smooth}</style></head>
 <body class="bg-background text-on-background selection:bg-primary selection:text-white">
 <!-- TopNavBar -->
 <nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-zinc-900/80 backdrop-blur-md transition-colors duration-300 shadow-sm shadow-black/5">
@@ -91,11 +91,11 @@
                 Estudio Arquitectura Norte
             </div>
 <div class="hidden md:flex items-center space-x-10">
-<a class="text-xs font-mono tracking-widest uppercase text-zinc-900 dark:text-zinc-50 font-bold border-b border-zinc-900 dark:border-zinc-50 pb-1" href="#">Inicio</a>
-<a class="text-xs font-mono tracking-widest uppercase text-zinc-500 dark:text-zinc-400 pb-1 hover:text-zinc-900 dark:hover:text-zinc-50 transition-all duration-200" href="#">Proyectos</a>
-<a class="text-xs font-mono tracking-widest uppercase text-zinc-500 dark:text-zinc-400 pb-1 hover:text-zinc-900 dark:hover:text-zinc-50 transition-all duration-200" href="#">Servicios</a>
-<a class="text-xs font-mono tracking-widest uppercase text-zinc-500 dark:text-zinc-400 pb-1 hover:text-zinc-900 dark:hover:text-zinc-50 transition-all duration-200" href="#">Estudio</a>
-<a class="text-xs font-mono tracking-widest uppercase text-zinc-500 dark:text-zinc-400 pb-1 hover:text-zinc-900 dark:hover:text-zinc-50 transition-all duration-200" href="#">Contacto</a>
+<a class="text-xs font-mono tracking-widest uppercase text-zinc-900 dark:text-zinc-50 font-bold border-b border-zinc-900 dark:border-zinc-50 pb-1" href="#inicio">Inicio</a>
+<a class="text-xs font-mono tracking-widest uppercase text-zinc-500 dark:text-zinc-400 pb-1 hover:text-zinc-900 dark:hover:text-zinc-50 transition-all duration-200" href="#proyectos">Proyectos</a>
+<a class="text-xs font-mono tracking-widest uppercase text-zinc-500 dark:text-zinc-400 pb-1 hover:text-zinc-900 dark:hover:text-zinc-50 transition-all duration-200" href="#servicios">Servicios</a>
+<a class="text-xs font-mono tracking-widest uppercase text-zinc-500 dark:text-zinc-400 pb-1 hover:text-zinc-900 dark:hover:text-zinc-50 transition-all duration-200" href="#estudio">Estudio</a>
+<a class="text-xs font-mono tracking-widest uppercase text-zinc-500 dark:text-zinc-400 pb-1 hover:text-zinc-900 dark:hover:text-zinc-50 transition-all duration-200" href="#contacto">Contacto</a>
 </div>
 <button class="hidden md:block bg-primary text-on-primary px-10 py-4 text-xs font-mono uppercase tracking-widest transition-all hover:bg-primary-fixed-dim">
                 Agendar consulta
@@ -107,7 +107,7 @@
 </nav>
 <main>
 <!-- Hero Section -->
-<section class="relative min-h-screen flex items-end pt-32 pb-24 px-8 overflow-hidden bg-surface">
+<section id="inicio" class="relative min-h-screen flex items-end pt-32 pb-24 px-8 overflow-hidden bg-surface">
 <div class="absolute inset-0 z-0">
 <img alt="Architecture Hero" class="w-full h-full object-cover grayscale brightness-90" data-alt="monolithic modern concrete building with sharp shadows and clean lines against a clear blue sky, architectural photography style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2nyKtcgUp9L5enOxOVFZtj79IY6gW5iOrI_dqII5gfzguy6Z8receTRPl1VhzuTRJOhL5KWDtTQl0psmdzQDnVMlchjpTOoj8zC6UiQddJcw9GdVouGL6ZLU1Xh698Ru6H6qHFKyutrLRrSOKqF24LjvTLh3-QQ38yduNJ01t2ThXrJYtsmjmBwjGn-_xc96P6wr574ss3cdHSNIdKVOqCi5hqWDCQGBmH1aHXW1wNtB-bUIKf7B5BBoZyv06KsyYeFKoo2pg71Y"/>
 <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
@@ -131,7 +131,7 @@
 </div>
 </section>
 <!-- Servicios (Bento Style) -->
-<section class="py-32 px-8 bg-surface-container-low">
+<section id="proyectos" class="py-32 px-8 bg-surface-container-low">
 <div class="max-w-[1920px] mx-auto">
 <div class="mb-24">
 <span class="font-mono text-[10px] tracking-[0.2em] uppercase text-outline mb-4 block">Capacidades</span>
@@ -163,7 +163,7 @@
 </div>
 </section>
 <!-- Proyectos (Asymmetric Grid) -->
-<section class="py-32 px-8 bg-surface-container-lowest">
+<section id="servicios" class="py-32 px-8 bg-surface-container-lowest">
 <div class="max-w-[1920px] mx-auto">
 <div class="flex flex-col md:flex-row justify-between items-end mb-24 gap-8">
 <div>
@@ -201,7 +201,7 @@
 </div>
 </section>
 <!-- Proceso & Beneficios -->
-<section class="py-32 px-8 bg-surface-container">
+<section id="estudio" class="py-32 px-8 bg-surface-container">
 <div class="max-w-[1920px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
 <div class="relative">
 <img alt="Studio Process" class="w-full aspect-square object-cover grayscale" data-alt="architectural blueprint on a dark desk with professional tools and drafting light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2p_VMA2Fy8fyvdHrT067hbVmMjh0Vub5Qj14RsVueS_fE9uq7v8UfpMdOh82IjNmIGnDJuXIHc8bRdniWGt1eghO0WbWQlW6jx7wvOlmkgnuA7s9XnNdjGMYor0EMwaaWHoFSDUzAVx7vJ2R3QQdABMVPQYZsBcz5zqsaE33nVGHBLKzhuMkPcDMxRFU9C6fETpuZjPd5zpQZEqUmILBLZIrn8CkKDnBU1fqzw3NlON-PF6B6tNRkFmMFpwH7HGsdKvhx9ycAtbs"/>
@@ -240,7 +240,7 @@
 </div>
 </section>
 <!-- Testimonios -->
-<section class="py-32 px-8 bg-surface-container-lowest overflow-hidden">
+<section id="contacto" class="py-32 px-8 bg-surface-container-lowest overflow-hidden">
 <div class="max-w-[1920px] mx-auto text-center">
 <span class="material-symbols-outlined text-6xl text-surface-container-highest mb-8">format_quote</span>
 <p class="text-2xl md:text-4xl font-medium tracking-tight max-w-4xl mx-auto mb-12 italic">

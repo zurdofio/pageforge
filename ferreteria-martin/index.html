@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="es-AR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary-fixed-dim": "#47464a",
+                    "on-tertiary-container": "#ffffff",
+                    "on-tertiary": "#e2e2e6",
+                    "tertiary-container": "#737478",
+                    "on-background": "#191c1d",
+                    "inverse-primary": "#c8c5ca",
+                    "on-primary-fixed": "#ffffff",
+                    "error-container": "#ffdad6",
+                    "surface-container-low": "#f3f4f5",
+                    "secondary": "#5d5e66",
+                    "surface-tint": "#5f5e61",
+                    "on-primary": "#e4e1e6",
+                    "secondary-container": "#d4d3dd",
+                    "on-tertiary-fixed": "#ffffff",
+                    "tertiary-fixed-dim": "#45474a",
+                    "secondary-fixed": "#c6c5cf",
+                    "inverse-on-surface": "#f0f1f2",
+                    "secondary-fixed-dim": "#abaab4",
+                    "surface-container-highest": "#e1e3e4",
+                    "on-primary-container": "#ffffff",
+                    "on-surface": "#191c1d",
+                    "surface-variant": "#e1e3e4",
+                    "error": "#ba1a1a",
+                    "tertiary-fixed": "#5d5e62",
+                    "on-error": "#ffffff",
+                    "background": "#f8f9fa",
+                    "outline-variant": "#c6c6c6",
+                    "on-secondary-fixed-variant": "#3a3b43",
+                    "on-secondary-fixed": "#1a1b22",
+                    "tertiary": "#3a3b3f",
+                    "surface-dim": "#d9dadb",
+                    "inverse-surface": "#2e3132",
+                    "on-surface-variant": "#474747",
+                    "on-secondary": "#ffffff",
+                    "primary-fixed": "#5f5e61",
+                    "on-tertiary-fixed-variant": "#e2e2e6",
+                    "primary-container": "#3b3b3e",
+                    "surface-container": "#edeeef",
+                    "on-error-container": "#410002",
+                    "primary": "#000000",
+                    "surface-container-lowest": "#ffffff",
+                    "surface": "#f8f9fa",
+                    "surface-container-high": "#e7e8e9",
+                    "surface-bright": "#f8f9fa",
+                    "outline": "#777777",
+                    "on-secondary-container": "#1a1b22",
+                    "on-primary-fixed-variant": "#e4e1e6"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Inter"],
+                    "display": ["Inter"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .industrial-gradient {
+            background: linear-gradient(135deg, #000000 0%, #3b3b3e 100%);
+        }
+        .glass-nav {
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary-container selection:text-white">
+<!-- Header: Sticky TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-zinc-50/80 dark:bg-zinc-950/80 backdrop-blur-xl border-b border-zinc-200/15 shadow-sm h-20 flex justify-between items-center px-8 max-w-full mx-auto">
+<div class="text-xl font-black tracking-tighter text-zinc-950 dark:text-zinc-50 uppercase">
+            Ferretería Martín
+        </div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="font-inter tracking-tight text-sm font-bold text-zinc-950 dark:text-zinc-50 border-b-2 border-zinc-950 dark:border-zinc-50 pb-1" href="#inicio">Inicio</a>
+<a class="font-inter tracking-tight text-sm font-medium text-zinc-500 dark:text-zinc-400 hover:text-zinc-800 dark:hover:text-zinc-200 transition-colors" href="#productos">Productos</a>
+<a class="font-inter tracking-tight text-sm font-medium text-zinc-500 dark:text-zinc-400 hover:text-zinc-800 dark:hover:text-zinc-200 transition-colors" href="#servicios">Servicios</a>
+<a class="font-inter tracking-tight text-sm font-medium text-zinc-500 dark:text-zinc-400 hover:text-zinc-800 dark:hover:text-zinc-200 transition-colors" href="#nosotros">Nosotros</a>
+<a class="font-inter tracking-tight text-sm font-medium text-zinc-500 dark:text-zinc-400 hover:text-zinc-800 dark:hover:text-zinc-200 transition-colors" href="#contacto">Contacto</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="bg-primary text-on-primary px-6 py-2.5 rounded-sm industrial-gradient font-bold text-sm tracking-tight active:scale-95 transition-all">
+                WhatsApp
+            </button>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="relative min-h-[921px] flex items-center pt-20 overflow-hidden bg-[#18181b]" id="inicio">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover opacity-40 grayscale" data-alt="dramatic industrial workshop interior with metal shelving and professional tools under cinematic focused lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5IvSgIi0v3Xe-7muJ38fwL0Xs1kWao1zFp0Dn4pXAMuXzzSvfPjWejzHxh2y7zWLWKDkOrSeKpBOFeME5XPPF0mfGK1pJavaxfcBjIJJDw6fYtKYX5madq_UG23Oti6WiUDNtp4rEv6bFNxYSKsPVNHciOnbQwxxunzQ_X2qbDVyYfET85grhxzchFcXIboM4rEu_SB1Cucvtp8qo95d1BjJI9_JkjRGqUZOL1rHYdmHBE54MqGub_kIfKJ-VojWH7CEYCMl2gUqL"/>
+</div>
+<div class="relative z-10 max-w-7xl mx-auto px-8 w-full">
+<div class="max-w-3xl">
+<h1 class="text-[56px] leading-[1.1] font-extrabold tracking-[-0.02em] text-white mb-6">
+                    Todo para tus proyectos
+                </h1>
+<p class="text-lg text-zinc-400 mb-10 leading-relaxed max-w-xl">
+                    Herramientas de precisión y materiales de construcción para profesionales que no aceptan menos que la perfección. El Curador Industrial a su servicio.
+                </p>
+<div class="flex flex-wrap gap-4">
+<a class="bg-white text-black px-8 py-4 rounded-sm font-bold tracking-tight active:scale-95 transition-all" href="#productos">
+                        Ver productos
+                    </a>
+<a class="bg-transparent text-white border border-white/20 px-8 py-4 rounded-sm font-bold tracking-tight hover:bg-white/10 active:scale-95 transition-all" href="#contacto">
+                        Contactar
+                    </a>
+</div>
+</div>
+</div>
+</section>
+<!-- Categories: Bento Grid -->
+<section class="py-32 px-8 bg-surface" id="productos">
+<div class="max-w-7xl mx-auto">
+<div class="mb-16">
+<span class="text-xs font-semibold tracking-[0.05em] uppercase text-outline mb-4 block">Nuestras Categorías</span>
+<h2 class="text-4xl font-bold tracking-tighter">Explorá nuestro inventario</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-4 auto-rows-[280px]">
+<!-- Herramientas -->
+<div class="md:col-span-2 md:row-span-2 relative group overflow-hidden bg-surface-container-low rounded-sm">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="professional power tool kit arranged neatly on a dark wooden workbench with morning light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_2A8U7mYbtzS4RmPEaaQtM8dFvPjpPqjnlY2Hx4BBIEiWbn5c30dtsFwfnq8GgSXwoo37oLoyyJCXqFkHUazzHByuk6-Fx36dljs0hrR0d1aZiwumNdiT3NOiNgUSjytp9uONCO-1BLlq9lDsNGJ2V-TFqpkqbuEpuONgraXzMbSMb19NyDKH3PAJBmRCTX50vue0H-ADIpIvYYwTyYU2Y7puV1Zr1kAd41F0QP9yRW2pPWPVn6_qCE5NOQZGd2li5Bs_aiMM3yRG"/>
+<div class="absolute inset-0 bg-black/40 flex flex-col justify-end p-8">
+<h3 class="text-2xl font-bold text-white">Herramientas</h3>
+<p class="text-zinc-200 text-sm">Eléctricas y manuales de alta gama.</p>
+</div>
+</div>
+<!-- Pinturas -->
+<div class="relative group overflow-hidden bg-surface-container-low rounded-sm">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="vibrant architectural paint swatches and metal buckets in a clean professional store environment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfL_XzbBhiwQwUr5rdtgvL9XAqC3RqkL6o-we898f9dqaPEtfV8KXahpt6BoZN3PvFUxnBKU9YMUd0ysf9YK16BPHvXfTA91wfoIteZbPhnWWFDgfhccYZ0zGD0UbDwCJKooYu_-0-wlUurELEKWKmhD5oGTdEh3yA0YzB8thdPT3sEekGBYZr24X4oPxvYBhZ4Daq0dnf156zSiP2k3AfoKebrNeoanNVRPhQ8LOD6v_jYtNcyyP5cD8xjGv5rB64tZvQPgjCja09"/>
+<div class="absolute inset-0 bg-black/40 flex flex-col justify-end p-6">
+<h3 class="text-xl font-bold text-white">Pinturas</h3>
+</div>
+</div>
+<!-- Construcción -->
+<div class="relative group overflow-hidden bg-surface-container-low rounded-sm">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="organized construction materials like bricks and cement bags on a pallet with industrial aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwfljUCRlGQKDpa28yDSWwyDcOSGcSH_AejtHRIsvZkEccFJQitxYxRmJK9v7g8y6DkLqgAOGT_hXwgiNLn5nRzx3-Z4T5hiY4wwYbHQIHIBfeqevpjSgNKv23_C0b73bZbLtYUI9sOFJWZoCQS7HorGRcwxvoe1VJKAjqoXcTPXDvTdf9sP2qbX8uKwfIgWoi-XLsMA61ueIuGtiLjeqGKUgXh1_Dpj9PmI_iDOAOKdle4aiOI3fE4vvst9epICNUH0eBhU8eGTp1"/>
+<div class="absolute inset-0 bg-black/40 flex flex-col justify-end p-6">
+<h3 class="text-xl font-bold text-white">Construcción</h3>
+</div>
+</div>
+<!-- Electricidad -->
+<div class="relative group overflow-hidden bg-surface-container-low rounded-sm">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="detail of electrical components and copper wiring neatly organized in a technical display" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8Qw9xg_YcbMh-UsgVb5eIcjtG2GxiD1znzeM21MyQcFIJGoOb594LrHxNkE88InVLzJQNzckqVh3OiYOKW1WElwBvqgcR7lJw01pvcjLcYQVNPCz9blUwwmbJsP8-6HNIQld9QK5uS9wuL7x-sjTpKDI3wUZWr4bG5FIQZ2lmy-DOgyq1xmWATiyZkDOshcnTJFNH95y27rXhBFilnC9JPnt6hvKgRb0X9s4CwmxPvxCM-jHARhDFCVTZhMzNDpUf6DMLtYZJfHgU"/>
+<div class="absolute inset-0 bg-black/40 flex flex-col justify-end p-6">
+<h3 class="text-xl font-bold text-white">Electricidad</h3>
+</div>
+</div>
+<!-- Plomería -->
+<div class="relative group overflow-hidden bg-surface-container-low rounded-sm">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="polished chrome plumbing fixtures and pipes laid out on a blueprint" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2HmDnmDfnOUym3-jqJHaSk53eivW_HE0Ae2OW0nJGwLuJiidY4b2mfy3WCziZWX1EBxtM8srCk_4b1MUepi5UShmsMV_FPtWByhlMitK_UdjMTQPqpBbq-AuOrMi-WousUS-sbigB_QdllGLHYIQInaH7AAmPl4LFUyxR949TivLEzWV0NFGu6ZLQC5nBW8Peb_w5ckPiA3Og4oUyxQXrDSoWmhjBYVja-rnP8zUApqQ7D2wd4KOwW9X8xAKU_b3BPRlcara9YT0S"/>
+<div class="absolute inset-0 bg-black/40 flex flex-col justify-end p-6">
+<h3 class="text-xl font-bold text-white">Plomería</h3>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Featured Products -->
+<section class="py-24 bg-surface-container-low px-8">
+<div class="max-w-7xl mx-auto">
+<div class="flex justify-between items-end mb-16">
+<div>
+<span class="text-xs font-semibold tracking-[0.05em] uppercase text-outline mb-4 block">Destacados</span>
+<h2 class="text-4xl font-bold tracking-tighter">Productos estrella</h2>
+</div>
+<a class="text-primary font-bold text-sm underline decoration-primary/20 hover:decoration-primary transition-all underline-offset-4" href="#">Ver catálogo completo</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+<!-- Product 1 -->
+<div class="bg-surface-container-lowest p-6 rounded-sm flex flex-col">
+<div class="aspect-square bg-surface rounded-sm mb-6 flex items-center justify-center p-4">
+<img class="max-h-full object-contain" data-alt="high-quality professional cordless drill standing on its battery base with focus on metallic finish" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOSHdmnnssfcu-hqcPWAwwuItVNR-S-fuPREBcjzQqVupIpdJ6dfu_iAzMhJTHXsLUp5rLmvzlzcRUxMRRYyUZCUlK92Mv-qRSGXpreyMp6bSIWdWssBNzZQNkOgaZsRDNCAO3sHNUEn97UB8J9UTI6YFkQuCueZoiAsz8ZJdsW3_Gur20a-8-k7TXez0Ts5nVNiVED4fTOmhKUXRjjqzWMVqaq3aNzn_DuGOap5NaYoJeOR-R73eu6fUWA18QPxxltB2uTZq4a9pp"/>
+</div>
+<div class="flex-grow">
+<span class="text-[10px] font-bold uppercase tracking-widest text-outline mb-2 block">HERRAMIENTAS ELÉCTRICAS</span>
+<h3 class="text-lg font-bold mb-4">Taladro Percutor 18V</h3>
+<div class="flex items-center gap-2 mb-6">
+<span class="bg-secondary-container text-on-secondary-container text-[10px] font-bold px-2 py-0.5 rounded-full uppercase">Stock Disponible</span>
+</div>
+</div>
+<button class="w-full industrial-gradient text-white font-bold py-3 text-sm active:scale-95 transition-all">Consultar</button>
+</div>
+<!-- Product 2 -->
+<div class="bg-surface-container-lowest p-6 rounded-sm flex flex-col">
+<div class="aspect-square bg-surface rounded-sm mb-6 flex items-center justify-center p-4">
+<img class="max-h-full object-contain" data-alt="close up of premium silver metal wrenches arranged in a professional tool chest" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBnC4E5T3OlPmL3hzqA0PFDDAsfMiyove4l_OJaxEpQ2rr52BWfVH21brRGWuWI0J-hjBg0JPDUhqzhUPlZdx7G22YOzPeARKKQXvml7J0JE4B5aTt-fHR3dq9TyhJRRupnx5YC_3l2Th3yVjiW5cFP_1BbIJiy24WFrjNNLxelwBPXgJ6_YkA2fboiewgKJ-pk1cBy2iQVvhgGtF3EdlVi7Kd6u5aFuYOaBjRqi57HzoUZQK_8e4fIMeQA93UlNwzq_nNJpO2qfeyz"/>
+</div>
+<div class="flex-grow">
+<span class="text-[10px] font-bold uppercase tracking-widest text-outline mb-2 block">HERRAMIENTAS MANUALES</span>
+<h3 class="text-lg font-bold mb-4">Set de Llaves Combinadas</h3>
+<div class="flex items-center gap-2 mb-6">
+<span class="bg-secondary-container text-on-secondary-container text-[10px] font-bold px-2 py-0.5 rounded-full uppercase">Stock Disponible</span>
+</div>
+</div>
+<button class="w-full industrial-gradient text-white font-bold py-3 text-sm active:scale-95 transition-all">Consultar</button>
+</div>
+<!-- Product 3 -->
+<div class="bg-surface-container-lowest p-6 rounded-sm flex flex-col">
+<div class="aspect-square bg-surface rounded-sm mb-6 flex items-center justify-center p-4">
+<img class="max-h-full object-contain" data-alt="professional paint sprayer machine on a clean industrial floor with focus on the nozzle" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3zUXIEM8Aj81zGN6d1JDQWR-DtQenhbgnZ_lyz8ZerI73Jcdhb0opbS1gzkjqYHTyyC09cUfh_r2KgpXfNNOhlghew1WVbY9WtM_fXRXrKai6KkDxQk9dMqDXELRl8uYnyS40RhYi4a4F49xWMHM-jauVt-azN451kERMT39YF1WYnh41R7-BTmy7d2GM0AgO4xBZ7wDTxrjtdgC5lruRVNzJroNoKZSVimGy_FRE8P3Ovc3JLXmsI4D4obdOaRUvRLQs9TpWGWgk"/>
+</div>
+<div class="flex-grow">
+<span class="text-[10px] font-bold uppercase tracking-widest text-outline mb-2 block">HOGAR Y PINTURA</span>
+<h3 class="text-lg font-bold mb-4">Pintura Látex Interior 20L</h3>
+<div class="flex items-center gap-2 mb-6">
+<span class="bg-secondary-container text-on-secondary-container text-[10px] font-bold px-2 py-0.5 rounded-full uppercase">Stock Disponible</span>
+</div>
+</div>
+<button class="w-full industrial-gradient text-white font-bold py-3 text-sm active:scale-95 transition-all">Consultar</button>
+</div>
+<!-- Product 4 -->
+<div class="bg-surface-container-lowest p-6 rounded-sm flex flex-col">
+<div class="aspect-square bg-surface rounded-sm mb-6 flex items-center justify-center p-4">
+<img class="max-h-full object-contain" data-alt="high quality copper plumbing pipes and connectors reflecting soft studio light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlvEYYFEPzEH_iaNVnyWEbjoR0TPDSld_z5I_jHNA2zlfvLqXV41auNNUU6CxvSGbxFnILFG5UiAbi3rMj_Nm6lDa6gT4sSkdRasdj3BUxiBYxUb-FCbzyktG8p3xJPN766s2KqyJgIHSlEnts4FmTz73RRAi9HKd0167FZUi9qYJd7xn4lntl1YfnMS23fgAbRQy4S_eB3cYE-PbBZ_WyW6db3_Du9gyZunhJjHRExONLpemoEcbK5whFpEO_7Tut9jKn0rOX4WJW"/>
+</div>
+<div class="flex-grow">
+<span class="text-[10px] font-bold uppercase tracking-widest text-outline mb-2 block">PLOMERÍA</span>
+<h3 class="text-lg font-bold mb-4">Kit Tubo Cobre 3/4</h3>
+<div class="flex items-center gap-2 mb-6">
+<span class="bg-secondary-container text-on-secondary-container text-[10px] font-bold px-2 py-0.5 rounded-full uppercase">Pedido Especial</span>
+</div>
+</div>
+<button class="w-full industrial-gradient text-white font-bold py-3 text-sm active:scale-95 transition-all">Consultar</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Section -->
+<section class="py-32 px-8 bg-surface" id="servicios">
+<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div>
+<span class="text-xs font-semibold tracking-[0.05em] uppercase text-outline mb-4 block">Nuestros Servicios</span>
+<h2 class="text-4xl font-bold tracking-tighter mb-8">Soluciones integrales para la industria</h2>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+<div class="space-y-4">
+<span class="material-symbols-outlined text-primary text-3xl">psychology</span>
+<h3 class="font-bold text-lg">Asesoramiento</h3>
+<p class="text-zinc-500 text-sm leading-relaxed">Expertos técnicos para guiarte en la elección de los materiales adecuados.</p>
+</div>
+<div class="space-y-4">
+<span class="material-symbols-outlined text-primary text-3xl">content_cut</span>
+<h3 class="font-bold text-lg">Corte a medida</h3>
+<p class="text-zinc-500 text-sm leading-relaxed">Servicio de dimensionado de maderas y metales con precisión milimétrica.</p>
+</div>
+<div class="space-y-4">
+<span class="material-symbols-outlined text-primary text-3xl">local_shipping</span>
+<h3 class="font-bold text-lg">Entrega en obra</h3>
+<p class="text-zinc-500 text-sm leading-relaxed">Logística propia para asegurar que tus materiales lleguen a tiempo.</p>
+</div>
+<div class="space-y-4">
+<span class="material-symbols-outlined text-primary text-3xl">inventory_2</span>
+<h3 class="font-bold text-lg">Pedidos especiales</h3>
+<p class="text-zinc-500 text-sm leading-relaxed">Conseguimos piezas críticas que no se encuentran en stock convencional.</p>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-high h-[600px] rounded-sm relative overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="professional craftsman in a workshop focused on measuring a piece of industrial hardware with soft natural lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-_lv6X96nXpkdJycO7kl_1kl3miolhTwvVMqqAWxyQPpd2gJGAQyEXdci_mRm9ySa-WK2TWxDmFoIQLXYWrCucyoNsdIU7AYFyRVEqB5VJdTEraQK0Z-34edgYlkySeTQBSjbcNPtssMEaLCxo58YwYqbidAtqkEas0q142gu28IZ9qX-yQ4tkzOqY4FYOs7wsNKlqaaWrb1AiCV18iVsSDrF8qsI_f_Fjj_kn4_bqCuu7Booq53HYS862jzSQtUA8EgLhHGvMqTL"/>
+<div class="absolute inset-0 border-[24px] border-surface"></div>
+</div>
+</div>
+</section>
+<!-- Benefits -->
+<section class="py-24 bg-primary text-white px-8">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between gap-12">
+<div class="flex-1">
+<h2 class="text-3xl font-bold tracking-tighter mb-6">Por qué elegirnos</h2>
+<p class="text-zinc-400">Más de 20 años siendo el referente industrial de Buenos Aires.</p>
+</div>
+<div class="flex-[2] grid grid-cols-2 md:grid-cols-4 gap-8">
+<div class="text-center">
+<div class="text-4xl font-black mb-2 tracking-tighter">20+</div>
+<div class="text-[10px] font-bold uppercase tracking-widest text-zinc-500">Años de experiencia</div>
+</div>
+<div class="text-center">
+<div class="text-4xl font-black mb-2 tracking-tighter">15k</div>
+<div class="text-[10px] font-bold uppercase tracking-widest text-zinc-500">Productos en stock</div>
+</div>
+<div class="text-center">
+<div class="text-4xl font-black mb-2 tracking-tighter">100%</div>
+<div class="text-[10px] font-bold uppercase tracking-widest text-zinc-500">Atención profesional</div>
+</div>
+<div class="text-center">
+<div class="text-4xl font-black mb-2 tracking-tighter">Mejor</div>
+<div class="text-[10px] font-bold uppercase tracking-widest text-zinc-500">Precio garantizado</div>
+</div>
+</div>
+</div>
+</section>
+<!-- About Us -->
+<section class="py-32 px-8 bg-surface" id="nosotros">
+<div class="max-w-3xl mx-auto text-center">
+<span class="text-xs font-semibold tracking-[0.05em] uppercase text-outline mb-4 block">Nuestra Historia</span>
+<h2 class="text-4xl font-bold tracking-tighter mb-8 italic">"Pasión por el hardware, compromiso con la industria."</h2>
+<p class="text-lg text-on-surface-variant leading-relaxed mb-8">
+                Ferretería Martín nació como un pequeño taller familiar y evolucionó hasta convertirse en el epicentro de soluciones industriales para Buenos Aires. Nuestra filosofía se basa en la curaduría: no vendemos cualquier herramienta, seleccionamos solo aquellas que garantizan la durabilidad y precisión que tu trabajo exige.
+            </p>
+<div class="flex justify-center gap-4">
+<div class="w-12 h-[1px] bg-outline mt-3"></div>
+<span class="font-bold uppercase text-xs tracking-widest">Martín G. - Fundador</span>
+<div class="w-12 h-[1px] bg-outline mt-3"></div>
+</div>
+</div>
+</section>
+<!-- Testimonials -->
+<section class="py-24 px-8 bg-surface-container-low">
+<div class="max-w-7xl mx-auto">
+<div class="text-center mb-16">
+<h2 class="text-3xl font-bold tracking-tighter">Lo que dicen nuestros clientes</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="bg-surface-container-lowest p-10 rounded-sm">
+<div class="flex gap-1 mb-6">
+<span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-zinc-600 mb-8 italic">"Excelente atención técnica. Me ayudaron a resolver un problema de plomería compleja en un edificio antiguo. Tienen de todo."</p>
+<div class="font-bold text-sm">— Ricardo Sosa, Arquitecto</div>
+</div>
+<div class="bg-surface-container-lowest p-10 rounded-sm">
+<div class="flex gap-1 mb-6">
+<span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-zinc-600 mb-8 italic">"Compré todas las herramientas eléctricas para mi nuevo taller. El precio fue inmejorable y la entrega en el día me salvó."</p>
+<div class="font-bold text-sm">— Marina Benítez, Carpintera</div>
+</div>
+<div class="bg-surface-container-lowest p-10 rounded-sm">
+<div class="flex gap-1 mb-6">
+<span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-zinc-600 mb-8 italic">"Profesionalismo puro. Si no lo tienen, te lo consiguen. Muy recomendables para compras corporativas y de obra."</p>
+<div class="font-bold text-sm">— Constructora Velázquez</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact & Map -->
+<section class="py-32 px-8 bg-surface" id="contacto">
+<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16">
+<div>
+<h2 class="text-4xl font-bold tracking-tighter mb-8">Hablemos de tu próximo gran proyecto</h2>
+<div class="space-y-8">
+<div class="flex items-start gap-4">
+<div class="w-10 h-10 bg-surface-container-high rounded-sm flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">location_on</span>
+</div>
+<div>
+<h4 class="font-bold text-sm uppercase tracking-widest mb-1">Dirección</h4>
+<p class="text-on-surface-variant">Av. San Martín 1234, Buenos Aires</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="w-10 h-10 bg-surface-container-high rounded-sm flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">phone</span>
+</div>
+<div>
+<h4 class="font-bold text-sm uppercase tracking-widest mb-1">Teléfono</h4>
+<p class="text-on-surface-variant">+54 11 4567-8900</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="w-10 h-10 bg-surface-container-high rounded-sm flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">mail</span>
+</div>
+<div>
+<h4 class="font-bold text-sm uppercase tracking-widest mb-1">Email</h4>
+<p class="text-on-surface-variant">contacto@ferreteriamartin.com</p>
+</div>
+</div>
+</div>
+<div class="mt-12 flex gap-4">
+<button class="bg-primary text-white font-bold py-4 px-10 rounded-sm industrial-gradient active:scale-95 transition-all">Enviar Mensaje</button>
+</div>
+</div>
+<div class="relative min-h-[400px] bg-surface-container-high rounded-sm overflow-hidden">
+<img class="w-full h-full object-cover opacity-60" data-alt="abstract top down map view of urban city grid with clean industrial monochromatic aesthetic" data-location="Buenos Aires" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9CGK_uiBa5cZKrDl-WGGgs8DqdxC6cQfeVALeTFOYKVGZkZ2aTbuawdODaxvOUxX1Y-CzRDUmy41i7NcYKngd2vyfFUXz8dhvwpZxqq-tnDKLtXiuLIv3iDN9NuRHgKggzEWYYpHJG6P4TzgxCQSNwFyB8OzLXuOuWjkhzC8_30C4Hs7AY0GDpYSLs_Av76856drS1wfMpjIl8W2nDc7UtahVfWmMmT9HdTWbP2l2_7ka6tjswLlFvTVt-lYrTAABLIVoVtkLbnWS"/>
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="bg-white p-4 shadow-xl flex items-center gap-3">
+<span class="material-symbols-outlined text-error" style="font-variation-settings: 'FILL' 1;">location_on</span>
+<span class="font-bold text-sm">Ferretería Martín</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-zinc-100 dark:bg-zinc-900 w-full py-12 px-8">
+<div class="flex flex-col md:flex-row justify-between items-center gap-8 w-full border-t border-zinc-200 dark:border-zinc-800 pt-12">
+<div class="text-lg font-bold text-zinc-900 dark:text-zinc-50">
+                FERRETERÍA MARTÍN
+            </div>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="font-inter text-xs tracking-widest uppercase font-semibold text-zinc-500 dark:text-zinc-400 hover:text-zinc-950 dark:hover:text-zinc-50 transition-opacity duration-300" href="#">Instagram</a>
+<a class="font-inter text-xs tracking-widest uppercase font-semibold text-zinc-500 dark:text-zinc-400 hover:text-zinc-950 dark:hover:text-zinc-50 transition-opacity duration-300" href="#">WhatsApp</a>
+<a class="font-inter text-xs tracking-widest uppercase font-semibold text-zinc-500 dark:text-zinc-400 hover:text-zinc-950 dark:hover:text-zinc-50 transition-opacity duration-300" href="#">Privacidad</a>
+<a class="font-inter text-xs tracking-widest uppercase font-semibold text-zinc-500 dark:text-zinc-400 hover:text-zinc-950 dark:hover:text-zinc-50 transition-opacity duration-300" href="#">Términos</a>
+</div>
+<div class="font-inter text-xs tracking-widest uppercase font-semibold text-zinc-500">
+                © 2024 Ferretería Martín. El Curador Industrial.
+            </div>
+</div>
+</footer>
+</body></html>

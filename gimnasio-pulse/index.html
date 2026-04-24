@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es-AR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Gimnasio Pulse</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,700;1,900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-fixed-dim": "#ffb3b2",
+                        "primary-fixed-dim": "#ffb4ac",
+                        "on-surface": "#1c1b1b",
+                        "on-secondary-fixed-variant": "#930013",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-container": "#da3437",
+                        "on-tertiary-fixed-variant": "#723335",
+                        "on-secondary-container": "#fffbff",
+                        "outline": "#8d706d",
+                        "on-secondary-fixed": "#410004",
+                        "on-primary-fixed": "#410002",
+                        "secondary-fixed": "#ffdad7",
+                        "on-primary-fixed-variant": "#8e1214",
+                        "on-error-container": "#93000a",
+                        "tertiary": "#5f2527",
+                        "tertiary-container": "#7b3b3c",
+                        "surface-container-low": "#f6f3f2",
+                        "tertiary-fixed": "#ffdad9",
+                        "error-container": "#ffdad6",
+                        "surface-bright": "#fcf9f8",
+                        "background": "#fcf9f8",
+                        "surface-container-highest": "#e5e2e1",
+                        "on-error": "#ffffff",
+                        "inverse-surface": "#313030",
+                        "on-tertiary-fixed": "#3a090d",
+                        "on-tertiary-container": "#ffa9a9",
+                        "on-secondary": "#ffffff",
+                        "primary": "#760009",
+                        "inverse-on-surface": "#f3f0ef",
+                        "on-primary-container": "#ffaaa1",
+                        "surface": "#fcf9f8",
+                        "surface-container-high": "#eae7e7",
+                        "on-surface-variant": "#59413e",
+                        "primary-fixed": "#ffdad6",
+                        "on-background": "#1c1b1b",
+                        "surface-dim": "#dcd9d9",
+                        "on-tertiary": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "surface-variant": "#e5e2e1",
+                        "outline-variant": "#e1bfbb",
+                        "inverse-primary": "#ffb4ac",
+                        "surface-tint": "#b02d29",
+                        "secondary": "#b61722",
+                        "error": "#ba1a1a",
+                        "primary-container": "#991b1b",
+                        "surface-container": "#f0eded",
+                        "secondary-fixed-dim": "#ffb3ad"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Playfair Display", "serif"],
+                        "display": ["Playfair Display", "serif"],
+                        "body": ["Inter", "sans-serif"],
+                        "label": ["Inter", "sans-serif"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .glass-panel {
+            background: rgba(252, 249, 248, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .text-gradient {
+            background: linear-gradient(135deg, #760009 0%, #991b1b 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .bg-gradient-primary {
+            background: linear-gradient(135deg, #760009 0%, #991b1b 100%);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body antialiased selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopAppBar from JSON -->
+<header class="bg-white/80 dark:bg-red-950/80 backdrop-blur-xl text-red-900 dark:text-red-100 docked full-width top-0 sticky z-50 shadow-2xl shadow-red-900/5 dark:shadow-none">
+<div class="flex justify-between items-center w-full px-6 py-4 max-w-screen-2xl mx-auto">
+<a class="text-2xl font-black italic tracking-tighter text-red-900 dark:text-white font-headline" href="#">Gimnasio Pulse</a>
+<nav class="hidden md:flex gap-8 items-center">
+<a class="text-red-600 dark:text-red-400 font-bold border-b-2 border-red-600 uppercase tracking-[0.1em] text-xs transition-colors duration-300" href="#inicio">Inicio</a>
+<a class="text-neutral-600 dark:text-neutral-300 font-medium hover:text-red-700 transition-colors uppercase tracking-[0.1em] text-xs" href="#clases">Clases</a>
+<a class="text-neutral-600 dark:text-neutral-300 font-medium hover:text-red-700 transition-colors uppercase tracking-[0.1em] text-xs" href="#planes">Planes</a>
+<a class="text-neutral-600 dark:text-neutral-300 font-medium hover:text-red-700 transition-colors uppercase tracking-[0.1em] text-xs" href="#entrenadores">Entrenadores</a>
+<a class="text-neutral-600 dark:text-neutral-300 font-medium hover:text-red-700 transition-colors uppercase tracking-[0.1em] text-xs" href="#contacto">Contacto</a>
+</nav>
+<button class="bg-primary text-on-primary rounded-lg px-6 py-2.5 font-bold uppercase tracking-[0.1em] text-xs hover:bg-neutral-100/50 dark:hover:bg-red-900/30 transition-all duration-300 active:scale-95 duration-150 ease-in-out hidden md:block">Probar gratis</button>
+<!-- Mobile Menu Toggle -->
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative min-h-[921px] flex items-center overflow-hidden bg-primary-container text-on-primary-container py-24 lg:py-0" id="inicio">
+<!-- Background Image -->
+<div class="absolute inset-0 z-0">
+<img alt="Hero background" class="w-full h-full object-cover opacity-40 mix-blend-multiply" data-alt="high contrast black and white photo of an athlete lifting weights in a dramatic dimly lit gym with intense spotlighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCazXygQ-9eKy9wEqRRqnJb-4sPmoQ5jLTnB_oQ2tYx5yhsEwM0WI9DdsFRIDP3IHJ5q4re4E9Fn1qZBWcLwotfYMO0vEaE2u-WV4KX5QOvsxYuPp3avZ00PM5M1OWmZy_a5QE_1gKDJMBlmqz7o7hQHO8vV3i8X947cmP3F95lFOYzHOnaciSw1TIgMLGJRJKERUmoIZSBeAlXmxTbrfRnehX_PunWIR057kT7_rJVt2vKQklXlPDv1MmG7AEvRNEyhtbGR7LRLx4"/>
+<div class="absolute inset-0 bg-gradient-to-r from-primary/90 to-transparent"></div>
+</div>
+<div class="max-w-screen-2xl mx-auto px-6 w-full relative z-10 flex flex-col lg:flex-row items-center gap-12">
+<div class="lg:w-3/5 space-y-8">
+<span class="text-secondary-fixed uppercase tracking-[0.2em] text-sm font-bold block mb-4">Servicios profesionales</span>
+<h1 class="font-headline text-5xl md:text-7xl lg:text-8xl font-black italic leading-none tracking-tighter text-white">
+                        Transformá tu cuerpo <br/> y tu energía
+                    </h1>
+<p class="text-primary-fixed text-lg md:text-xl max-w-xl font-medium">
+                        El primer paso hacia tu mejor versión. Instalaciones premium, entrenadores de élite y una comunidad que te impulsa a superar tus límites todos los días.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-4 pt-8">
+<a class="bg-white text-primary rounded-lg px-8 py-4 font-bold uppercase tracking-[0.1em] text-sm text-center transition-transform hover:scale-105 active:scale-95 shadow-2xl shadow-black/20" href="#planes">Ver planes</a>
+<a class="border border-outline-variant/30 text-white rounded-lg px-8 py-4 font-bold uppercase tracking-[0.1em] text-sm text-center transition-colors hover:bg-white/10 backdrop-blur-sm" href="#contacto">Empezar hoy</a>
+</div>
+</div>
+</div>
+<!-- Performance Ticker -->
+<div class="absolute bottom-0 w-full overflow-hidden border-t border-white/10 bg-black/20 backdrop-blur-md py-4">
+<div class="flex whitespace-nowrap animate-[scroll_30s_linear_infinite] gap-12 px-6">
+<span class="font-headline italic font-black text-2xl text-transparent" style="-webkit-text-stroke: 1px rgba(255,255,255,0.4);">FUERZA</span>
+<span class="font-headline italic font-black text-2xl text-transparent" style="-webkit-text-stroke: 1px rgba(255,255,255,0.4);">·</span>
+<span class="font-headline italic font-black text-2xl text-transparent" style="-webkit-text-stroke: 1px rgba(255,255,255,0.4);">RESISTENCIA</span>
+<span class="font-headline italic font-black text-2xl text-transparent" style="-webkit-text-stroke: 1px rgba(255,255,255,0.4);">·</span>
+<span class="font-headline italic font-black text-2xl text-transparent" style="-webkit-text-stroke: 1px rgba(255,255,255,0.4);">POTENCIA</span>
+<span class="font-headline italic font-black text-2xl text-transparent" style="-webkit-text-stroke: 1px rgba(255,255,255,0.4);">·</span>
+<span class="font-headline italic font-black text-2xl text-transparent" style="-webkit-text-stroke: 1px rgba(255,255,255,0.4);">ENERGÍA</span>
+<span class="font-headline italic font-black text-2xl text-transparent" style="-webkit-text-stroke: 1px rgba(255,255,255,0.4);">·</span>
+<span class="font-headline italic font-black text-2xl text-transparent" style="-webkit-text-stroke: 1px rgba(255,255,255,0.4);">DISCIPLINA</span>
+</div>
+</div>
+</section>
+<!-- Clases Section -->
+<section class="py-32 bg-surface-container-low" id="clases">
+<div class="max-w-screen-2xl mx-auto px-6">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+<div>
+<span class="text-primary uppercase tracking-[0.15em] text-xs font-bold block mb-4">TRAINING PROGRAMS</span>
+<h2 class="font-headline text-4xl md:text-6xl font-black italic tracking-tighter text-on-surface">Nuestras Clases</h2>
+</div>
+<a class="text-primary font-bold uppercase tracking-[0.1em] text-sm hover:text-primary-container transition-colors border-b-2 border-primary-fixed pb-1" href="#">Ver calendario</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Clase 1 -->
+<div class="group relative aspect-[3/4] overflow-hidden bg-surface-container-highest cursor-pointer">
+<img alt="Funcional" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-80" data-alt="group of people doing functional training with kettlebells in a modern gym with warm lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAehWB5b2EzSaZqv4mr4sD9TpviSXbtNX5-vCMRZ249WJRaHUbLVnkJ2oI32CoChhR9gW9Lc1sewRiruCjdiiep38awn7daDZ1A6OlwAmAI0WaLa9EzGzraOQB_re4S8etOBI2le-gmnpjDT1uH9PxYUr-gk6uSESdW4xqlUhiDyz7NL8Jp0UYAnKLIaoxxPEfC8JMBw9iUIdD66R4aAfRQUcLrqVW7DqEs0WteAgybL7nQXfi1Mb-YcPTMQexeoKlzdL9aBGEIOR4"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-8 w-full z-10">
+<span class="bg-primary text-white text-[10px] font-bold uppercase tracking-[0.2em] px-3 py-1 mb-4 inline-block">Alta Intensidad</span>
+<h3 class="font-headline text-3xl font-black italic text-white mb-2">Funcional</h3>
+<p class="text-surface-variant text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-4 group-hover:translate-y-0">Desarrollá fuerza y movilidad para tu día a día.</p>
+</div>
+</div>
+<!-- Clase 2 -->
+<div class="group relative aspect-[3/4] overflow-hidden bg-surface-container-highest cursor-pointer md:mt-12">
+<img alt="Musculación" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-80" data-alt="close up of heavy dumbbells lined up on a rack in a premium fitness club with dark editorial lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9xp6cCfKFRtxXnhw_G_c-6Wya7NmVzcFTmMO0hpRZdepqQklSbKfi85M5yL7ZJHiOEXOlcLr0vKIR6sfIgUGihdYctxpubdpix6ONPbcC6shT1x8NtgWyHmua3279J9d3ffKvtMeuawtxAzwe1dP5ySMaoD6FQk4tS3ggTzSLKabcgV4IwCVSM2y4sEdtfG7_DvYQVWkr-6rtgtXxjmJ9dYJvFvgY58POiWK_kv47Oam7db0KGlkWR2JjX1PERn2kPsJug_RKTkA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-8 w-full z-10">
+<span class="bg-secondary text-white text-[10px] font-bold uppercase tracking-[0.2em] px-3 py-1 mb-4 inline-block">Fuerza</span>
+<h3 class="font-headline text-3xl font-black italic text-white mb-2">Musculación</h3>
+<p class="text-surface-variant text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-4 group-hover:translate-y-0">Hipertrofia y tonificación con equipamiento premium.</p>
+</div>
+</div>
+<!-- Clase 3 -->
+<div class="group relative aspect-[3/4] overflow-hidden bg-surface-container-highest cursor-pointer">
+<img alt="Cross Training" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-80" data-alt="athlete doing a pull up in a crossfit box style gym with chalk on hands and intense concentration" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQSU-oMEQ8GjEjIhbmEQSBlMVh4y0MoWHmCP7Uvo2YgKK9XmMHSWAUKwGHxyI0z39_n0vaxGIMfeZwmM2sXCc6g_6IdPeQQHcoEmFjnLuWahEG715JAIrHqUVn6YIUiIuZrq67IdxpMYp-PvbiWvxjYaJicfFH67kehdDLQ38huXanRdrlViE1wr4mdC6p4dw76JOZTrs9l7PfquOLON2Gnk4ABsz7KP1RnwnQV72eSvIevO1mySGodSt4PYypZaSkO2x2K-q05U4"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-8 w-full z-10">
+<span class="bg-tertiary text-white text-[10px] font-bold uppercase tracking-[0.2em] px-3 py-1 mb-4 inline-block">Potencia</span>
+<h3 class="font-headline text-3xl font-black italic text-white mb-2">Cross Training</h3>
+<p class="text-surface-variant text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-4 group-hover:translate-y-0">Desafía tus límites con ejercicios funcionales variados.</p>
+</div>
+</div>
+<!-- Clase 4 -->
+<div class="group relative aspect-[3/4] overflow-hidden bg-surface-container-highest cursor-pointer md:mt-12">
+<img alt="Yoga" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-80" data-alt="woman holding a yoga pose in a bright serene studio with natural sunlight streaming through large windows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8t7vN__PLTiHUjcDdoP-vWaXH-UAERkXV9EPGXi6vRSx3DZBzIW93X4d6OtHonl40tn6bUtAyhvdulA9gLHtfFGAsqOLTvPru7hwY-oWDzAcyalJKchBfe0Fge9noUlsoRSbQ66uhfomGxJJ5CR06rrm6ZIsr0NHr7-uW_qnSsoJuM_6NEXv37y2XPQaVFoZ7FYYFYdHm3o8IP79bz6m1bGbNGKzlPeVi0CSqH8Tsiv-hRAFd3TVS-F8WuvW6ZMy_hyFxGkx6kKA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-8 w-full z-10">
+<span class="bg-surface text-primary text-[10px] font-bold uppercase tracking-[0.2em] px-3 py-1 mb-4 inline-block">Mind &amp; Body</span>
+<h3 class="font-headline text-3xl font-black italic text-white mb-2">Yoga</h3>
+<p class="text-surface-variant text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-4 group-hover:translate-y-0">Flexibilidad, equilibrio y control de la respiración.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Planes Section -->
+<section class="py-32 bg-surface" id="planes">
+<div class="max-w-screen-xl mx-auto px-6">
+<div class="text-center mb-20">
+<span class="text-primary uppercase tracking-[0.15em] text-xs font-bold block mb-4">MEMBERSHIPS</span>
+<h2 class="font-headline text-4xl md:text-6xl font-black italic tracking-tighter text-on-surface">Elegí tu Plan</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+<!-- Plan 1 -->
+<div class="bg-surface-container-lowest p-10 relative z-10 shadow-[0_32px_64px_-12px_rgba(28,27,27,0.05)] md:translate-y-4">
+<h3 class="font-headline text-2xl font-bold italic text-on-surface mb-2">Básico</h3>
+<div class="flex items-baseline gap-2 mb-8 border-b border-surface-variant pb-8">
+<span class="text-lg font-bold text-on-surface-variant">ARS</span>
+<span class="text-5xl font-black tracking-tighter text-on-surface">15.000</span>
+<span class="text-sm text-on-surface-variant">/mes</span>
+</div>
+<ul class="space-y-4 mb-10">
+<li class="flex items-center gap-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-sm" data-icon="check">check</span>
+                                Acceso a sala de musculación
+                            </li>
+<li class="flex items-center gap-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-sm" data-icon="check">check</span>
+                                Horario de 08:00 a 16:00hs
+                            </li>
+<li class="flex items-center gap-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-sm" data-icon="check">check</span>
+                                Vestuarios básicos
+                            </li>
+</ul>
+<button class="w-full bg-transparent border border-outline-variant/30 text-primary rounded-lg px-6 py-4 font-bold uppercase tracking-[0.1em] text-xs hover:bg-surface-container-low transition-colors">Inscribirme</button>
+</div>
+<!-- Plan 2 (Highlighted) -->
+<div class="bg-primary-container p-12 relative z-20 shadow-[0_32px_64px_-12px_rgba(118,0,9,0.2)] md:-translate-y-4">
+<div class="absolute top-0 right-0 bg-secondary text-white text-[10px] font-bold uppercase tracking-[0.2em] px-4 py-2 transform translate-x-2 -translate-y-2">Más popular</div>
+<h3 class="font-headline text-3xl font-bold italic text-white mb-2">Pro</h3>
+<div class="flex items-baseline gap-2 mb-8 border-b border-white/20 pb-8">
+<span class="text-lg font-bold text-primary-fixed">ARS</span>
+<span class="text-6xl font-black tracking-tighter text-white">25.000</span>
+<span class="text-sm text-primary-fixed">/mes</span>
+</div>
+<ul class="space-y-4 mb-10">
+<li class="flex items-center gap-3 text-white">
+<span class="material-symbols-outlined text-primary-fixed text-sm" data-icon="check">check</span>
+                                Acceso libre 24/7
+                            </li>
+<li class="flex items-center gap-3 text-white">
+<span class="material-symbols-outlined text-primary-fixed text-sm" data-icon="check">check</span>
+                                2 clases grupales semanales
+                            </li>
+<li class="flex items-center gap-3 text-white">
+<span class="material-symbols-outlined text-primary-fixed text-sm" data-icon="check">check</span>
+                                Rutina personalizada mensual
+                            </li>
+<li class="flex items-center gap-3 text-white">
+<span class="material-symbols-outlined text-primary-fixed text-sm" data-icon="check">check</span>
+                                Acceso a app exclusiva
+                            </li>
+</ul>
+<button class="w-full bg-white text-primary rounded-lg px-6 py-4 font-bold uppercase tracking-[0.1em] text-xs hover:bg-surface transition-colors shadow-lg">Inscribirme</button>
+</div>
+<!-- Plan 3 -->
+<div class="bg-surface-container-lowest p-10 relative z-10 shadow-[0_32px_64px_-12px_rgba(28,27,27,0.05)] md:translate-y-4">
+<h3 class="font-headline text-2xl font-bold italic text-on-surface mb-2">Élite</h3>
+<div class="flex items-baseline gap-2 mb-8 border-b border-surface-variant pb-8">
+<span class="text-lg font-bold text-on-surface-variant">ARS</span>
+<span class="text-5xl font-black tracking-tighter text-on-surface">45.000</span>
+<span class="text-sm text-on-surface-variant">/mes</span>
+</div>
+<ul class="space-y-4 mb-10">
+<li class="flex items-center gap-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-sm" data-icon="check">check</span>
+                                Todo incluido del plan Pro
+                            </li>
+<li class="flex items-center gap-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-sm" data-icon="check">check</span>
+                                Clases grupales ilimitadas
+                            </li>
+<li class="flex items-center gap-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-sm" data-icon="check">check</span>
+                                4 sesiones de Personal Trainer
+                            </li>
+<li class="flex items-center gap-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-sm" data-icon="check">check</span>
+                                Evaluación nutricional mensual
+                            </li>
+</ul>
+<button class="w-full bg-transparent border border-outline-variant/30 text-primary rounded-lg px-6 py-4 font-bold uppercase tracking-[0.1em] text-xs hover:bg-surface-container-low transition-colors">Inscribirme</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer from JSON -->
+
+<div class="w-full mt-8 rounded-md overflow-hidden"><iframe src="https://www.google.com/maps?q=Av.%20C%C3%B3rdoba%202800%2C%20Buenos%20Aires&output=embed" width="100%" height="300" style="border:0;" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade" title="Mapa"></iframe></div>
+<footer class="bg-neutral-50 dark:bg-neutral-950 text-red-900 dark:text-red-500 full-width py-12 px-6 tonal-layering using surface-container-highest flat no shadows">
+<div class="flex flex-col md:flex-row justify-between items-center gap-8 max-w-7xl mx-auto">
+<div class="flex flex-col items-center md:items-start gap-4 cursor-pointer" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+<span class="text-lg font-bold text-red-900 dark:text-red-100 font-headline italic">Gimnasio Pulse</span>
+<p class="text-sm font-body text-neutral-500 dark:text-neutral-400">© 2024 Gimnasio Pulse. Av. Córdoba 2800. Elevando el rendimiento humano.</p>
+</div>
+<div class="flex gap-6">
+<a class="text-neutral-500 dark:text-neutral-400 hover:text-red-800 uppercase tracking-widest text-xs font-bold hover:translate-x-1 transition-transform duration-200" href="https://instagram.com/gimnasiopulse" target="_blank" rel="noopener noreferrer">Instagram</a>
+<a class="text-neutral-500 dark:text-neutral-400 hover:text-red-800 uppercase tracking-widest text-xs font-bold hover:translate-x-1 transition-transform duration-200" href="https://wa.me/5491166331188" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+<a class="text-neutral-500 dark:text-neutral-400 hover:text-red-800 uppercase tracking-widest text-xs font-bold hover:translate-x-1 transition-transform duration-200" href="#">Privacidad</a>
+<a class="text-neutral-500 dark:text-neutral-400 hover:text-red-800 uppercase tracking-widest text-xs font-bold hover:translate-x-1 transition-transform duration-200" href="#">Términos</a>
+</div>
+</div>
+</footer>
+</main>
+</body></html>

@@ -393,9 +393,9 @@ document.addEventListener('submit',function(e){
 
 
 <style data-pf-motion>
-.pf-motion body > *[data-pf-reveal]:not([style*="sticky"]):not([style*="fixed"]),
-.pf-motion main > *[data-pf-reveal]:not([style*="sticky"]):not([style*="fixed"]),
-.pf-motion section > *[data-pf-reveal]:not([style*="sticky"]):not([style*="fixed"]) {
+.pf-motion body > *[data-pf-reveal]:not(.pf-in):not([style*="sticky"]):not([style*="fixed"]),
+.pf-motion main > *[data-pf-reveal]:not(.pf-in):not([style*="sticky"]):not([style*="fixed"]),
+.pf-motion section > *[data-pf-reveal]:not(.pf-in):not([style*="sticky"]):not([style*="fixed"]) {
   opacity: 0;
   transform: translateY(14px);
   transition: opacity .55s cubic-bezier(.22,.61,.36,1), transform .55s cubic-bezier(.22,.61,.36,1);
@@ -433,7 +433,7 @@ img { transition: transform .35s cubic-bezier(.22,.61,.36,1); }
 if(!('IntersectionObserver'in window)||!document.documentElement.animate)return;
 var root=document.documentElement;
 // Clear any state baked in by a previous run: the editors save a clone of the
-// live DOM, so a stale without pf-in would otherwise leave that
+// live DOM, so a stale data-pf-reveal without pf-in would otherwise leave that
 // element hidden with nothing watching it.
 root.classList.remove('pf-motion');
 document.querySelectorAll('[data-pf-reveal]').forEach(function(el){

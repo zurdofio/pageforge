@@ -313,64 +313,7 @@
 </div>
 </div>
 </footer>
-<script-script="">(function(){
-var CFG={"phone":"5491122334455","email":"","business":"E2E Panaderia Test"};
-function labelFor(el,form){
-  if(el.id){var l=form.querySelector('label[for="'+el.id+'"]');if(l&&l.textContent.trim())return l.textContent.trim();}
-  var w=el.closest('label');if(w&&w.textContent.trim())return w.textContent.trim().replace(el.value,'').trim();
-  return el.getAttribute('placeholder')||el.getAttribute('name')||el.id||'Campo';
-}
-function collect(form){
-  var lines=[],ok=false;
-  form.querySelectorAll('input,textarea,select').forEach(function(el){
-    if(el.type==='submit'||el.type==='button'||el.type==='hidden')return;
-    var v=(el.value||'').trim();
-    if(el.type==='checkbox'||el.type==='radio'){if(!el.checked)return;v=v||'sí';}
-    if(!v)return;
-    ok=true;lines.push(labelFor(el,form).replace(/[:*]\s*$/,'')+': '+v);
-  });
-  return ok?lines.join('\n'):null;
-}
-function send(form){
-  var body=collect(form);
-  if(!body){var f=form.querySelector('input,textarea');if(f&&f.focus)f.focus();return;}
-  var intro=CFG.business?('Consulta desde el sitio de '+CFG.business):'Consulta desde el sitio web';
-  var text=intro+'\n\n'+body;
-  var url=CFG.phone?('https://wa.me/'+CFG.phone+'?text='+encodeURIComponent(text))
-    :('mailto:'+CFG.email+'?subject='+encodeURIComponent(intro)+'&body='+encodeURIComponent(text));
-  var w=null;try{w=window.open(url,'_blank');}catch(e){}
-  if(!w)fallback(form,text,url);
-}
-// Sandboxed previews block navigation to wa.me and mailto:, so show the message
-// instead of failing silently. Also covers popup blockers on the live site.
-function fallback(form,text,url){
-  var id='pf-form-fallback';var old=document.getElementById(id);if(old)old.remove();
-  var box=document.createElement('div');box.id=id;box.setAttribute('role','status');
-  box.style.cssText='margin-top:12px;padding:12px;border:1px solid currentColor;border-radius:8px;font-size:14px;white-space:pre-wrap';
-  var p=document.createElement('p');p.style.cssText='margin:0 0 8px;font-weight:600';
-  p.textContent='No pudimos abrir la app. Copiá el mensaje y envialo:';
-  var pre=document.createElement('div');pre.textContent=text;pre.style.cssText='margin-bottom:8px';
-  var btn=document.createElement('button');btn.type='button';btn.textContent='Copiar mensaje';
-  btn.style.cssText='cursor:pointer;padding:6px 12px;border-radius:6px';
-  btn.addEventListener('click',function(){
-    if(navigator.clipboard)navigator.clipboard.writeText(text);
-    btn.textContent='¡Copiado!';
-  });
-  var a=document.createElement('a');a.href=url;a.target='_blank';a.rel='noopener noreferrer';
-  a.textContent='Abrir en una pestaña nueva';a.style.cssText='display:inline-block;margin-left:12px';
-  box.appendChild(p);box.appendChild(pre);box.appendChild(btn);box.appendChild(a);
-  form.appendChild(box);
-}
-document.addEventListener('click',function(e){
-  var b=e.target.closest('[data-pf-form-submit]');if(!b)return;
-  var form=b.closest('[data-pf-form]');if(!form)return;
-  e.preventDefault();e.stopPropagation();send(form);
-},true);
-document.addEventListener('submit',function(e){
-  var form=e.target.closest('[data-pf-form]');if(!form)return;
-  e.preventDefault();send(form);
-},true);
-})();</script>
+
 <a data-pf-whatsapp="" href="https://wa.me/5491122334455?text=Hola+E2E+Panaderia+Test%21+Vi+su+sitio+web+y+quiero+hacer+una+consulta." target="_blank" rel="noopener noreferrer" aria-label="Chatear por WhatsApp" style="position:fixed;bottom:20px;right:20px;width:56px;height:56px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 12px rgba(0,0,0,0.25);z-index:9999;"><svg width="30" height="30" viewBox="0 0 24 24" fill="#ffffff" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path></svg></a>
 
 

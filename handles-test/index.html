@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+
+<html lang="es-AR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Handles Test | Prueba de handles persistidos</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                            "on-error-container": "#93000a",
+                            "on-tertiary": "#ffffff",
+                            "text-muted": "#6b7280",
+                            "surface-container-lowest": "#ffffff",
+                            "secondary-container": "#2170e4",
+                            "on-secondary": "#ffffff",
+                            "inverse-primary": "#b8c4ff",
+                            "surface-bright": "#fbf8ff",
+                            "tertiary-fixed": "#ffdbce",
+                            "on-tertiary-fixed-variant": "#802a00",
+                            "secondary": "#0058be",
+                            "on-tertiary-container": "#ffa583",
+                            "surface-tint": "#3755c3",
+                            "inverse-on-surface": "#f1f0fa",
+                            "background": "#ffffff",
+                            "text-main": "#1a1a1a",
+                            "surface-container": "#eeedf7",
+                            "on-secondary-fixed": "#001a42",
+                            "tertiary-fixed-dim": "#ffb59a",
+                            "on-primary-fixed-variant": "#173bab",
+                            "outline-variant": "#c4c5d5",
+                            "on-primary-fixed": "#001453",
+                            "on-background": "#1a1b22",
+                            "outline": "#757684",
+                            "accent": "#60a5fa",
+                            "on-secondary-container": "#fefcff",
+                            "primary-fixed": "#dde1ff",
+                            "primary": "#00288e",
+                            "on-secondary-fixed-variant": "#004395",
+                            "surface-dim": "#dad9e3",
+                            "primary-fixed-dim": "#b8c4ff",
+                            "secondary-fixed-dim": "#adc6ff",
+                            "tertiary-container": "#872d00",
+                            "primary-container": "#1e40af",
+                            "surface-container-high": "#e8e7f1",
+                            "surface-container-highest": "#e3e1eb",
+                            "tertiary": "#611e00",
+                            "on-error": "#ffffff",
+                            "on-surface-variant": "#444653",
+                            "inverse-surface": "#2f3037",
+                            "on-tertiary-fixed": "#380d00",
+                            "on-surface": "#1a1b22",
+                            "secondary-fixed": "#d8e2ff",
+                            "surface-variant": "#e3e1eb",
+                            "on-primary-container": "#a8b8ff",
+                            "surface": "#f8f9fa",
+                            "surface-container-low": "#f4f2fc",
+                            "error": "#ba1a1a",
+                            "on-primary": "#ffffff",
+                            "error-container": "#ffdad6"
+                    },
+                    "borderRadius": {
+                            "DEFAULT": "0.25rem",
+                            "lg": "0.5rem",
+                            "xl": "0.75rem",
+                            "full": "9999px"
+                    },
+                    "spacing": {
+                            "sm": "8px",
+                            "2xl": "48px",
+                            "3xl": "64px",
+                            "lg": "24px",
+                            "md": "16px",
+                            "xs": "4px",
+                            "xl": "32px"
+                    },
+                    "fontFamily": {
+                            "headline": ["\"Inter\", system-ui, sans-serif"],
+                            "display-xl": ["\"Inter\""],
+                            "display": ["\"Inter\", system-ui, sans-serif"],
+                            "headline-lg": ["\"Inter\""],
+                            "display-xl-mobile": ["\"Inter\""],
+                            "caption": ["\"Inter\", system-ui, sans-serif"],
+                            "body-md": ["\"Inter\""],
+                            "label-sm": ["\"Inter\""],
+                            "body": ["\"Inter\", system-ui, sans-serif"]
+                    },
+                    "fontSize": {
+                            "headline": ["32px", { "lineHeight": "1.2", "fontWeight": "700" }],
+                            "display-xl": ["56px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                            "display": ["56px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                            "headline-lg": ["32px", { "lineHeight": "1.2", "fontWeight": "700" }],
+                            "display-xl-mobile": ["40px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                            "caption": ["13px", { "lineHeight": "1.4", "letterSpacing": "0.02em", "fontWeight": "500" }],
+                            "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                            "label-sm": ["13px", { "lineHeight": "1.4", "letterSpacing": "0.02em", "fontWeight": "500" }],
+                            "body": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<meta name="description" content="Prueba de handles persistidos">
+<meta property="og:title" content="Handles Test">
+<meta property="og:description" content="Prueba de handles persistidos">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://zurdofio.github.io/pageforge/handles-test">
+<meta property="og:locale" content="es_AR">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"Handles Test","description":"Prueba de handles persistidos","url":"https://zurdofio.github.io/pageforge/handles-test","telephone":"+54 11 5555-6666","email":"hola@handlestest.com","sameAs":["https://wa.me/5491155556666"]}</script>
+</head>
+<body class="bg-background text-on-surface font-body font-body-md antialiased pt-[72px]">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 h-[72px] bg-background dark:bg-background border-b border-surface-dim">
+<div class="flex justify-between items-center max-w-7xl mx-auto px-lg h-full">
+<a class="font-headline text-headline text-primary dark:text-primary-fixed font-bold tracking-tight" href="#">Handles Test</a>
+<div class="hidden md:flex items-center gap-lg">
+<a class="font-body text-body-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors duration-200" href="#servicios">Servicios</a>
+<a class="font-body text-body-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors duration-200" href="#proceso">Proceso</a>
+<a class="font-body text-body-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors duration-200" href="#experiencia">Experiencia</a>
+<a class="font-body text-body-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors duration-200" href="#testimonios">Testimonios</a>
+<a class="font-body text-body-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors duration-200" href="#contacto">Contacto</a>
+</div>
+<a class="bg-primary text-on-primary font-body text-body-md font-bold px-md py-sm rounded-lg hover:bg-primary-container transition-colors shadow-sm" href="#contacto">Contactar</a>
+</div>
+</nav>
+<main class="max-w-[1200px] mx-auto w-full">
+<!-- Hero Section -->
+<section class="bg-primary text-on-primary py-3xl px-lg mt-md rounded-2xl mx-md md:mx-lg overflow-hidden relative shadow-md" id="hero">
+<div class="relative z-10 max-w-3xl flex flex-col items-start gap-lg">
+<h1 class="font-display-xl-mobile md:font-display-xl text-display-xl-mobile md:text-display-xl text-on-primary">Prueba de handles persistidos.</h1>
+<p class="font-body-md text-body-md text-primary-fixed-dim max-w-2xl text-lg">Sitio de prueba para validar que los handles se guardan y el sitio queda editable. Asegurando la calidad y consistencia técnica en cada despliegue.</p>
+<div class="flex flex-col sm:flex-row gap-md mt-sm">
+<a class="bg-surface text-primary font-body-md text-body-md font-bold px-xl py-md rounded-lg shadow-sm hover:bg-surface-container transition-colors text-center inline-flex items-center justify-center gap-sm" href="#contacto">
+                        Solicitar Presupuesto
+                        <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+</div>
+<div class="absolute right-0 top-0 w-1/3 h-full opacity-20 pointer-events-none hidden md:block" data-alt="A highly abstract, modern geometric composition featuring deep blue and white intersecting planes and subtle lighting gradients. The aesthetic is extremely clean, corporate, and precise, conveying a sense of technical stability and professional services architecture. High key lighting, sharp vectors, minimalist." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDR4DRJLtnBv3KMPrTSgCGRZLGchnG4u_nOXoXWN30xIQxNbo0feaa5LS0UMBjbdHO0pGbQ1Ec_t07UMjPCikJhmaFOI1uT0Rwwrinu5RLk-rezfLgl0A4RxX9qhlt7Dm4W08XUL1WCz0yxmXcirQ9rSY_t9hvD2ZJ4IdxmiT_0Fm3g-Rp6W53VB91U-PtcWEaHV17O3lHZWO7GX5OixNDWKk4YJPTpRlt8vUmYt_dKgq4m3eb3w_c6P8UBXbie3jD8art8aXKsO2A')">
+</div>
+</section>
+<!-- Servicios -->
+<section class="py-3xl px-lg mx-auto" id="servicios">
+<div class="flex flex-col gap-sm mb-2xl">
+<span class="text-accent font-caption text-caption uppercase tracking-wider font-bold">Nuestra Oferta</span>
+<h2 class="font-headline-lg text-headline-lg text-text-main">Servicios Profesionales</h2>
+<p class="text-on-surface-variant font-body-md max-w-2xl">Soluciones estructuradas diseñadas para optimizar y asegurar sus operaciones corporativas.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-lg">
+<!-- Card 1 -->
+<div class="bg-surface rounded-xl p-lg border border-surface-dim hover:shadow-sm transition-shadow group">
+<div class="w-12 h-12 bg-primary-container rounded-lg flex items-center justify-center text-primary mb-md group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined" data-icon="strategy" style="font-variation-settings: 'FILL' 1;">strategy</span>
+</div>
+<h3 class="font-headline text-headline text-text-main text-xl mb-xs">Consultoría Estratégica</h3>
+<p class="text-on-surface-variant font-body-md">Optimización de procesos corporativos integrales.</p>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface rounded-xl p-lg border border-surface-dim hover:shadow-sm transition-shadow group">
+<div class="w-12 h-12 bg-primary-container rounded-lg flex items-center justify-center text-primary mb-md group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined" data-icon="fact_check" style="font-variation-settings: 'FILL' 1;">fact_check</span>
+</div>
+<h3 class="font-headline text-headline text-text-main text-xl mb-xs">Auditoría Técnica</h3>
+<p class="text-on-surface-variant font-body-md">Garantía de calidad y validación de sistemas.</p>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface rounded-xl p-lg border border-surface-dim hover:shadow-sm transition-shadow group">
+<div class="w-12 h-12 bg-primary-container rounded-lg flex items-center justify-center text-primary mb-md group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined" data-icon="account_tree" style="font-variation-settings: 'FILL' 1;">account_tree</span>
+</div>
+<h3 class="font-headline text-headline text-text-main text-xl mb-xs">Gestión de Proyectos</h3>
+<p class="text-on-surface-variant font-body-md">Entregas a tiempo y control de ejecución riguroso.</p>
+</div>
+</div>
+</section>
+<!-- Proceso -->
+<section class="py-3xl px-lg bg-surface-container-low rounded-2xl mx-md md:mx-lg mb-3xl" id="proceso">
+<div class="flex flex-col items-center text-center gap-sm mb-2xl">
+<span class="text-accent font-caption text-caption uppercase tracking-wider font-bold">Metodología</span>
+<h2 class="font-headline-lg text-headline-lg text-text-main">Cómo Trabajamos</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-lg relative">
+<!-- Connecting Line (Desktop) -->
+<div class="hidden md:block absolute top-6 left-[10%] right-[10%] h-0.5 bg-outline-variant z-0"></div>
+<div class="flex flex-col items-center text-center z-10 relative">
+<div class="w-12 h-12 bg-primary text-on-primary rounded-full flex items-center justify-center font-headline font-bold text-xl mb-md shadow-sm border-4 border-surface-container-low">1</div>
+<h4 class="font-body-md font-bold text-text-main mb-xs">Contacto inicial</h4>
+<p class="text-on-surface-variant text-sm font-body-md">Evaluación preliminar</p>
+</div>
+<div class="flex flex-col items-center text-center z-10 relative">
+<div class="w-12 h-12 bg-primary text-on-primary rounded-full flex items-center justify-center font-headline font-bold text-xl mb-md shadow-sm border-4 border-surface-container-low">2</div>
+<h4 class="font-body-md font-bold text-text-main mb-xs">Diagnóstico</h4>
+<p class="text-on-surface-variant text-sm font-body-md">Planificación estructurada</p>
+</div>
+<div class="flex flex-col items-center text-center z-10 relative">
+<div class="w-12 h-12 bg-primary text-on-primary rounded-full flex items-center justify-center font-headline font-bold text-xl mb-md shadow-sm border-4 border-surface-container-low">3</div>
+<h4 class="font-body-md font-bold text-text-main mb-xs">Ejecución</h4>
+<p class="text-on-surface-variant text-sm font-body-md">Control técnico</p>
+</div>
+<div class="flex flex-col items-center text-center z-10 relative">
+<div class="w-12 h-12 bg-primary text-on-primary rounded-full flex items-center justify-center font-headline font-bold text-xl mb-md shadow-sm border-4 border-surface-container-low">4</div>
+<h4 class="font-body-md font-bold text-text-main mb-xs">Entrega</h4>
+<p class="text-on-surface-variant text-sm font-body-md">Seguimiento continuo</p>
+</div>
+</div>
+</section>
+<!-- Experiencia -->
+<section class="py-3xl px-lg" id="experiencia">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-2xl items-center">
+<div class="order-2 lg:order-1 rounded-2xl overflow-hidden shadow-sm h-[400px] w-full" data-alt="A bright, modern corporate office environment with glass partitions, emphasizing a professional, authoritative, and clean aesthetic. The lighting is natural and crisp, highlighting a structured and reliable IT consulting workspace. Color palette is neutral with strategic touches of corporate blue." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDky4hhS7FSyqPo6Z8m9ZRkXErlbjNM0-uTr1dBPGQo-x_uG8B7X7GREOfH9EISmWrIDfk_zYFqGzNG9S-MUWmsd3bWE6JK9D1LBHhvZYrW_et4ia6CslInIogTRAWmP0oVpdJNQg9luM6WFBflCkOxRK4WxL44xhXN_CK3n9zDw_MVjvk_xBgK3VZ5NXqAqHvhajYy-qryocEY236bhqAaLvlpd2s1R-c-h2mvt-cvPVXzUjCE1-sX61kKGa0jGY0teZCnIULKqig')">
+</div>
+<div class="order-1 lg:order-2 flex flex-col gap-md">
+<span class="text-accent font-caption text-caption uppercase tracking-wider font-bold">Credenciales</span>
+<h2 class="font-headline-lg text-headline-lg text-text-main">15 Años de Experiencia</h2>
+<p class="text-on-surface-variant font-body-md text-lg">Especialistas en consultoría IT y optimización corporativa. Hemos consolidado nuestra práctica profesional asegurando la integridad técnica y estructural de cada proyecto.</p>
+<div class="grid grid-cols-2 gap-md mt-lg">
+<div class="bg-surface p-md rounded-lg border border-surface-dim">
+<span class="block font-headline-lg text-primary mb-xs">15+</span>
+<span class="font-body-md text-sm text-on-surface-variant">Años en el sector</span>
+</div>
+<div class="bg-surface p-md rounded-lg border border-surface-dim">
+<span class="block font-headline-lg text-primary mb-xs">100%</span>
+<span class="font-body-md text-sm text-on-surface-variant">Garantía de calidad</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonios -->
+<section class="py-3xl px-lg bg-surface-container-lowest border-t border-surface-dim" id="testimonios">
+<div class="text-center mb-2xl">
+<h2 class="font-headline-lg text-headline-lg text-text-main">Lo que dicen nuestros clientes</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-lg max-w-4xl mx-auto">
+<div class="bg-surface p-xl rounded-xl border border-surface-dim shadow-sm flex flex-col justify-between">
+<p class="font-body-md text-on-surface text-lg italic mb-lg">"Excelente servicio y atención. Resolvieron nuestros desafíos técnicos con gran profesionalismo."</p>
+<div class="flex items-center gap-md">
+<div class="w-12 h-12 bg-primary-container rounded-full flex items-center justify-center text-primary font-bold">JP</div>
+<div>
+<p class="font-body-md font-bold text-text-main">Juan Pérez</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Director de Operaciones</p>
+</div>
+</div>
+</div>
+<div class="bg-surface p-xl rounded-xl border border-surface-dim shadow-sm flex flex-col justify-between">
+<p class="font-body-md text-on-surface text-lg italic mb-lg">"Un aliado estratégico para nuestro crecimiento. Su auditoría técnica fue fundamental."</p>
+<div class="flex items-center gap-md">
+<div class="w-12 h-12 bg-primary-container rounded-full flex items-center justify-center text-primary font-bold">MG</div>
+<div>
+<p class="font-body-md font-bold text-text-main">María García</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">CEO</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contacto -->
+<section class="py-3xl px-lg mb-2xl" id="contacto">
+<div class="bg-primary-container rounded-2xl p-2xl text-center flex flex-col items-center gap-lg max-w-3xl mx-auto">
+<h2 class="font-headline-lg text-headline-lg text-on-primary-container">Inicie su proyecto hoy</h2>
+<p class="font-body-md text-on-primary-container max-w-xl opacity-90">Contáctenos directamente para discutir cómo podemos asegurar y optimizar sus procesos técnicos.</p>
+<div class="flex flex-col gap-md w-full max-w-md mt-md">
+<a class="bg-surface text-text-main font-body-md p-md rounded-lg flex items-center justify-center gap-sm border border-outline-variant hover:bg-surface-container transition-colors" href="tel:+541155556666">
+<span class="material-symbols-outlined text-primary">call</span>
+                        +54 11 5555-6666
+                    </a>
+<a class="bg-surface text-text-main font-body-md p-md rounded-lg flex items-center justify-center gap-sm border border-outline-variant hover:bg-surface-container transition-colors" href="mailto:hola@handlestest.com">
+<span class="material-symbols-outlined text-primary">mail</span>
+                        hola@handlestest.com
+                    </a>
+<a class="bg-[#25D366] text-white font-body-md font-bold p-md rounded-lg flex items-center justify-center gap-sm shadow-sm hover:opacity-90 transition-opacity mt-sm" href="https://wa.me/5491155556666" rel="noopener noreferrer" target="_blank">
+                        WhatsApp CTA
+                    </a>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-xl bg-surface-container dark:bg-surface-container-highest">
+<div class="flex flex-col md:flex-row justify-between items-center max-w-7xl mx-auto px-lg gap-lg">
+<span class="font-headline text-headline-sm text-primary font-bold">Handles Test</span>
+<div class="flex flex-wrap justify-center gap-md font-label-sm text-label-sm text-on-surface-variant">
+<a class="hover:text-primary transition-colors" href="#">Privacidad</a>
+<a class="hover:text-primary transition-colors" href="#">Términos</a>
+<a class="hover:text-primary transition-colors" href="#servicios">Servicios</a>
+<a class="hover:text-primary transition-colors" href="#contacto">Contacto</a>
+</div>
+<div class="flex items-center gap-md">
+<a class="text-on-surface-variant hover:text-primary transition-colors flex items-center gap-xs font-label-sm" href="https://wa.me/5491155556666" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined" style="font-size: 20px;">chat</span>
+                    WhatsApp
+                </a>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant md:hidden">© 2024 Handles Test. Todos los derechos reservados.</p>
+</div>
+<div class="max-w-7xl mx-auto px-lg mt-md hidden md:block">
+<p class="font-label-sm text-label-sm text-on-surface-variant text-center">© 2024 Handles Test. Todos los derechos reservados.</p>
+</div>
+</footer>
+
+<a data-pf-whatsapp href="https://wa.me/5491155556666?text=Hola+Handles+Test%21+Vi+su+sitio+web+y+quiero+hacer+una+consulta." target="_blank" rel="noopener noreferrer" aria-label="Chatear por WhatsApp" style="position:fixed;bottom:20px;right:20px;width:56px;height:56px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 12px rgba(0,0,0,0.25);z-index:9999;"><svg width="30" height="30" viewBox="0 0 24 24" fill="#ffffff" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+<style data-pf-motion>
+.pf-motion body > *[data-pf-reveal]:not(.pf-in):not([style*="sticky"]):not([style*="fixed"]),
+.pf-motion main > *[data-pf-reveal]:not(.pf-in):not([style*="sticky"]):not([style*="fixed"]),
+.pf-motion section > *[data-pf-reveal]:not(.pf-in):not([style*="sticky"]):not([style*="fixed"]) {
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity .55s cubic-bezier(.22,.61,.36,1), transform .55s cubic-bezier(.22,.61,.36,1);
+  will-change: opacity, transform;
+}
+.pf-motion [data-pf-reveal].pf-in {
+  opacity: 1;
+  transform: none;
+}
+a, button, [role="button"] {
+  transition: color .18s ease, background-color .18s ease, border-color .18s ease,
+              box-shadow .18s ease, transform .18s ease;
+}
+a:hover, button:hover, [role="button"]:hover { filter: brightness(1.06); }
+button:active, [role="button"]:active, a:active { transform: translateY(1px); }
+:focus-visible {
+  outline: 2px solid #60a5fa;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+img { transition: transform .35s cubic-bezier(.22,.61,.36,1); }
+@media (prefers-reduced-motion: reduce) {
+  .pf-motion [data-pf-reveal],
+  .pf-motion [data-pf-reveal].pf-in {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+  a, button, [role="button"], img {
+    transition: none !important;
+    transform: none !important;
+  }
+}
+</style><script data-pf-motion>(function(){
+if(!('IntersectionObserver'in window)||!document.documentElement.animate)return;
+var root=document.documentElement;
+// Clear any state baked in by a previous run: the editors save a clone of the
+// live DOM, so a stale data-pf-reveal without pf-in would otherwise leave that
+// element hidden with nothing watching it.
+root.classList.remove('pf-motion');
+document.querySelectorAll('[data-pf-reveal]').forEach(function(el){
+  el.removeAttribute('data-pf-reveal');
+  el.classList.remove('pf-in');
+});
+var targets=[];
+['body','main','section'].forEach(function(parent){
+  document.querySelectorAll(parent+' > *').forEach(function(el){
+    if(el.hasAttribute('data-pf-reveal'))return;
+    var tag=el.tagName;
+    if(tag==='SCRIPT'||tag==='STYLE'||tag==='LINK'||tag==='NOSCRIPT'||tag==='HEADER')return;
+    var pos=getComputedStyle(el).position;
+    if(pos==='sticky'||pos==='fixed')return;
+    el.setAttribute('data-pf-reveal','');
+    targets.push(el);
+  });
+});
+if(!targets.length)return;
+// Added only once the targets are marked, so the hidden state and the observer
+// that clears it always land together.
+root.classList.add('pf-motion');
+var io=new IntersectionObserver(function(entries){
+  entries.forEach(function(e){
+    if(!e.isIntersecting)return;
+    e.target.classList.add('pf-in');
+    io.unobserve(e.target);
+  });
+},{rootMargin:'0px 0px -8% 0px',threshold:0.05});
+targets.forEach(function(el){
+  var r=el.getBoundingClientRect();
+  // Anything already on screen at load reveals immediately: no flash of blank hero.
+  if(r.top<window.innerHeight)el.classList.add('pf-in');
+  else io.observe(el);
+});
+// Safety net: if anything stays hidden after 3s, show everything.
+setTimeout(function(){targets.forEach(function(el){el.classList.add('pf-in');});},3000);
+})();</script></body></html>

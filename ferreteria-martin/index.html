@@ -89,6 +89,7 @@
             -webkit-backdrop-filter: blur(12px);
         }
     </style>
+<title>Ferretería Martín | Todo para tus proyectos</title>
 </head>
 <body class="bg-surface text-on-surface font-body selection:bg-primary-container selection:text-white">
 <!-- Header: Sticky TopNavBar -->
@@ -436,4 +437,83 @@
             </div>
 </div>
 </footer>
-</body></html>
+<style data-pf-motion>
+.pf-motion body > *[data-pf-reveal]:not(.pf-in):not([style*="sticky"]):not([style*="fixed"]),
+.pf-motion main > *[data-pf-reveal]:not(.pf-in):not([style*="sticky"]):not([style*="fixed"]),
+.pf-motion section > *[data-pf-reveal]:not(.pf-in):not([style*="sticky"]):not([style*="fixed"]) {
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity .55s cubic-bezier(.22,.61,.36,1), transform .55s cubic-bezier(.22,.61,.36,1);
+  will-change: opacity, transform;
+}
+.pf-motion [data-pf-reveal].pf-in {
+  opacity: 1;
+  transform: none;
+}
+a, button, [role="button"] {
+  transition: color .18s ease, background-color .18s ease, border-color .18s ease,
+              box-shadow .18s ease, transform .18s ease;
+}
+a:hover, button:hover, [role="button"]:hover { filter: brightness(1.06); }
+button:active, [role="button"]:active, a:active { transform: translateY(1px); }
+:focus-visible {
+  outline: 2px solid #d4d4d8;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+img { transition: transform .35s cubic-bezier(.22,.61,.36,1); }
+@media (prefers-reduced-motion: reduce) {
+  .pf-motion [data-pf-reveal],
+  .pf-motion [data-pf-reveal].pf-in {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+  a, button, [role="button"], img {
+    transition: none !important;
+    transform: none !important;
+  }
+}
+</style><script data-pf-motion>(function(){
+if(!('IntersectionObserver'in window)||!document.documentElement.animate)return;
+var root=document.documentElement;
+// Clear any state baked in by a previous run: the editors save a clone of the
+// live DOM, so a stale data-pf-reveal without pf-in would otherwise leave that
+// element hidden with nothing watching it.
+root.classList.remove('pf-motion');
+document.querySelectorAll('[data-pf-reveal]').forEach(function(el){
+  el.removeAttribute('data-pf-reveal');
+  el.classList.remove('pf-in');
+});
+var targets=[];
+['body','main','section'].forEach(function(parent){
+  document.querySelectorAll(parent+' > *').forEach(function(el){
+    if(el.hasAttribute('data-pf-reveal'))return;
+    var tag=el.tagName;
+    if(tag==='SCRIPT'||tag==='STYLE'||tag==='LINK'||tag==='NOSCRIPT'||tag==='HEADER')return;
+    var pos=getComputedStyle(el).position;
+    if(pos==='sticky'||pos==='fixed')return;
+    el.setAttribute('data-pf-reveal','');
+    targets.push(el);
+  });
+});
+if(!targets.length)return;
+// Added only once the targets are marked, so the hidden state and the observer
+// that clears it always land together.
+root.classList.add('pf-motion');
+var io=new IntersectionObserver(function(entries){
+  entries.forEach(function(e){
+    if(!e.isIntersecting)return;
+    e.target.classList.add('pf-in');
+    io.unobserve(e.target);
+  });
+},{rootMargin:'0px 0px -8% 0px',threshold:0.05});
+targets.forEach(function(el){
+  var r=el.getBoundingClientRect();
+  // Anything already on screen at load reveals immediately: no flash of blank hero.
+  if(r.top<window.innerHeight)el.classList.add('pf-in');
+  else io.observe(el);
+});
+// Safety net: if anything stays hidden after 3s, show everything.
+setTimeout(function(){targets.forEach(function(el){el.classList.add('pf-in');});},3000);
+})();</script></body></html>
